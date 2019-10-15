@@ -1,0 +1,107 @@
+// GENERICS
+// reset styles (reset personal complementary to download)
+// Change : 17-09-2017
+// Date   : 17-09-2017
+// ------------------
+
+
+
+
+
+*
+	&,
+	&:before,
+	&:after
+		box-sizing: border-box
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+	margin: 0
+	padding: 0
+
+*:focus
+	outline: 0
+
+
+// FONT
+// =================================================
+textarea,
+address
+	font-style: normal
+
+
+// TEXT
+// =================================================
+a,
+span
+	display: inline-block
+
+a
+	text-decoration: none
+	outline: none
+
+p
+	&:only-child
+		margin: 0
+
+	&:not(:last-child)
+		margin-bottom: 10px
+
+table
+	width: 100%
+
+
+// IMAGE
+// =================================================
+img
+	width: 100%
+	font-style: italic
+	vertical-align: middle
+	display: block
+
+
+// FORM
+// =================================================
+input,
+button,
+select
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+
+
+fieldset
+	margin: 0
+	padding: 0
+	border: none
+
+input,
+select,
+textarea
+	border-radius: 0
+	outline: none
+
+textarea
+	min-height: 150px
+	// para quitar el margin bottom fantasma que tiene por defecto
+	display: inherit
+	resize: vertical
+
+input
+	&[type="submit"],
+	&[type="reset"]
+		// border: none
+		// background-color: inherit
+		cursor: pointer
