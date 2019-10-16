@@ -64,21 +64,21 @@
 							Gender
 						</label>
 						<div class="c-checkbox__list">
-							<div class="c-checkbox__item">
-								<input id="genderMale" class="c-checkbox__input" name="gender" type="radio"
-									value="Male">
-								<label class="c-label c-checkbox__label" for="genderMale">Male</label>
-							</div>
-							<div class="c-checkbox__item">
-								<input id="genderFemale" class="c-checkbox__input" name="gender" type="radio"
-									value="Female">
-								<label class="c-label c-checkbox__label" for="genderFemale">Female</label>
-							</div>
-							<div class="c-checkbox__item">
-								<input id="genderOther" class="c-checkbox__input" name="gender" type="radio"
-									value="Other">
-								<label class="c-label c-checkbox__label" for="genderOther">Other</label>
-							</div>
+							<label for="genderMale" class="c-check">
+								<input id="genderMale" class="c-check__input" name="gender" value="Male" type="radio" required>
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Male</span>
+							</label>
+							<label for="genderFemale" class="c-check">
+								<input id="genderFemale" class="c-check__input" name="gender" value="Female" type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Female</span>
+							</label>
+							<label for="genderOther" class="c-check">
+								<input id="genderOther" class="c-check__input" name="gender" value="Other" type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Other</span>
+							</label>
 						</div>
 					</div>
 
@@ -1126,49 +1126,42 @@
 							Experience
 						</label>
 
-						<div class="c-form__group c-checkbox__list">
-							<div class="c-form__item c-checkbox__item">
-								<input id="experienceGradePractices" class="c-checkbox__input" name="experienceGrade"
-									type="radio">
-								<label class="c-label c-checkbox__label" for="experienceGradePractices">
-									Practices
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="experienceGradeJunior" class="c-checkbox__input" name="experienceGrade"
-									type="radio">
-								<label class="c-label c-checkbox__label" for="experienceGradeJunior">
-									Junior
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="experienceGradeSenior" class="c-checkbox__input" name="experienceGrade"
-									type="radio">
-								<label class="c-label c-checkbox__label" for="experienceGradeSenior">
-									Senior
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="experienceGradeManager" class="c-checkbox__input" name="experienceGrade"
-									type="radio">
-								<label class="c-label c-checkbox__label" for="experienceGradeManager">
-									Manager
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="experienceGradeDirector" class="c-checkbox__input" name="experienceGrade"
-									type="radio">
-								<label class="c-label c-checkbox__label" for="experienceGradeDirector">
-									Director
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="experienceGradeBoss" class="c-checkbox__input" name="experienceGrade"
-									type="radio">
-								<label class="c-label c-checkbox__label" for="experienceGradeBoss">
-									Boss
-								</label>
-							</div>
+						<div class="c-form__check-list">
+							<label for="experienceGradePractices" class="c-check">
+								<input id="experienceGradePractices" class="c-check__input" name="experienceGrade" value="" type="radio" required>
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Practices</span>
+							</label>
+
+							<label for="experienceGradeJunior" class="c-check">
+								<input id="experienceGradeJunior" class="c-check__input" name="experienceGrade" value="" type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Junior</span>
+							</label>
+
+							<label for="experienceGradeSenior" class="c-check">
+								<input id="experienceGradeSenior" class="c-check__input" name="experienceGrade" value="" type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Senior</span>
+							</label>
+
+							<label for="experienceGradeManager" class="c-check">
+								<input id="experienceGradeManager" class="c-check__input" name="experienceGrade" value="" type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Manager</span>
+							</label>
+
+							<label for="experienceGradeDirector" class="c-check">
+								<input id="experienceGradeDirector" class="c-check__input" name="experienceGrade" value="" type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Director</span>
+							</label>
+
+							<label for="experienceGradeBoss" class="c-check">
+								<input id="experienceGradeBoss" class="c-check__input" name="experienceGrade" value="" type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Boss</span>
+							</label>
 						</div>
 					</div>
 
@@ -1233,41 +1226,36 @@
 							Favorite Browser
 						</label>
 
-						<div class="c-form__group c-checkbox__list">
-							<div class="c-form__item c-checkbox__item">
-								<input id="browserFirefox" class="c-checkbox__input" name="browserFirefox"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="browserFirefox">
-									Firefox
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="browserSafari" class="c-checkbox__input" name="browserSafari"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="browserSafari">
-									Safari
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="browserOpera" class="c-checkbox__input" name="browserOpera" type="checkbox">
-								<label class="c-label c-checkbox__label" for="browserOpera">
-									Opera
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="browserInternetExplorer" class="c-checkbox__input"
-									name="browserInternetExplorer" type="checkbox">
-								<label class="c-label c-checkbox__label" for="browserInternetExplorer">
-									Internet Explorer
-								</label>
-							</div>
-							<div class="c-form__item c-checkbox__item">
-								<input id="browserMicrosoftEdge" class="c-checkbox__input" name="browserMicrosoftEdge"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="browserMicrosoftEdge">
-									Microsoft Edge
-								</label>
-							</div>
+						<div class="c-form__check-list">
+							<label for="browserFirefox" class="c-check">
+								<input id="browserFirefox" class="c-check__input" name="browserFirefox" value="Firefox" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Firefox</span>
+							</label>
+
+							<label for="browserSafari" class="c-check">
+								<input id="browserSafari" class="c-check__input" name="browserSafari" value="Safari" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Safari</span>
+							</label>
+
+							<label for="browserOpera" class="c-check">
+								<input id="browserOpera" class="c-check__input" name="browserOpera" value="Opera" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Opera</span>
+							</label>
+
+							<label for="browserInternetExplorer" class="c-check">
+								<input id="browserInternetExplorer" class="c-check__input" name="browserInternetExplorer" value="Internet Explorer" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Internet Explorer</span>
+							</label>
+
+							<label for="browserMicrosoftEdge" class="c-check">
+								<input id="browserMicrosoftEdge" class="c-check__input" name="browserMicrosoftEdge" value="Microsoft Edge" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Microsoft Edge</span>
+							</label>
 						</div>
 					</div>
 
@@ -1277,54 +1265,43 @@
 						</label>
 
 						<div class="c-checkbox__list">
-							<div class="c-checkbox__item">
-								<input id="editorNotePadc-checkbox__item" class="c-checkbox__input" name="editorNotePad"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="editorNotePad">
-									Note Pad ++
-								</label>
-							</div>
-							<div class="c-checkbox__item">
-								<input id="editorSublimeText" class="c-checkbox__input" name="editorSublimeText"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="editorSublimeText">
-									Sublime Text
-								</label>
-							</div>
-							<div class="c-checkbox__item">
-								<input id="editorAtom" class="c-checkbox__input" name="editorAtom" type="checkbox">
-								<label class="c-label c-checkbox__label" for="editorAtom">
-									Atom
-								</label>
-							</div>
-							<div class="c-checkbox__item">
-								<input id="editorNetbeans" class="c-checkbox__input" name="editorNetbeans"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="editorNetbeans">
-									Netbeans
-								</label>
-							</div>
-							<div class="c-checkbox__item">
-								<input id="editorVisualStudio" class="c-checkbox__input" name="editorVisualStudio"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="editorVisualStudio">
-									Visual Studio
-								</label>
-							</div>
-							<div class="c-checkbox__item">
-								<input id="editorBrackets" class="c-checkbox__input" name="editorBrackets"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="editorBrackets">
-									Brackets
-								</label>
-							</div>
-							<div class="c-checkbox__item">
-								<input id="editorJetbrains" class="c-checkbox__input" name="editorJetbrains"
-									type="checkbox">
-								<label class="c-label c-checkbox__label" for="editorJetbrains">
-									Jetbrains (WebStorm, PhpSorm,...)
-								</label>
-							</div>
+							<label for="editorNotePad" class="c-check">
+								<input id="editorNotePad" class="c-check__input" name="editorNotePad" value="Note Pad" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Note Pad ++</span>
+							</label>
+
+							<label for="editorSublimeText" class="c-check">
+								<input id="editorSublimeText" class="c-check__input" name="editorSublimeText" value="Sublime Text" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Sublime Text</span>
+							</label>
+							<label for="editorAtom" class="c-check">
+								<input id="editorAtom" class="c-check__input" name="editorAtom" value="Atom" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Atom</span>
+							</label>
+							<label for="editorNetbeans" class="c-check">
+								<input id="editorNetbeans" class="c-check__input" name="editorNetbeans" value="Netbeans" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Netbeans</span>
+							</label>
+
+							<label for="editorVisualStudio" class="c-check">
+								<input id="editorVisualStudio" class="c-check__input" name="editorVisualStudio" value="Visual Studio" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Visual Studio</span>
+							</label>
+							<label for="editorBrackets" class="c-check">
+								<input id="editorBrackets" class="c-check__input" name="editorBrackets" value="Brackets" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Brackets</span>
+							</label>
+							<label for="editorJetbrains" class="c-check">
+								<input id="editorJetbrains" class="c-check__input" name="editorJetbrains" value="Jetbrains" type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Jetbrains (WebStorm, PhpSorm,...)</span>
+							</label>
 						</div>
 					</div>
 				</fieldset>
@@ -1476,19 +1453,17 @@
 						Status
 					</legend>
 
-					<div class="c-form__group c-chekbox__list">
-						<div class="c-form__item c-checkbox__item">
-							<input id="statusPrivate" class="c-checkboc__input" name="statusPrivate" type="checkbox">
-							<label class="c-label c-checkbox__label" for="statusPrivate">
-								Private
-							</label>
-						</div>
-						<div class="c-form__item c-checkbox__item">
-							<input id="statusPublic" class="c-checkboc__input" name="statusPublic" type="checkbox">
-							<label class="c-label c-checkbox__label" for="statusPublic">
-								Public
-							</label>
-						</div>
+					<div class="c-form__check-list">
+						<label for="statusPrivate" class="c-check">
+							<input id="statusPrivate" class="c-check__input" name="statusActive" value="Private" type="radio" required>
+							<span class="c-check__mark"></span>
+							<span class="c-check__label">Private</span>
+						</label>
+						<label for="statusPublic" class="c-check">
+							<input id="statusPublic" class="c-check__input" name="statusActive" value="Public" type="radio">
+							<span class="c-check__mark"></span>
+							<span class="c-check__label">Public</span>
+						</label>
 					</div>
 				</fieldset>
 
