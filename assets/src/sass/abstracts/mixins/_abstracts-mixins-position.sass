@@ -1,0 +1,75 @@
+// ABSTRACTS - MIXIN
+// position (top, bottom, left, right)
+// ------------------
+
+
+
+
+
+// MIXIN - POSITION
+// =================================================
+// $Recycle.BinThis mixin 'position' is used for move the element inside of his element father, who have the property CSS position: relative.
+//
+// This mixin require:
+//
+// External means:
+// ------------------
+// Mixin prefix
+//
+// Args:
+// ------------------
+// - $vertical
+// @param {string} Position vertical inside of element father.
+// Values: center | top | bottom
+// - $horizontal
+// @param {string} Position horizontal inside of element father.
+// Default: NULL
+// Values: center | left | right
+@mixin position($vertical, $horizontal: NULL)
+	position: absolute
+
+	@if $horizontal == NULL
+		@if $vertical == "center"
+			top: 50%
+			left: 50%
+			@include prefix(transform, translate(-50%, -50%))
+		@else if $vertical == "top"
+			top: 0
+		@else if $vertical == "bottom"
+			bottom: 0
+		@else if $vertical == "left"
+			left: 0
+		@else if $vertical == "right"
+			right: 0
+
+	@if $horizontal != NULL
+		@if $vertical == "center"
+			top: 50%
+			@include prefix(transform, translate(0, -50%))
+			@if $horizontal == "center"
+				left: 50%
+				@include prefix(transform, translate(-50%, 0))
+			@if $horizontal == "left"
+				left: 0
+			@else if $horizontal == "right"
+				right: 0
+
+		@if $vertical == "top"
+			top: 0
+			@if $horizontal == "center"
+				left: 50%
+				@include prefix(transform, translate(-50%, 0))
+			@else if $horizontal == "left"
+				left: 0
+			@else if $horizontal == "right"
+				right: 0
+
+		@if $vertical == "bottom"
+			bottom: 0
+			@if $horizontal == "center"
+				left: 50%
+				@include prefix(transform, translate(-50%, 0))
+			@else if $horizontal == "left"
+				left: 0
+			@else if $horizontal == "right"
+				right: 0

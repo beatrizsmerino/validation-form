@@ -1,0 +1,47 @@
+// ABSTRACTS - MIXIN
+// prefix animation
+// ------------------
+
+
+
+
+
+// ANIMATION
+// =================================================
+// http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+//
+// This file need the files:
+// tools > _tools-mixins-prefix-keyframes.sass
+// tools > _tools-mixins-prefix-animation.sass
+//
+//
+// use example:
+// 1.create keyframe
+// animations > _animations-keyframes
+//
+// @include keyframes(move-the-object)
+//  0%
+//    left: 100px
+//  100%
+//    left: 200px
+//
+// 2. Call the animation keyframe
+// objects > _objects-...sass
+//
+// .object-to-animate
+//  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s')
+@mixin animation($animate...)
+	$max: length($animate)
+	$animations: ''
+
+	@for $i from 1 through $max
+		$animations: #{$animations + nth($animate, $i)}
+
+		@if $i < $max
+			$animations: #{$animations + ", "}
+
+
+	-webkit-animation: $animations
+	-moz-animation: $animations
+	-o-animation: $animations
+	animation: $animations
