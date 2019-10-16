@@ -49,6 +49,8 @@ var nodeModules = "./node_modules/";
 // Roots used to concat the files in a specific order.
 let filesJs = [
     rootSrcJs + 'scripts.js',
+    rootSrcJs + 'components/components-message.js',
+    rootSrcJs + 'page/page-account.js'
 ];
 
 var filesCss = [
