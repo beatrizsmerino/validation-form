@@ -11,6 +11,10 @@
 		&:not(:last-child)
 			margin-bottom: 2rem
 
+	&__list
+		&:not(:last-of-type)
+			margin-bottom: 0.5rem
+
 	&__item
 		&:not(:last-child)
 			margin-bottom: 1rem
@@ -46,20 +50,3 @@
 	display: inline-block
 	font-size: 1.2rem
 	color: $color-brand-2
-
-
-
-// CHECKBOX
-.c-checkbox
-	&__group
-
-	&__item
-		display: flex
-		align-item: center
-
-		&:not(:last-child)
-			margin-bottom: 0.5rem
-
-	&__label
-		margin-left: 1rem
-		margin-bottom: 0
