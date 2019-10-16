@@ -1,0 +1,32 @@
+// ABSTRACTS - MIXIN
+// contain (find contain in a list)
+// ------------------
+
+
+
+
+
+// FUNCTION - CONTAINS (Find contain in a list)
+// =================================================  
+// This function 'contains' check whether an item belongs to a list or not. For example it`s using in the mixin mediaquery.
+// 
+// This function require:
+//
+// Args:
+// ------------------
+// - $list
+// @param {List} List of items to check into.
+// - $item
+// @param {any} Item to check within the list.
+//
+// This function return:
+//
+// @return {bool} True/false if the item is contained in the list.
+// Declaration of function
+@function t-contains($list, $item)
+	@return index($list, $item) !=null
+
+
+// Use function:
+// @if not t-contains($rules, $rule)
+//  $rule: 'max'
