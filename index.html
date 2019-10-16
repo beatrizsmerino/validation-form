@@ -15,7 +15,7 @@
     </h1>
 
     <div class="c-page__content">
-		<form action="">
+		<form id="" class="c-form" action="" method="">
 			<fieldset>
 				<legend>
 					Data User
@@ -26,7 +26,7 @@
 						First Name
 					</label>
 					<br>
-					<input id="firstName" name="firstName" type="text">
+					<input id="firstName" class="c-form__field" name="firstName" type="text">
 				</div>
 
 				<br>
@@ -36,7 +36,7 @@
 						Last Name
 					</label>
 					<br>
-					<input id="lastName" name="lastName" type="text">
+					<input id="lastName" class="c-form__field" name="lastName" type="text">
 				</div>
 
 				<br>
@@ -46,7 +46,7 @@
 						Phone
 					</label>
 					<br>
-					<input id="phone" name="phone" type="tel">
+					<input id="phone" class="c-form__field" name="phone" type="tel">
 				</div>
 
 				<br>
@@ -56,7 +56,7 @@
 						Date of birth
 					</label>
 					<br>
-					<input id="birth" name="birth" type="date">
+					<input id="birth" class="c-form__field" name="birth" type="date">
 				</div>
 
 				<br>
@@ -66,7 +66,7 @@
 						Age
 					</label>
 					<br>
-					<input id="age" name="age" type="number" readonly>
+					<input id="age" class="c-form__field" name="age" type="number" readonly>
 				</div>
 
 				<br>
@@ -76,18 +76,18 @@
 						Gender
 					</label>
 					<div>
-						<div>
-							<input id="genderMale" name="gender" type="radio" value="Male">
-							<label for="">Male</label>
-						</div>
-						<div>
-							<input id="genderFemale" name="gender" type="radio" value="Female">
-							<label for="">Female</label>
-						</div>
-						<div>
-							<input id="genderOther" name="gender" type="radio" value="Other">
-							<label for="">Other</label>
-						</div>
+					<div>
+						<input id="genderMale" name="gender" type="radio" value="Male">
+						<label for="">Male</label>
+					</div>
+					<div>
+						<input id="genderFemale" name="gender" type="radio" value="Female">
+						<label for="">Female</label>
+					</div>
+					<div>
+						<input id="genderOther" name="gender" type="radio" value="Other">
+						<label for="">Other</label>
+					</div>
 					</div>
 				</div>
 
@@ -97,7 +97,7 @@
 					<label for="photo">
 						File
 					</label>
-					<input id="photo" name="photo" type="file">
+					<input id="photo" class="c-form__field" name="photo" type="file">
 				</div>
 			</fieldset>
 
@@ -114,7 +114,7 @@
 						Country
 					</label>
 					<br>
-					<select id="country" name="country">
+					<select id="country" class="c-form__field" name="country">
 						<option disabled="" selected="" value="0">
 							Select one
 						</option>
@@ -371,7 +371,7 @@
 						Province
 					</label>
 					<br>
-					<select id="province" name="province">
+					<select id="province" class="c-form__field" name="province">
 						<option value="0">
 							Select one
 						</option>
@@ -1028,7 +1028,7 @@
 						Language
 					</label>
 					<br>
-					<select id="language" name="language">
+					<select id="language" class="c-form__field" name="language">
 						<option value="0">
 							Select one
 						</option>
@@ -1121,7 +1121,7 @@
 						Description State
 					</label>
 					<br>
-					<textarea id="descriptionState" name="descriptionState" cols="30" rows="10" placeholder="..."></textarea>
+					<textarea id="descriptionState" class="c-form__field" name="descriptionState" cols="30" rows="10" placeholder="..."></textarea>
 				</div>
 
 				<br>
@@ -1131,7 +1131,7 @@
 						Company
 					</label>
 					<br>
-					<input id="company" name="company" type="text">
+					<input id="company" class="c-form__field" name="company" type="text">
 				</div>
 
 				<br>
@@ -1141,7 +1141,7 @@
 						Company Rol
 					</label>
 					<br>
-					<input id="companyRol" name="companyRol" type="text">
+					<input id="companyRol" class="c-form__field" name="companyRol" type="text">
 				</div>
 
 				<br>
@@ -1151,7 +1151,7 @@
 						Experience (0-30 years)
 					</label>
 					<br>
-					<input id="years" name="years" type="range" max="30" value="2" step="10">
+					<input id="years" class="c-form__field" name="years" type="range" max="30" value="2" step="10">
 				</div>
 
 				<br>
@@ -1319,7 +1319,7 @@
 						<label for="editorAtom">
 							Atom
 						</label>
-					</div>
+						</div>
 					<div>
 						<input id="editorNetbeans" name="editorNetbeans" type="checkbox">
 						<label for="editorNetbeans">
@@ -1360,7 +1360,7 @@
 						Github
 					</label>
 					<br>
-					<input id="githubUrl" name="githubUrl" type="url" placeholder="https://github.com/...">
+					<input id="githubUrl" class="c-form__field" name="githubUrl" type="url" placeholder="https://github.com/...">
 				</div>
 
 				<br>
@@ -1370,7 +1370,7 @@
 						Linkedin
 					</label>
 					<br>
-					<input id="linkedinUrl" name="linkedinUrl" type="url" placeholder="https://www.linkedin.com/...">
+					<input id="linkedinUrl" class="c-form__field" name="linkedinUrl" type="url" placeholder="https://www.linkedin.com/...">
 				</div>
 
 				<br>
@@ -1380,7 +1380,7 @@
 						Twitter
 					</label>
 					<br>
-					<input id="twitterUrl" name="twitterUrl" type="url" placeholder="https://www.twitter.com/...">
+					<input id="twitterUrl" class="c-form__field" name="twitterUrl" type="url" placeholder="https://www.twitter.com/...">
 				</div>
 
 				<br>
@@ -1390,7 +1390,7 @@
 						Blog
 					</label>
 					<br>
-					<input id="blogUrl" name="blogUrl" type="url" placeholder="https://medium.com/...">
+					<input id="blogUrl" class="c-form__field" name="blogUrl" type="url" placeholder="https://medium.com/...">
 				</div>
 
 				<br>
@@ -1400,7 +1400,7 @@
 						Codepen, CodeSandbox, JSFiddle...
 					</label>
 					<br>
-					<input id="editorOnlineUrl" name="editorOnlineUrl" type="url" placeholder="https://codepen.io/">
+					<input id="editorOnlineUrl" class="c-form__field" name="editorOnlineUrl" type="url" placeholder="https://codepen.io/">
 				</div>
 
 				<br>
@@ -1410,7 +1410,7 @@
 						Website
 					</label>
 					<br>
-					<input id="webUrl" name="webUrl" type="url" placeholder="https://www...">
+					<input id="webUrl" class="c-form__field" name="webUrl" type="url" placeholder="https://www...">
 				</div>
 			</fieldset>
 
@@ -1427,7 +1427,7 @@
 						Short description about you
 					</label>
 					<br>
-					<textarea id="description" name="description" cols="30" rows="10" placeholder="..."></textarea>
+					<textarea id="description" class="c-form__field" name="description" cols="30" rows="10" placeholder="..."></textarea>
 				</div>
 
 				<br>
@@ -1437,7 +1437,7 @@
 						Hobbies
 					</label>
 					<br>
-					<input list="hobbies" name="hobbies" placeholder="Choose or write">
+					<input class="c-form__field" list="hobbies" name="hobbies" placeholder="Choose or write">
 					<datalist id="hobbies">
 						<option value="Meetups"></option>
 						<option value="Sports"></option>
@@ -1460,7 +1460,7 @@
 						Old User Nick
 					</label>
 					<br>
-					<input id="oldUser" name="oldUser" type="text" placeholder="">
+					<input id="oldUser" class="c-form__field" name="oldUser" type="text" placeholder="">
 				</div>
 				<br>
 				<div>
@@ -1468,7 +1468,7 @@
 						New User Nick
 					</label>
 					<br>
-					<input id="newUser" name="newUser" type="text" placeholder="">
+					<input id="newUser" class="c-form__field" name="newUser" type="text" placeholder="">
 				</div>
 			</fieldset>
 
@@ -1485,7 +1485,7 @@
 						Old Email
 					</label>
 					<br>
-					<input id="oldEmail" name="oldEmail" type="email" placeholder="@">
+					<input id="oldEmail" class="c-form__field" name="oldEmail" type="email" placeholder="@">
 				</div>
 				<br>
 				<div>
@@ -1493,7 +1493,7 @@
 						New Email
 					</label>
 					<br>
-					<input id="newEmail" name="newEmail" type="email" placeholder="@">
+					<input id="newEmail" class="c-form__field" name="newEmail" type="email" placeholder="@">
 				</div>
 			</fieldset>
 
@@ -1510,7 +1510,7 @@
 						Old Password
 					</label>
 					<br>
-					<input id="oldPassword" name="oldPassword" type="password" placeholder="***">
+					<input id="oldPassword" class="c-form__field" name="oldPassword" type="password" placeholder="***">
 				</div>
 				<br>
 				<div>
@@ -1518,7 +1518,7 @@
 						New Password
 					</label>
 					<br>
-					<input id="newPassword" name="newPassword" type="password" placeholder="***">
+					<input id="newPassword" class="c-form__field" name="newPassword" type="password" placeholder="***">
 				</div>
 			</fieldset>
 
@@ -1550,9 +1550,9 @@
 
 			<input class="c-button" type="submit" value="save">
 		</form>
-	</div>
+	  </div>
 
-	<script src="assets/js/scripts.min.js"></script>
+	  <script src="assets/js/scripts.min.js"></script>
 </body>
 
 </html>
