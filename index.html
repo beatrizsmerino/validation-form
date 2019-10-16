@@ -16,47 +16,47 @@
 
     <div class="c-page__content">
 		<form id="" class="c-form" action="" method="">
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Data User
 				</legend>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="firstName">
 						First Name
 					</label>
 					<input id="firstName" class="c-form__field" name="firstName" type="text">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="lastName">
 						Last Name
 					</label>
 					<input id="lastName" class="c-form__field" name="lastName" type="text">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="phone">
 						Phone
 					</label>
 					<input id="phone" class="c-form__field" name="phone" type="tel">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="birth">
 						Date of birth
 					</label>
 					<input id="birth" class="c-form__field" name="birth" type="date">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="age">
 						Age
 					</label>
 					<input id="age" class="c-form__field" name="age" type="number" readonly>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label">
 						Gender
 					</label>
@@ -76,7 +76,7 @@
 					</div>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="photo">
 						File
 					</label>
@@ -84,12 +84,12 @@
 				</div>
 			</fieldset>
 
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Location
 				</legend>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="country">
 						Country
 					</label>
@@ -343,7 +343,7 @@
 					</select>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="province">
 						Province
 					</label>
@@ -997,7 +997,7 @@
 					</select>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="language">
 						Language
 					</label>
@@ -1081,82 +1081,85 @@
 				</div>
 			</fieldset>
 
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Proffesional data
 				</legend>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="descriptionState">
 						Description State
 					</label>
 					<textarea id="descriptionState" class="c-form__field" name="descriptionState" cols="30" rows="10" placeholder="..."></textarea>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="company">
 						Company
 					</label>
 					<input id="company" class="c-form__field" name="company" type="text">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="companyRol">
 						Company Rol
 					</label>
 					<input id="companyRol" class="c-form__field" name="companyRol" type="text">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="years">
 						Experience (0-30 years)
 					</label>
 					<input id="years" class="c-form__field" name="years" type="range" max="30" value="2" step="10">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label">
 						Experience
 					</label>
-					<div>
-						<input id="experienceGradePractices" name="experienceGrade" type="radio">
-						<label class="c-label" for="experienceGradePractices">
-							Practices
-						</label>
-					</div>
-					<div>
-						<input id="experienceGradeJunior" name="experienceGrade" type="radio">
-						<label class="c-label" for="experienceGradeJunior">
-							Junior
-						</label>
-					</div>
-					<div>
-						<input id="experienceGradeSenior" name="experienceGrade" type="radio">
-						<label class="c-label" for="experienceGradeSenior">
-							Senior
-						</label>
-					</div>
-					<div>
-						<input id="experienceGradeManager" name="experienceGrade" type="radio">
-						<label class="c-label" for="experienceGradeManager">
-							Manager
-						</label>
-					</div>
-					<div>
-						<input id="experienceGradeDirector" name="experienceGrade" type="radio">
-						<label class="c-label" for="experienceGradeDirector">
-							Director
-						</label>
-					</div>
-					<div>
-						<input id="experienceGradeBoss" name="experienceGrade" type="radio">
-						<label class="c-label" for="experienceGradeBoss">
-							Boss
-						</label>
+
+					<div class="c-form__group">
+						<div class="c-form__item">
+							<input id="experienceGradePractices" name="experienceGrade" type="radio">
+							<label class="c-label" for="experienceGradePractices">
+								Practices
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="experienceGradeJunior" name="experienceGrade" type="radio">
+							<label class="c-label" for="experienceGradeJunior">
+								Junior
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="experienceGradeSenior" name="experienceGrade" type="radio">
+							<label class="c-label" for="experienceGradeSenior">
+								Senior
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="experienceGradeManager" name="experienceGrade" type="radio">
+							<label class="c-label" for="experienceGradeManager">
+								Manager
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="experienceGradeDirector" name="experienceGrade" type="radio">
+							<label class="c-label" for="experienceGradeDirector">
+								Director
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="experienceGradeBoss" name="experienceGrade" type="radio">
+							<label class="c-label" for="experienceGradeBoss">
+								Boss
+							</label>
+						</div>
 					</div>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="skills">
 						Skills
 					</label>
@@ -1212,48 +1215,51 @@
 					</select>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label">
 						Favorite Browser
 					</label>
 
-					<div>
-						<input id="browserFirefox" name="browserFirefox" type="checkbox">
-						<label class="c-label" for="browserFirefox">
-							Firefox
-						</label>
-					</div>
-					<div>
-						<input id="browserSafari" name="browserSafari" type="checkbox">
-						<label class="c-label" for="browserSafari">
-							Safari
-						</label>
-					</div>
-					<div>
-						<input id="browserOpera" name="browserOpera" type="checkbox">
-						<label class="c-label" for="browserOpera">
-							Opera
-						</label>
-					</div>
-					<div>
-						<input id="browserInternetExplorer" name="browserInternetExplorer" type="checkbox">
-						<label class="c-label" for="browserInternetExplorer">
-							Internet Explorer
-						</label>
-					</div>
-					<div>
-						<input id="browserMicrosoftEdge" name="browserMicrosoftEdge" type="checkbox">
-						<label class="c-label" for="browserMicrosoftEdge">
-							Microsoft Edge
-						</label>
+					<div class="c-form__group">
+						<div class="c-form__item">
+							<input id="browserFirefox" name="browserFirefox" type="checkbox">
+							<label class="c-label" for="browserFirefox">
+								Firefox
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="browserSafari" name="browserSafari" type="checkbox">
+							<label class="c-label" for="browserSafari">
+								Safari
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="browserOpera" name="browserOpera" type="checkbox">
+							<label class="c-label" for="browserOpera">
+								Opera
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="browserInternetExplorer" name="browserInternetExplorer" type="checkbox">
+							<label class="c-label" for="browserInternetExplorer">
+								Internet Explorer
+							</label>
+						</div>
+						<div class="c-form__item">
+							<input id="browserMicrosoftEdge" name="browserMicrosoftEdge" type="checkbox">
+							<label class="c-label" for="browserMicrosoftEdge">
+								Microsoft Edge
+							</label>
+						</div>
 					</div>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label">
 						Favorite Editor
 					</label>
-					<div>
+
+					<div class="c-form__group">
 						<input id="editorNotePad" name="editorNotePad" type="checkbox">
 						<label class="c-label" for="editorNotePad">
 							Note Pad ++
@@ -1298,47 +1304,47 @@
 				</div>
 			</fieldset>
 
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Social Media
 				</legend>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="githubUrl">
 						Github
 					</label>
 					<input id="githubUrl" class="c-form__field" name="githubUrl" type="url" placeholder="https://github.com/...">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="linkedinUrl">
 						Linkedin
 					</label>
 					<input id="linkedinUrl" class="c-form__field" name="linkedinUrl" type="url" placeholder="https://www.linkedin.com/...">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="twitterUrl">
 						Twitter
 					</label>
 					<input id="twitterUrl" class="c-form__field" name="twitterUrl" type="url" placeholder="https://www.twitter.com/...">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="blogUrl">
 						Blog
 					</label>
 					<input id="blogUrl" class="c-form__field" name="blogUrl" type="url" placeholder="https://medium.com/...">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="editorOnlineUrl">
 						Codepen, CodeSandbox, JSFiddle...
 					</label>
 					<input id="editorOnlineUrl" class="c-form__field" name="editorOnlineUrl" type="url" placeholder="https://codepen.io/">
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="webUrl">
 						Website
 					</label>
@@ -1346,19 +1352,19 @@
 				</div>
 			</fieldset>
 
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Aditional Info
 				</legend>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="description">
 						Short description about you
 					</label>
 					<textarea id="description" class="c-form__field" name="description" cols="30" rows="10" placeholder="..."></textarea>
 				</div>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="hobbies">
 						Hobbies
 					</label>
@@ -1372,18 +1378,19 @@
 				</div>
 			</fieldset>
 
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Change User Nick
 				</legend>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="oldUser">
 						Old User Nick
 					</label>
 					<input id="oldUser" class="c-form__field" name="oldUser" type="text" placeholder="">
-				</div
-				<div>
+				</div>
+
+				<div class="c-form__item">
 					<label class="c-label" for="newUser">
 						New User Nick
 					</label>
@@ -1391,18 +1398,19 @@
 				</div>
 			</fieldset>
 
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Change Email
 				</legend>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="oldEmail">
 						Old Email
 					</label>
 					<input id="oldEmail" class="c-form__field" name="oldEmail" type="email" placeholder="@">
-				</div
-				<div>
+				</div>
+
+				<div class="c-form__item">
 					<label class="c-label" for="newEmail">
 						New Email
 					</label>
@@ -1410,18 +1418,19 @@
 				</div>
 			</fieldset>
 
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Change Password
 				</legend>
 
-				<div>
+				<div class="c-form__item">
 					<label class="c-label" for="oldPassword">
 						Old Password
 					</label>
 					<input id="oldPassword" class="c-form__field" name="oldPassword" type="password" placeholder="***">
-				</div
-				<div>
+				</div>
+
+				<div class="c-form__item">
 					<label class="c-label" for="newPassword">
 						New Password
 					</label>
@@ -1429,18 +1438,19 @@
 				</div>
 			</fieldset>
 
-			<fieldset>
+			<fieldset class="c-fieldset">
 				<legend class="c-legend">
 					Status
 				</legend>
-				<div>
-					<div>
+
+				<div class="c-form__group">
+					<div class="c-form__item">
 						<input id="statusPrivate" name="statusPrivate" type="checkbox">
 						<label class="c-label" for="statusPrivate">
 							Private
 						</label>
 					</div>
-					<div>
+					<div class="c-form__item">
 						<input id="statusPublic" name="statusPublic" type="checkbox">
 						<label class="c-label" for="statusPublic">
 							Public
