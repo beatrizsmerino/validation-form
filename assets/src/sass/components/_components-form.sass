@@ -8,15 +8,22 @@
 
 .c-form
 	&__group
-		&:not(:last-child)
-			margin-bottom: 2rem
+		display: flex
+
+		&--3
+			@include media('lg')
+				flex-direction: column
+
+	&__column
+		&:not(:last-of-type)
+			margin-right: 2rem
 
 	&__list
 		&:not(:last-of-type)
 			margin-bottom: 0.5rem
 
 	&__item
-		&:not(:last-child)
+		&:not(:last-of-type)
 			margin-bottom: 1rem
 
 	&__field
@@ -33,7 +40,7 @@
 
 
 .c-fieldset
-	&:not(:last-child)
+	&:not(:last-of-type)
 		margin-bottom: 4rem
 
 
