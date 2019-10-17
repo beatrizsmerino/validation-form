@@ -1451,20 +1451,26 @@
 				<fieldset class="c-fieldset">
 					<legend class="c-legend">
 						Status
-					</legend>
+          </legend>
+          
+          <div class="c-form__item">
+            <label class="c-label">
+              Status user account
+            </label>
 
-					<div class="c-form__check-list">
-						<label for="statusPrivate" class="c-check">
-							<input id="statusPrivate" class="c-check__input" name="statusActive" value="Private" type="radio" required>
-							<span class="c-check__mark"></span>
-							<span class="c-check__label">Private</span>
-						</label>
-						<label for="statusPublic" class="c-check">
-							<input id="statusPublic" class="c-check__input" name="statusActive" value="Public" type="radio">
-							<span class="c-check__mark"></span>
-							<span class="c-check__label">Public</span>
-						</label>
-					</div>
+            <div class="c-form__check-list">
+              <label for="statusPrivate" class="c-check">
+                <input id="statusPrivate" class="c-check__input" name="statusActive" value="Private" type="radio" required>
+                <span class="c-check__mark"></span>
+                <span class="c-check__label">Private</span>
+              </label>
+              <label for="statusPublic" class="c-check">
+                <input id="statusPublic" class="c-check__input" name="statusActive" value="Public" type="radio">
+                <span class="c-check__mark"></span>
+                <span class="c-check__label">Public</span>
+              </label>
+            </div>
+          </div>
 				</fieldset>
 
 				<input id="accountForm" class="c-button" type="submit" value="save">
