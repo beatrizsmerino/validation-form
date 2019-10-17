@@ -10,13 +10,14 @@
 	&__group
 		display: flex
 
-		&--3
-			@include media('lg')
-				flex-direction: column
+		@include media('lg')
+			flex-direction: column
 
 	&__column
-		&:not(:last-of-type)
-			margin-right: 2rem
+    flex: 1
+    
+    &:not(:last-of-type)
+      margin-right: 2rem
 
 	&__list
 		&:not(:last-of-type)
