@@ -1,0 +1,81 @@
+// ABSTRACTS - MIXINS
+// MEDIA
+// =================================================
+
+
+
+
+
+
+// Description:
+// ----------------------------------------------------------------------
+// Create mediaquery for breakpoint given.
+// This mixin 'media' generate the rule @media in a way more easy, passing only the parameters of size breakpoint, min/max and width/height.
+
+
+// Require:
+// ----------------------------------------------------------------------
+// External means:
+// - $breakpoints
+// @optional {map} Map with breakpoints names and values is required if param is key.
+//
+// Args:
+// - $breakpoint
+// @param {num/string} Breakpoint to define the media query. It accepts 'numbers' with and without units (px will be asigned if unitless) or 'key' within a previous $breakpoints map defined (see @optional), or variables previously defined.
+// Values: $var | sizePX | size% | sizeEM | sizeREM
+// - $rule
+// @param {string} Defines if it will be a max-width or min-width mediaquery.
+// Default: max
+// Values: max | min
+// - $dimension
+// @param {string} Defines if it will be a width or height mediaquery.
+// Default: width
+// Values: width | height
+
+
+// Declaration:
+// ----------------------------------------------------------------------
+@mixin media($breakpoint, $rule: 'max', $dimension: 'width', $unit: 'px') {
+    $rules: 'max', 'min';
+    $dimensions: 'width', 'height';
+    $units: 'px', 'em', 'rem', '%', 'vw', 'vh';
+    @if not contains($rules, $rule) {
+        $rule: 'max';
+    }
+    @if not contains($dimensions, $dimension) {
+        $rule: 'width';
+    }
+    @if type-of($breakpoint) == number {
+        @if unitless($breakpoint) {
+            @media (#{$rule}-#{$dimension}: #{$breakpoint} + $unit) {
+                @content;
+            }
+        }
+        @else if contains($units, unit($breakpoint)) {
+            @media (#{$rule}-#{$dimension}: #{$breakpoint}) {
+                @content;
+            }
+        }
+        @else {
+            @error "Invalid units provided";
+        }
+    }
+    @else if variable_exists(breakpoints) {
+        @if map-has-key($breakpoints, $breakpoint) {
+            @media (#{$rule}-#{$dimension}: #{inspect(map-get($breakpoints, $breakpoint))}) {
+                @content;
+            }
+        }
+        @else {
+            @error "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Available breakpoints are: #{map-keys($breakpoints)}.";
+        }
+    }
+    @else if variable_exists(breakpoint) {
+        @media (#{$rule}-#{$dimension}: #{$breakpoint}) {
+            @content;
+        }
+    }
+    @else {
+        @error "Neither $breakpoints map nor variable provided are defined";
+    }
+}

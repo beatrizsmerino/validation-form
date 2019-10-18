@@ -1409,27 +1409,27 @@
 
 
 				<div class="c-form__group">
-					<fieldset class="c-form__column c-fieldset">
+					<fieldset class="c-form__column c-form__column--3 c-fieldset">
 						<legend class="c-legend">
-							Change User Nick
+							Change Nick
 						</legend>
 
 						<div class="c-form__item">
-							<label class="c-label" for="oldUser">
-								Old User Nick
+							<label class="c-label" for="oldNick">
+								Old Nick
 							</label>
-							<input id="oldUser" class="c-form__field" name="oldUser" type="text" placeholder="">
+							<input id="oldNick" class="c-form__field" name="oldNick" type="text" placeholder="">
 						</div>
 
 						<div class="c-form__item">
-							<label class="c-label" for="newUser">
-								New User Nick
+							<label class="c-label" for="newNick">
+								New Nick
 							</label>
-							<input id="newUser" class="c-form__field" name="newUser" type="text" placeholder="">
+							<input id="newNick" class="c-form__field" name="newNick" type="text" placeholder="">
 						</div>
 					</fieldset>
 
-					<fieldset class="c-form__column c-fieldset">
+					<fieldset class="c-form__column c-form__column--3 c-fieldset">
 						<legend class="c-legend">
 							Change Email
 						</legend>
@@ -1449,7 +1449,7 @@
 						</div>
 					</fieldset>
 
-					<fieldset class="c-form__column c-fieldset">
+					<fieldset class="c-form__column c-form__column--3 c-fieldset">
 						<legend class="c-legend">
 							Change Password
 						</legend>
@@ -1470,34 +1470,34 @@
 								placeholder="***">
 						</div>
 					</fieldset>
-
-					<fieldset class="c-form__column">
-						<legend class="c-legend">
-							Status
-						</legend>
-
-						<div class="c-form__item">
-							<label class="c-label">
-								Select one
-							</label>
-
-							<div class="c-form__check-list">
-								<label for="statusPrivate" class="c-check">
-									<input id="statusPrivate" class="c-check__input" name="statusActive" value="Private"
-										type="radio" required>
-									<span class="c-check__mark"></span>
-									<span class="c-check__label">Private</span>
-								</label>
-								<label for="statusPublic" class="c-check">
-									<input id="statusPublic" class="c-check__input" name="statusActive" value="Public"
-										type="radio">
-									<span class="c-check__mark"></span>
-									<span class="c-check__label">Public</span>
-								</label>
-							</div>
-						</div>
-					</fieldset>
 				</div>
+
+				<fieldset class="c-fieldset">
+					<legend class="c-legend">
+						Status
+					</legend>
+
+					<div class="c-form__item">
+						<label class="c-label">
+							Select one
+						</label>
+
+						<div class="c-form__check-list">
+							<label for="statusPrivate" class="c-check">
+								<input id="statusPrivate" class="c-check__input" name="statusActive" value="Private"
+									type="radio" required>
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Private</span>
+							</label>
+							<label for="statusPublic" class="c-check">
+								<input id="statusPublic" class="c-check__input" name="statusActive" value="Public"
+									type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Public</span>
+							</label>
+						</div>
+					</div>
+				</fieldset>
 
 				<input id="accountForm" class="c-button" type="submit" value="save">
 			</form>

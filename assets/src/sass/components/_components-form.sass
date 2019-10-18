@@ -2,22 +2,26 @@
 // form
 // ------------------
 
-
-
-
-
 .c-form
 	&__group
 		display: flex
+		flex-wrap: wrap
 
-		@include media('lg')
+		@include media('xl')
 			flex-direction: column
 
 	&__column
-    flex: 1
-    
-    &:not(:last-of-type)
-      margin-right: 2rem
+		flex: 1
+
+		&:not(:last-of-type)
+			margin-right: 2rem
+
+		&--3
+			width: 30%
+
+			@include media('xl')
+				width: 100% !important
+
 
 	&__list
 		&:not(:last-of-type)
@@ -38,18 +42,14 @@
 			border-color: $color-brand-1
 			background-color: $color-gray-98
 
-
-
 .c-fieldset
-		margin-bottom: 4rem
-
+	margin-bottom: 4rem
 
 .c-legend
 	margin-bottom: 2rem
 	font-size: 1.8rem
 	font-weight: 800
 	color: $color-brand-1
-
 
 .c-label
 	width: 100%
