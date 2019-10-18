@@ -90,6 +90,31 @@
 						</label>
 						<input id="photo" class="c-form__field" name="photo" type="file">
 					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="photo">
+							Brand colors
+						</label>
+						<div class="c-form__list">
+							<div class="c-form__item">
+								<label for="backgroundColor" class="c-check">
+									Background Color
+								</label>
+								<input id="backgroundColor" class="c-form__field" name="backgroundColor" type="color">
+							</div>
+							<div class="c-form__item">
+								<label for="textColor" class="c-check">
+									Text Color
+								</label>
+								<input id="textColor" class="c-form__field" name="textColor" type="color">
+							</div>
+							<div class="c-form__item">
+								<div class="colorBrandPreview">
+									Preview
+								</div>
+							</div>
+						</div>
+					</div>
 				</fieldset>
 
 				<fieldset class="c-fieldset">
@@ -1096,10 +1121,10 @@
 
 					<div class="c-form__item">
 						<label class="c-label" for="descriptionState">
-							Description State
+							Description state
 						</label>
-						<textarea id="descriptionState" class="c-form__field" name="descriptionState" cols="30"
-							rows="10" placeholder="..."></textarea>
+						<textarea id="descriptionState" class="c-form__field" name="descriptionState"
+							placeholder="..."></textarea>
 					</div>
 
 					<div class="c-form__item">
@@ -1175,6 +1200,40 @@
 					</div>
 
 					<div class="c-form__item">
+						<label class="c-label">
+							Profesional status
+						</label>
+
+						<div class="c-form__list">
+							<label for="lookingWork" class="c-check">
+								<input id="lookingWork" class="c-check__input" name="lookingWork" value="lookingWork"
+									type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Looking for work</span>
+							</label>
+							<label for="displayLookingWork" class="c-check">
+								<input id="displayLookingWork" class="c-check__input" name="displayLookingWork"
+									value="displayLookingWork" type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Display "looking for work" on profile</span>
+							</label>
+							<label for="contactMe" class="c-check">
+								<input id="contactMe" class="c-check__input" name="contactMe" value="contactMe"
+									type="radio">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Recruiters can contact me about job opportunities</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="education">
+							Education
+						</label>
+						<textarea id="education" class="c-form__field" name="education" placeholder="..."></textarea>
+					</div>
+
+					<div class="c-form__item">
 						<label class="c-label" for="skills">
 							Skills
 						</label>
@@ -1228,6 +1287,14 @@
 								<option value="28">Grunt</option>
 							</optgroup>
 						</select>
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="skillsDescription">
+							Description skills
+						</label>
+						<textarea id="skillsDescription" class="c-form__field" name="skillsDescription"
+							placeholder="What tools and languages are you most experienced with? are you specialized or more of a generalist?"></textarea>
 					</div>
 
 					<div class="c-form__item">
@@ -1325,6 +1392,30 @@
 							</label>
 						</div>
 					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="gettingIntoDescription">
+							I'm getting into
+						</label>
+						<textarea id="gettingIntoDescription" class="c-form__field" name="gettingIntoDescription"
+							placeholder="What are you learning right now? what are the new tools and languages you're picking up in 2019?"></textarea>
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="proyectsDescription">
+							My projects and hacks
+						</label>
+						<textarea id="proyectsDescription" class="c-form__field" name="proyectsDescription"
+							placeholder="What projects are currently occupying most of your time?"></textarea>
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="collaborationsDescription">
+							Available for
+						</label>
+						<textarea id="collaborationsDescription" class="c-form__field" name="collaborationsDescription"
+							placeholder="What kinds of collaborations or discussions are you available for? what's a good reason to say hey to you these days?"></textarea>
+					</div>
 				</fieldset>
 
 				<fieldset class="c-fieldset">
@@ -1341,11 +1432,35 @@
 					</div>
 
 					<div class="c-form__item">
+						<label class="c-label" for="gitLabUrl">
+							GitLab
+						</label>
+						<input id="gitLabUrl" class="c-form__field" name="gitLabUrl" type="url"
+							placeholder="https://about.gitlab.com/...">
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="stackOverflowUrl">
+							Stack Overflow
+						</label>
+						<input id="stackOverflowUrl" class="c-form__field" name="stackOverflowUrl" type="url"
+							placeholder="https://github.com/...">
+					</div>
+
+					<div class="c-form__item">
 						<label class="c-label" for="linkedinUrl">
 							Linkedin
 						</label>
 						<input id="linkedinUrl" class="c-form__field" name="linkedinUrl" type="url"
 							placeholder="https://www.linkedin.com/...">
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="facebookUrl">
+							Facebook
+						</label>
+						<input id="facebookUrl" class="c-form__field" name="facebookUrl" type="url"
+							placeholder="https://facebook.com/...">
 					</div>
 
 					<div class="c-form__item">
@@ -1357,19 +1472,43 @@
 					</div>
 
 					<div class="c-form__item">
-						<label class="c-label" for="blogUrl">
-							Blog
+						<label class="c-label" for="instagramUrl">
+							Instagram
 						</label>
-						<input id="blogUrl" class="c-form__field" name="blogUrl" type="url"
+						<input id="instagramUrl" class="c-form__field" name="instagramUrl" type="url"
+							placeholder="https://www.instagram.com/...">
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="mediumUrl">
+							Medium
+						</label>
+						<input id="mediumUrl" class="c-form__field" name="mediumUrl" type="url"
 							placeholder="https://medium.com/...">
 					</div>
 
 					<div class="c-form__item">
-						<label class="c-label" for="editorOnlineUrl">
-							Codepen, CodeSandbox, JSFiddle...
+						<label class="c-label" for="codepenUrl">
+							Codepen
 						</label>
-						<input id="editorOnlineUrl" class="c-form__field" name="editorOnlineUrl" type="url"
+						<input id="codepenUrl" class="c-form__field" name="codepenUrl" type="url"
 							placeholder="https://codepen.io/">
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="codeSandboxUrl">
+							CodeSandbox
+						</label>
+						<input id="codeSandboxUrl" class="c-form__field" name="codeSandboxUrl" type="url"
+							placeholder="https://codesandbox.io/">
+					</div>
+
+					<div class="c-form__item">
+						<label class="c-label" for="jsFiddleUrl">
+							JSFiddle
+						</label>
+						<input id="jsFiddleUrl" class="c-form__field" name="jsFiddleUrl" type="url"
+							placeholder="https://jsfiddle.net/">
 					</div>
 
 					<div class="c-form__item">
@@ -1447,6 +1586,16 @@
 							</label>
 							<input id="newEmail" class="c-form__field" name="newEmail" type="email" placeholder="@">
 						</div>
+
+						<div class="c-form__item">
+							<label for="displayEmail" class="c-check">
+								<input id="displayEmail" class="c-check__input" name="displayEmail" value="1"
+									type="checkbox">
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">Display email on profile</span>
+							</label>
+						</div>
+
 					</fieldset>
 
 					<fieldset class="c-form__column c-form__column--3 c-fieldset">
