@@ -1556,14 +1556,19 @@
 					<div class="c-form__item">
 						<label class="c-label" for="hobbies">
 							Hobbies
-						</label>
-						<input class="c-form__field" list="hobbies" name="hobbies" placeholder="Choose or write">
-						<datalist id="hobbies">
-							<option value="Meetups"></option>
-							<option value="Sports"></option>
-							<option value="Coding open source"></option>
-							<option value="Video games"></option>
-						</datalist>
+            </label>
+            <div class="c-select__wrapper">
+              <span class="c-select__arrow">
+                <i class="icon-chevron-thin-down"></i>
+              </span>
+              <input class="c-form__field c-select" list="hobbies" name="hobbies" placeholder="Choose or write">
+              <datalist id="hobbies">
+                <option value="Meetups"></option>
+                <option value="Sports"></option>
+                <option value="Coding open source"></option>
+                <option value="Video games"></option>
+              </datalist>
+            </div>
 					</div>
 				</fieldset>
 
