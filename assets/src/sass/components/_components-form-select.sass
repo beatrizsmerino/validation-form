@@ -1,0 +1,28 @@
+// COMPONENTS
+// select
+// ------------------
+
+
+
+
+
+// SELECT
+// =================================================
+
+.c-select
+	cursor: pointer
+
+	&__wrapper
+		position: relative
+	
+	&__arrow
+		margin: 0
+		position: absolute
+		top: 1.7rem
+		right: 1rem
+		display: flex
+		align-items: center
+		@include prefix(transform, translateY(-50%))
+		font-size: 1.2rem
+		color: $color-gray-0
+		pointer-events: none
