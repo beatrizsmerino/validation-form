@@ -1,0 +1,52 @@
+// ANIMATIONS
+// keyframes
+// zoomIn, zoomOut, radar, radarCenter
+// ------------------
+// KEYFRAMES - ZOOM IN
+// =================================================
+@include keyframes(zoomIn)
+	from
+		opacity: 0
+		@include prefix(transform, scale3d(0.8, 0.8, 0.8))
+
+	100%
+		opacity: 1
+		@include prefix(transform, scale3d(1, 1, 1))
+
+
+
+
+
+// KEYFRAMES - ZOOM OUT
+// =================================================
+@include keyframes(zoomOut)
+	from
+		opacity: 1
+		@include prefix(transform, scale3d(1, 1, 1))
+
+	100%
+		opacity: 0
+		@include prefix(transform, scale3d(0.8, 0.8, 0.8))
+
+
+
+
+
+// KEYFRAMES - RADAR
+// =================================================
+@include keyframes(radar)
+	from
+		@include prefix(transform, scale3d(1, 1, 1))
+
+	100%
+		@include prefix(transform, scale3d(1.1, 1.1, 1.1))
+
+
+
+
+
+// KEYFRAMES - RADAR CENTER
+// =================================================
+@include keyframes(radarCenter)
+	to
+		@include prefix(transform, translate(-50%, -50%) scale3d(1.05, 1.05, 1.05))
