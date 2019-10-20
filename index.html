@@ -27,28 +27,28 @@
 						<label class="c-label" for="firstName">
 							First name
 						</label>
-						<input id="firstName" class="c-form__field" name="firstName" type="text">
+						<input id="firstName" class="c-form__field" name="firstName" type="text" required>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="lastName">
 							Last name
 						</label>
-						<input id="lastName" class="c-form__field" name="lastName" type="text">
+						<input id="lastName" class="c-form__field" name="lastName" type="text" required>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="phone">
 							Phone
 						</label>
-						<input id="phone" class="c-form__field" name="phone" type="tel">
+						<input id="phone" class="c-form__field" name="phone" type="tel" required>
 					</div>
 
 					<div class="c-form__item">
-						<label class="c-label" for="birth">
+						<label class="c-label" for="dateBirth">
 							Date of birth
 						</label>
-						<input id="birth" class="c-form__field" name="birth" type="date">
+						<input id="dateBirth" class="c-form__field" name="dateBirth" type="date" required>
 					</div>
 
 					<div class="c-form__item">
@@ -64,21 +64,26 @@
 						</label>
 						<div class="c-form__list">
 							<label for="genderMale" class="c-check">
-								<input id="genderMale" class="c-check__input" name="gender" value="Male" type="radio"
-									required>
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Male</span>
+								<div class="c-check__inner">
+									<input id="genderMale" class="c-check__input" name="gender" value="Male" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Male</span>
+								</div>
 							</label>
 							<label for="genderFemale" class="c-check">
-								<input id="genderFemale" class="c-check__input" name="gender" value="Female"
-									type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Female</span>
+								<div class="c-check__inner">
+									<input id="genderFemale" class="c-check__input" name="gender" value="Female"
+										type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Female</span>
+								</div>
 							</label>
 							<label for="genderOther" class="c-check">
-								<input id="genderOther" class="c-check__input" name="gender" value="Other" type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Other</span>
+								<div class="c-check__inner">
+									<input id="genderOther" class="c-check__input" name="gender" value="Other" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Other</span>
+								</div>
 							</label>
 						</div>
 					</div>
@@ -87,24 +92,22 @@
 						<label class="c-label" for="photo">
 							Profile image
 						</label>
-						<input id="photo" class="c-form__field" name="photo" type="file">
+						<input id="photo" class="c-form__field" name="photo" type="file" required>
 					</div>
 
 					<div class="c-form__item">
-						<label class="c-label" for="photo">
+						<label class="c-label">
 							Brand colors
 						</label>
 						<div class="c-form__list">
 							<div class="c-form-color">
-								<input id="backgroundColor" class="c-form__field c-form-color__input"
-									name="backgroundColor" type="color">
+								<input id="backgroundColor" class="c-form__field c-form-color__input" name="backgroundColor" type="color" value="#35495e">
 								<label for="backgroundColor" class="c-form-color__label">
 									Background Color
 								</label>
 							</div>
 							<div class="c-form-color">
-								<input id="textColor" class="c-form__field c-form-color__input" name="textColor"
-									type="color">
+								<input id="textColor" class="c-form__field c-form-color__input" name="textColor" type="color" value="#42b883">
 								<label for="textColor" class="c-form-color__label">
 									Text Color
 								</label>
@@ -126,1007 +129,1007 @@
 					<div class="c-form__item">
 						<label class="c-label" for="country">
 							Country
-            </label>
+						</label>
 
-            <div class="c-select__wrapper">
-              <span class="c-select__arrow">
-                <i class="icon-chevron-thin-down"></i>
-              </span>
-              <select id="country" class="c-form__field c-select" name="country">
-                <option disabled="" selected="" value="0">
-                  Select one
-                </option>
-                <option data-phone="61" value="16">Australia</option>
-                <option data-phone="43" value="17">Austria</option>
-                <option data-phone="32" value="25">Belgium</option>
-                <option data-phone="1" value="43">Canada</option>
-                <option data-phone="86" value="49">China</option>
-                <option data-phone="45" value="62">Denmark</option>
-                <option data-phone="358" value="77">Finland</option>
-                <option data-phone="33" value="78">France</option>
-                <option data-phone="49" value="83">Germany</option>
-                <option data-phone="852" value="97">Hong Kong</option>
-                <option data-phone="353" value="104">Ireland</option>
-                <option data-phone="39" value="107">Italy</option>
-                <option data-phone="52" value="140">Mexico</option>
-                <option data-phone="31" value="153">Netherlands</option>
-                <option data-phone="47" value="163">Norway</option>
-                <option data-phone="351" value="175">Portugal</option>
-                <option data-phone="82" value="205">South Korea</option>
-                <option data-phone="34" value="207">Spain</option>
-                <option data-phone="46" value="213">Sweden</option>
-                <option data-phone="41" value="214">Switzerland</option>
-                <option data-phone="886" value="216">Taiwan</option>
-                <option data-phone="44" value="233">United Kingdom</option>
-                <option data-phone="1" value="234">United States</option>
-                <option data-phone="93" value="1">Afghanistan</option>
-                <option data-phone="358" value="2">Åland Islands</option>
-                <option data-phone="355" value="3">Albania</option>
-                <option data-phone="213" value="4">Algeria</option>
-                <option data-phone="1" value="5">American Samoa</option>
-                <option data-phone="376" value="6">Andorra</option>
-                <option data-phone="244" value="7">Angola</option>
-                <option data-phone="1" value="8">Anguilla</option>
-                <option data-phone="672" value="9">Antarctica</option>
-                <option data-phone="1" value="12">Antigua and Barbuda</option>
-                <option data-phone="54" value="37">Argentina</option>
-                <option data-phone="374" value="14">Armenia</option>
-                <option data-phone="297" value="15">Aruba</option>
-                <option data-phone="994" value="19">Azerbaijan</option>
-                <option data-phone="1" value="20">Bahamas</option>
-                <option data-phone="973" value="21">Bahrain</option>
-                <option data-phone="880" value="22">Bangladesh</option>
-                <option data-phone="1" value="23">Barbados</option>
-                <option data-phone="375" value="24">Belarus</option>
-                <option data-phone="501" value="26">Belize</option>
-                <option data-phone="229" value="27">Benin</option>
-                <option data-phone="1" value="28">Bermuda</option>
-                <option data-phone="975" value="29">Bhutan</option>
-                <option data-phone="591" value="30">Bolivia</option>
-                <option data-phone="387" value="31">Bosnia and Herzegovina</option>
-                <option data-phone="267" value="32">Botswana</option>
-                <option data-phone="47" value="33">Bouvet Island</option>
-                <option data-phone="55" value="34">Brazil</option>
-                <option data-phone="246" value="35">British Indian Ocean Territory</option>
-                <option data-phone="673" value="36">Brunei Darussalam</option>
-                <option data-phone="359" value="38">Bulgaria</option>
-                <option data-phone="226" value="39">Burkina Faso</option>
-                <option data-phone="257" value="40">Burundi</option>
-                <option data-phone="855" value="41">Cambodia</option>
-                <option data-phone="237" value="42">Cameroon</option>
-                <option data-phone="238" value="44">Cape Verde</option>
-                <option data-phone="1" value="45">Cayman Islands</option>
-                <option data-phone="236" value="46">Central African Republic</option>
-                <option data-phone="235" value="47">Chad</option>
-                <option data-phone="56" value="48">Chile</option>
-                <option data-phone="61" value="50">Christmas Island</option>
-                <option data-phone="61" value="51">Cocos Islands</option>
-                <option data-phone="57" value="52">Colombia</option>
-                <option data-phone="269" value="53">Comoros</option>
-                <option data-phone="682" value="54">Cook Islands</option>
-                <option data-phone="506" value="55">Costa Rica</option>
-                <option data-phone="385" value="56">Croatia</option>
-                <option data-phone="53" value="57">Cuba</option>
-                <option data-phone="599" value="58">Curacao</option>
-                <option data-phone="357" value="59">Cyprus</option>
-                <option data-phone="420" value="60">Czech Republic</option>
-                <option data-phone="243" value="61">Democratic Republic of the Congo</option>
-                <option data-phone="253" value="63">Djibouti</option>
-                <option data-phone="1" value="64">Dominica</option>
-                <option data-phone="1" value="65">Dominican Republic</option>
-                <option data-phone="670" value="66">East Timor</option>
-                <option data-phone="593" value="67">Ecuador</option>
-                <option data-phone="20" value="68">Egypt</option>
-                <option data-phone="503" value="69">El Salvador</option>
-                <option data-phone="240" value="70">Equatorial Guinea</option>
-                <option data-phone="291" value="71">Eritrea</option>
-                <option data-phone="372" value="72">Estonia</option>
-                <option data-phone="251" value="73">Ethiopia</option>
-                <option data-phone="500" value="74">Falkland Islands</option>
-                <option data-phone="298" value="75">Faroe Islands</option>
-                <option data-phone="679" value="76">Fiji</option>
-                <option data-phone="594" value="246">French Guiana</option>
-                <option data-phone="689" value="79">French Polynesia</option>
-                <option data-phone="241" value="80">Gabon</option>
-                <option data-phone="220" value="81">Gambia</option>
-                <option data-phone="995" value="82">Georgia</option>
-                <option data-phone="233" value="84">Ghana</option>
-                <option data-phone="350" value="85">Gibraltar</option>
-                <option data-phone="30" value="86">Greece</option>
-                <option data-phone="299" value="87">Greenland</option>
-                <option data-phone="1" value="88">Grenada</option>
-                <option data-phone="1" value="89">Guam</option>
-                <option data-phone="502" value="90">Guatemala</option>
-                <option data-phone="44" value="91">Guernsey</option>
-                <option data-phone="224" value="92">Guinea</option>
-                <option data-phone="245" value="93">Guinea-Bissau</option>
-                <option data-phone="592" value="94">Guyana</option>
-                <option data-phone="509" value="95">Haiti</option>
-                <option data-phone="504" value="96">Honduras</option>
-                <option data-phone="36" value="98">Hungary</option>
-                <option data-phone="354" value="99">Iceland</option>
-                <option data-phone="91" value="100">India</option>
-                <option data-phone="62" value="101">Indonesia</option>
-                <option data-phone="98" value="102">Iran</option>
-                <option data-phone="964" value="103">Iraq</option>
-                <option data-phone="44" value="105">Isle of Man</option>
-                <option data-phone="972" value="106">Israel</option>
-                <option data-phone="225" value="108">Ivory Coast</option>
-                <option data-phone="1" value="109">Jamaica</option>
-                <option data-phone="81" value="110">Japan</option>
-                <option data-phone="44" value="111">Jersey</option>
-                <option data-phone="962" value="112">Jordan</option>
-                <option data-phone="7" value="113">Kazakhstan</option>
-                <option data-phone="254" value="114">Kenya</option>
-                <option data-phone="686" value="115">Kiribati</option>
-                <option data-phone="383" value="116">Kosovo</option>
-                <option data-phone="965" value="117">Kuwait</option>
-                <option data-phone="996" value="118">Kyrgyzstan</option>
-                <option data-phone="856" value="119">Laos</option>
-                <option data-phone="371" value="120">Latvia</option>
-                <option data-phone="961" value="121">Lebanon</option>
-                <option data-phone="266" value="122">Lesotho</option>
-                <option data-phone="231" value="123">Liberia</option>
-                <option data-phone="218" value="124">Libya</option>
-                <option data-phone="423" value="125">Liechtenstein</option>
-                <option data-phone="370" value="126">Lithuania</option>
-                <option data-phone="352" value="127">Luxembourg</option>
-                <option data-phone="853" value="128">Macao</option>
-                <option data-phone="389" value="129">Macedonia</option>
-                <option data-phone="261" value="130">Madagascar</option>
-                <option data-phone="265" value="131">Malawi</option>
-                <option data-phone="60" value="132">Malaysia</option>
-                <option data-phone="960" value="133">Maldives</option>
-                <option data-phone="223" value="134">Mali</option>
-                <option data-phone="356" value="135">Malta</option>
-                <option data-phone="692" value="136">Marshall Islands</option>
-                <option data-phone="222" value="137">Mauritania</option>
-                <option data-phone="230" value="138">Mauritius</option>
-                <option data-phone="262" value="139">Mayotte</option>
-                <option data-phone="691" value="141">Micronesia</option>
-                <option data-phone="373" value="142">Moldova</option>
-                <option data-phone="377" value="143">Monaco</option>
-                <option data-phone="976" value="144">Mongolia</option>
-                <option data-phone="382" value="145">Montenegro</option>
-                <option data-phone="1" value="146">Montserrat</option>
-                <option data-phone="212" value="147">Morocco</option>
-                <option data-phone="258" value="148">Mozambique</option>
-                <option data-phone="95" value="149">Myanmar</option>
-                <option data-phone="264" value="150">Namibia</option>
-                <option data-phone="674" value="151">Nauru</option>
-                <option data-phone="977" value="152">Nepal</option>
-                <option data-phone="599" value="154">Netherlands Antilles</option>
-                <option data-phone="687" value="155">New Caledonia</option>
-                <option data-phone="64" value="156">New Zealand</option>
-                <option data-phone="505" value="157">Nicaragua</option>
-                <option data-phone="227" value="158">Niger</option>
-                <option data-phone="234" value="159">Nigeria</option>
-                <option data-phone="683" value="160">Niue</option>
-                <option data-phone="850" value="161">North Korea</option>
-                <option data-phone="1" value="162">Northern Mariana Islands</option>
-                <option data-phone="968" value="164">Oman</option>
-                <option data-phone="92" value="165">Pakistan</option>
-                <option data-phone="680" value="166">Palau</option>
-                <option data-phone="970" value="167">Palestine</option>
-                <option data-phone="507" value="168">Panama</option>
-                <option data-phone="675" value="169">Papua New Guinea</option>
-                <option data-phone="595" value="170">Paraguay</option>
-                <option data-phone="51" value="171">Peru</option>
-                <option data-phone="63" value="172">Philippines</option>
-                <option data-phone="64" value="173">Pitcairn</option>
-                <option data-phone="48" value="174">Poland</option>
-                <option data-phone="1" value="176">Puerto Rico</option>
-                <option data-phone="974" value="177">Qatar</option>
-                <option data-phone="242" value="178">Republic of the Congo</option>
-                <option data-phone="262" value="179">Reunion</option>
-                <option data-phone="40" value="180">Romania</option>
-                <option data-phone="7" value="181">Russia</option>
-                <option data-phone="250" value="182">Rwanda</option>
-                <option data-phone="590" value="183">Saint Barthelemy</option>
-                <option data-phone="290" value="184">Saint Helena</option>
-                <option data-phone="1" value="185">Saint Kitts and Nevis</option>
-                <option data-phone="1" value="186">Saint Lucia</option>
-                <option data-phone="590" value="187">Saint Martin</option>
-                <option data-phone="508" value="188">Saint Pierre and Miquelon</option>
-                <option data-phone="1" value="189">Saint Vincent and the Grenadines</option>
-                <option data-phone="685" value="190">Samoa</option>
-                <option data-phone="378" value="191">San Marino</option>
-                <option data-phone="239" value="192">Sao Tome and Principe</option>
-                <option data-phone="966" value="193">Saudi Arabia</option>
-                <option data-phone="221" value="194">Senegal</option>
-                <option data-phone="381" value="195">Serbia</option>
-                <option data-phone="248" value="196">Seychelles</option>
-                <option data-phone="232" value="197">Sierra Leone</option>
-                <option data-phone="65" value="198">Singapore</option>
-                <option data-phone="1" value="199">Sint Maarten</option>
-                <option data-phone="421" value="200">Slovakia</option>
-                <option data-phone="386" value="201">Slovenia</option>
-                <option data-phone="677" value="202">Solomon Islands</option>
-                <option data-phone="252" value="203">Somalia</option>
-                <option data-phone="27" value="204">South Africa</option>
-                <option data-phone="211" value="206">South Sudan</option>
-                <option data-phone="94" value="208">Sri Lanka</option>
-                <option data-phone="249" value="209">Sudan</option>
-                <option data-phone="597" value="210">Suriname</option>
-                <option data-phone="47" value="211">Svalbard and Jan Mayen</option>
-                <option data-phone="268" value="212">Swaziland</option>
-                <option data-phone="963" value="215">Syria</option>
-                <option data-phone="992" value="217">Tajikistan</option>
-                <option data-phone="255" value="218">Tanzania</option>
-                <option data-phone="66" value="219">Thailand</option>
-                <option data-phone="228" value="220">Togo</option>
-                <option data-phone="690" value="221">Tokelau</option>
-                <option data-phone="676" value="222">Tonga</option>
-                <option data-phone="1" value="223">Trinidad and Tobago</option>
-                <option data-phone="216" value="224">Tunisia</option>
-                <option data-phone="90" value="225">Turkey</option>
-                <option data-phone="993" value="226">Turkmenistan</option>
-                <option data-phone="1" value="227">Turks and Caicos Islands</option>
-                <option data-phone="688" value="228">Tuvalu</option>
-                <option data-phone="1" value="229">U.S. Virgin Islands</option>
-                <option data-phone="256" value="230">Uganda</option>
-                <option data-phone="380" value="231">Ukraine</option>
-                <option data-phone="971" value="232">United Arab Emirates</option>
-                <option data-phone="598" value="235">Uruguay</option>
-                <option data-phone="998" value="236">Uzbekistan</option>
-                <option data-phone="678" value="237">Vanuatu</option>
-                <option data-phone="379" value="238">Vatican</option>
-                <option data-phone="58" value="239">Venezuela</option>
-                <option data-phone="84" value="240">Vietnam</option>
-                <option data-phone="681" value="241">Wallis and Futuna</option>
-                <option data-phone="212" value="242">Western Sahara</option>
-                <option data-phone="967" value="243">Yemen</option>
-                <option data-phone="260" value="244">Zambia</option>
-                <option data-phone="263" value="245">Zimbabwe</option>
-              </select>
-            </div>
+						<div class="c-select__wrapper">
+							<span class="c-select__arrow">
+								<i class="icon-chevron-thin-down"></i>
+							</span>
+							<select id="country" class="c-form__field c-select" name="country" required>
+								<option disabled="" selected="" value="0">
+								Select one
+								</option>
+								<option data-phone="61" value="16">Australia</option>
+								<option data-phone="43" value="17">Austria</option>
+								<option data-phone="32" value="25">Belgium</option>
+								<option data-phone="1" value="43">Canada</option>
+								<option data-phone="86" value="49">China</option>
+								<option data-phone="45" value="62">Denmark</option>
+								<option data-phone="358" value="77">Finland</option>
+								<option data-phone="33" value="78">France</option>
+								<option data-phone="49" value="83">Germany</option>
+								<option data-phone="852" value="97">Hong Kong</option>
+								<option data-phone="353" value="104">Ireland</option>
+								<option data-phone="39" value="107">Italy</option>
+								<option data-phone="52" value="140">Mexico</option>
+								<option data-phone="31" value="153">Netherlands</option>
+								<option data-phone="47" value="163">Norway</option>
+								<option data-phone="351" value="175">Portugal</option>
+								<option data-phone="82" value="205">South Korea</option>
+								<option data-phone="34" value="207">Spain</option>
+								<option data-phone="46" value="213">Sweden</option>
+								<option data-phone="41" value="214">Switzerland</option>
+								<option data-phone="886" value="216">Taiwan</option>
+								<option data-phone="44" value="233">United Kingdom</option>
+								<option data-phone="1" value="234">United States</option>
+								<option data-phone="93" value="1">Afghanistan</option>
+								<option data-phone="358" value="2">Åland Islands</option>
+								<option data-phone="355" value="3">Albania</option>
+								<option data-phone="213" value="4">Algeria</option>
+								<option data-phone="1" value="5">American Samoa</option>
+								<option data-phone="376" value="6">Andorra</option>
+								<option data-phone="244" value="7">Angola</option>
+								<option data-phone="1" value="8">Anguilla</option>
+								<option data-phone="672" value="9">Antarctica</option>
+								<option data-phone="1" value="12">Antigua and Barbuda</option>
+								<option data-phone="54" value="37">Argentina</option>
+								<option data-phone="374" value="14">Armenia</option>
+								<option data-phone="297" value="15">Aruba</option>
+								<option data-phone="994" value="19">Azerbaijan</option>
+								<option data-phone="1" value="20">Bahamas</option>
+								<option data-phone="973" value="21">Bahrain</option>
+								<option data-phone="880" value="22">Bangladesh</option>
+								<option data-phone="1" value="23">Barbados</option>
+								<option data-phone="375" value="24">Belarus</option>
+								<option data-phone="501" value="26">Belize</option>
+								<option data-phone="229" value="27">Benin</option>
+								<option data-phone="1" value="28">Bermuda</option>
+								<option data-phone="975" value="29">Bhutan</option>
+								<option data-phone="591" value="30">Bolivia</option>
+								<option data-phone="387" value="31">Bosnia and Herzegovina</option>
+								<option data-phone="267" value="32">Botswana</option>
+								<option data-phone="47" value="33">Bouvet Island</option>
+								<option data-phone="55" value="34">Brazil</option>
+								<option data-phone="246" value="35">British Indian Ocean Territory</option>
+								<option data-phone="673" value="36">Brunei Darussalam</option>
+								<option data-phone="359" value="38">Bulgaria</option>
+								<option data-phone="226" value="39">Burkina Faso</option>
+								<option data-phone="257" value="40">Burundi</option>
+								<option data-phone="855" value="41">Cambodia</option>
+								<option data-phone="237" value="42">Cameroon</option>
+								<option data-phone="238" value="44">Cape Verde</option>
+								<option data-phone="1" value="45">Cayman Islands</option>
+								<option data-phone="236" value="46">Central African Republic</option>
+								<option data-phone="235" value="47">Chad</option>
+								<option data-phone="56" value="48">Chile</option>
+								<option data-phone="61" value="50">Christmas Island</option>
+								<option data-phone="61" value="51">Cocos Islands</option>
+								<option data-phone="57" value="52">Colombia</option>
+								<option data-phone="269" value="53">Comoros</option>
+								<option data-phone="682" value="54">Cook Islands</option>
+								<option data-phone="506" value="55">Costa Rica</option>
+								<option data-phone="385" value="56">Croatia</option>
+								<option data-phone="53" value="57">Cuba</option>
+								<option data-phone="599" value="58">Curacao</option>
+								<option data-phone="357" value="59">Cyprus</option>
+								<option data-phone="420" value="60">Czech Republic</option>
+								<option data-phone="243" value="61">Democratic Republic of the Congo</option>
+								<option data-phone="253" value="63">Djibouti</option>
+								<option data-phone="1" value="64">Dominica</option>
+								<option data-phone="1" value="65">Dominican Republic</option>
+								<option data-phone="670" value="66">East Timor</option>
+								<option data-phone="593" value="67">Ecuador</option>
+								<option data-phone="20" value="68">Egypt</option>
+								<option data-phone="503" value="69">El Salvador</option>
+								<option data-phone="240" value="70">Equatorial Guinea</option>
+								<option data-phone="291" value="71">Eritrea</option>
+								<option data-phone="372" value="72">Estonia</option>
+								<option data-phone="251" value="73">Ethiopia</option>
+								<option data-phone="500" value="74">Falkland Islands</option>
+								<option data-phone="298" value="75">Faroe Islands</option>
+								<option data-phone="679" value="76">Fiji</option>
+								<option data-phone="594" value="246">French Guiana</option>
+								<option data-phone="689" value="79">French Polynesia</option>
+								<option data-phone="241" value="80">Gabon</option>
+								<option data-phone="220" value="81">Gambia</option>
+								<option data-phone="995" value="82">Georgia</option>
+								<option data-phone="233" value="84">Ghana</option>
+								<option data-phone="350" value="85">Gibraltar</option>
+								<option data-phone="30" value="86">Greece</option>
+								<option data-phone="299" value="87">Greenland</option>
+								<option data-phone="1" value="88">Grenada</option>
+								<option data-phone="1" value="89">Guam</option>
+								<option data-phone="502" value="90">Guatemala</option>
+								<option data-phone="44" value="91">Guernsey</option>
+								<option data-phone="224" value="92">Guinea</option>
+								<option data-phone="245" value="93">Guinea-Bissau</option>
+								<option data-phone="592" value="94">Guyana</option>
+								<option data-phone="509" value="95">Haiti</option>
+								<option data-phone="504" value="96">Honduras</option>
+								<option data-phone="36" value="98">Hungary</option>
+								<option data-phone="354" value="99">Iceland</option>
+								<option data-phone="91" value="100">India</option>
+								<option data-phone="62" value="101">Indonesia</option>
+								<option data-phone="98" value="102">Iran</option>
+								<option data-phone="964" value="103">Iraq</option>
+								<option data-phone="44" value="105">Isle of Man</option>
+								<option data-phone="972" value="106">Israel</option>
+								<option data-phone="225" value="108">Ivory Coast</option>
+								<option data-phone="1" value="109">Jamaica</option>
+								<option data-phone="81" value="110">Japan</option>
+								<option data-phone="44" value="111">Jersey</option>
+								<option data-phone="962" value="112">Jordan</option>
+								<option data-phone="7" value="113">Kazakhstan</option>
+								<option data-phone="254" value="114">Kenya</option>
+								<option data-phone="686" value="115">Kiribati</option>
+								<option data-phone="383" value="116">Kosovo</option>
+								<option data-phone="965" value="117">Kuwait</option>
+								<option data-phone="996" value="118">Kyrgyzstan</option>
+								<option data-phone="856" value="119">Laos</option>
+								<option data-phone="371" value="120">Latvia</option>
+								<option data-phone="961" value="121">Lebanon</option>
+								<option data-phone="266" value="122">Lesotho</option>
+								<option data-phone="231" value="123">Liberia</option>
+								<option data-phone="218" value="124">Libya</option>
+								<option data-phone="423" value="125">Liechtenstein</option>
+								<option data-phone="370" value="126">Lithuania</option>
+								<option data-phone="352" value="127">Luxembourg</option>
+								<option data-phone="853" value="128">Macao</option>
+								<option data-phone="389" value="129">Macedonia</option>
+								<option data-phone="261" value="130">Madagascar</option>
+								<option data-phone="265" value="131">Malawi</option>
+								<option data-phone="60" value="132">Malaysia</option>
+								<option data-phone="960" value="133">Maldives</option>
+								<option data-phone="223" value="134">Mali</option>
+								<option data-phone="356" value="135">Malta</option>
+								<option data-phone="692" value="136">Marshall Islands</option>
+								<option data-phone="222" value="137">Mauritania</option>
+								<option data-phone="230" value="138">Mauritius</option>
+								<option data-phone="262" value="139">Mayotte</option>
+								<option data-phone="691" value="141">Micronesia</option>
+								<option data-phone="373" value="142">Moldova</option>
+								<option data-phone="377" value="143">Monaco</option>
+								<option data-phone="976" value="144">Mongolia</option>
+								<option data-phone="382" value="145">Montenegro</option>
+								<option data-phone="1" value="146">Montserrat</option>
+								<option data-phone="212" value="147">Morocco</option>
+								<option data-phone="258" value="148">Mozambique</option>
+								<option data-phone="95" value="149">Myanmar</option>
+								<option data-phone="264" value="150">Namibia</option>
+								<option data-phone="674" value="151">Nauru</option>
+								<option data-phone="977" value="152">Nepal</option>
+								<option data-phone="599" value="154">Netherlands Antilles</option>
+								<option data-phone="687" value="155">New Caledonia</option>
+								<option data-phone="64" value="156">New Zealand</option>
+								<option data-phone="505" value="157">Nicaragua</option>
+								<option data-phone="227" value="158">Niger</option>
+								<option data-phone="234" value="159">Nigeria</option>
+								<option data-phone="683" value="160">Niue</option>
+								<option data-phone="850" value="161">North Korea</option>
+								<option data-phone="1" value="162">Northern Mariana Islands</option>
+								<option data-phone="968" value="164">Oman</option>
+								<option data-phone="92" value="165">Pakistan</option>
+								<option data-phone="680" value="166">Palau</option>
+								<option data-phone="970" value="167">Palestine</option>
+								<option data-phone="507" value="168">Panama</option>
+								<option data-phone="675" value="169">Papua New Guinea</option>
+								<option data-phone="595" value="170">Paraguay</option>
+								<option data-phone="51" value="171">Peru</option>
+								<option data-phone="63" value="172">Philippines</option>
+								<option data-phone="64" value="173">Pitcairn</option>
+								<option data-phone="48" value="174">Poland</option>
+								<option data-phone="1" value="176">Puerto Rico</option>
+								<option data-phone="974" value="177">Qatar</option>
+								<option data-phone="242" value="178">Republic of the Congo</option>
+								<option data-phone="262" value="179">Reunion</option>
+								<option data-phone="40" value="180">Romania</option>
+								<option data-phone="7" value="181">Russia</option>
+								<option data-phone="250" value="182">Rwanda</option>
+								<option data-phone="590" value="183">Saint Barthelemy</option>
+								<option data-phone="290" value="184">Saint Helena</option>
+								<option data-phone="1" value="185">Saint Kitts and Nevis</option>
+								<option data-phone="1" value="186">Saint Lucia</option>
+								<option data-phone="590" value="187">Saint Martin</option>
+								<option data-phone="508" value="188">Saint Pierre and Miquelon</option>
+								<option data-phone="1" value="189">Saint Vincent and the Grenadines</option>
+								<option data-phone="685" value="190">Samoa</option>
+								<option data-phone="378" value="191">San Marino</option>
+								<option data-phone="239" value="192">Sao Tome and Principe</option>
+								<option data-phone="966" value="193">Saudi Arabia</option>
+								<option data-phone="221" value="194">Senegal</option>
+								<option data-phone="381" value="195">Serbia</option>
+								<option data-phone="248" value="196">Seychelles</option>
+								<option data-phone="232" value="197">Sierra Leone</option>
+								<option data-phone="65" value="198">Singapore</option>
+								<option data-phone="1" value="199">Sint Maarten</option>
+								<option data-phone="421" value="200">Slovakia</option>
+								<option data-phone="386" value="201">Slovenia</option>
+								<option data-phone="677" value="202">Solomon Islands</option>
+								<option data-phone="252" value="203">Somalia</option>
+								<option data-phone="27" value="204">South Africa</option>
+								<option data-phone="211" value="206">South Sudan</option>
+								<option data-phone="94" value="208">Sri Lanka</option>
+								<option data-phone="249" value="209">Sudan</option>
+								<option data-phone="597" value="210">Suriname</option>
+								<option data-phone="47" value="211">Svalbard and Jan Mayen</option>
+								<option data-phone="268" value="212">Swaziland</option>
+								<option data-phone="963" value="215">Syria</option>
+								<option data-phone="992" value="217">Tajikistan</option>
+								<option data-phone="255" value="218">Tanzania</option>
+								<option data-phone="66" value="219">Thailand</option>
+								<option data-phone="228" value="220">Togo</option>
+								<option data-phone="690" value="221">Tokelau</option>
+								<option data-phone="676" value="222">Tonga</option>
+								<option data-phone="1" value="223">Trinidad and Tobago</option>
+								<option data-phone="216" value="224">Tunisia</option>
+								<option data-phone="90" value="225">Turkey</option>
+								<option data-phone="993" value="226">Turkmenistan</option>
+								<option data-phone="1" value="227">Turks and Caicos Islands</option>
+								<option data-phone="688" value="228">Tuvalu</option>
+								<option data-phone="1" value="229">U.S. Virgin Islands</option>
+								<option data-phone="256" value="230">Uganda</option>
+								<option data-phone="380" value="231">Ukraine</option>
+								<option data-phone="971" value="232">United Arab Emirates</option>
+								<option data-phone="598" value="235">Uruguay</option>
+								<option data-phone="998" value="236">Uzbekistan</option>
+								<option data-phone="678" value="237">Vanuatu</option>
+								<option data-phone="379" value="238">Vatican</option>
+								<option data-phone="58" value="239">Venezuela</option>
+								<option data-phone="84" value="240">Vietnam</option>
+								<option data-phone="681" value="241">Wallis and Futuna</option>
+								<option data-phone="212" value="242">Western Sahara</option>
+								<option data-phone="967" value="243">Yemen</option>
+								<option data-phone="260" value="244">Zambia</option>
+								<option data-phone="263" value="245">Zimbabwe</option>
+							</select>
+						</div>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="province">
 							Province
-            </label>
-            <div class="c-select__wrapper">
-              <span class="c-select__arrow">
-                <i class="icon-chevron-thin-down"></i>
-              </span>
-              <select id="province" class="c-form__field c-select" name="province">
-                <option disabled="" selected="" value="0">
-                  Select one
-                </option>
-                <option data-country="233" value="687">Cork</option>
-                <option data-country="233" value="615">Cornwall</option>
-                <option data-country="78" value="389">Corse</option>
-                <option data-country="107" value="773">Cosenza</option>
-                <option data-country="107" value="774">Cremona</option>
-                <option data-country="86" value="995">Crete</option>
-                <option data-country="181" value="377">Crimean Federal District</option>
-                <option data-country="233" value="696">Cromartyshire</option>
-                <option data-country="107" value="775">Crotone</option>
-                <option data-country="233" value="616">Cumberland</option>
-                <option data-country="233" value="617">Cumbria</option>
-                <option data-country="107" value="776">Cuneo</option>
-                <option data-country="37" value="1072">Cuyo</option>
-                <option data-country="100" value="529">Dadra and Nagar Haveli</option>
-                <option data-country="213" value="500">Dalarna (Dalecarlia)</option>
-                <option data-country="213" value="501">Dalsland (Dalia)</option>
-                <option data-country="100" value="530">Daman and Diu</option>
-                <option data-country="234" value="9">Delaware</option>
-                <option data-country="233" value="731">Denbighshire</option>
-                <option data-country="233" value="618">Derbyshire</option>
-                <option data-country="233" value="619">Devon</option>
-                <option data-country="34" value="932">Distrito Federal</option>
-                <option data-country="104" value="328">Donegal</option>
-                <option data-country="233" value="620">Dorset</option>
-                <option data-country="233" value="681">Down</option>
-                <option data-country="104" value="323">Down</option>
-                <option data-country="153" value="953">Drenthe</option>
-                <option data-country="37" value="1077">Dry Pampas</option>
-                <option data-country="104" value="304">Dublin</option>
-                <option data-country="233" value="697">Dumfriesshire</option>
-                <option data-country="233" value="698">Dunbartonshire (Dumbarton)</option>
-                <option data-country="140" value="561">Durango</option>
-                <option data-country="233" value="621">Durham</option>
-                <option data-country="233" value="732">Dyfed</option>
-                <option data-country="233" value="700">East Lothian (Haddingtonshire)</option>
-                <option data-country="86" value="997">East Macedonia and Thrace</option>
-                <option data-country="233" value="622">East Suffolk</option>
-                <option data-country="233" value="623">East Sussex</option>
-                <option data-country="225" value="1009">Eastern Anatolia</option>
-                <option data-country="204" value="1013">Eastern Cape</option>
-                <option data-country="77" value="468">Eastern Finland</option>
-                <option data-country="110" value="444">Ehime</option>
-                <option data-country="107" value="777">Enna</option>
-                <option data-country="86" value="998">Epirus</option>
-                <option data-country="34" value="933">Espírito Santo</option>
-                <option data-country="233" value="624">Essex</option>
-                <option data-country="175" value="357">Évora</option>
-                <option data-country="207" value="62">Extremadura</option>
-                <option data-country="181" value="372">Far Eastern Federal District</option>
-                <option data-country="175" value="358">Faro</option>
-                <option data-country="104" value="324">Fermanagh</option>
-                <option data-country="233" value="682">Fermanagh</option>
-                <option data-country="107" value="778">Fermo</option>
-                <option data-country="107" value="779">Ferrara</option>
-                <option data-country="233" value="702">Fife</option>
-                <option data-country="163" value="348">Finnmark</option>
-                <option data-country="25" value="965">Flanders</option>
-                <option data-country="153" value="954">Flevoland</option>
-                <option data-country="233" value="733">Flintshire</option>
-                <option data-country="107" value="780">Florence</option>
-                <option data-country="234" value="10">Florida</option>
-                <option data-country="107" value="781">Foggia</option>
-                <option data-country="107" value="782">Forlì-Cesena</option>
-                <option data-country="78" value="393">Franche-Comte</option>
-                <option data-country="204" value="1017">Free State</option>
-                <option data-country="107" value="783">Frosinone</option>
-                <option data-country="153" value="955">Fryslân</option>
-                <option data-country="49" value="905">Fujian Province</option>
-                <option data-country="110" value="452">Fukui</option>
-                <option data-country="110" value="447">Fukuoka</option>
-                <option data-country="110" value="421">Fukushima</option>
-                <option data-country="207" value="63">Galicia</option>
-                <option data-country="104" value="298">Galway</option>
-                <option data-country="205" value="490">Gangwon</option>
-                <option data-country="49" value="920">Gansu Province</option>
-                <option data-country="213" value="503">Gästrikland (Gestricia)</option>
-                <option data-country="204" value="1018">Gauteng</option>
-                <option data-country="153" value="956">Gelderland</option>
-                <option data-country="107" value="784">Genoa</option>
-                <option data-country="234" value="11">Georgia</option>
-                <option data-country="110" value="425">Gifu</option>
-                <option data-country="156" value="1083">Gisborne</option>
-                <option data-country="233" value="734">Glamorgan</option>
-                <option data-country="233" value="625">Gloucestershire</option>
-                <option data-country="100" value="532">Goa</option>
-                <option data-country="34" value="934">Goiás</option>
-                <option data-country="107" value="785">Gorizia</option>
-                <option data-country="213" value="502">Gotland (Gotlandia)</option>
-                <option data-country="37" value="1070">Gran Chaco</option>
-                <option data-country="233" value="626">Greater London</option>
-                <option data-country="233" value="627">Greater Manchester</option>
-                <option data-country="174" value="472">Greater Poland (Wielkopolskie)</option>
-                <option data-country="153" value="957">Groningen</option>
-                <option data-country="107" value="786">Grosseto</option>
-                <option data-country="34" value="937">Grosso do Sul</option>
-                <option data-country="140" value="579">Guanajuato</option>
-                <option data-country="49" value="911">Guangdong Province</option>
-                <option data-country="49" value="912">Guangxi Zhuang Autonomous Region</option>
-                <option data-country="175" value="359">Guarda</option>
-                <option data-country="140" value="571">Guerrero</option>
-                <option data-country="49" value="916">Guizhou Province</option>
-                <option data-country="100" value="533">Gujarat</option>
-                <option data-country="110" value="439">Gunma</option>
-                <option data-country="233" value="735">Gwent</option>
-                <option data-country="233" value="736">Gwynedd</option>
-                <option data-country="205" value="491">Gyeonggi</option>
-                <option data-country="106" value="1032">Haifa District</option>
-                <option data-country="49" value="913">Hainan Province</option>
-                <option data-country="213" value="504">Halland (Hallandia)</option>
-                <option data-country="213" value="505">Hälsingland (Helsingia)</option>
-                <option data-country="83" value="411">Hamburg</option>
-                <option data-country="233" value="628">Hampshire (County of Southampton)</option>
-                <option data-country="213" value="506">Härjedalen (Herdalia)</option>
-                <option data-country="100" value="534">Haryana</option>
-                <option data-country="78" value="394">Haute Normandie</option>
-                <option data-country="234" value="12">Hawaii</option>
-                <option data-country="156" value="1084">Hawke's Bay</option>
-                <option data-country="16" value="596">Heard Island and McDonald Islands</option>
-                <option data-country="49" value="895">Hebei Province</option>
-                <option data-country="163" value="333">Hedmark</option>
-                <option data-country="49" value="900">Heilongjiang Province</option>
-                <option data-country="49" value="908">Henan Province</option>
-                <option data-country="233" value="629">Hereford and Worcester</option>
-                <option data-country="233" value="630">Herefordshire</option>
-                <option data-country="233" value="631">Hertfordshire</option>
-                <option data-country="83" value="407">Hesse</option>
-                <option data-country="140" value="583">Hidalgo</option>
-                <option data-country="100" value="535">Himachal Pradesh</option>
-                <option data-country="110" value="429">Hiroshima</option>
-                <option data-country="110" value="419">Hokkaido</option>
-                <option data-country="97" value="990">Hong Kong Island</option>
-                <option data-country="49" value="924">Hong Kong Special Administrative Region</option>
-                <option data-country="163" value="341">Hordaland</option>
-                <option data-country="62" value="977">Hovedstaden</option>
-                <option data-country="60" value="1052">Hradec Králové</option>
-                <option data-country="49" value="909">Hubei Province</option>
-                <option data-country="233" value="632">Humberside</option>
-                <option data-country="49" value="910">Hunan Province</option>
-                <option data-country="233" value="633">Huntingdon and Peterborough</option>
-                <option data-country="233" value="634">Huntingdonshire</option>
-                <option data-country="110" value="430">Hyogo</option>
-                <option data-country="110" value="441">Ibaraki</option>
-                <option data-country="234" value="13">Idaho</option>
-                <option data-country="78" value="402">Ile-de-France</option>
-                <option data-country="234" value="14">Illinois</option>
-                <option data-country="107" value="787">Imperia</option>
-                <option data-country="205" value="1100">Incheon</option>
-                <option data-country="234" value="15">Indiana</option>
-                <option data-country="49" value="897">Inner Mongolia Autonomous Region</option>
-                <option data-country="233" value="704">Inverness-shire</option>
-                <option data-country="86" value="999">Ionian Islands</option>
-                <option data-country="234" value="16">Iowa</option>
-                <option data-country="107" value="788">Isernia</option>
-                <option data-country="110" value="453">Ishikawa</option>
-                <option data-country="233" value="635">Isle of Ely Division</option>
-                <option data-country="233" value="636">Isle of Wight</option>
-                <option data-country="110" value="420">Iwate</option>
-                <option data-country="140" value="564">Jalisco</option>
-                <option data-country="100" value="536">Jammu and Kashmir</option>
-                <option data-country="213" value="507">Jämtland (Jemtia)</option>
-                <option data-country="205" value="494">Jeju</option>
-                <option data-country="106" value="1030">Jerusalem District</option>
-                <option data-country="16" value="597">Jervis Bay Territory</option>
-                <option data-country="100" value="537">Jharkhand</option>
-                <option data-country="49" value="902">Jiangsu Province</option>
-                <option data-country="49" value="906">Jiangxi Province</option>
-                <option data-country="49" value="899">Jilin Province</option>
-                <option data-country="106" value="1036">Judea and Samaria Area</option>
-                <option data-country="110" value="465">Kagawa</option>
-                <option data-country="110" value="428">Kagoshima</option>
-                <option data-country="110" value="461">Kanagawa</option>
-                <option data-country="234" value="17">Kansas</option>
-                <option data-country="60" value="1049">Karlovy Vary</option>
-                <option data-country="100" value="538">Karnataka</option>
-                <option data-country="233" value="637">Kent</option>
-                <option data-country="234" value="18">Kentucky</option>
-                <option data-country="100" value="539">Kerala</option>
-                <option data-country="104" value="317">Kerry</option>
-                <option data-country="104" value="305">Kildare</option>
-                <option data-country="104" value="306">Kilkenny</option>
-                <option data-country="233" value="705">Kincardineshire</option>
-                <option data-country="233" value="706">Kinross-shire</option>
-                <option data-country="233" value="707">Kirkcudbrightshire</option>
-                <option data-country="110" value="433">Kochi</option>
-                <option data-country="97" value="987">Kowloon</option>
-                <option data-country="110" value="435">Kumamoto</option>
-                <option data-country="174" value="473">Kuyavian-Pomeranian (Kujawsko-pomorskie)</option>
-                <option data-country="204" value="1019">KwaZulu-Natal</option>
-                <option data-country="110" value="449">Kyoto</option>
-                <option data-country="207" value="64">La Rioja</option>
-                <option data-country="107" value="789">La Spezia</option>
-                <option data-country="100" value="540">Lakshadweep</option>
-                <option data-country="233" value="708">Lanarkshire</option>
-                <option data-country="233" value="638">Lancashire</option>
-                <option data-country="78" value="383">Languedoc-Roussillon</option>
-                <option data-country="104" value="307">Laois</option>
-                <option data-country="77" value="470">Lapland</option>
-                <option data-country="213" value="508">Lappland (Lapponia Suecana)</option>
-                <option data-country="107" value="790">L'Aquila</option>
-                <option data-country="107" value="791">Latina</option>
-                <option data-country="107" value="792">Lecce</option>
-                <option data-country="107" value="793">Lecco</option>
-                <option data-country="233" value="639">Leicestershire</option>
-                <option data-country="175" value="360">Leiria</option>
-                <option data-country="104" value="299">Leitrim</option>
-                <option data-country="174" value="474">Lesser Poland (Malopolskie)</option>
-                <option data-country="49" value="898">Liaoning Province</option>
-                <option data-country="60" value="1051">Liberec</option>
-                <option data-country="153" value="958">Limburg</option>
-                <option data-country="104" value="318">Limerick</option>
-                <option data-country="78" value="388">Limousin</option>
-                <option data-country="204" value="1020">Limpopo</option>
-                <option data-country="233" value="640">Lincolnshire</option>
-                <option data-country="233" value="641">Lincolnshire Parts of Holland</option>
-                <option data-country="233" value="642">Lincolnshire Parts of Kesteven</option>
-                <option data-country="233" value="643">Lincolnshire Parts of Lindsey</option>
-                <option data-country="175" value="361">Lisbon</option>
-                <option data-country="107" value="794">Livorno</option>
-                <option data-country="107" value="795">Lodi</option>
-                <option data-country="174" value="475">Lodz (Lódzkie)</option>
-                <option data-country="78" value="397">Loiret Centre</option>
-                <option data-country="233" value="644">London</option>
-                <option data-country="233" value="683">Londonderry</option>
-                <option data-country="104" value="325">Londonderry</option>
-                <option data-country="104" value="308">Longford</option>
-                <option data-country="78" value="398">Lorraine</option>
-                <option data-country="234" value="19">Louisiana</option>
-                <option data-country="104" value="309">Louth</option>
-                <option data-country="17" value="970">Lower Austria</option>
-                <option data-country="83" value="406">Lower Saxony</option>
-                <option data-country="174" value="476">Lower Silesian (Dolnoslaskie)</option>
-                <option data-country="174" value="477">Lublin (Lubelskie)</option>
-                <option data-country="174" value="478">Lubusz (Lubuskie)</option>
-                <option data-country="107" value="796">Lucca</option>
-                <option data-country="49" value="925">Macau Special Administrative Region</option>
-                <option data-country="107" value="797">Macerata</option>
-                <option data-country="100" value="541">Madhya Pradesh</option>
-                <option data-country="207" value="65">Madrid</option>
-                <option data-country="100" value="542">Maharashtra</option>
-                <option data-country="234" value="20">Maine</option>
-                <option data-country="156" value="1086">Manawatu-Wanganui</option>
-                <option data-country="100" value="543">Manipur</option>
-                <option data-country="43" value="860">Manitoba</option>
-                <option data-country="107" value="798">Mantua</option>
-                <option data-country="34" value="935">Maranhão</option>
-                <option data-country="156" value="1091">Marlborough</option>
-                <option data-country="225" value="1010">Marmara</option>
-                <option data-country="234" value="21">Maryland</option>
-                <option data-country="174" value="479">Masovian (Mazowieckie)</option>
-                <option data-country="107" value="799">Massa and Carrara</option>
-                <option data-country="234" value="22">Massachusetts</option>
-                <option data-country="107" value="800">Matera</option>
-                <option data-country="34" value="936">Mato Grosso</option>
-                <option data-country="104" value="300">Mayo</option>
-                <option data-country="104" value="310">Meath</option>
-                <option data-country="83" value="416">Mecklenburg-Vorpommern</option>
-                <option data-country="213" value="509">Medelpad (Medelpadia)</option>
-                <option data-country="107" value="801">Medio Campidano</option>
-                <option data-country="225" value="1011">Mediterranean</option>
-                <option data-country="100" value="544">Meghalaya</option>
-                <option data-country="233" value="737">Merionethshire</option>
-                <option data-country="233" value="646">Merseyside</option>
-                <option data-country="37" value="1071">Mesopotamia</option>
-                <option data-country="107" value="802">Messina</option>
-                <option data-country="140" value="582">México</option>
-                <option data-country="140" value="589">Mexico City</option>
-                <option data-country="234" value="23">Michigan</option>
-                <option data-country="140" value="573">Michoacán</option>
-                <option data-country="233" value="738">Mid Glamorgan</option>
-                <option data-country="233" value="647">Middlesex</option>
-                <option data-country="78" value="382">Midi-Pyrenees</option>
-                <option data-country="233" value="709">Midlothian (County of Edinburgh)</option>
-                <option data-country="62" value="978">Midtjylland</option>
-                <option data-country="110" value="443">Mie</option>
-                <option data-country="107" value="803">Milan</option>
-                <option data-country="34" value="938">Minas Gerais</option>
-                <option data-country="175" value="353">Minho Norte</option>
-                <option data-country="234" value="24">Minnesota</option>
-                <option data-country="234" value="25">Mississippi</option>
-                <option data-country="234" value="26">Missouri</option>
-                <option data-country="110" value="432">Miyagi</option>
-                <option data-country="110" value="437">Miyazaki</option>
-                <option data-country="100" value="545">Mizoram</option>
-                <option data-country="107" value="804">Modena</option>
-                <option data-country="104" value="329">Monaghan</option>
-                <option data-country="233" value="739">Monmouthshire</option>
-                <option data-country="234" value="27">Montana</option>
-                <option data-country="233" value="740">Montgomeryshire</option>
-                <option data-country="107" value="805">Monza and Brianza</option>
-                <option data-country="60" value="1056">Moravia-Silesia</option>
-                <option data-country="233" value="710">Moray (Elginshire)</option>
-                <option data-country="163" value="343">Møre og Romsdal</option>
-                <option data-country="140" value="587">Morelos</option>
-                <option data-country="204" value="1021">Mpumalanga</option>
-                <option data-country="207" value="66">Murcia</option>
-                <option data-country="100" value="546">Nagaland</option>
-                <option data-country="110" value="422">Nagano</option>
-                <option data-country="110" value="455">Nagasaki</option>
-                <option data-country="233" value="711">Nairnshire</option>
-                <option data-country="107" value="806">Naples</option>
-                <option data-country="110" value="458">Nara</option>
-                <option data-country="213" value="511">Närke (Nericia)</option>
-                <option data-country="100" value="531">National Capital Territory of Delhi</option>
-                <option data-country="207" value="67">Navarre</option>
-                <option data-country="140" value="580">Nayarit</option>
-                <option data-country="234" value="28">Nebraska</option>
-                <option data-country="156" value="1090">Nelson</option>
-                <option data-country="234" value="29">Nevada</option>
-                <option data-country="43" value="859">New Brunswick</option>
-                <option data-country="234" value="30">New Hampshire</option>
-                <option data-country="234" value="31">New Jersey</option>
-                <option data-country="234" value="32">New Mexico</option>
-                <option data-country="16" value="598">New South Wales</option>
-                <option data-country="97" value="986">New Territories</option>
-                <option data-country="234" value="33">New York</option>
-                <option data-country="43" value="865">Newfoundland and Labrador</option>
-                <option data-country="110" value="423">Niigata</option>
-                <option data-country="49" value="922">Ningxia Hui Autonomous Region</option>
-                <option data-country="78" value="399">Nord</option>
-                <option data-country="62" value="979">Nordjylland</option>
-                <option data-country="163" value="346">Nordland</option>
-                <option data-country="163" value="345">Nord-Trøndelag</option>
-                <option data-country="233" value="648">Norfolk</option>
-                <option data-country="16" value="599">Norfolk Island</option>
-                <option data-country="213" value="510">Norrbotten (Norbothnia)</option>
-                <option data-country="86" value="1000">North Aegean</option>
-                <option data-country="153" value="959">North Brabant</option>
-                <option data-country="234" value="34">North Carolina</option>
-                <option data-country="181" value="376">North Caucasian Federal District</option>
-                <option data-country="205" value="488">North Chungcheong</option>
-                <option data-country="234" value="35">North Dakota</option>
-                <option data-country="205" value="492">North Gyeongsang</option>
-                <option data-country="153" value="960">North Holland</option>
-                <option data-country="233" value="651">North Humberside</option>
-                <option data-country="205" value="495">North Jeolla</option>
-                <option data-country="83" value="403">North Rhine-Westphalia</option>
-                <option data-country="204" value="1022">North West</option>
-                <option data-country="233" value="652">North Yorkshire</option>
-                <option data-country="233" value="649">Northamptonshire</option>
-                <option data-country="204" value="1023">Northern Cape</option>
-                <option data-country="106" value="1031">Northern District</option>
-                <option data-country="16" value="600">Northern Territory</option>
-                <option data-country="156" value="1078">Northland</option>
-                <option data-country="233" value="650">Northumberland</option>
-                <option data-country="37" value="1069">Northwest</option>
-                <option data-country="43" value="982">Northwest Territories</option>
-                <option data-country="181" value="371">Northwestern Federal District</option>
-                <option data-country="233" value="653">Nottinghamshire</option>
-                <option data-country="43" value="858">Nova Scotia</option>
-                <option data-country="107" value="807">Novara</option>
-                <option data-country="140" value="570">Nuevo León</option>
-                <option data-country="43" value="985">Nunavut</option>
-                <option data-country="107" value="808">Nuoro</option>
-                <option data-country="140" value="562">Oaxaca</option>
-                <option data-country="100" value="547">Odisha</option>
-                <option data-country="104" value="311">Offaly</option>
-                <option data-country="107" value="809">Ogliastra</option>
-                <option data-country="234" value="36">Ohio</option>
-                <option data-country="110" value="442">Oita</option>
-                <option data-country="110" value="434">Okayama</option>
-                <option data-country="110" value="462">Okinawa</option>
-                <option data-country="234" value="37">Oklahoma</option>
-                <option data-country="213" value="512">Öland (Olandia)</option>
-                <option data-country="107" value="810">Olbia-Tempio</option>
-                <option data-country="60" value="1054">Olomouc</option>
-                <option data-country="43" value="856">Ontario</option>
-                <option data-country="174" value="480">Opole (Opolskie)</option>
-                <option data-country="163" value="334">Oppland</option>
-                <option data-country="234" value="38">Oregon</option>
-                <option data-country="107" value="811">Oristano</option>
-                <option data-country="233" value="712">Orkney</option>
-                <option data-country="110" value="464">Osaka</option>
-                <option data-country="163" value="332">Oslo</option>
-                <option data-country="213" value="513">Östergötland (Ostrogothia)</option>
-                <option data-country="163" value="330">Østfold</option>
-                <option data-country="156" value="1094">Otago</option>
-                <option data-country="77" value="469">Oulu</option>
-                <option data-country="153" value="961">Overijssel</option>
-                <option data-country="233" value="654">Oxfordshire</option>
-                <option data-country="107" value="812">Padua</option>
-                <option data-country="107" value="813">Palermo</option>
-                <option data-country="37" value="1073">Pampas</option>
-                <option data-country="34" value="939">Pará</option>
-                <option data-country="34" value="940">Paraíba</option>
-                <option data-country="34" value="941">Paraná</option>
-                <option data-country="60" value="1053">Pardubice</option>
-                <option data-country="107" value="814">Parma</option>
-                <option data-country="37" value="1075">Patagonia</option>
-                <option data-country="107" value="815">Pavia</option>
-                <option data-country="78" value="396">Pays-de-Loire</option>
-                <option data-country="233" value="713">Peeblesshire</option>
-                <option data-country="86" value="1001">Peloponnese</option>
-                <option data-country="233" value="741">Pembrokeshire</option>
-                <option data-country="234" value="39">Pennsylvania</option>
-                <option data-country="34" value="942">Pernambuco</option>
-                <option data-country="233" value="714">Perthshire</option>
-                <option data-country="107" value="816">Perugia</option>
-                <option data-country="107" value="817">Pesaro and Urbino</option>
-                <option data-country="107" value="818">Pescara</option>
-                <option data-country="107" value="819">Piacenza</option>
-                <option data-country="34" value="943">Piauí</option>
-                <option data-country="78" value="400">Picardie</option>
-                <option data-country="107" value="820">Pisa</option>
-                <option data-country="107" value="821">Pistoia</option>
-                <option data-country="60" value="1048">Plzeň</option>
-                <option data-country="174" value="481">Podlasie (Podlaskie)</option>
-                <option data-country="78" value="386">Poitou-Charente</option>
-                <option data-country="174" value="482">Pomeranian (Pomorskie)</option>
-                <option data-country="107" value="822">Pordenone</option>
-                <option data-country="175" value="362">Portalegre</option>
-                <option data-country="175" value="363">Porto</option>
-                <option data-country="107" value="823">Potenza</option>
-                <option data-country="233" value="742">Powys</option>
-                <option data-country="60" value="1045">Prague</option>
-                <option data-country="107" value="824">Prato</option>
-                <option data-country="43" value="862">Prince Edward Island</option>
-                <option data-country="78" value="379">Provence-Cote d'Azur</option>
-                <option data-country="100" value="548">Puducherry</option>
-                <option data-country="140" value="578">Puebla</option>
-                <option data-country="100" value="549">Punjab</option>
-                <option data-country="49" value="921">Qinghai Province</option>
-                <option data-country="43" value="857">Quebec</option>
-                <option data-country="16" value="601">Queensland</option>
-                <option data-country="140" value="584">Querétaro</option>
-                <option data-country="140" value="576">Quintana Roo</option>
-                <option data-country="233" value="743">Radnorshire</option>
-                <option data-country="107" value="825">Ragusa</option>
-                <option data-country="100" value="550">Rajasthan</option>
-                <option data-country="107" value="826">Ravenna</option>
-                <option data-country="107" value="827">Reggio Calabria</option>
-                <option data-country="107" value="828">Reggio Emilia</option>
-                <option data-country="233" value="715">Renfrewshire</option>
-                <option data-country="83" value="408">Rhineland-Palatinate</option>
-                <option data-country="234" value="40">Rhode Island</option>
-                <option data-country="78" value="380">Rhone-Alpes</option>
-                <option data-country="107" value="829">Rieti</option>
-                <option data-country="107" value="830">Rimini</option>
-                <option data-country="34" value="944">Rio de Janeiro</option>
-                <option data-country="34" value="945">Rio Grande do Norte</option>
-                <option data-country="34" value="946">Rio Grande do Sul</option>
-                <option data-country="163" value="340">Rogaland</option>
-                <option data-country="107" value="831">Rome</option>
-                <option data-country="34" value="947">Rondônia</option>
-                <option data-country="34" value="948">Roraima</option>
-                <option data-country="104" value="301">Roscommon</option>
-                <option data-country="233" value="716">Ross and Cromarty</option>
-                <option data-country="233" value="717">Ross-shire</option>
-                <option data-country="107" value="832">Rovigo</option>
-                <option data-country="233" value="718">Roxburghshire</option>
-                <option data-country="233" value="656">Rutland</option>
-                <option data-country="83" value="417">Saarland</option>
-                <option data-country="110" value="460">Saga</option>
-                <option data-country="110" value="457">Saitama</option>
-                <option data-country="107" value="833">Salerno</option>
-                <option data-country="17" value="972">Salzburg Province</option>
-                <option data-country="140" value="572">San Luis Potosí</option>
-                <option data-country="34" value="949">Santa Catarina</option>
-                <option data-country="175" value="364">Santarém</option>
-                <option data-country="34" value="950">São Paulo</option>
-                <option data-country="43" value="863">Saskatchewan</option>
-                <option data-country="107" value="834">Sassari</option>
-                <option data-country="107" value="835">Savona</option>
-                <option data-country="83" value="410">Saxony</option>
-                <option data-country="83" value="414">Saxony-Anhalt</option>
-                <option data-country="83" value="412">Schleswig-Holstein</option>
-                <option data-country="233" value="719">Selkirkshire</option>
-                <option data-country="34" value="951">Sergipe</option>
-                <option data-country="175" value="365">Setúbal</option>
-                <option data-country="49" value="919">Shaanxi Province</option>
-                <option data-country="49" value="907">Shandong Province</option>
-                <option data-country="49" value="901">Shanghai Municipality</option>
-                <option data-country="49" value="896">Shanxi Province</option>
-                <option data-country="233" value="720">Shetland (Zetland)</option>
-                <option data-country="110" value="456">Shiga</option>
-                <option data-country="110" value="436">Shimane</option>
-                <option data-country="110" value="431">Shizuoka</option>
-                <option data-country="233" value="657">Shropshire (Salop)</option>
-                <option data-country="181" value="373">Siberian Federal District</option>
-                <option data-country="49" value="915">Sichuan Province</option>
-                <option data-country="107" value="836">Siena</option>
-                <option data-country="37" value="1076">Sierras Pampeanas</option>
-                <option data-country="100" value="551">Sikkim</option>
-                <option data-country="174" value="483">Silesian (Slaskie)</option>
-                <option data-country="140" value="575">Sinaloa</option>
-                <option data-country="62" value="980">Sjælland</option>
-                <option data-country="213" value="514">Skåne (Scania)</option>
-                <option data-country="104" value="302">Sligo</option>
-                <option data-country="213" value="515">Småland (Smolandia)</option>
-                <option data-country="213" value="516">Södermanland (Sudermannia)</option>
-                <option data-country="163" value="342">Sogn og Fjordane</option>
-                <option data-country="233" value="655">Soke of Peterborough</option>
-                <option data-country="233" value="658">Somerset</option>
-                <option data-country="107" value="837">Sondrio</option>
-                <option data-country="140" value="559">Sonora</option>
-                <option data-country="163" value="344">Sør-Trøndelag</option>
-                <option data-country="86" value="1002">South Aegean</option>
-                <option data-country="16" value="602">South Australia</option>
-                <option data-country="60" value="1047">South Bohemia</option>
-                <option data-country="234" value="41">South Carolina</option>
-                <option data-country="205" value="489">South Chungcheong</option>
-                <option data-country="234" value="42">South Dakota</option>
-                <option data-country="233" value="744">South Glamorgan</option>
-                <option data-country="205" value="493">South Gyeongsang</option>
-                <option data-country="153" value="962">South Holland</option>
-                <option data-country="233" value="659">South Humberside</option>
-                <option data-country="205" value="496">South Jeolla</option>
-                <option data-country="60" value="1057">South Moravia</option>
-                <option data-country="233" value="660">South Yorkshire</option>
-                <option data-country="225" value="1012">Southeastern Anatolia</option>
-                <option data-country="106" value="1035">Southern District</option>
-                <option data-country="181" value="370">Southern Federal District</option>
-                <option data-country="77" value="466">Southern Finland</option>
-                <option data-country="156" value="1095">Southland</option>
-                <option data-country="233" value="661">Staffordshire</option>
-                <option data-country="233" value="721">Stirlingshire</option>
-                <option data-country="17" value="973">Styria</option>
-                <option data-country="174" value="484">Subcarpathian (Podkarpackie)</option>
-                <option data-country="233" value="662">Suffolk</option>
-                <option data-country="233" value="663">Surrey</option>
-                <option data-country="233" value="664">Sussex</option>
-                <option data-country="233" value="722">Sutherland</option>
-                <option data-country="174" value="485">Swietokrzyskie (Swietokrzyskie)</option>
-                <option data-country="62" value="981">Syddanmark</option>
-                <option data-country="107" value="838">Syracuse</option>
-                <option data-country="140" value="581">Tabasco</option>
-                <option data-country="140" value="563">Tamaulipas</option>
-                <option data-country="100" value="552">Tamil Nadu</option>
-                <option data-country="156" value="1085">Taranaki</option>
-                <option data-country="107" value="839">Taranto</option>
-                <option data-country="156" value="1088">Tasman</option>
-                <option data-country="16" value="603">Tasmania</option>
-                <option data-country="106" value="1034">Tel Aviv District</option>
-                <option data-country="100" value="553">Telangana</option>
-                <option data-country="163" value="337">Telemark</option>
-                <option data-country="234" value="43">Tennessee</option>
-                <option data-country="107" value="840">Teramo</option>
-                <option data-country="107" value="841">Terni</option>
-                <option data-country="234" value="44">Texas</option>
-                <option data-country="86" value="1003">Thessaly</option>
-                <option data-country="83" value="415">Thuringia</option>
-                <option data-country="49" value="894">Tianjin Municipality</option>
-                <option data-country="49" value="918">Tibet Autonomous Region</option>
-                <option data-country="104" value="319">Tipperary</option>
-                <option data-country="17" value="974">Tirol</option>
-                <option data-country="140" value="588">Tlaxcala</option>
-                <option data-country="34" value="952">Tocantins</option>
-                <option data-country="110" value="438">Tochigi</option>
-                <option data-country="110" value="454">Tokushima</option>
-                <option data-country="110" value="463">Tokyo</option>
-                <option data-country="110" value="459">Tottori</option>
-                <option data-country="110" value="451">Toyama</option>
-                <option data-country="107" value="842">Trapani</option>
-                <option data-country="107" value="843">Trento</option>
-                <option data-country="107" value="844">Treviso</option>
-                <option data-country="107" value="845">Trieste</option>
-                <option data-country="100" value="554">Tripura</option>
-                <option data-country="163" value="347">Troms</option>
-                <option data-country="107" value="846">Turin</option>
-                <option data-country="233" value="665">Tyne and Wear</option>
-                <option data-country="233" value="685">Tyrone</option>
-                <option data-country="104" value="326">Tyrone</option>
-                <option data-country="107" value="847">Udine</option>
-                <option data-country="17" value="971">Upper Austria</option>
-                <option data-country="213" value="517">Uppland (Uplandia)</option>
-                <option data-country="181" value="374">Ural Federal District</option>
-                <option data-country="60" value="1050">Ústí nad Labem</option>
-                <option data-country="234" value="45">Utah</option>
-                <option data-country="153" value="963">Utrecht</option>
-                <option data-country="100" value="555">Uttar Pradesh</option>
-                <option data-country="100" value="556">Uttarakhand</option>
-                <option data-country="207" value="68">Valencian Community</option>
-                <option data-country="107" value="848">Varese</option>
-                <option data-country="213" value="518">Värmland (Wermlandia)</option>
-                <option data-country="213" value="520">Västerbotten (Vestrobothnia)</option>
-                <option data-country="213" value="521">Västergötland (Westrogothia)</option>
-                <option data-country="213" value="519">Västmanland (Vestmannia)</option>
-                <option data-country="107" value="849">Venice</option>
-                <option data-country="140" value="568">Veracruz</option>
-                <option data-country="107" value="850">Verbano-Cusio-Ossola</option>
-                <option data-country="107" value="851">Vercelli</option>
-                <option data-country="234" value="46">Vermont</option>
-                <option data-country="107" value="852">Verona</option>
-                <option data-country="163" value="339">Vest-Agder</option>
-                <option data-country="163" value="336">Vestfold</option>
-                <option data-country="175" value="366">Viana do Castelo</option>
-                <option data-country="107" value="853">Vibo Valentia</option>
-                <option data-country="107" value="854">Vicenza</option>
-                <option data-country="16" value="604">Victoria</option>
-                <option data-country="17" value="976">Vienna</option>
-                <option data-country="175" value="367">Vila Real</option>
-                <option data-country="234" value="47">Virginia</option>
-                <option data-country="175" value="368">Viseu</option>
-                <option data-country="107" value="855">Viterbo</option>
-                <option data-country="181" value="375">Volga Federal District</option>
-                <option data-country="17" value="975">Vorarlberg</option>
-                <option data-country="60" value="1059">Vysočina</option>
-                <option data-country="156" value="1081">Waikato</option>
-                <option data-country="110" value="448">Wakayama</option>
-                <option data-country="25" value="966">Wallonia</option>
-                <option data-country="174" value="486">Warmian-Masurian (Warminsko-mazurskie)</option>
-                <option data-country="233" value="666">Warwickshire</option>
-                <option data-country="234" value="48">Washington</option>
-                <option data-country="104" value="320">Waterford</option>
-                <option data-country="156" value="1087">Wellington</option>
-                <option data-country="100" value="557">West Bengal</option>
-                <option data-country="156" value="1092">West Coast</option>
-                <option data-country="233" value="745">West Glamorgan</option>
-                <option data-country="233" value="723">West Lothian (Linlithgowshire)</option>
-                <option data-country="86" value="1005">West Macedonia</option>
-                <option data-country="233" value="667">West Midlands</option>
-                <option data-country="233" value="669">West Suffolk</option>
-                <option data-country="233" value="670">West Sussex</option>
-                <option data-country="234" value="49">West Virginia</option>
-                <option data-country="233" value="671">West Yorkshire</option>
-                <option data-country="16" value="605">Western Australia</option>
-                <option data-country="204" value="1024">Western Cape</option>
-                <option data-country="77" value="467">Western Finland</option>
-                <option data-country="86" value="1004">Western Greece</option>
-                <option data-country="174" value="487">Western Pomeranian (Zachodniopomorskie)</option>
-                <option data-country="104" value="312">Westmeath</option>
-                <option data-country="233" value="668">Westmorland</option>
-                <option data-country="104" value="313">Wexford</option>
-                <option data-country="104" value="314">Wicklow</option>
-                <option data-country="233" value="724">Wigtownshire</option>
-                <option data-country="233" value="672">Wiltshire</option>
-                <option data-country="234" value="50">Wisconsin</option>
-                <option data-country="233" value="673">Worcestershire</option>
-                <option data-country="234" value="51">Wyoming</option>
-                <option data-country="49" value="923">Xinjiang Uyghur Autonomous Region</option>
-                <option data-country="110" value="427">Yamagata</option>
-                <option data-country="110" value="440">Yamaguchi</option>
-                <option data-country="110" value="450">Yamanashi</option>
-                <option data-country="233" value="674">Yorkshire</option>
-                <option data-country="233" value="675">Yorkshire East Riding</option>
-                <option data-country="233" value="676">Yorkshire North Riding</option>
-                <option data-country="233" value="677">Yorkshire West Riding</option>
-                <option data-country="140" value="577">Yucatán</option>
-                <option data-country="43" value="984">Yukon</option>
-                <option data-country="49" value="917">Yunnan Province</option>
-                <option data-country="140" value="565">Zacatecas</option>
-                <option data-country="153" value="964">Zeeland</option>
-                <option data-country="49" value="903">Zhejiang Province</option>
-                <option data-country="60" value="1058">Zlín</option>
-              </select>
-            </div>
+            			</label>
+            			<div class="c-select__wrapper">
+							<span class="c-select__arrow">
+								<i class="icon-chevron-thin-down"></i>
+							</span>
+							<select id="province" class="c-form__field c-select" name="province" required>
+								<option disabled="" selected="" value="0">
+								Select one
+								</option>
+								<option data-country="233" value="687">Cork</option>
+								<option data-country="233" value="615">Cornwall</option>
+								<option data-country="78" value="389">Corse</option>
+								<option data-country="107" value="773">Cosenza</option>
+								<option data-country="107" value="774">Cremona</option>
+								<option data-country="86" value="995">Crete</option>
+								<option data-country="181" value="377">Crimean Federal District</option>
+								<option data-country="233" value="696">Cromartyshire</option>
+								<option data-country="107" value="775">Crotone</option>
+								<option data-country="233" value="616">Cumberland</option>
+								<option data-country="233" value="617">Cumbria</option>
+								<option data-country="107" value="776">Cuneo</option>
+								<option data-country="37" value="1072">Cuyo</option>
+								<option data-country="100" value="529">Dadra and Nagar Haveli</option>
+								<option data-country="213" value="500">Dalarna (Dalecarlia)</option>
+								<option data-country="213" value="501">Dalsland (Dalia)</option>
+								<option data-country="100" value="530">Daman and Diu</option>
+								<option data-country="234" value="9">Delaware</option>
+								<option data-country="233" value="731">Denbighshire</option>
+								<option data-country="233" value="618">Derbyshire</option>
+								<option data-country="233" value="619">Devon</option>
+								<option data-country="34" value="932">Distrito Federal</option>
+								<option data-country="104" value="328">Donegal</option>
+								<option data-country="233" value="620">Dorset</option>
+								<option data-country="233" value="681">Down</option>
+								<option data-country="104" value="323">Down</option>
+								<option data-country="153" value="953">Drenthe</option>
+								<option data-country="37" value="1077">Dry Pampas</option>
+								<option data-country="104" value="304">Dublin</option>
+								<option data-country="233" value="697">Dumfriesshire</option>
+								<option data-country="233" value="698">Dunbartonshire (Dumbarton)</option>
+								<option data-country="140" value="561">Durango</option>
+								<option data-country="233" value="621">Durham</option>
+								<option data-country="233" value="732">Dyfed</option>
+								<option data-country="233" value="700">East Lothian (Haddingtonshire)</option>
+								<option data-country="86" value="997">East Macedonia and Thrace</option>
+								<option data-country="233" value="622">East Suffolk</option>
+								<option data-country="233" value="623">East Sussex</option>
+								<option data-country="225" value="1009">Eastern Anatolia</option>
+								<option data-country="204" value="1013">Eastern Cape</option>
+								<option data-country="77" value="468">Eastern Finland</option>
+								<option data-country="110" value="444">Ehime</option>
+								<option data-country="107" value="777">Enna</option>
+								<option data-country="86" value="998">Epirus</option>
+								<option data-country="34" value="933">Espírito Santo</option>
+								<option data-country="233" value="624">Essex</option>
+								<option data-country="175" value="357">Évora</option>
+								<option data-country="207" value="62">Extremadura</option>
+								<option data-country="181" value="372">Far Eastern Federal District</option>
+								<option data-country="175" value="358">Faro</option>
+								<option data-country="104" value="324">Fermanagh</option>
+								<option data-country="233" value="682">Fermanagh</option>
+								<option data-country="107" value="778">Fermo</option>
+								<option data-country="107" value="779">Ferrara</option>
+								<option data-country="233" value="702">Fife</option>
+								<option data-country="163" value="348">Finnmark</option>
+								<option data-country="25" value="965">Flanders</option>
+								<option data-country="153" value="954">Flevoland</option>
+								<option data-country="233" value="733">Flintshire</option>
+								<option data-country="107" value="780">Florence</option>
+								<option data-country="234" value="10">Florida</option>
+								<option data-country="107" value="781">Foggia</option>
+								<option data-country="107" value="782">Forlì-Cesena</option>
+								<option data-country="78" value="393">Franche-Comte</option>
+								<option data-country="204" value="1017">Free State</option>
+								<option data-country="107" value="783">Frosinone</option>
+								<option data-country="153" value="955">Fryslân</option>
+								<option data-country="49" value="905">Fujian Province</option>
+								<option data-country="110" value="452">Fukui</option>
+								<option data-country="110" value="447">Fukuoka</option>
+								<option data-country="110" value="421">Fukushima</option>
+								<option data-country="207" value="63">Galicia</option>
+								<option data-country="104" value="298">Galway</option>
+								<option data-country="205" value="490">Gangwon</option>
+								<option data-country="49" value="920">Gansu Province</option>
+								<option data-country="213" value="503">Gästrikland (Gestricia)</option>
+								<option data-country="204" value="1018">Gauteng</option>
+								<option data-country="153" value="956">Gelderland</option>
+								<option data-country="107" value="784">Genoa</option>
+								<option data-country="234" value="11">Georgia</option>
+								<option data-country="110" value="425">Gifu</option>
+								<option data-country="156" value="1083">Gisborne</option>
+								<option data-country="233" value="734">Glamorgan</option>
+								<option data-country="233" value="625">Gloucestershire</option>
+								<option data-country="100" value="532">Goa</option>
+								<option data-country="34" value="934">Goiás</option>
+								<option data-country="107" value="785">Gorizia</option>
+								<option data-country="213" value="502">Gotland (Gotlandia)</option>
+								<option data-country="37" value="1070">Gran Chaco</option>
+								<option data-country="233" value="626">Greater London</option>
+								<option data-country="233" value="627">Greater Manchester</option>
+								<option data-country="174" value="472">Greater Poland (Wielkopolskie)</option>
+								<option data-country="153" value="957">Groningen</option>
+								<option data-country="107" value="786">Grosseto</option>
+								<option data-country="34" value="937">Grosso do Sul</option>
+								<option data-country="140" value="579">Guanajuato</option>
+								<option data-country="49" value="911">Guangdong Province</option>
+								<option data-country="49" value="912">Guangxi Zhuang Autonomous Region</option>
+								<option data-country="175" value="359">Guarda</option>
+								<option data-country="140" value="571">Guerrero</option>
+								<option data-country="49" value="916">Guizhou Province</option>
+								<option data-country="100" value="533">Gujarat</option>
+								<option data-country="110" value="439">Gunma</option>
+								<option data-country="233" value="735">Gwent</option>
+								<option data-country="233" value="736">Gwynedd</option>
+								<option data-country="205" value="491">Gyeonggi</option>
+								<option data-country="106" value="1032">Haifa District</option>
+								<option data-country="49" value="913">Hainan Province</option>
+								<option data-country="213" value="504">Halland (Hallandia)</option>
+								<option data-country="213" value="505">Hälsingland (Helsingia)</option>
+								<option data-country="83" value="411">Hamburg</option>
+								<option data-country="233" value="628">Hampshire (County of Southampton)</option>
+								<option data-country="213" value="506">Härjedalen (Herdalia)</option>
+								<option data-country="100" value="534">Haryana</option>
+								<option data-country="78" value="394">Haute Normandie</option>
+								<option data-country="234" value="12">Hawaii</option>
+								<option data-country="156" value="1084">Hawke's Bay</option>
+								<option data-country="16" value="596">Heard Island and McDonald Islands</option>
+								<option data-country="49" value="895">Hebei Province</option>
+								<option data-country="163" value="333">Hedmark</option>
+								<option data-country="49" value="900">Heilongjiang Province</option>
+								<option data-country="49" value="908">Henan Province</option>
+								<option data-country="233" value="629">Hereford and Worcester</option>
+								<option data-country="233" value="630">Herefordshire</option>
+								<option data-country="233" value="631">Hertfordshire</option>
+								<option data-country="83" value="407">Hesse</option>
+								<option data-country="140" value="583">Hidalgo</option>
+								<option data-country="100" value="535">Himachal Pradesh</option>
+								<option data-country="110" value="429">Hiroshima</option>
+								<option data-country="110" value="419">Hokkaido</option>
+								<option data-country="97" value="990">Hong Kong Island</option>
+								<option data-country="49" value="924">Hong Kong Special Administrative Region</option>
+								<option data-country="163" value="341">Hordaland</option>
+								<option data-country="62" value="977">Hovedstaden</option>
+								<option data-country="60" value="1052">Hradec Králové</option>
+								<option data-country="49" value="909">Hubei Province</option>
+								<option data-country="233" value="632">Humberside</option>
+								<option data-country="49" value="910">Hunan Province</option>
+								<option data-country="233" value="633">Huntingdon and Peterborough</option>
+								<option data-country="233" value="634">Huntingdonshire</option>
+								<option data-country="110" value="430">Hyogo</option>
+								<option data-country="110" value="441">Ibaraki</option>
+								<option data-country="234" value="13">Idaho</option>
+								<option data-country="78" value="402">Ile-de-France</option>
+								<option data-country="234" value="14">Illinois</option>
+								<option data-country="107" value="787">Imperia</option>
+								<option data-country="205" value="1100">Incheon</option>
+								<option data-country="234" value="15">Indiana</option>
+								<option data-country="49" value="897">Inner Mongolia Autonomous Region</option>
+								<option data-country="233" value="704">Inverness-shire</option>
+								<option data-country="86" value="999">Ionian Islands</option>
+								<option data-country="234" value="16">Iowa</option>
+								<option data-country="107" value="788">Isernia</option>
+								<option data-country="110" value="453">Ishikawa</option>
+								<option data-country="233" value="635">Isle of Ely Division</option>
+								<option data-country="233" value="636">Isle of Wight</option>
+								<option data-country="110" value="420">Iwate</option>
+								<option data-country="140" value="564">Jalisco</option>
+								<option data-country="100" value="536">Jammu and Kashmir</option>
+								<option data-country="213" value="507">Jämtland (Jemtia)</option>
+								<option data-country="205" value="494">Jeju</option>
+								<option data-country="106" value="1030">Jerusalem District</option>
+								<option data-country="16" value="597">Jervis Bay Territory</option>
+								<option data-country="100" value="537">Jharkhand</option>
+								<option data-country="49" value="902">Jiangsu Province</option>
+								<option data-country="49" value="906">Jiangxi Province</option>
+								<option data-country="49" value="899">Jilin Province</option>
+								<option data-country="106" value="1036">Judea and Samaria Area</option>
+								<option data-country="110" value="465">Kagawa</option>
+								<option data-country="110" value="428">Kagoshima</option>
+								<option data-country="110" value="461">Kanagawa</option>
+								<option data-country="234" value="17">Kansas</option>
+								<option data-country="60" value="1049">Karlovy Vary</option>
+								<option data-country="100" value="538">Karnataka</option>
+								<option data-country="233" value="637">Kent</option>
+								<option data-country="234" value="18">Kentucky</option>
+								<option data-country="100" value="539">Kerala</option>
+								<option data-country="104" value="317">Kerry</option>
+								<option data-country="104" value="305">Kildare</option>
+								<option data-country="104" value="306">Kilkenny</option>
+								<option data-country="233" value="705">Kincardineshire</option>
+								<option data-country="233" value="706">Kinross-shire</option>
+								<option data-country="233" value="707">Kirkcudbrightshire</option>
+								<option data-country="110" value="433">Kochi</option>
+								<option data-country="97" value="987">Kowloon</option>
+								<option data-country="110" value="435">Kumamoto</option>
+								<option data-country="174" value="473">Kuyavian-Pomeranian (Kujawsko-pomorskie)</option>
+								<option data-country="204" value="1019">KwaZulu-Natal</option>
+								<option data-country="110" value="449">Kyoto</option>
+								<option data-country="207" value="64">La Rioja</option>
+								<option data-country="107" value="789">La Spezia</option>
+								<option data-country="100" value="540">Lakshadweep</option>
+								<option data-country="233" value="708">Lanarkshire</option>
+								<option data-country="233" value="638">Lancashire</option>
+								<option data-country="78" value="383">Languedoc-Roussillon</option>
+								<option data-country="104" value="307">Laois</option>
+								<option data-country="77" value="470">Lapland</option>
+								<option data-country="213" value="508">Lappland (Lapponia Suecana)</option>
+								<option data-country="107" value="790">L'Aquila</option>
+								<option data-country="107" value="791">Latina</option>
+								<option data-country="107" value="792">Lecce</option>
+								<option data-country="107" value="793">Lecco</option>
+								<option data-country="233" value="639">Leicestershire</option>
+								<option data-country="175" value="360">Leiria</option>
+								<option data-country="104" value="299">Leitrim</option>
+								<option data-country="174" value="474">Lesser Poland (Malopolskie)</option>
+								<option data-country="49" value="898">Liaoning Province</option>
+								<option data-country="60" value="1051">Liberec</option>
+								<option data-country="153" value="958">Limburg</option>
+								<option data-country="104" value="318">Limerick</option>
+								<option data-country="78" value="388">Limousin</option>
+								<option data-country="204" value="1020">Limpopo</option>
+								<option data-country="233" value="640">Lincolnshire</option>
+								<option data-country="233" value="641">Lincolnshire Parts of Holland</option>
+								<option data-country="233" value="642">Lincolnshire Parts of Kesteven</option>
+								<option data-country="233" value="643">Lincolnshire Parts of Lindsey</option>
+								<option data-country="175" value="361">Lisbon</option>
+								<option data-country="107" value="794">Livorno</option>
+								<option data-country="107" value="795">Lodi</option>
+								<option data-country="174" value="475">Lodz (Lódzkie)</option>
+								<option data-country="78" value="397">Loiret Centre</option>
+								<option data-country="233" value="644">London</option>
+								<option data-country="233" value="683">Londonderry</option>
+								<option data-country="104" value="325">Londonderry</option>
+								<option data-country="104" value="308">Longford</option>
+								<option data-country="78" value="398">Lorraine</option>
+								<option data-country="234" value="19">Louisiana</option>
+								<option data-country="104" value="309">Louth</option>
+								<option data-country="17" value="970">Lower Austria</option>
+								<option data-country="83" value="406">Lower Saxony</option>
+								<option data-country="174" value="476">Lower Silesian (Dolnoslaskie)</option>
+								<option data-country="174" value="477">Lublin (Lubelskie)</option>
+								<option data-country="174" value="478">Lubusz (Lubuskie)</option>
+								<option data-country="107" value="796">Lucca</option>
+								<option data-country="49" value="925">Macau Special Administrative Region</option>
+								<option data-country="107" value="797">Macerata</option>
+								<option data-country="100" value="541">Madhya Pradesh</option>
+								<option data-country="207" value="65">Madrid</option>
+								<option data-country="100" value="542">Maharashtra</option>
+								<option data-country="234" value="20">Maine</option>
+								<option data-country="156" value="1086">Manawatu-Wanganui</option>
+								<option data-country="100" value="543">Manipur</option>
+								<option data-country="43" value="860">Manitoba</option>
+								<option data-country="107" value="798">Mantua</option>
+								<option data-country="34" value="935">Maranhão</option>
+								<option data-country="156" value="1091">Marlborough</option>
+								<option data-country="225" value="1010">Marmara</option>
+								<option data-country="234" value="21">Maryland</option>
+								<option data-country="174" value="479">Masovian (Mazowieckie)</option>
+								<option data-country="107" value="799">Massa and Carrara</option>
+								<option data-country="234" value="22">Massachusetts</option>
+								<option data-country="107" value="800">Matera</option>
+								<option data-country="34" value="936">Mato Grosso</option>
+								<option data-country="104" value="300">Mayo</option>
+								<option data-country="104" value="310">Meath</option>
+								<option data-country="83" value="416">Mecklenburg-Vorpommern</option>
+								<option data-country="213" value="509">Medelpad (Medelpadia)</option>
+								<option data-country="107" value="801">Medio Campidano</option>
+								<option data-country="225" value="1011">Mediterranean</option>
+								<option data-country="100" value="544">Meghalaya</option>
+								<option data-country="233" value="737">Merionethshire</option>
+								<option data-country="233" value="646">Merseyside</option>
+								<option data-country="37" value="1071">Mesopotamia</option>
+								<option data-country="107" value="802">Messina</option>
+								<option data-country="140" value="582">México</option>
+								<option data-country="140" value="589">Mexico City</option>
+								<option data-country="234" value="23">Michigan</option>
+								<option data-country="140" value="573">Michoacán</option>
+								<option data-country="233" value="738">Mid Glamorgan</option>
+								<option data-country="233" value="647">Middlesex</option>
+								<option data-country="78" value="382">Midi-Pyrenees</option>
+								<option data-country="233" value="709">Midlothian (County of Edinburgh)</option>
+								<option data-country="62" value="978">Midtjylland</option>
+								<option data-country="110" value="443">Mie</option>
+								<option data-country="107" value="803">Milan</option>
+								<option data-country="34" value="938">Minas Gerais</option>
+								<option data-country="175" value="353">Minho Norte</option>
+								<option data-country="234" value="24">Minnesota</option>
+								<option data-country="234" value="25">Mississippi</option>
+								<option data-country="234" value="26">Missouri</option>
+								<option data-country="110" value="432">Miyagi</option>
+								<option data-country="110" value="437">Miyazaki</option>
+								<option data-country="100" value="545">Mizoram</option>
+								<option data-country="107" value="804">Modena</option>
+								<option data-country="104" value="329">Monaghan</option>
+								<option data-country="233" value="739">Monmouthshire</option>
+								<option data-country="234" value="27">Montana</option>
+								<option data-country="233" value="740">Montgomeryshire</option>
+								<option data-country="107" value="805">Monza and Brianza</option>
+								<option data-country="60" value="1056">Moravia-Silesia</option>
+								<option data-country="233" value="710">Moray (Elginshire)</option>
+								<option data-country="163" value="343">Møre og Romsdal</option>
+								<option data-country="140" value="587">Morelos</option>
+								<option data-country="204" value="1021">Mpumalanga</option>
+								<option data-country="207" value="66">Murcia</option>
+								<option data-country="100" value="546">Nagaland</option>
+								<option data-country="110" value="422">Nagano</option>
+								<option data-country="110" value="455">Nagasaki</option>
+								<option data-country="233" value="711">Nairnshire</option>
+								<option data-country="107" value="806">Naples</option>
+								<option data-country="110" value="458">Nara</option>
+								<option data-country="213" value="511">Närke (Nericia)</option>
+								<option data-country="100" value="531">National Capital Territory of Delhi</option>
+								<option data-country="207" value="67">Navarre</option>
+								<option data-country="140" value="580">Nayarit</option>
+								<option data-country="234" value="28">Nebraska</option>
+								<option data-country="156" value="1090">Nelson</option>
+								<option data-country="234" value="29">Nevada</option>
+								<option data-country="43" value="859">New Brunswick</option>
+								<option data-country="234" value="30">New Hampshire</option>
+								<option data-country="234" value="31">New Jersey</option>
+								<option data-country="234" value="32">New Mexico</option>
+								<option data-country="16" value="598">New South Wales</option>
+								<option data-country="97" value="986">New Territories</option>
+								<option data-country="234" value="33">New York</option>
+								<option data-country="43" value="865">Newfoundland and Labrador</option>
+								<option data-country="110" value="423">Niigata</option>
+								<option data-country="49" value="922">Ningxia Hui Autonomous Region</option>
+								<option data-country="78" value="399">Nord</option>
+								<option data-country="62" value="979">Nordjylland</option>
+								<option data-country="163" value="346">Nordland</option>
+								<option data-country="163" value="345">Nord-Trøndelag</option>
+								<option data-country="233" value="648">Norfolk</option>
+								<option data-country="16" value="599">Norfolk Island</option>
+								<option data-country="213" value="510">Norrbotten (Norbothnia)</option>
+								<option data-country="86" value="1000">North Aegean</option>
+								<option data-country="153" value="959">North Brabant</option>
+								<option data-country="234" value="34">North Carolina</option>
+								<option data-country="181" value="376">North Caucasian Federal District</option>
+								<option data-country="205" value="488">North Chungcheong</option>
+								<option data-country="234" value="35">North Dakota</option>
+								<option data-country="205" value="492">North Gyeongsang</option>
+								<option data-country="153" value="960">North Holland</option>
+								<option data-country="233" value="651">North Humberside</option>
+								<option data-country="205" value="495">North Jeolla</option>
+								<option data-country="83" value="403">North Rhine-Westphalia</option>
+								<option data-country="204" value="1022">North West</option>
+								<option data-country="233" value="652">North Yorkshire</option>
+								<option data-country="233" value="649">Northamptonshire</option>
+								<option data-country="204" value="1023">Northern Cape</option>
+								<option data-country="106" value="1031">Northern District</option>
+								<option data-country="16" value="600">Northern Territory</option>
+								<option data-country="156" value="1078">Northland</option>
+								<option data-country="233" value="650">Northumberland</option>
+								<option data-country="37" value="1069">Northwest</option>
+								<option data-country="43" value="982">Northwest Territories</option>
+								<option data-country="181" value="371">Northwestern Federal District</option>
+								<option data-country="233" value="653">Nottinghamshire</option>
+								<option data-country="43" value="858">Nova Scotia</option>
+								<option data-country="107" value="807">Novara</option>
+								<option data-country="140" value="570">Nuevo León</option>
+								<option data-country="43" value="985">Nunavut</option>
+								<option data-country="107" value="808">Nuoro</option>
+								<option data-country="140" value="562">Oaxaca</option>
+								<option data-country="100" value="547">Odisha</option>
+								<option data-country="104" value="311">Offaly</option>
+								<option data-country="107" value="809">Ogliastra</option>
+								<option data-country="234" value="36">Ohio</option>
+								<option data-country="110" value="442">Oita</option>
+								<option data-country="110" value="434">Okayama</option>
+								<option data-country="110" value="462">Okinawa</option>
+								<option data-country="234" value="37">Oklahoma</option>
+								<option data-country="213" value="512">Öland (Olandia)</option>
+								<option data-country="107" value="810">Olbia-Tempio</option>
+								<option data-country="60" value="1054">Olomouc</option>
+								<option data-country="43" value="856">Ontario</option>
+								<option data-country="174" value="480">Opole (Opolskie)</option>
+								<option data-country="163" value="334">Oppland</option>
+								<option data-country="234" value="38">Oregon</option>
+								<option data-country="107" value="811">Oristano</option>
+								<option data-country="233" value="712">Orkney</option>
+								<option data-country="110" value="464">Osaka</option>
+								<option data-country="163" value="332">Oslo</option>
+								<option data-country="213" value="513">Östergötland (Ostrogothia)</option>
+								<option data-country="163" value="330">Østfold</option>
+								<option data-country="156" value="1094">Otago</option>
+								<option data-country="77" value="469">Oulu</option>
+								<option data-country="153" value="961">Overijssel</option>
+								<option data-country="233" value="654">Oxfordshire</option>
+								<option data-country="107" value="812">Padua</option>
+								<option data-country="107" value="813">Palermo</option>
+								<option data-country="37" value="1073">Pampas</option>
+								<option data-country="34" value="939">Pará</option>
+								<option data-country="34" value="940">Paraíba</option>
+								<option data-country="34" value="941">Paraná</option>
+								<option data-country="60" value="1053">Pardubice</option>
+								<option data-country="107" value="814">Parma</option>
+								<option data-country="37" value="1075">Patagonia</option>
+								<option data-country="107" value="815">Pavia</option>
+								<option data-country="78" value="396">Pays-de-Loire</option>
+								<option data-country="233" value="713">Peeblesshire</option>
+								<option data-country="86" value="1001">Peloponnese</option>
+								<option data-country="233" value="741">Pembrokeshire</option>
+								<option data-country="234" value="39">Pennsylvania</option>
+								<option data-country="34" value="942">Pernambuco</option>
+								<option data-country="233" value="714">Perthshire</option>
+								<option data-country="107" value="816">Perugia</option>
+								<option data-country="107" value="817">Pesaro and Urbino</option>
+								<option data-country="107" value="818">Pescara</option>
+								<option data-country="107" value="819">Piacenza</option>
+								<option data-country="34" value="943">Piauí</option>
+								<option data-country="78" value="400">Picardie</option>
+								<option data-country="107" value="820">Pisa</option>
+								<option data-country="107" value="821">Pistoia</option>
+								<option data-country="60" value="1048">Plzeň</option>
+								<option data-country="174" value="481">Podlasie (Podlaskie)</option>
+								<option data-country="78" value="386">Poitou-Charente</option>
+								<option data-country="174" value="482">Pomeranian (Pomorskie)</option>
+								<option data-country="107" value="822">Pordenone</option>
+								<option data-country="175" value="362">Portalegre</option>
+								<option data-country="175" value="363">Porto</option>
+								<option data-country="107" value="823">Potenza</option>
+								<option data-country="233" value="742">Powys</option>
+								<option data-country="60" value="1045">Prague</option>
+								<option data-country="107" value="824">Prato</option>
+								<option data-country="43" value="862">Prince Edward Island</option>
+								<option data-country="78" value="379">Provence-Cote d'Azur</option>
+								<option data-country="100" value="548">Puducherry</option>
+								<option data-country="140" value="578">Puebla</option>
+								<option data-country="100" value="549">Punjab</option>
+								<option data-country="49" value="921">Qinghai Province</option>
+								<option data-country="43" value="857">Quebec</option>
+								<option data-country="16" value="601">Queensland</option>
+								<option data-country="140" value="584">Querétaro</option>
+								<option data-country="140" value="576">Quintana Roo</option>
+								<option data-country="233" value="743">Radnorshire</option>
+								<option data-country="107" value="825">Ragusa</option>
+								<option data-country="100" value="550">Rajasthan</option>
+								<option data-country="107" value="826">Ravenna</option>
+								<option data-country="107" value="827">Reggio Calabria</option>
+								<option data-country="107" value="828">Reggio Emilia</option>
+								<option data-country="233" value="715">Renfrewshire</option>
+								<option data-country="83" value="408">Rhineland-Palatinate</option>
+								<option data-country="234" value="40">Rhode Island</option>
+								<option data-country="78" value="380">Rhone-Alpes</option>
+								<option data-country="107" value="829">Rieti</option>
+								<option data-country="107" value="830">Rimini</option>
+								<option data-country="34" value="944">Rio de Janeiro</option>
+								<option data-country="34" value="945">Rio Grande do Norte</option>
+								<option data-country="34" value="946">Rio Grande do Sul</option>
+								<option data-country="163" value="340">Rogaland</option>
+								<option data-country="107" value="831">Rome</option>
+								<option data-country="34" value="947">Rondônia</option>
+								<option data-country="34" value="948">Roraima</option>
+								<option data-country="104" value="301">Roscommon</option>
+								<option data-country="233" value="716">Ross and Cromarty</option>
+								<option data-country="233" value="717">Ross-shire</option>
+								<option data-country="107" value="832">Rovigo</option>
+								<option data-country="233" value="718">Roxburghshire</option>
+								<option data-country="233" value="656">Rutland</option>
+								<option data-country="83" value="417">Saarland</option>
+								<option data-country="110" value="460">Saga</option>
+								<option data-country="110" value="457">Saitama</option>
+								<option data-country="107" value="833">Salerno</option>
+								<option data-country="17" value="972">Salzburg Province</option>
+								<option data-country="140" value="572">San Luis Potosí</option>
+								<option data-country="34" value="949">Santa Catarina</option>
+								<option data-country="175" value="364">Santarém</option>
+								<option data-country="34" value="950">São Paulo</option>
+								<option data-country="43" value="863">Saskatchewan</option>
+								<option data-country="107" value="834">Sassari</option>
+								<option data-country="107" value="835">Savona</option>
+								<option data-country="83" value="410">Saxony</option>
+								<option data-country="83" value="414">Saxony-Anhalt</option>
+								<option data-country="83" value="412">Schleswig-Holstein</option>
+								<option data-country="233" value="719">Selkirkshire</option>
+								<option data-country="34" value="951">Sergipe</option>
+								<option data-country="175" value="365">Setúbal</option>
+								<option data-country="49" value="919">Shaanxi Province</option>
+								<option data-country="49" value="907">Shandong Province</option>
+								<option data-country="49" value="901">Shanghai Municipality</option>
+								<option data-country="49" value="896">Shanxi Province</option>
+								<option data-country="233" value="720">Shetland (Zetland)</option>
+								<option data-country="110" value="456">Shiga</option>
+								<option data-country="110" value="436">Shimane</option>
+								<option data-country="110" value="431">Shizuoka</option>
+								<option data-country="233" value="657">Shropshire (Salop)</option>
+								<option data-country="181" value="373">Siberian Federal District</option>
+								<option data-country="49" value="915">Sichuan Province</option>
+								<option data-country="107" value="836">Siena</option>
+								<option data-country="37" value="1076">Sierras Pampeanas</option>
+								<option data-country="100" value="551">Sikkim</option>
+								<option data-country="174" value="483">Silesian (Slaskie)</option>
+								<option data-country="140" value="575">Sinaloa</option>
+								<option data-country="62" value="980">Sjælland</option>
+								<option data-country="213" value="514">Skåne (Scania)</option>
+								<option data-country="104" value="302">Sligo</option>
+								<option data-country="213" value="515">Småland (Smolandia)</option>
+								<option data-country="213" value="516">Södermanland (Sudermannia)</option>
+								<option data-country="163" value="342">Sogn og Fjordane</option>
+								<option data-country="233" value="655">Soke of Peterborough</option>
+								<option data-country="233" value="658">Somerset</option>
+								<option data-country="107" value="837">Sondrio</option>
+								<option data-country="140" value="559">Sonora</option>
+								<option data-country="163" value="344">Sør-Trøndelag</option>
+								<option data-country="86" value="1002">South Aegean</option>
+								<option data-country="16" value="602">South Australia</option>
+								<option data-country="60" value="1047">South Bohemia</option>
+								<option data-country="234" value="41">South Carolina</option>
+								<option data-country="205" value="489">South Chungcheong</option>
+								<option data-country="234" value="42">South Dakota</option>
+								<option data-country="233" value="744">South Glamorgan</option>
+								<option data-country="205" value="493">South Gyeongsang</option>
+								<option data-country="153" value="962">South Holland</option>
+								<option data-country="233" value="659">South Humberside</option>
+								<option data-country="205" value="496">South Jeolla</option>
+								<option data-country="60" value="1057">South Moravia</option>
+								<option data-country="233" value="660">South Yorkshire</option>
+								<option data-country="225" value="1012">Southeastern Anatolia</option>
+								<option data-country="106" value="1035">Southern District</option>
+								<option data-country="181" value="370">Southern Federal District</option>
+								<option data-country="77" value="466">Southern Finland</option>
+								<option data-country="156" value="1095">Southland</option>
+								<option data-country="233" value="661">Staffordshire</option>
+								<option data-country="233" value="721">Stirlingshire</option>
+								<option data-country="17" value="973">Styria</option>
+								<option data-country="174" value="484">Subcarpathian (Podkarpackie)</option>
+								<option data-country="233" value="662">Suffolk</option>
+								<option data-country="233" value="663">Surrey</option>
+								<option data-country="233" value="664">Sussex</option>
+								<option data-country="233" value="722">Sutherland</option>
+								<option data-country="174" value="485">Swietokrzyskie (Swietokrzyskie)</option>
+								<option data-country="62" value="981">Syddanmark</option>
+								<option data-country="107" value="838">Syracuse</option>
+								<option data-country="140" value="581">Tabasco</option>
+								<option data-country="140" value="563">Tamaulipas</option>
+								<option data-country="100" value="552">Tamil Nadu</option>
+								<option data-country="156" value="1085">Taranaki</option>
+								<option data-country="107" value="839">Taranto</option>
+								<option data-country="156" value="1088">Tasman</option>
+								<option data-country="16" value="603">Tasmania</option>
+								<option data-country="106" value="1034">Tel Aviv District</option>
+								<option data-country="100" value="553">Telangana</option>
+								<option data-country="163" value="337">Telemark</option>
+								<option data-country="234" value="43">Tennessee</option>
+								<option data-country="107" value="840">Teramo</option>
+								<option data-country="107" value="841">Terni</option>
+								<option data-country="234" value="44">Texas</option>
+								<option data-country="86" value="1003">Thessaly</option>
+								<option data-country="83" value="415">Thuringia</option>
+								<option data-country="49" value="894">Tianjin Municipality</option>
+								<option data-country="49" value="918">Tibet Autonomous Region</option>
+								<option data-country="104" value="319">Tipperary</option>
+								<option data-country="17" value="974">Tirol</option>
+								<option data-country="140" value="588">Tlaxcala</option>
+								<option data-country="34" value="952">Tocantins</option>
+								<option data-country="110" value="438">Tochigi</option>
+								<option data-country="110" value="454">Tokushima</option>
+								<option data-country="110" value="463">Tokyo</option>
+								<option data-country="110" value="459">Tottori</option>
+								<option data-country="110" value="451">Toyama</option>
+								<option data-country="107" value="842">Trapani</option>
+								<option data-country="107" value="843">Trento</option>
+								<option data-country="107" value="844">Treviso</option>
+								<option data-country="107" value="845">Trieste</option>
+								<option data-country="100" value="554">Tripura</option>
+								<option data-country="163" value="347">Troms</option>
+								<option data-country="107" value="846">Turin</option>
+								<option data-country="233" value="665">Tyne and Wear</option>
+								<option data-country="233" value="685">Tyrone</option>
+								<option data-country="104" value="326">Tyrone</option>
+								<option data-country="107" value="847">Udine</option>
+								<option data-country="17" value="971">Upper Austria</option>
+								<option data-country="213" value="517">Uppland (Uplandia)</option>
+								<option data-country="181" value="374">Ural Federal District</option>
+								<option data-country="60" value="1050">Ústí nad Labem</option>
+								<option data-country="234" value="45">Utah</option>
+								<option data-country="153" value="963">Utrecht</option>
+								<option data-country="100" value="555">Uttar Pradesh</option>
+								<option data-country="100" value="556">Uttarakhand</option>
+								<option data-country="207" value="68">Valencian Community</option>
+								<option data-country="107" value="848">Varese</option>
+								<option data-country="213" value="518">Värmland (Wermlandia)</option>
+								<option data-country="213" value="520">Västerbotten (Vestrobothnia)</option>
+								<option data-country="213" value="521">Västergötland (Westrogothia)</option>
+								<option data-country="213" value="519">Västmanland (Vestmannia)</option>
+								<option data-country="107" value="849">Venice</option>
+								<option data-country="140" value="568">Veracruz</option>
+								<option data-country="107" value="850">Verbano-Cusio-Ossola</option>
+								<option data-country="107" value="851">Vercelli</option>
+								<option data-country="234" value="46">Vermont</option>
+								<option data-country="107" value="852">Verona</option>
+								<option data-country="163" value="339">Vest-Agder</option>
+								<option data-country="163" value="336">Vestfold</option>
+								<option data-country="175" value="366">Viana do Castelo</option>
+								<option data-country="107" value="853">Vibo Valentia</option>
+								<option data-country="107" value="854">Vicenza</option>
+								<option data-country="16" value="604">Victoria</option>
+								<option data-country="17" value="976">Vienna</option>
+								<option data-country="175" value="367">Vila Real</option>
+								<option data-country="234" value="47">Virginia</option>
+								<option data-country="175" value="368">Viseu</option>
+								<option data-country="107" value="855">Viterbo</option>
+								<option data-country="181" value="375">Volga Federal District</option>
+								<option data-country="17" value="975">Vorarlberg</option>
+								<option data-country="60" value="1059">Vysočina</option>
+								<option data-country="156" value="1081">Waikato</option>
+								<option data-country="110" value="448">Wakayama</option>
+								<option data-country="25" value="966">Wallonia</option>
+								<option data-country="174" value="486">Warmian-Masurian (Warminsko-mazurskie)</option>
+								<option data-country="233" value="666">Warwickshire</option>
+								<option data-country="234" value="48">Washington</option>
+								<option data-country="104" value="320">Waterford</option>
+								<option data-country="156" value="1087">Wellington</option>
+								<option data-country="100" value="557">West Bengal</option>
+								<option data-country="156" value="1092">West Coast</option>
+								<option data-country="233" value="745">West Glamorgan</option>
+								<option data-country="233" value="723">West Lothian (Linlithgowshire)</option>
+								<option data-country="86" value="1005">West Macedonia</option>
+								<option data-country="233" value="667">West Midlands</option>
+								<option data-country="233" value="669">West Suffolk</option>
+								<option data-country="233" value="670">West Sussex</option>
+								<option data-country="234" value="49">West Virginia</option>
+								<option data-country="233" value="671">West Yorkshire</option>
+								<option data-country="16" value="605">Western Australia</option>
+								<option data-country="204" value="1024">Western Cape</option>
+								<option data-country="77" value="467">Western Finland</option>
+								<option data-country="86" value="1004">Western Greece</option>
+								<option data-country="174" value="487">Western Pomeranian (Zachodniopomorskie)</option>
+								<option data-country="104" value="312">Westmeath</option>
+								<option data-country="233" value="668">Westmorland</option>
+								<option data-country="104" value="313">Wexford</option>
+								<option data-country="104" value="314">Wicklow</option>
+								<option data-country="233" value="724">Wigtownshire</option>
+								<option data-country="233" value="672">Wiltshire</option>
+								<option data-country="234" value="50">Wisconsin</option>
+								<option data-country="233" value="673">Worcestershire</option>
+								<option data-country="234" value="51">Wyoming</option>
+								<option data-country="49" value="923">Xinjiang Uyghur Autonomous Region</option>
+								<option data-country="110" value="427">Yamagata</option>
+								<option data-country="110" value="440">Yamaguchi</option>
+								<option data-country="110" value="450">Yamanashi</option>
+								<option data-country="233" value="674">Yorkshire</option>
+								<option data-country="233" value="675">Yorkshire East Riding</option>
+								<option data-country="233" value="676">Yorkshire North Riding</option>
+								<option data-country="233" value="677">Yorkshire West Riding</option>
+								<option data-country="140" value="577">Yucatán</option>
+								<option data-country="43" value="984">Yukon</option>
+								<option data-country="49" value="917">Yunnan Province</option>
+								<option data-country="140" value="565">Zacatecas</option>
+								<option data-country="153" value="964">Zeeland</option>
+								<option data-country="49" value="903">Zhejiang Province</option>
+								<option data-country="60" value="1058">Zlín</option>
+							</select>
+						</div>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="language">
 							Language
-            </label>
-            <div class="c-select__wrapper">
-              <span class="c-select__arrow">
-                <i class="icon-chevron-thin-down"></i>
-              </span>
-              <select id="language" class="c-form__field c-select" name="language">
-                <option disabled="" selected="" value="0">
-                  Select one
-                </option>
-                <option value="Afrikanns">Afrikanns</option>
-                <option value="Albanian">Albanian</option>
-                <option value="Arabic">Arabic</option>
-                <option value="Armenian">Armenian</option>
-                <option value="Basque">Basque</option>
-                <option value="Bengali">Bengali</option>
-                <option value="Bulgarian">Bulgarian</option>
-                <option value="Catalan">Catalan</option>
-                <option value="Cambodian">Cambodian</option>
-                <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
-                <option value="Croation">Croation</option>
-                <option value="Czech">Czech</option>
-                <option value="Danish">Danish</option>
-                <option value="Dutch">Dutch</option>
-                <option value="English">English</option>
-                <option value="Estonian">Estonian</option>
-                <option value="Fiji">Fiji</option>
-                <option value="Finnish">Finnish</option>
-                <option value="French">French</option>
-                <option value="Georgian">Georgian</option>
-                <option value="German">German</option>
-                <option value="Greek">Greek</option>
-                <option value="Gujarati">Gujarati</option>
-                <option value="Hebrew">Hebrew</option>
-                <option value="Hindi">Hindi</option>
-                <option value="Hungarian">Hungarian</option>
-                <option value="Icelandic">Icelandic</option>
-                <option value="Indonesian">Indonesian</option>
-                <option value="Irish">Irish</option>
-                <option value="Italian">Italian</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Javanese">Javanese</option>
-                <option value="Korean">Korean</option>
-                <option value="Latin">Latin</option>
-                <option value="Latvian">Latvian</option>
-                <option value="Lithuanian">Lithuanian</option>
-                <option value="Macedonian">Macedonian</option>
-                <option value="Malay">Malay</option>
-                <option value="Malayalam">Malayalam</option>
-                <option value="Maltese">Maltese</option>
-                <option value="Maori">Maori</option>
-                <option value="Marathi">Marathi</option>
-                <option value="Mongolian">Mongolian</option>
-                <option value="Nepali">Nepali</option>
-                <option value="Norwegian">Norwegian</option>
-                <option value="Persian">Persian</option>
-                <option value="Polish">Polish</option>
-                <option value="Portuguese">Portuguese</option>
-                <option value="Punjabi">Punjabi</option>
-                <option value="Quechua">Quechua</option>
-                <option value="Romanian">Romanian</option>
-                <option value="Russian">Russian</option>
-                <option value="Samoan">Samoan</option>
-                <option value="Serbian">Serbian</option>
-                <option value="Slovak">Slovak</option>
-                <option value="Slovenian">Slovenian</option>
-                <option value="Spanish">Spanish</option>
-                <option value="Swahili">Swahili</option>
-                <option value="Swedish ">Swedish </option>
-                <option value="Tamil">Tamil</option>
-                <option value="Tatar">Tatar</option>
-                <option value="Telugu">Telugu</option>
-                <option value="Thai">Thai</option>
-                <option value="Tibetan">Tibetan</option>
-                <option value="Tonga">Tonga</option>
-                <option value="Turkish">Turkish</option>
-                <option value="Ukranian">Ukranian</option>
-                <option value="Urdu">Urdu</option>
-                <option value="Uzbek">Uzbek</option>
-                <option value="Vietnamese">Vietnamese</option>
-                <option value="Welsh">Welsh</option>
-                <option value="Xhosa">Xhosa</option>
-              </select>
-            </div>
+            			</label>
+            			<div class="c-select__wrapper">
+							<span class="c-select__arrow">
+								<i class="icon-chevron-thin-down"></i>
+							</span>
+							<select id="language" class="c-form__field c-select" name="language" required>
+								<option disabled="" selected="" value="0">
+								Select one
+								</option>
+								<option value="Afrikanns">Afrikanns</option>
+								<option value="Albanian">Albanian</option>
+								<option value="Arabic">Arabic</option>
+								<option value="Armenian">Armenian</option>
+								<option value="Basque">Basque</option>
+								<option value="Bengali">Bengali</option>
+								<option value="Bulgarian">Bulgarian</option>
+								<option value="Catalan">Catalan</option>
+								<option value="Cambodian">Cambodian</option>
+								<option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+								<option value="Croation">Croation</option>
+								<option value="Czech">Czech</option>
+								<option value="Danish">Danish</option>
+								<option value="Dutch">Dutch</option>
+								<option value="English">English</option>
+								<option value="Estonian">Estonian</option>
+								<option value="Fiji">Fiji</option>
+								<option value="Finnish">Finnish</option>
+								<option value="French">French</option>
+								<option value="Georgian">Georgian</option>
+								<option value="German">German</option>
+								<option value="Greek">Greek</option>
+								<option value="Gujarati">Gujarati</option>
+								<option value="Hebrew">Hebrew</option>
+								<option value="Hindi">Hindi</option>
+								<option value="Hungarian">Hungarian</option>
+								<option value="Icelandic">Icelandic</option>
+								<option value="Indonesian">Indonesian</option>
+								<option value="Irish">Irish</option>
+								<option value="Italian">Italian</option>
+								<option value="Japanese">Japanese</option>
+								<option value="Javanese">Javanese</option>
+								<option value="Korean">Korean</option>
+								<option value="Latin">Latin</option>
+								<option value="Latvian">Latvian</option>
+								<option value="Lithuanian">Lithuanian</option>
+								<option value="Macedonian">Macedonian</option>
+								<option value="Malay">Malay</option>
+								<option value="Malayalam">Malayalam</option>
+								<option value="Maltese">Maltese</option>
+								<option value="Maori">Maori</option>
+								<option value="Marathi">Marathi</option>
+								<option value="Mongolian">Mongolian</option>
+								<option value="Nepali">Nepali</option>
+								<option value="Norwegian">Norwegian</option>
+								<option value="Persian">Persian</option>
+								<option value="Polish">Polish</option>
+								<option value="Portuguese">Portuguese</option>
+								<option value="Punjabi">Punjabi</option>
+								<option value="Quechua">Quechua</option>
+								<option value="Romanian">Romanian</option>
+								<option value="Russian">Russian</option>
+								<option value="Samoan">Samoan</option>
+								<option value="Serbian">Serbian</option>
+								<option value="Slovak">Slovak</option>
+								<option value="Slovenian">Slovenian</option>
+								<option value="Spanish">Spanish</option>
+								<option value="Swahili">Swahili</option>
+								<option value="Swedish ">Swedish </option>
+								<option value="Tamil">Tamil</option>
+								<option value="Tatar">Tatar</option>
+								<option value="Telugu">Telugu</option>
+								<option value="Thai">Thai</option>
+								<option value="Tibetan">Tibetan</option>
+								<option value="Tonga">Tonga</option>
+								<option value="Turkish">Turkish</option>
+								<option value="Ukranian">Ukranian</option>
+								<option value="Urdu">Urdu</option>
+								<option value="Uzbek">Uzbek</option>
+								<option value="Vietnamese">Vietnamese</option>
+								<option value="Welsh">Welsh</option>
+								<option value="Xhosa">Xhosa</option>
+							</select>
+						</div>
 					</div>
 				</fieldset>
 
@@ -1139,8 +1142,7 @@
 						<label class="c-label" for="descriptionState">
 							Description state
 						</label>
-						<textarea id="descriptionState" class="c-form__field" name="descriptionState"
-							placeholder="..."></textarea>
+						<textarea id="descriptionState" class="c-form__field c-textarea ckeditor" name="descriptionState" placeholder="..." required></textarea>
 					</div>
 
 					<div class="c-form__item">
@@ -1158,10 +1160,10 @@
 					</div>
 
 					<div class="c-form__item">
-						<label class="c-label" for="years">
+						<label class="c-label" for="experienceYears">
 							Experience (0-30 years)
 						</label>
-						<input id="years" class="c-form__field c-range" name="years" type="range" max="30" value="2"
+						<input id="experienceYears" class="c-form__field c-range" name="experienceYears" type="range" max="50" value="0"
 							step="10">
 					</div>
 
@@ -1172,45 +1174,51 @@
 
 						<div class="c-form__list">
 							<label for="experienceGradePractices" class="c-check">
-								<input id="experienceGradePractices" class="c-check__input" name="experienceGrade"
-									value="" type="radio" required>
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Practices</span>
+								<div class="c-check__inner">
+									<input id="experienceGradePractices" class="c-check__input" name="experienceGrade" value="0" type="radio" required>
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Practices</span>
+								</div>
 							</label>
 
 							<label for="experienceGradeJunior" class="c-check">
-								<input id="experienceGradeJunior" class="c-check__input" name="experienceGrade" value=""
-									type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Junior</span>
+								<div class="c-check__inner">
+									<input id="experienceGradeJunior" class="c-check__input" name="experienceGrade" value="1" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Junior</span>
+								</div>
 							</label>
 
 							<label for="experienceGradeSenior" class="c-check">
-								<input id="experienceGradeSenior" class="c-check__input" name="experienceGrade" value=""
-									type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Senior</span>
+								<div class="c-check__inner">
+									<input id="experienceGradeSenior" class="c-check__input" name="experienceGrade" value="2" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Senior</span>
+								</div>
 							</label>
 
 							<label for="experienceGradeManager" class="c-check">
-								<input id="experienceGradeManager" class="c-check__input" name="experienceGrade"
-									value="" type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Manager</span>
+								<div class="c-check__inner">
+									<input id="experienceGradeManager" class="c-check__input" name="experienceGrade" value="3" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Manager</span>
+								</div>
 							</label>
 
 							<label for="experienceGradeDirector" class="c-check">
-								<input id="experienceGradeDirector" class="c-check__input" name="experienceGrade"
-									value="" type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Director</span>
+								<div class="c-check__inner">
+									<input id="experienceGradeDirector" class="c-check__input" name="experienceGrade" value="4" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Director</span>
+								</div>
 							</label>
 
 							<label for="experienceGradeBoss" class="c-check">
-								<input id="experienceGradeBoss" class="c-check__input" name="experienceGrade" value=""
-									type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Boss</span>
+								<div class="c-check__inner">
+									<input id="experienceGradeBoss" class="c-check__input" name="experienceGrade" value="5" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Boss</span>
+								</div>
 							</label>
 						</div>
 					</div>
@@ -1222,22 +1230,25 @@
 
 						<div class="c-form__list">
 							<label for="lookingWork" class="c-check">
-								<input id="lookingWork" class="c-check__input" name="profesionalStatus" value="lookingWork"
-									type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Looking for work</span>
+								<div class="c-check__inner">
+									<input id="lookingWork" class="c-check__input" name="profesionalStatus" value="0" type="radio" required>
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Looking for work</span>
+								</div>
 							</label>
 							<label for="displayLookingWork" class="c-check">
-								<input id="displayLookingWork" class="c-check__input" name="profesionalStatus"
-									value="displayLookingWork" type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Display "looking for work" on profile</span>
+								<div class="c-check__inner">
+									<input id="displayLookingWork" class="c-check__input" name="profesionalStatus" value="1" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Display "looking for work" on profile</span>
+								</div>
 							</label>
 							<label for="contactMe" class="c-check">
-								<input id="contactMe" class="c-check__input" name="profesionalStatus" value="contactMe"
-									type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Recruiters can contact me about job opportunities</span>
+								<div class="c-check__inner">
+									<input id="contactMe" class="c-check__input" name="profesionalStatus" value="2" type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Recruiters can contact me about job opportunities</span>
+								</div>
 							</label>
 						</div>
 					</div>
@@ -1246,76 +1257,76 @@
 						<label class="c-label" for="education">
 							Education
 						</label>
-						<textarea id="education" class="c-form__field" name="education" placeholder="..."></textarea>
+						<textarea id="education" class="c-form__field c-textarea ckeditor" name="education" placeholder="..." required></textarea>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="skills">
 							Skills
-            </label>
-            <div class="c-select__wrapper">
-              <span class="c-select__arrow">
-                <i class="icon-chevron-thin-down"></i>
-              </span>
-              <select id="skills" class="c-form__field c-select" name="skills" multiple size="8">
-                <option value="0">Select one</option>
-                <optgroup label="Languages">
-                  <option value="1">HTML</option>
-                  <option value="2">CSS</option>
-                  <option value="3">JS</option>
-                  <option value="5">PHP</option>
-                  <option value="6">SQL</option>
-                </optgroup>
-                <optgroup label="CSS Architecture">
-                  <option value="7">SASS</option>
-                  <option value="8">OOCSS</option>
-                  <option value="9">SMACSS</option>
-                </optgroup>
-                <optgroup label="CSS Frameworks">
-                  <option value="10">Boostrapp</option>
-                  <option value="11">Materialize CSS</option>
-                  <option value="12">Bulma</option>
-                  <option value="13">Foundation</option>
-                  <option value="14">Semantic Ui</option>
-                </optgroup>
-                <optgroup label="CSS pre-processors">
-                  <option value="15">Sass</option>
-                  <option value="16">Less</option>
-                  <option value="17">PostCss</option>
-                </optgroup>
-                <optgroup label="JS Architecture">
-                  <option value="18">Typescript</option>
-                </optgroup>
-                <optgroup label="JS Frameworks">
-                  <option value="19">VUE</option>
-                  <option value="20">Angular</option>
-                  <option value="21">React</option>
-                </optgroup>
-                <optgroup label="PHP Frameworks">
-                  <option value="22">Laravel</option>
-                  <option value="23">Symfony</option>
-                </optgroup>
-                <optgroup label="Version Control">
-                  <option value="24">GIT and GitHub</option>
-                </optgroup>
-                <optgroup label="Package Managers">
-                  <option value="25">NPM</option>
-                  <option value="26">YARN</option>
-                </optgroup>
-                <optgroup label="Tasks runers">
-                  <option value="27">Gulp</option>
-                  <option value="28">Grunt</option>
-                </optgroup>
-              </select>
-            </div>
+            			</label>
+						<div class="c-select__wrapper">
+							<span class="c-select__arrow">
+								<i class="icon-chevron-thin-down"></i>
+							</span>
+							<select id="skills" class="c-form__field c-select" name="skills" multiple size="8" required>
+								<option value="0">Select one</option>
+								<optgroup label="Languages">
+									<option value="1">HTML</option>
+									<option value="2">CSS</option>
+									<option value="3">JS</option>
+									<option value="5">PHP</option>
+									<option value="6">SQL</option>
+								</optgroup>
+								<optgroup label="CSS Architecture">
+									<option value="7">SASS</option>
+									<option value="8">OOCSS</option>
+									<option value="9">SMACSS</option>
+								</optgroup>
+								<optgroup label="CSS Frameworks">
+									<option value="10">Boostrapp</option>
+									<option value="11">Materialize CSS</option>
+									<option value="12">Bulma</option>
+									<option value="13">Foundation</option>
+									<option value="14">Semantic Ui</option>
+								</optgroup>
+								<optgroup label="CSS pre-processors">
+									<option value="15">Sass</option>
+									<option value="16">Less</option>
+									<option value="17">PostCss</option>
+								</optgroup>
+								<optgroup label="JS Architecture">
+									<option value="18">Typescript</option>
+								</optgroup>
+								<optgroup label="JS Frameworks">
+									<option value="19">VUE</option>
+									<option value="20">Angular</option>
+									<option value="21">React</option>
+								</optgroup>
+								<optgroup label="PHP Frameworks">
+									<option value="22">Laravel</option>
+									<option value="23">Symfony</option>
+								</optgroup>
+								<optgroup label="Version Control">
+									<option value="24">GIT and GitHub</option>
+								</optgroup>
+								<optgroup label="Package Managers">
+									<option value="25">NPM</option>
+									<option value="26">YARN</option>
+								</optgroup>
+								<optgroup label="Tasks runers">
+									<option value="27">Gulp</option>
+									<option value="28">Grunt</option>
+								</optgroup>
+							</select>
+						</div>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="skillsDescription">
 							Description skills
 						</label>
-						<textarea id="skillsDescription" class="c-form__field" name="skillsDescription"
-							placeholder="What tools and languages are you most experienced with? are you specialized or more of a generalist?"></textarea>
+						<textarea id="skillsDescription" class="c-form__field c-textarea ckeditor" name="skillsDescription"
+							placeholder="What tools and languages are you most experienced with? are you specialized or more of a generalist?" required></textarea>
 					</div>
 
 					<div class="c-form__item">
@@ -1325,38 +1336,43 @@
 
 						<div class="c-form__list">
 							<label for="browserFirefox" class="c-check">
-								<input id="browserFirefox" class="c-check__input" name="browserFirefox" value="Firefox"
-									type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Firefox</span>
+								<div class="c-check__inner">
+									<input id="browserFirefox" class="c-check__input" name="browserFirefox" value="Firefox" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Firefox</span>
+								</div>
 							</label>
 
 							<label for="browserSafari" class="c-check">
-								<input id="browserSafari" class="c-check__input" name="browserSafari" value="Safari"
-									type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Safari</span>
+								<div class="c-check__inner">
+									<input id="browserSafari" class="c-check__input" name="browserSafari" value="Safari" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Safari</span>
+								</div>
 							</label>
 
 							<label for="browserOpera" class="c-check">
-								<input id="browserOpera" class="c-check__input" name="browserOpera" value="Opera"
-									type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Opera</span>
+								<div class="c-check__inner">
+									<input id="browserOpera" class="c-check__input" name="browserOpera" value="Opera" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Opera</span>
+								</div>
 							</label>
 
 							<label for="browserInternetExplorer" class="c-check">
-								<input id="browserInternetExplorer" class="c-check__input"
-									name="browserInternetExplorer" value="Internet Explorer" type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Internet Explorer</span>
+								<div class="c-check__inner">
+									<input id="browserInternetExplorer" class="c-check__input" name="browserInternetExplorer" value="Internet Explorer" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Internet Explorer</span>
+								</div>
 							</label>
 
 							<label for="browserMicrosoftEdge" class="c-check">
-								<input id="browserMicrosoftEdge" class="c-check__input" name="browserMicrosoftEdge"
-									value="Microsoft Edge" type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Microsoft Edge</span>
+								<div class="c-check__inner">
+									<input id="browserMicrosoftEdge" class="c-check__input" name="browserMicrosoftEdge" value="Microsoft Edge" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Microsoft Edge</span>
+								</div>
 							</label>
 						</div>
 					</div>
@@ -1368,48 +1384,59 @@
 
 						<div class="c-form__list">
 							<label for="editorNotePad" class="c-check">
-								<input id="editorNotePad" class="c-check__input" name="editorNotePad" value="Note Pad"
-									type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Note Pad ++</span>
+								<div class="c-check__inner">
+									<input id="editorNotePad" class="c-check__input" name="editorNotePad" value="Note Pad" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Note Pad ++</span>
+								</div>
 							</label>
 
 							<label for="editorSublimeText" class="c-check">
-								<input id="editorSublimeText" class="c-check__input" name="editorSublimeText"
-									value="Sublime Text" type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Sublime Text</span>
+								<div class="c-check__inner">
+									<input id="editorSublimeText" class="c-check__input" name="editorSublimeText" value="Sublime Text" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Sublime Text</span>
+								</div>
 							</label>
+
 							<label for="editorAtom" class="c-check">
-								<input id="editorAtom" class="c-check__input" name="editorAtom" value="Atom"
-									type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Atom</span>
+								<div class="c-check__inner">
+									<input id="editorAtom" class="c-check__input" name="editorAtom" value="Atom" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Atom</span>
+								</div>
 							</label>
+
 							<label for="editorNetbeans" class="c-check">
-								<input id="editorNetbeans" class="c-check__input" name="editorNetbeans" value="Netbeans"
-									type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Netbeans</span>
+								<div class="c-check__inner">
+									<input id="editorNetbeans" class="c-check__input" name="editorNetbeans" value="Netbeans" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Netbeans</span>
+								</div>
 							</label>
 
 							<label for="editorVisualStudio" class="c-check">
-								<input id="editorVisualStudio" class="c-check__input" name="editorVisualStudio"
-									value="Visual Studio" type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Visual Studio</span>
+								<div class="c-check__inner">
+									<input id="editorVisualStudio" class="c-check__input" name="editorVisualStudio" value="Visual Studio" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Visual Studio</span>
+								</div>
 							</label>
+
 							<label for="editorBrackets" class="c-check">
-								<input id="editorBrackets" class="c-check__input" name="editorBrackets" value="Brackets"
-									type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Brackets</span>
+								<div class="c-check__inner">
+									<input id="editorBrackets" class="c-check__input" name="editorBrackets" value="Brackets" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Brackets</span>
+								</div>
 							</label>
+
 							<label for="editorJetbrains" class="c-check">
-								<input id="editorJetbrains" class="c-check__input" name="editorJetbrains"
-									value="Jetbrains" type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Jetbrains (WebStorm, PhpSorm,...)</span>
+								<div class="c-check__inner">
+									<input id="editorJetbrains" class="c-check__input" name="editorJetbrains" value="Jetbrains" type="checkbox">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Jetbrains (WebStorm, PhpSorm,...)</span>
+								</div>
 							</label>
 						</div>
 					</div>
@@ -1418,24 +1445,24 @@
 						<label class="c-label" for="gettingIntoDescription">
 							I'm getting into
 						</label>
-						<textarea id="gettingIntoDescription" class="c-form__field" name="gettingIntoDescription"
-							placeholder="What are you learning right now? what are the new tools and languages you're picking up in 2019?"></textarea>
+						<textarea id="gettingIntoDescription" class="c-form__field c-textarea ckeditor" name="gettingIntoDescription"
+							placeholder="What are you learning right now? what are the new tools and languages you're picking up in 2019?" required></textarea>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="proyectsDescription">
 							My projects and hacks
 						</label>
-						<textarea id="proyectsDescription" class="c-form__field" name="proyectsDescription"
-							placeholder="What projects are currently occupying most of your time?"></textarea>
+						<textarea id="proyectsDescription" class="c-form__field c-textarea ckeditor" name="proyectsDescription"
+							placeholder="What projects are currently occupying most of your time?" required></textarea>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="collaborationsDescription">
 							Available for
 						</label>
-						<textarea id="collaborationsDescription" class="c-form__field" name="collaborationsDescription"
-							placeholder="What kinds of collaborations or discussions are you available for? what's a good reason to say hey to you these days?"></textarea>
+						<textarea id="collaborationsDescription" class="c-form__field c-textarea ckeditor" name="collaborationsDescription"
+							placeholder="What kinds of collaborations or discussions are you available for? what's a good reason to say hey to you these days?" required></textarea>
 					</div>
 				</fieldset>
 
@@ -1445,11 +1472,11 @@
 					</legend>
 
 					<div class="c-form__item">
-						<label class="c-label" for="githubUrl">
+						<label class="c-label" for="gitHubUrl">
 							Github
 						</label>
-						<input id="githubUrl" class="c-form__field" name="githubUrl" type="url"
-							placeholder="https://github.com/...">
+						<input id="gitHubUrl" class="c-form__field" name="gitHubUrl" type="url"
+							placeholder="https://github.com/..." required>
 					</div>
 
 					<div class="c-form__item">
@@ -1457,7 +1484,7 @@
 							GitLab
 						</label>
 						<input id="gitLabUrl" class="c-form__field" name="gitLabUrl" type="url"
-							placeholder="https://about.gitlab.com/...">
+							placeholder="https://about.gitlab.com/..." required>
 					</div>
 
 					<div class="c-form__item">
@@ -1465,7 +1492,7 @@
 							Stack Overflow
 						</label>
 						<input id="stackOverflowUrl" class="c-form__field" name="stackOverflowUrl" type="url"
-							placeholder="https://github.com/...">
+							placeholder="https://github.com/..." required>
 					</div>
 
 					<div class="c-form__item">
@@ -1473,7 +1500,7 @@
 							Linkedin
 						</label>
 						<input id="linkedinUrl" class="c-form__field" name="linkedinUrl" type="url"
-							placeholder="https://www.linkedin.com/...">
+							placeholder="https://www.linkedin.com/..." required>
 					</div>
 
 					<div class="c-form__item">
@@ -1481,7 +1508,7 @@
 							Facebook
 						</label>
 						<input id="facebookUrl" class="c-form__field" name="facebookUrl" type="url"
-							placeholder="https://facebook.com/...">
+							placeholder="https://facebook.com/..." required>
 					</div>
 
 					<div class="c-form__item">
@@ -1489,7 +1516,7 @@
 							Twitter
 						</label>
 						<input id="twitterUrl" class="c-form__field" name="twitterUrl" type="url"
-							placeholder="https://www.twitter.com/...">
+							placeholder="https://www.twitter.com/..." required>
 					</div>
 
 					<div class="c-form__item">
@@ -1497,7 +1524,7 @@
 							Instagram
 						</label>
 						<input id="instagramUrl" class="c-form__field" name="instagramUrl" type="url"
-							placeholder="https://www.instagram.com/...">
+							placeholder="https://www.instagram.com/..." required>
 					</div>
 
 					<div class="c-form__item">
@@ -1505,7 +1532,7 @@
 							Medium
 						</label>
 						<input id="mediumUrl" class="c-form__field" name="mediumUrl" type="url"
-							placeholder="https://medium.com/...">
+							placeholder="https://medium.com/..." required>
 					</div>
 
 					<div class="c-form__item">
@@ -1513,7 +1540,7 @@
 							Codepen
 						</label>
 						<input id="codepenUrl" class="c-form__field" name="codepenUrl" type="url"
-							placeholder="https://codepen.io/">
+							placeholder="https://codepen.io/" required>
 					</div>
 
 					<div class="c-form__item">
@@ -1521,7 +1548,7 @@
 							CodeSandbox
 						</label>
 						<input id="codeSandboxUrl" class="c-form__field" name="codeSandboxUrl" type="url"
-							placeholder="https://codesandbox.io/">
+							placeholder="https://codesandbox.io/" required>
 					</div>
 
 					<div class="c-form__item">
@@ -1529,14 +1556,14 @@
 							JSFiddle
 						</label>
 						<input id="jsFiddleUrl" class="c-form__field" name="jsFiddleUrl" type="url"
-							placeholder="https://jsfiddle.net/">
+							placeholder="https://jsfiddle.net/" required>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="webUrl">
 							Website
 						</label>
-						<input id="webUrl" class="c-form__field" name="webUrl" type="url" placeholder="https://www...">
+						<input id="webUrl" class="c-form__field" name="webUrl" type="url" placeholder="https://www..." required>
 					</div>
 				</fieldset>
 
@@ -1546,29 +1573,29 @@
 					</legend>
 
 					<div class="c-form__item">
-						<label class="c-label" for="description">
+						<label class="c-label" for="descriptionAbout">
 							Short description about you
 						</label>
-						<textarea id="description" class="c-form__field" name="description" cols="30" rows="10"
-							placeholder="..."></textarea>
+						<textarea id="descriptionAbout" class="c-form__field c-textarea ckeditor" name="descriptionAbout" cols="30" rows="10"
+							placeholder="..." required></textarea>
 					</div>
 
 					<div class="c-form__item">
 						<label class="c-label" for="hobbies">
 							Hobbies
-            </label>
-            <div class="c-select__wrapper">
-              <span class="c-select__arrow">
-                <i class="icon-chevron-thin-down"></i>
-              </span>
-              <input class="c-form__field c-select" list="hobbies" name="hobbies" placeholder="Choose or write">
-              <datalist id="hobbies">
-                <option value="Meetups"></option>
-                <option value="Sports"></option>
-                <option value="Coding open source"></option>
-                <option value="Video games"></option>
-              </datalist>
-            </div>
+						</label>
+						<div class="c-select__wrapper">
+							<span class="c-select__arrow">
+								<i class="icon-chevron-thin-down"></i>
+							</span>
+							<input class="c-form__field c-select" list="hobbies" name="hobbies" placeholder="Choose or write" required>
+							<datalist id="hobbies">
+								<option value="Meetups"></option>
+								<option value="Sports"></option>
+								<option value="Coding open source"></option>
+								<option value="Video games"></option>
+							</datalist>
+						</div>
 					</div>
 				</fieldset>
 
@@ -1583,14 +1610,14 @@
 							<label class="c-label" for="oldUsername">
 								Old username
 							</label>
-							<input id="oldUsername" class="c-form__field" name="oldUsername" type="text" placeholder="">
+							<input id="oldUsername" class="c-form__field" name="oldUsername" type="text" placeholder="" required>
 						</div>
 
 						<div class="c-form__item">
 							<label class="c-label" for="newUsername">
 								New username
 							</label>
-							<input id="newUsername" class="c-form__field" name="newUsername" type="text" placeholder="">
+							<input id="newUsername" class="c-form__field" name="newUsername" type="text" placeholder="" required>
 						</div>
 					</fieldset>
 
@@ -1603,22 +1630,30 @@
 							<label class="c-label" for="oldEmail">
 								Old email
 							</label>
-							<input id="oldEmail" class="c-form__field" name="oldEmail" type="email" placeholder="@">
+							<input id="oldEmail" class="c-form__field" name="oldEmail" type="email" placeholder="@" required>
 						</div>
 
 						<div class="c-form__item">
 							<label class="c-label" for="newEmail">
 								New email
 							</label>
-							<input id="newEmail" class="c-form__field" name="newEmail" type="email" placeholder="@">
+							<input id="newEmail" class="c-form__field" name="newEmail" type="email" placeholder="@" required>
+						</div>
+
+						<div class="c-form__item">
+							<label class="c-label" for="repeatNewEmail">
+								Repeat new email
+							</label>
+							<input id="repeatNewEmail" class="c-form__field" name="repeatNewEmail" type="email" placeholder="@" required>
 						</div>
 
 						<div class="c-form__item">
 							<label for="displayEmail" class="c-check">
-								<input id="displayEmail" class="c-check__input" name="displayEmail" value="1"
-									type="checkbox">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Display email on profile</span>
+								<div class="c-check__inner">
+									<input id="displayEmail" class="c-check__input" name="displayEmail" value="1" type="checkbox" required>
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Display email on profile</span>
+								</div>
 							</label>
 						</div>
 
@@ -1633,16 +1668,21 @@
 							<label class="c-label" for="oldPassword">
 								Old password
 							</label>
-							<input id="oldPassword" class="c-form__field" name="oldPassword" type="password"
-								placeholder="***">
+							<input id="oldPassword" class="c-form__field" name="oldPassword" type="password" placeholder="***" required>
 						</div>
 
 						<div class="c-form__item">
 							<label class="c-label" for="newPassword">
 								New password
 							</label>
-							<input id="newPassword" class="c-form__field" name="newPassword" type="password"
-								placeholder="***">
+							<input id="newPassword" class="c-form__field" name="newPassword" type="password" placeholder="***" required>
+						</div>
+
+						<div class="c-form__item">
+							<label class="c-label" for="repeatNewPassword">
+								Repeat new password
+							</label>
+							<input id="repeatNewPassword" class="c-form__field" name="repeatNewPassword" type="password" placeholder="***" required>
 						</div>
 					</fieldset>
 				</div>
@@ -1659,18 +1699,40 @@
 
 						<div class="c-form__list">
 							<label for="statusPrivate" class="c-check">
-								<input id="statusPrivate" class="c-check__input" name="statusActive" value="Private"
-									type="radio" required>
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Private</span>
+								<div class="c-check__inner">
+									<input id="statusPrivate" class="c-check__input" name="statusActive" value="Private"
+										type="radio">
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Private</span>
+								</div>
 							</label>
+
 							<label for="statusPublic" class="c-check">
-								<input id="statusPublic" class="c-check__input" name="statusActive" value="Public"
-									type="radio">
-								<span class="c-check__mark"></span>
-								<span class="c-check__label">Public</span>
+								<div class="c-check__inner">
+									<input id="statusPublic" class="c-check__input" name="statusActive" value="Public"
+										type="radio" checked>
+									<span class="c-check__mark"></span>
+									<span class="c-check__label">Public</span>
+								</div>
 							</label>
 						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="c-fieldset">
+					<legend class="c-legend">
+						Terms and Conditions
+					</legend>	
+					<div class="c-form-input">
+						<label for="terms" class="c-check">
+							<div class="c-check__inner">
+								<input id="terms" class="c-check__input" name="terms" value="termsAcept" type="checkbox" checked required>
+								<span class="c-check__mark"></span>
+								<span class="c-check__label">
+									I accept the <a href="#" class="c-link">Terms and Conditions</a>
+								</span>
+							</div>
+						</label>
 					</div>
 				</fieldset>
 
