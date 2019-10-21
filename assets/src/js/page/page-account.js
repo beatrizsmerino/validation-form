@@ -2,48 +2,42 @@
 // account
 // ------------------
 
-
-
-
-
-(function ()
-{
-
-    $("#accountForm").validate({
-        rules: {
-            firstName: {
-                required: true,
-                letter: true
-            },
-            lastName: {
-                required: true,
+(function () {
+	$("#accountForm").validate({
+		rules: {
+			firstName: {
+				required: true,
 				letter: true
-            },
+			},
+			lastName: {
+				required: true,
+				letter: true
+			},
 			phone: {
 				required: true
 			},
-			dateBirth:{
+			dateBirth: {
 				required: true
 			},
 			// age:{},
 			// gender:{},
-			photo:{
+			photo: {
 				required: true
 			},
 			// backgroundColor:{},
 			// textColor:{},
 			//------------------------------
-			country:{
+			country: {
 				required: true
 			},
-			province:{
+			province: {
 				required: true
 			},
-			language:{
+			language: {
 				required: true
 			},
 			//------------------------------
-			descriptionState:{
+			descriptionState: {
 				required: true
 			},
 			// company:{
@@ -55,19 +49,19 @@
 			// experienceYears:{
 			// 	required: true
 			// },
-			experienceGrade:{
+			experienceGrade: {
 				required: true
 			},
-			profesionalStatus:{
+			profesionalStatus: {
 				required: true
 			},
-			education:{
+			education: {
 				required: true
 			},
-			skills:{
+			skills: {
 				required: true
 			},
-			skillsDescription:{
+			skillsDescription: {
 				required: true
 			},
 			// browserFirefox:{},
@@ -82,119 +76,117 @@
 			// editorVisualStudio:{},
 			// editorBrackets:{},
 			// editorJetbrains:{},
-			gettingIntoDescription:{
+			gettingIntoDescription: {
 				required: true
 			},
-			proyectsDescription:{
+			proyectsDescription: {
 				required: true
 			},
-			collaborationsDescription:{
-				required: true
-			},
-			//------------------------------
-			gitHubUrl:{
-				required: true,
-				url: true
-			},
-			gitLabUrl:{
-				required: true,
-				url: true
-			},
-			stackOverflowUrl:{
-				required: true,
-				url: true
-			},
-			linkedinUrl:{
-				required: true,
-				url: true
-			},
-			facebookUrl:{
-				required: true,
-				url: true
-			},
-			twitterUrl:{
-				required: true,
-				url: true
-			},
-			instagramUrl:{
-				required: true,
-				url: true
-			},
-			mediumUrl:{
-				required: true,
-				url: true
-			},
-			codepenUrl:{
-				required: true,
-				url: true
-			},
-			codeSandboxUrl:{
-				required: true,
-				url: true
-			},
-			jsFiddleUrl:{
-				required: true,
-				url: true
-			},
-			webUrl:{
-				required: true,
-				url: true
-			},
-			//------------------------------
-			descriptionAbout:{
-				required: true
-			},
-			hobbies:{
+			collaborationsDescription: {
 				required: true
 			},
 			//------------------------------
-			oldUsername:{
+			gitHubUrl: {
+				required: true,
+				url: true
+			},
+			gitLabUrl: {
+				required: true,
+				url: true
+			},
+			stackOverflowUrl: {
+				required: true,
+				url: true
+			},
+			linkedinUrl: {
+				required: true,
+				url: true
+			},
+			facebookUrl: {
+				required: true,
+				url: true
+			},
+			twitterUrl: {
+				required: true,
+				url: true
+			},
+			instagramUrl: {
+				required: true,
+				url: true
+			},
+			mediumUrl: {
+				required: true,
+				url: true
+			},
+			codepenUrl: {
+				required: true,
+				url: true
+			},
+			codeSandboxUrl: {
+				required: true,
+				url: true
+			},
+			jsFiddleUrl: {
+				required: true,
+				url: true
+			},
+			webUrl: {
+				required: true,
+				url: true
+			},
+			//------------------------------
+			descriptionAbout: {
 				required: true
 			},
-			newUsername:{
+			hobbies: {
 				required: true
 			},
-			repeatNewUsername:{
+			//------------------------------
+			oldUsername: {
+				required: true
+			},
+			newUsername: {
+				required: true
+			},
+			repeatNewUsername: {
 				required: true,
 				equalTo: "#newUsername"
 			},
 			//------------------------------
-			oldEmail:{
+			oldEmail: {
 				required: true,
 				email: true
 			},
-			newEmail:{
+			newEmail: {
 				required: true,
 				email: true
 			},
-			repeatNewEmail:{
+			repeatNewEmail: {
 				required: true,
 				email: true,
 				equalTo: "#newEmail"
 			},
-			displayEmail:{
+			displayEmail: {
 				required: true
 			},
 			//------------------------------
-			oldPassword:{
+			oldPassword: {
 				required: true
 			},
-			newPassword:{
+			newPassword: {
 				required: true
 			},
-			repeatNewPassword:{
+			repeatNewPassword: {
 				required: true,
-                equalTo: "#newPassword"
+				equalTo: "#newPassword"
 			},
 			//------------------------------
 			// statusActive:{},
 			//------------------------------
-			termsAcept:{
+			termsAcept: {
 				required: true
 			}
-        },
-        messages: {
-        }
-    });
-
+		},
+		messages: {}
+	});
 })();
