@@ -5,11 +5,8 @@
 
 
 
-$(document).ready(function(){
-    
-    // FORM - REQUIRED
-    // =================================================
-    
-    formFieldRequired();
 
-});
+// FORM - REQUIRED
+// =================================================
+
+formFieldRequired();
