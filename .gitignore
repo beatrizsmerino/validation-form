@@ -693,10 +693,5 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/node,macos,windows,phpstorm,phpstorm+all,phpstorm+iml,visualstudio,visualstudiocode
 
 
-
-# Files
-assets/dist/css/styles.min.css
-assets/dist/js/scripts.min.js
-
 # Visual Studio Code - Live Reload
 .vscode/settings.json
