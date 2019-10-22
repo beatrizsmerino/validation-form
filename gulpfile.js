@@ -50,7 +50,17 @@ var nodeModules = "./node_modules/";
 // Roots used to concat the files in a specific order.
 let filesJs = [
     rootSrcJs + "scripts.js",
+    //----------------
+    rootSrcJs + "tools/tools-form-require.js",
+    rootSrcJs + "tools/tools-form-validation.js",
+    rootSrcJs + "tools/tools-form-validation-ckeditor.js",
+    //----------------
+    rootSrcJs + "components/components-form-require.js",
+    rootSrcJs + "components/components-form-validation.js",
+    rootSrcJs + "components/components-form-validation-ckeditor.js",
+    //----------------
     rootSrcJs + "components/components-message.js",
+    //----------------
     rootSrcJs + "page/page-account.js"
 ];
 

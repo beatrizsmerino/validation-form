@@ -25,64 +25,73 @@ $check-mark-color: $color-gray-100
 
 
 .c-check
-    width: 100%
-    height: $check-input-size
-    padding-left: $check-input-size
-    display: flex
-    align-items: center
-    position: relative
-    font-size: 1rem
-    user-select: none
-    cursor: pointer
+	width: 100%
+	height: $check-input-size
+	padding-left: $check-input-size
+	display: flex
+	align-items: center
+	position: relative
+	font-size: 1rem
+	user-select: none
+	cursor: pointer
+	
+	&:only-child
+		margin-bottom: 0
+	
+	&:not(:last-of-type)
+		margin-bottom: 0.4rem
+		
+	/* On mouse-over */
+	&:hover
+		.c-check__input ~ .c-check__mark
+			background-color: darken($color-brand-1, 5%)
+	
+	&__label
+		margin-left: $check-label-margin-left
+		position: relative
+	
+	/* Hide the browser's default checkbox */
+	&__input
+		width: 0
+		height: 0
+		position: absolute
+		opacity: 0
+		cursor: pointer
+		
+		/* When the checkbox is checked*/
+		&:checked ~ .c-check__mark
+			background-color: $check-input-background-color-checked
+			
+		/* Show the checkmark when checked */
+		&:checked ~ .c-check__mark:after
+			display: block
+	
+	/* Create a custom checkbox */
+	&__mark
+		width: $check-input-size
+		height: $check-input-size
+		position: absolute
+		top: 0
+		left: 0
+		border-width: $check-input-border
+		border-style: solid
+		border-color: $check-input-border-color
+		background-color: $check-input-background-color
+		
+		/* Create the checkmark/indicator (hidden when not checked) */
+		&:after
+			content: ""
+			display: none
+			width: #{$check-mark-width}px
+			height: #{$check-mark-height}px
+			position: absolute
+			top: calc(50% - #{$check-mark-height/2}px)
+			left: calc(50% - #{$check-mark-width/2}px)
+			border: solid $check-mark-color
+			border-width: 0 3px 3px 0
+			transform: rotate(45deg)
 
-    &:not(:last-child)
-      margin-bottom: 0.4rem
-        
-    /* On mouse-over */
-    &:hover
-        .c-check__input ~ .c-check__mark
-            background-color: darken($color-brand-1, 5%)
-
-    &__label
-        margin-left: $check-label-margin-left;
-
-    /* Hide the browser's default checkbox */
-    &__input
-        position: absolute
-        opacity: 0
-        cursor: pointer
-        height: 0
-        width: 0
-        
-        /* When the checkbox is checked*/
-        &:checked ~ .c-check__mark
-            background-color: $check-input-background-color-checked
-            
-        /* Show the checkmark when checked */
-        &:checked ~ .c-check__mark:after 
-            display: block
-        
-    /* Create a custom checkbox */
-    &__mark
-        position: absolute
-        top: 0
-        left: 0
-        height: $check-input-size
-        width: $check-input-size
-        border-width: $check-input-border
-        border-style: solid
-        border-color: $check-input-border-color
-        background-color: $check-input-background-color
-        
-        /* Create the checkmark/indicator (hidden when not checked) */
-        &:after
-            content: ""
-            display: none
-            width: #{$check-mark-width}px
-            height: #{$check-mark-height}px
-            position: absolute
-            top: calc(50% - #{$check-mark-height/2}px)
-            left: calc(50% - #{$check-mark-width/2}px)
-            border: solid $check-mark-color
-            border-width: 0 3px 3px 0
-            transform: rotate(45deg)
+.c-check
+	&__input
+		&[type="radio"] ~ .c-check__mark
+			border-radius: 50%
