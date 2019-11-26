@@ -9,7 +9,7 @@
 
 // KEYFRAMES - MOVE IN
 // =================================================
-@include keyframes(moveInTopToBottom)
+@include keyframes(moveInBottomToTop)
 	0%
 		opacity: 0
 		@include prefix(transform, translate3d(0, 100%, 0))
@@ -27,7 +27,7 @@
 		@include prefix(transform, translate3d(0, 0, 0))
 
 
-@include keyframes(moveInLeftToRight)
+@include keyframes(moveInRightToLeft)
 	0%
 		opacity: 0
 		@include prefix(transform, translate3d(100%, 0, 0))
@@ -36,7 +36,7 @@
 		@include prefix(transform, translate3d(0, 0, 0))
 
 
-@include keyframes(moveInRightToLeft)
+@include keyframes(moveInLeftToRight)
 	0%
 		opacity: 0
 		@include prefix(transform, translate3d(-100%, 0, 0))
@@ -50,17 +50,19 @@
 
 // KEYFRAMES - MOVE OUT
 // =================================================
-@include keyframes(moveOutBottomToTop)
+@include keyframes(moveOutTopToBottom)
 	0%
 		opacity: 1
+		@include prefix(transform, translate3d(0, 0, 0))
 	100%
 		opacity: 0
 		@include prefix(transform, translate3d(0, 100%, 0))
 
 
-@include keyframes(moveOutTopToBottom)
+@include keyframes(moveOutBottomToTop)
 	0%
 		opacity: 1
+		@include prefix(transform, translate3d(0, 0, 0))
 	100%
 		opacity: 0
 		@include prefix(transform, translate3d(0, -100%, 0))
@@ -69,6 +71,7 @@
 @include keyframes(moveOutLeftToRight)
 	0%
 		opacity: 1
+		@include prefix(transform, translate3d(0, 0, 0))
 	100%
 		opacity: 0
 		@include prefix(transform, translate3d(100%, 0, 0))
@@ -76,135 +79,6 @@
 
 @include keyframes(moveOutRightToLeft)
 	0%
-		opacity: 1
-	100%
-		opacity: 0
-		@include prefix(transform, translate3d(-100%, 0, 0))
-
-
-
-
-
-// KEYFRAMES - MOVE IN OUT
-// =================================================
-@include keyframes(moveInOutBottomToTop)
-	0%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 100%, 0))
-	5%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 0, 0))
-	95%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 0, 0))
-	100%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 100%, 0))
-
-
-@include keyframes(moveInOutTopToBottom)
-	0%
-		opacity: 1
-		@include prefix(transform, translate3d(0, -100%, 0))
-	45%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 0, 0))
-	55%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 0, 0))
-	100%
-		opacity: 1
-		@include prefix(transform, translate3d(0, -100%, 0))
-
-
-@include keyframes(moveInOutLeftToRight)
-	0%
-		opacity: 1
-		@include prefix(transform, translate3d(100%, 0, 0))
-	45%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 0, 0))
-	55%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 0, 0))
-	100%
-		opacity: 1
-		@include prefix(transform, translate3d(100%, 0, 0))
-
-
-@include keyframes(moveInOutRightToLeft)
-	0%
-		opacity: 1
-		@include prefix(transform, translate3d(-100%, 0, 0))
-	5%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 0, 0))
-	95%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 0, 0))
-	100%
-		opacity: 1
-		@include prefix(transform, translate3d(-100%, 0, 0))
-
-
-
-
-
-// KEYFRAMES - MOVE OUT IN
-// =================================================
-@include keyframes(moveOutInBottomToTop)
-	0%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 100%, 0))
-	5%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 0, 0))
-	95%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 0, 0))
-	100%
-		opacity: 0
-		@include prefix(transform, translate3d(0, 100%, 0))
-
-
-@include keyframes(moveOutInTopToBottom)
-	0%
-		opacity: 0
-		@include prefix(transform, translate3d(0, -100%, 0))
-	5%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 0, 0))
-	95%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 0, 0))
-	100%
-		opacity: 0
-		@include prefix(transform, translate3d(0, -100%, 0))
-
-
-@include keyframes(moveOutInLeftToRight)
-	0%
-		opacity: 0
-		@include prefix(transform, translate3d(100%, 0, 0))
-	5%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 0, 0))
-	95%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 0, 0))
-	100%
-		opacity: 0
-		@include prefix(transform, translate3d(100%, 0, 0))
-
-
-@include keyframes(moveOutInRightToLeft)
-	0%
-		opacity: 0
-		@include prefix(transform, translate3d(-100%, 0, 0))
-	5%
-		opacity: 1
-		@include prefix(transform, translate3d(0, 0, 0))
-	95%
 		opacity: 1
 		@include prefix(transform, translate3d(0, 0, 0))
 	100%
