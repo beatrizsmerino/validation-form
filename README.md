@@ -6,11 +6,11 @@
 
 ### The validation form is a complete example of an html form on the user account with different fields, required validations and custom text fields.
 
-![Validation Form](https://github.com/beatrizsmerino/validation-form/blob/feature/documentation/documentation/images/validation-form-1.jpg)
+![Validation Form](https://github.com/beatrizsmerino/validation-form/blob/master/README/images/validation-form-1.jpg)
 
-![Validation Form](https://github.com/beatrizsmerino/validation-form/blob/feature/documentation/documentation/images/validation-form-2.jpg)
+![Validation Form](https://github.com/beatrizsmerino/validation-form/blob/master/README/images/validation-form-2.jpg)
 
-![Validation Form](https://github.com/beatrizsmerino/validation-form/blob/feature/documentation/documentation/images/validation-form-3.jpg)
+![Validation Form](https://github.com/beatrizsmerino/validation-form/blob/master/README/images/validation-form-3.jpg)
 
 ## Development interface
 
