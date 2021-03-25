@@ -23,13 +23,13 @@ const gulp                = require("gulp"),
 let proyectName = "validation-form/";
 
 // Root src
-let rootSrc        = "assets/src/",
+let rootSrc        = "src/",
     rootSrcIcomoon = rootSrc + "icomoon/",
     rootSrcSass    = rootSrc + "sass/",
     rootSrcJs      = rootSrc + "js/";
 
 // Root dist
-let rootDist        = "assets/dist/",
+let rootDist        = "dist/",
     rootDistIcomoon = rootDist + "icomoon/",
     rootDistCss     = rootDist + "css/",
     rootDistJs      = rootDist + "js/";
