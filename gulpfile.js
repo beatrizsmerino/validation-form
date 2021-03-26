@@ -36,19 +36,22 @@ let rootDist        = "dist/",
 
 // Root Files
 let rootFiles     = "**/*",
-    rootFilesSass = "**/*.sass",
-    rootFilesCss  = "**/*.css",
-    rootFilesJs   = "**/*.js";
+	rootFilesHtml = "*.html",
+	rootFilesSass = "**/*.sass",
+	rootFilesCss  = "**/*.css",
+	rootFilesJs   = "**/*.js";
 
 // Watch
-let WatchFilesCss = rootDistCss + rootFilesCss,
-    WatchFilesJs  = rootDistJs + rootFilesJs;
+let WatchFilesHtml = rootDist + rootFilesHtml,
+	WatchFilesCss = rootDistCss + rootFilesCss,
+	WatchFilesJs = rootDistJs + rootFilesJs,
+	WatchFilesIcon = rootDistIcomoon + rootFiles;
 
 // Node modules
 var nodeModules = "./node_modules/";
 
 // Roots used to concat the files in a specific order.
-let filesJs = [
+let filesJsCompile = [
     rootSrcJs + "scripts.js",
     //----------------
     rootSrcJs + "tools/tools-form-require.js",
@@ -69,14 +72,27 @@ var filesCss = [rootDistCss + "styles.min.css"];
 
 // GULP TASK
 // =================================================
-function server() {
+function createServer() {
 	browserSync.init({
 		server: {
-			port: 3000,
-			baseDir: ".",
-			browser: ["google-chrome", "google-chrome", "firefox", "opera"],
+			baseDir: "./dist",
+			browser: ["google-chrome", "firefox"],
 		},
 	});
+}
+
+function copyDirectory(directoryToCopy, directoryOutput) {
+	return gulp
+		.src(`${directoryToCopy}/**/*`)
+		.pipe(gulp.dest(directoryOutput));
+}
+
+function copyFiles(filesToCopy, directoryOutput) {
+	return gulp.src(filesToCopy).pipe(gulp.dest(directoryOutput));
+}
+
+function htmlCopy(){
+	return copyFiles(rootSrc + rootFilesHtml, rootDist);
 }
 
 function icomoonMinify()
@@ -96,10 +112,8 @@ function icomoonMinify()
         .pipe(gulp.dest(rootDistIcomoon));
 }
 
-function icomoonCopy()
-{
-    return gulp.src(rootSrcIcomoon + 'fonts/*', {base: "./" + rootSrcIcomoon})
-               .pipe(gulp.dest(rootDistIcomoon));
+function icomoonCopy(){
+	return copyDirectory(rootSrc + "icomoon/fonts", rootDist + "icomoon/fonts");
 }
 
 function sassCompile()
@@ -140,7 +154,7 @@ function cssCompile()
 function jsCompile()
 {
     return gulp
-        .src(filesJs)
+        .src(filesJsCompile)
         .pipe(
             babel({
                 presets: ["@babel/preset-env"]
@@ -152,38 +166,72 @@ function jsCompile()
         .pipe(gulp.dest(rootDistJs));
 }
 
+function jsCopy() {
+	return copyDirectory(rootSrc + "js/libs", rootDist + "js/libs");
+}
+
 
 // WATCH and EXPORTS
 // =================================================
 function watch()
 {
-    server();
+    createServer();
     
-    gulp.watch(rootSrcJs + rootFilesJs, jsCompile);
-    gulp.watch(rootSrcSass + rootFilesSass, gulp.series(icomoonMinify, icomoonCopy));
+	gulp.watch(rootSrc + rootFilesHtml, htmlCopy);
+    gulp.watch(rootSrcJs + rootFilesJs, gulp.series(jsCompile, jsCopy));
+    gulp.watch(rootSrcIcomoon + rootFiles, gulp.series(icomoonMinify, icomoonCopy));
     gulp.watch(rootSrcSass + rootFilesSass, gulp.series(sassCompile, cssCompile));
     
-    gulp.watch([WatchFilesCss, WatchFilesJs]).on("change", reload);
+    gulp.watch([WatchFilesHtml, WatchFilesCss, WatchFilesIcon, WatchFilesJs]).on(
+		"change",
+		reload
+	);
 }
 
-exports.server = server;
+exports.createServer  = createServer;
+exports.htmlCopy 	  = htmlCopy;
 exports.icomoonMinify = icomoonMinify;
 exports.icomoonCopy   = icomoonCopy;
 exports.sassCompile   = sassCompile;
 exports.cssCompile    = cssCompile;
 exports.jsCompile     = jsCompile;
+exports.jsCopy 		  = jsCopy;
+exports.watch 		  = watch;
 
-exports.watch = watch;
 
+gulp.task(
+	"default",
+	gulp.series(
+		htmlCopy,
+		sassCompile,
+		cssCompile,
+		jsCompile,
+		icomoonMinify,
+		icomoonCopy,
+		watch
+	)
+);
 
-gulp.task("default", gulp.parallel(watch));
+gulp.task("watch", gulp.parallel(watch));
 
-gulp.task("server", gulp.series(server));
+gulp.task("serve", gulp.series(createServer));
 
-gulp.task("all", gulp.series(sassCompile, cssCompile, jsCompile, icomoonMinify, icomoonCopy));
+gulp.task(
+	"build",
+	gulp.series(
+		htmlCopy,
+		sassCompile,
+		cssCompile,
+		jsCompile,
+		icomoonMinify,
+		icomoonCopy
+	)
+);
 
-gulp.task("icomoon", gulp.series(icomoonMinify, icomoonCopy));
+gulp.task("html", gulp.series(htmlCopy));
+
+gulp.task("icon", gulp.series(icomoonMinify, icomoonCopy));
 
 gulp.task("css", gulp.series(sassCompile, cssCompile));
 
-gulp.task("js", gulp.series(jsCompile));
+gulp.task("js", gulp.series(jsCompile, jsCopy));
