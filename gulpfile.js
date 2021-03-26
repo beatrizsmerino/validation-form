@@ -184,6 +184,6 @@ gulp.task("all", gulp.series(sassCompile, cssCompile, jsCompile, icomoonMinify, 
 
 gulp.task("icomoon", gulp.series(icomoonMinify, icomoonCopy));
 
-gulp.task("css", gulp.series(sassCompile, cssCompile, icomoonMinify));
+gulp.task("css", gulp.series(sassCompile, cssCompile));
 
 gulp.task("js", gulp.series(jsCompile));
