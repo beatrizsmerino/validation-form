@@ -20,7 +20,7 @@ const gulp                = require("gulp"),
 
 // ROOTS
 // =================================================
-let proyectName = "validation-form/";
+let proyectName = "./validation-form/";
 
 // Root src
 let rootSrc        = "src/",
@@ -69,6 +69,16 @@ var filesCss = [rootDistCss + "styles.min.css"];
 
 // GULP TASK
 // =================================================
+function server() {
+	browserSync.init({
+		server: {
+			port: 3000,
+			baseDir: ".",
+			browser: ["google-chrome", "google-chrome", "firefox", "opera"],
+		},
+	});
+}
+
 function icomoonMinify()
 {
     return gulp
@@ -147,11 +157,7 @@ function jsCompile()
 // =================================================
 function watch()
 {
-    browserSync.init({
-        open: "external",
-        proxy: "http://localhost/" + proyectName,
-        port: 3306
-    });
+    server();
     
     gulp.watch(rootSrcJs + rootFilesJs, jsCompile);
     gulp.watch(rootSrcSass + rootFilesSass, gulp.series(icomoonMinify, icomoonCopy));
@@ -160,6 +166,7 @@ function watch()
     gulp.watch([WatchFilesCss, WatchFilesJs]).on("change", reload);
 }
 
+exports.server = server;
 exports.icomoonMinify = icomoonMinify;
 exports.icomoonCopy   = icomoonCopy;
 exports.sassCompile   = sassCompile;
@@ -170,6 +177,8 @@ exports.watch = watch;
 
 
 gulp.task("default", gulp.parallel(watch));
+
+gulp.task("server", gulp.series(server));
 
 gulp.task("all", gulp.series(sassCompile, cssCompile, jsCompile, icomoonMinify, icomoonCopy));
 
