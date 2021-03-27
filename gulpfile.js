@@ -206,6 +206,7 @@ gulp.task(
 		sassCompile,
 		cssCompile,
 		jsCompile,
+		jsCopy,
 		icomoonMinify,
 		icomoonCopy,
 		watch
@@ -223,6 +224,7 @@ gulp.task(
 		sassCompile,
 		cssCompile,
 		jsCompile,
+		jsCopy,
 		icomoonMinify,
 		icomoonCopy
 	)
