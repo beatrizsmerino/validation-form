@@ -18,59 +18,59 @@ const gulp                = require("gulp"),
       babel               = require("gulp-babel");
 
 
-// ROOTS
+// SETTINGS: FOLDER/FILE PATHS
 // =================================================
 let proyectName = "./validation-form/";
 
-// Root src
-let rootSrc        = "src/",
-    rootSrcIcomoon = rootSrc + "icomoon/",
-    rootSrcSass    = rootSrc + "sass/",
-    rootSrcJs      = rootSrc + "js/";
+// Path src
+let pathSrc        = "src/",
+    pathSrcIcomoon = pathSrc + "icomoon/",
+    pathSrcSass    = pathSrc + "sass/",
+    pathSrcJs      = pathSrc + "js/";
 
-// Root dist
-let rootDist        = "dist/",
-    rootDistIcomoon = rootDist + "icomoon/",
-    rootDistCss     = rootDist + "css/",
-    rootDistJs      = rootDist + "js/";
+// Path dist
+let pathDist        = "dist/",
+    pathDistIcomoon = pathDist + "icomoon/",
+    pathDistCss     = pathDist + "css/",
+    pathDistJs      = pathDist + "js/";
 
-// Root Files
-let rootFiles     = "**/*",
-	rootFilesHtml = "*.html",
-	rootFilesSass = "**/*.sass",
-	rootFilesCss  = "**/*.css",
-	rootFilesJs   = "**/*.js";
+// Path Files
+let pathFiles     = "**/*",
+	pathFilesHtml = "*.html",
+	pathFilesSass = "**/*.sass",
+	pathFilesCss  = "**/*.css",
+	pathFilesJs   = "**/*.js";
 
 // Watch
-let WatchFilesHtml = rootDist + rootFilesHtml,
-	WatchFilesCss = rootDistCss + rootFilesCss,
-	WatchFilesJs = rootDistJs + rootFilesJs,
-	WatchFilesIcon = rootDistIcomoon + rootFiles;
+let WatchFilesHtml = pathDist + pathFilesHtml,
+	WatchFilesCss = pathDistCss + pathFilesCss,
+	WatchFilesJs = pathDistJs + pathFilesJs,
+	WatchFilesIcon = pathDistIcomoon + pathFiles;
 
 // Node modules
 var nodeModules = "./node_modules/";
 
-// Roots used to concat the files in a specific order.
+// Paths used to concat the files in a specific order.
 let filesJsCompile = [
-    rootSrcJs + "scripts.js",
+    pathSrcJs + "scripts.js",
     //----------------
-    rootSrcJs + "tools/tools-form-require.js",
-    rootSrcJs + "tools/tools-form-validation.js",
-    rootSrcJs + "tools/tools-form-validation-ckeditor.js",
+    pathSrcJs + "tools/tools-form-require.js",
+    pathSrcJs + "tools/tools-form-validation.js",
+    pathSrcJs + "tools/tools-form-validation-ckeditor.js",
     //----------------
-    rootSrcJs + "components/components-form-require.js",
-    rootSrcJs + "components/components-form-validation.js",
-    rootSrcJs + "components/components-form-validation-ckeditor.js",
+    pathSrcJs + "components/components-form-require.js",
+    pathSrcJs + "components/components-form-validation.js",
+    pathSrcJs + "components/components-form-validation-ckeditor.js",
     //----------------
-    rootSrcJs + "components/components-message.js",
+    pathSrcJs + "components/components-message.js",
     //----------------
-    rootSrcJs + "page/page-account.js"
+    pathSrcJs + "page/page-account.js"
 ];
 
-var filesCss = [rootDistCss + "styles.min.css"];
+var filesCss = [pathDistCss + "styles.min.css"];
 
 
-// GULP TASK
+// FUNTIONS USED IN THE TASKS
 // =================================================
 function createServer() {
 	browserSync.init({
@@ -92,13 +92,13 @@ function copyFiles(filesToCopy, directoryOutput) {
 }
 
 function htmlCopy(){
-	return copyFiles(rootSrc + rootFilesHtml, rootDist);
+	return copyFiles(pathSrc + pathFilesHtml, pathDist);
 }
 
 function icomoonMinify()
 {
     return gulp
-        .src(rootSrcIcomoon + "style.css")
+        .src(pathSrcIcomoon + "style.css")
         .pipe(
             srcMaps.init({
                 loadMaps: true,
@@ -109,36 +109,36 @@ function icomoonMinify()
         .pipe(srcMaps.write("./maps/"))
         .pipe(lineEndingCorrector())
         .pipe(rename("fonts.min.css"))
-        .pipe(gulp.dest(rootDistIcomoon));
+        .pipe(gulp.dest(pathDistIcomoon));
 }
 
 function icomoonCopy(){
-	return copyDirectory(rootSrc + "icomoon/fonts", rootDist + "icomoon/fonts");
+	return copyDirectory(pathSrc + "icomoon/fonts", pathDist + "icomoon/fonts");
 }
 
 function sassCompile()
 {
     return gulp
-        .src([rootSrcSass + "styles.sass"])
-        .pipe(
-            srcMaps.init({
-                loadMaps: true
-            })
-        )
-        .pipe(
-            sass({
-                outputStyle: "compressed"
-            }).on("error", sass.logError)
-        )
-        .pipe(
-            autoprefixer({
-                versions: ["last 2 versions"]
-            })
-        )
-        .pipe(srcMaps.write())
-        .pipe(lineEndingCorrector())
-        .pipe(rename("styles.min.css"))
-        .pipe(gulp.dest(rootDistCss));
+		.src([pathSrcSass + "styles.sass"])
+		.pipe(
+			srcMaps.init({
+				loadMaps: true,
+			})
+		)
+		.pipe(
+			sass({
+				outputStyle: "compressed",
+			}).on("error", sass.logError)
+		)
+		.pipe(
+			autoprefixer({
+				versions: ["last 2 versions"],
+			})
+		)
+		.pipe(srcMaps.write())
+		.pipe(lineEndingCorrector())
+		.pipe(rename("styles.min.css"))
+		.pipe(gulp.dest(pathDistCss));
 }
 
 function cssCompile()
@@ -148,7 +148,7 @@ function cssCompile()
         .pipe(concat("styles.min.css"))
         .pipe(srcMaps.write())
         .pipe(lineEndingCorrector())
-        .pipe(gulp.dest(rootDistCss));
+        .pipe(gulp.dest(pathDistCss));
 }
 
 function jsCompile()
@@ -163,24 +163,24 @@ function jsCompile()
         .pipe(concat("scripts.min.js"))
         .pipe(uglify())
         .pipe(lineEndingCorrector())
-        .pipe(gulp.dest(rootDistJs));
+        .pipe(gulp.dest(pathDistJs));
 }
 
 function jsCopy() {
-	return copyDirectory(rootSrc + "js/libs", rootDist + "js/libs");
+	return copyDirectory(pathSrc + "js/libs", pathDist + "js/libs");
 }
 
 
-// WATCH and EXPORTS
+// WATCH
 // =================================================
 function watch()
 {
     createServer();
     
-	gulp.watch(rootSrc + rootFilesHtml, htmlCopy);
-    gulp.watch(rootSrcJs + rootFilesJs, gulp.series(jsCompile, jsCopy));
-    gulp.watch(rootSrcIcomoon + rootFiles, gulp.series(icomoonMinify, icomoonCopy));
-    gulp.watch(rootSrcSass + rootFilesSass, gulp.series(sassCompile, cssCompile));
+	gulp.watch(pathSrc + pathFilesHtml, htmlCopy);
+    gulp.watch(pathSrcJs + pathFilesJs, gulp.series(jsCompile, jsCopy));
+    gulp.watch(pathSrcIcomoon + pathFiles, gulp.series(icomoonMinify, icomoonCopy));
+    gulp.watch(pathSrcSass + pathFilesSass, gulp.series(sassCompile, cssCompile));
     
     gulp.watch([WatchFilesHtml, WatchFilesCss, WatchFilesIcon, WatchFilesJs]).on(
 		"change",
@@ -188,6 +188,9 @@ function watch()
 	);
 }
 
+
+// EXPORTS
+// =================================================
 exports.createServer  = createServer;
 exports.htmlCopy 	  = htmlCopy;
 exports.icomoonMinify = icomoonMinify;
@@ -199,6 +202,8 @@ exports.jsCopy 		  = jsCopy;
 exports.watch 		  = watch;
 
 
+// TASKS
+// =================================================
 gulp.task(
 	"default",
 	gulp.series(
@@ -212,8 +217,6 @@ gulp.task(
 		watch
 	)
 );
-
-gulp.task("watch", gulp.parallel(watch));
 
 gulp.task("serve", gulp.series(createServer));
 
@@ -232,8 +235,10 @@ gulp.task(
 
 gulp.task("html", gulp.series(htmlCopy));
 
-gulp.task("icon", gulp.series(icomoonMinify, icomoonCopy));
-
 gulp.task("css", gulp.series(sassCompile, cssCompile));
 
 gulp.task("js", gulp.series(jsCompile, jsCopy));
+
+gulp.task("icon", gulp.series(icomoonMinify, icomoonCopy));
+
+gulp.task("watch", gulp.parallel(watch));
