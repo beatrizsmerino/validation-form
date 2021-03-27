@@ -695,3 +695,7 @@ MigrationBackup/
 
 # Visual Studio Code - Live Reload
 .vscode/settings.json
+
+
+# FOLDERS
+dist
