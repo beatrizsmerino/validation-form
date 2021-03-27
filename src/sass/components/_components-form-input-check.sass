@@ -24,7 +24,7 @@ $check-mark-color: $color-gray-100
 
 
 
-.c-check
+.check
 	width: 100%
 	height: $check-input-size
 	padding-left: $check-input-size
@@ -43,7 +43,7 @@ $check-mark-color: $color-gray-100
 		
 	/* On mouse-over */
 	&:hover
-		.c-check__input ~ .c-check__mark
+		.check__input ~ .check__mark
 			background-color: darken($color-brand-1, 5%)
 	
 	&__label
@@ -59,11 +59,11 @@ $check-mark-color: $color-gray-100
 		cursor: pointer
 		
 		/* When the checkbox is checked*/
-		&:checked ~ .c-check__mark
+		&:checked ~ .check__mark
 			background-color: $check-input-background-color-checked
 			
 		/* Show the checkmark when checked */
-		&:checked ~ .c-check__mark:after
+		&:checked ~ .check__mark:after
 			display: block
 	
 	/* Create a custom checkbox */
@@ -91,7 +91,7 @@ $check-mark-color: $color-gray-100
 			border-width: 0 3px 3px 0
 			transform: rotate(45deg)
 
-.c-check
+.check
 	&__input
-		&[type="radio"] ~ .c-check__mark
+		&[type="radio"] ~ .check__mark
 			border-radius: 50%
