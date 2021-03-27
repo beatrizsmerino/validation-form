@@ -17,15 +17,15 @@ var validateSettings = {
     {
         if (element.is(":checkbox")) {
             error.appendTo(
-                element.closest(".c-form__item")
+                element.closest(".form__item")
             );
         } else if (element.is(":radio")) {
             error.appendTo(
-                element.closest(".c-form__item")
+                element.closest(".form__item")
             );
         } else if (element.is("select")) {
             error.appendTo(
-                element.closest(".c-select__wrapper")
+                element.closest(".select__wrapper")
             );
         } else {
             error.insertAfter(element);

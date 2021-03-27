@@ -11,9 +11,9 @@
 
     // MNG - CLOSE
     // =================================================
-    $('.c-message__close').on('click', function ()
+    $('.message__close').on('click', function ()
     {
-        $(this).closest('.c-message').removeClass('is-view');
+        $(this).closest('.message').removeClass('is-view');
     });
 
 
@@ -26,7 +26,7 @@
 
     $('input:submit').on('click', function ()
     {
-        $('.c-message').addClass('is-view');
+        $('.message').addClass('is-view');
     });
 
 })();

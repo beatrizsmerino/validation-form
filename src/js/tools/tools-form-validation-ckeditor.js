@@ -59,7 +59,7 @@ function ckeditorValidate(textareaId) {
 		$("#" + textareaId)
 			.parent()
 			.find(textareaLabel)
-			.hasClass("c-required")
+			.hasClass("required")
 	) {
 		if (ckeditorText == "") {
 			if (!$("#" + errorLabelId).length) {
