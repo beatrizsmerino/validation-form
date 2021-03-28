@@ -19,11 +19,6 @@
 
     // MNG - VIEW
     // =================================================
-    $('form').submit(function (e)
-    {
-        e.preventDefault();
-    });
-
     $('input:submit').on('click', function ()
     {
         $('.message').addClass('is-view');
