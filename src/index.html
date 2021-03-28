@@ -134,6 +134,13 @@
 							</legend>
 
 							<div class="form__item">
+								<label class="label" for="address">
+									Address
+								</label>
+								<input id="address" class="form__field" name="address" type="text">
+							</div>
+
+							<div class="form__item">
 								<label class="label" for="country">
 									Country
 								</label>
@@ -1158,6 +1165,13 @@
 								</label>
 								<input id="phone" class="form__field" name="phone" type="tel" required>
 							</div>
+
+							<div class="form__item">
+								<label class="label" for="email">
+									Email
+								</label>
+								<input id="email" class="form__field" name="email" type="email">
+							</div>
 						</fieldset>
 					</div>
 
@@ -1279,35 +1293,30 @@
 								</label>
 
 								<div class="form__list">
-									<label for="lookingWork" class="check">
-										<div class="check__inner">
-											<input id="lookingWork" class="check__input" name="profesionalStatus"
-												value="0" type="radio" required>
-											<span class="check__mark"></span>
-											<span class="check__label">
-												Looking for work
-											</span>
-										</div>
+									<label for="studying" class="check">
+										<input id="studying" class="check__input" name="profesionalStatus" value="0"
+											type="radio" required>
+										<span class="check__mark"></span>
+										<span class="check__label">Studying</span>
 									</label>
-									<label for="displayLookingWork" class="check">
-										<div class="check__inner">
-											<input id="displayLookingWork" class="check__input" name="profesionalStatus"
-												value="1" type="radio">
-											<span class="check__mark"></span>
-											<span class="check__label">
-												Display "looking for work" on profile
-											</span>
-										</div>
+									<label for="working" class="check">
+										<input id="working" class="check__input" name="profesionalStatus" value="1"
+											type="radio">
+										<span class="check__mark"></span>
+										<span class="check__label">Working</span>
+									</label>
+									<label for="lookingWork" class="check">
+										<input id="lookingWork" class="check__input" name="profesionalStatus" value="2"
+											type="radio">
+										<span class="check__mark"></span>
+										<span class="check__label">Working but open to opportunities</span>
 									</label>
 									<label for="contactMe" class="check">
-										<div class="check__inner">
-											<input id="contactMe" class="check__input" name="profesionalStatus"
-												value="2" type="radio">
-											<span class="check__mark"></span>
-											<span class="check__label">
-												Recruiters can contact me about job opportunities
-											</span>
-										</div>
+										<input id="contactMe" class="check__input" name="profesionalStatus" value="3"
+											type="radio">
+										<span class="check__mark"></span>
+										<span class="check__label">Recruiters can contact me about job
+											opportunities</span>
 									</label>
 								</div>
 							</div>
@@ -1596,18 +1605,18 @@
 									<label class="label" for="gitHubUrl">
 										Github
 									</label>
-									<input id="gitHubUrl" class="form__field" name="gitHubUrl" type="url" placeholder="https://github.com/..."
-										required>
+									<input id="gitHubUrl" class="form__field" name="gitHubUrl" type="url"
+										placeholder="https://github.com/..." required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="gitLabUrl">
 										GitLab
 									</label>
-									<input id="gitLabUrl" class="form__field" name="gitLabUrl" type="url" placeholder="https://about.gitlab.com/..."
-										required>
+									<input id="gitLabUrl" class="form__field" name="gitLabUrl" type="url"
+										placeholder="https://about.gitlab.com/..." required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="stackOverflowUrl">
 										Stack Overflow
@@ -1615,23 +1624,23 @@
 									<input id="stackOverflowUrl" class="form__field" name="stackOverflowUrl" type="url"
 										placeholder="https://github.com/..." required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="mediumUrl">
 										Medium
 									</label>
-									<input id="mediumUrl" class="form__field" name="mediumUrl" type="url" placeholder="https://medium.com/..."
-										required>
+									<input id="mediumUrl" class="form__field" name="mediumUrl" type="url"
+										placeholder="https://medium.com/..." required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="codepenUrl">
 										Codepen
 									</label>
-									<input id="codepenUrl" class="form__field" name="codepenUrl" type="url" placeholder="https://codepen.io/"
-										required>
+									<input id="codepenUrl" class="form__field" name="codepenUrl" type="url"
+										placeholder="https://codepen.io/" required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="codeSandboxUrl">
 										CodeSandbox
@@ -1639,16 +1648,16 @@
 									<input id="codeSandboxUrl" class="form__field" name="codeSandboxUrl" type="url"
 										placeholder="https://codesandbox.io/" required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="jsFiddleUrl">
 										JSFiddle
 									</label>
-									<input id="jsFiddleUrl" class="form__field" name="jsFiddleUrl" type="url" placeholder="https://jsfiddle.net/"
-										required>
+									<input id="jsFiddleUrl" class="form__field" name="jsFiddleUrl" type="url"
+										placeholder="https://jsfiddle.net/" required>
 								</div>
 							</div>
-							
+
 							<div class="form__group">
 								<div class="form__item">
 									<label class="label" for="linkedinUrl">
@@ -1657,15 +1666,15 @@
 									<input id="linkedinUrl" class="form__field" name="linkedinUrl" type="url"
 										placeholder="https://www.linkedin.com/..." required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="facebookUrl">
 										Facebook
 									</label>
-									<input id="facebookUrl" class="form__field" name="facebookUrl" type="url" placeholder="https://facebook.com/..."
-										required>
+									<input id="facebookUrl" class="form__field" name="facebookUrl" type="url"
+										placeholder="https://facebook.com/..." required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="twitterUrl">
 										Twitter
@@ -1673,7 +1682,7 @@
 									<input id="twitterUrl" class="form__field" name="twitterUrl" type="url"
 										placeholder="https://www.twitter.com/..." required>
 								</div>
-							
+
 								<div class="form__item">
 									<label class="label" for="instagramUrl">
 										Instagram
