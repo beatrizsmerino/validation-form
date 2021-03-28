@@ -4,30 +4,82 @@
 
 .form
 	&__group
-		display: flex
-		flex-wrap: wrap
-
-		@include media('xl')
-			flex-direction: column
+		> *
+			&:not(:last-of-type)
+				margin-bottom: 2rem
 
 	&__column
-		flex: 1
+		display: flex
+
+		@include media('md')
+			flex-direction: column
 
 		&:not(:last-of-type)
-			margin-right: 2rem
+			margin-bottom: 1.5rem
 
+		> *
+			flex: 1
+
+			@include media('md')
+				width: 100%
+				flex: none
+
+			&:not(:last-of-type)
+				margin-right: 1.5rem
+
+				@include media('md')
+					margin-right: 0
+					margin-bottom: 1.5rem
+
+		>.fieldset
+			&:not(:last-of-type)
+				margin-right: 2rem
+
+				@include media('lg')
+					margin-bottom: 4rem
 		&--3
-			width: 30%
+			@include media('lg')
+				flex-direction: column
 
-			@include media('xl')
-				width: 100% !important
+			>*
+				@include media('lg')
+					width: 100%
+					flex: none
 
+				&:not(:last-of-type)
+					margin-right: 1.5rem
+
+					@include media('lg')
+						margin-right: 0
+						margin-bottom: 1.5rem
+
+			> .fieldset
+				&:not(:last-of-type)
+					@include media('lg')
+						margin-bottom: 4rem
+
+		> .form
+			&__item
+				&:not(:last-of-type)
+					margin-bottom: 0
+
+					@include media('md')
+						margin-right: 0
+						margin-bottom: 1.5rem
+		
+	
+	> .fieldset,
+	> *
+		&:not(:last-child)
+			margin-bottom: 4rem
 
 	&__list
 		&:not(:last-of-type)
 			margin-bottom: 0.5rem
 
 	&__item
+		width: 100%
+
 		&:not(:last-of-type)
 			margin-bottom: 1.5rem
 
@@ -38,15 +90,35 @@
 		border: 2px solid $color-gray-0
 		background-color: $color-gray-100
 
+		&::-webkit-input-placeholder
+			/* Chrome/Opera/Safari */
+			font-weight: 200
+
+		&::-moz-placeholder
+			/* Firefox 19+ */
+			font-weight: 200
+
+		&:-ms-input-placeholder
+			/* IE 10+ */
+			font-weight: 200
+
+		&:-moz-placeholder
+			/* Firefox 18- */
+			font-weight: 200
+
+		&:hover,
 		&:focus
 			border-color: $color-brand-1
 			background-color: $color-gray-98
 
 
-.fieldset
-	margin-bottom: 4rem
+		@include media('md')
+			display: flex
+			justify-content: center
+			
 
 .legend
+	width: 100%
 	margin-bottom: 2rem
 	font-size: 1.8rem
 	font-weight: 800
@@ -57,4 +129,5 @@
 	position: relative
 	display: inline-block
 	font-size: 1.2rem
+	font-weight: 600
 	color: $color-brand-2
