@@ -52,9 +52,13 @@ $check-mark-color: $color-gray-100
 	
 	/* Hide the browser's default checkbox */
 	&__input
-		width: 0
-		height: 0
+		width: $check-input-size
+		height: $check-input-size
+		margin: 0
+		padding: 0
 		position: absolute
+		top: 0
+		left: 0
 		opacity: 0
 		cursor: pointer
 		
