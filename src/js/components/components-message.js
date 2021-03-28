@@ -1,27 +1,30 @@
 // COMPONENTS
-// message
-// ------------------
+// MESSAGE
+// =================================================
 
 
 
 
 
-(function ()
-{
-
-    // MNG - CLOSE
-    // =================================================
-    $('.message__close').on('click', function ()
-    {
-        $(this).closest('.message').removeClass('is-view');
-    });
+function messageOpen() {
+	$(".message__open").on("click", function () {
+		$(".message").addClass("is-view");
+	});
+}
 
 
-    // MNG - VIEW
-    // =================================================
-    $('input:submit').on('click', function ()
-    {
-        $('.message').addClass('is-view');
-    });
 
-})();
+
+
+function messageClose() {
+	$(".message__close").on("click", function () {
+		$(".message").removeClass("is-view");
+	});
+}
+
+
+
+
+
+messageClose();
+messageOpen();
