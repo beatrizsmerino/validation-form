@@ -52,19 +52,14 @@ var nodeModules = "./node_modules/";
 
 // Paths used to concat the files in a specific order.
 let filesJsCompile = [
-    pathSrcJs + "scripts.js",
-    //----------------
-    pathSrcJs + "tools/tools-form-require.js",
-    pathSrcJs + "tools/tools-form-validation.js",
-    pathSrcJs + "tools/tools-form-validation-ckeditor.js",
-    //----------------
-    pathSrcJs + "components/components-form-require.js",
-    pathSrcJs + "components/components-form-validation.js",
-    pathSrcJs + "components/components-form-validation-ckeditor.js",
-    //----------------
-    pathSrcJs + "components/components-message.js",
-    //----------------
-    pathSrcJs + "page/page-account.js"
+	pathSrcJs + "components/components-form-require.js",
+	pathSrcJs + "components/components-form-validation.js",
+	pathSrcJs + "components/components-form-validation-ckeditor.js",
+	pathSrcJs + "components/components-message.js",
+	//----------------
+	pathSrcJs + "page/page-account.js",
+	//----------------
+	pathSrcJs + "scripts.js",
 ];
 
 var filesCss = [pathDistCss + "styles.min.css"];
