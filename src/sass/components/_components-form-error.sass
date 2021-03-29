@@ -22,3 +22,12 @@ form
 	select
 		&.error
 			border-color: $color-error
+
+	.check
+		&__input
+			&.error + .check__mark
+				border-color: $color-error
+
+		&:hover
+			.check__mark
+				border-color: $color-gray-0
