@@ -1174,26 +1174,26 @@
 						</legend>
 
 						<div class="form__item">
-							<label class="label" for="descriptionState">
-								Description state
+							<label class="label" for="professionalDescription">
+								Professional history
 							</label>
-							<textarea id="descriptionState" class="form__field textarea ckeditor"
-								name="descriptionState" placeholder="..." required></textarea>
+							<textarea id="professionalDescription" class="form__field textarea ckeditor"
+								name="professionalDescription" placeholder="..." required></textarea>
 						</div>
 
 						<div class="form__column">
 							<div class="form__item">
-								<label class="label" for="company">
-									Company
+								<label class="label" for="companyName">
+									Company name
 								</label>
-								<input id="company" class="form__field" name="company" type="text">
+								<input id="companyName" class="form__field" name="companyName" type="text">
 							</div>
 
 							<div class="form__item">
-								<label class="label" for="companyRol">
-									Company Rol
+								<label class="label" for="companyPosition">
+									Company position
 								</label>
-								<input id="companyRol" class="form__field" name="companyRol" type="text">
+								<input id="companyPosition" class="form__field" name="companyPosition" type="text">
 							</div>
 						</div>
 
@@ -1202,7 +1202,7 @@
 								Experience (0-30 years)
 							</label>
 							<input id="experienceYears" class="form__field range" name="experienceYears" type="range"
-								max="50" value="0" step="10">
+								max="30" value="0" step="1">
 						</div>
 
 						<div class="form__column">
@@ -1278,36 +1278,43 @@
 										<input id="studying" class="check__input" name="profesionalStatus" value="0"
 											type="radio" required>
 										<span class="check__mark"></span>
-										<span class="check__label">Studying</span>
+										<span class="check__label">
+											Studying
+										</span>
 									</label>
 									<label for="working" class="check">
 										<input id="working" class="check__input" name="profesionalStatus" value="1"
 											type="radio">
 										<span class="check__mark"></span>
-										<span class="check__label">Working</span>
+										<span class="check__label">
+											Working
+										</span>
 									</label>
 									<label for="lookingWork" class="check">
 										<input id="lookingWork" class="check__input" name="profesionalStatus" value="2"
 											type="radio">
 										<span class="check__mark"></span>
-										<span class="check__label">Working but open to opportunities</span>
+										<span class="check__label">
+											Working but open to opportunities
+										</span>
 									</label>
 									<label for="contactMe" class="check">
 										<input id="contactMe" class="check__input" name="profesionalStatus" value="3"
 											type="radio">
 										<span class="check__mark"></span>
-										<span class="check__label">Recruiters can contact me about job
-											opportunities</span>
+										<span class="check__label">
+											Recruiters can contact me about job opportunities
+										</span>
 									</label>
 								</div>
 							</div>
 						</div>
 
 						<div class="form__item">
-							<label class="label" for="education">
-								Education
+							<label class="label" for="educationDescription">
+								Education history
 							</label>
-							<textarea id="education" class="form__field textarea ckeditor" name="education"
+							<textarea id="educationDescription" class="form__field textarea ckeditor" name="educationDescription"
 								placeholder="..." required></textarea>
 						</div>
 
@@ -1375,7 +1382,7 @@
 							</label>
 							<textarea id="skillsDescription" class="form__field textarea ckeditor"
 								name="skillsDescription"
-								placeholder="What tools and languages are you most experienced with? are you specialized or more of a generalist?"
+								placeholder="What tools and languages are you most experienced with? Are you specialized or more of a generalist?"
 								required></textarea>
 						</div>
 
@@ -1515,17 +1522,17 @@
 						</div>
 
 						<div class="form__item">
-							<label class="label" for="gettingIntoDescription">
-								I'm getting into
+							<label class="label" for="learningDescription">
+								Currently learning
 							</label>
-							<textarea id="gettingIntoDescription" class="form__field textarea ckeditor"
-								name="gettingIntoDescription"
-								placeholder="What are you learning right now? what are the new tools and languages you're picking up in 2019?"></textarea>
+							<textarea id="learningDescription" class="form__field textarea ckeditor"
+								name="learningDescription"
+								placeholder="What are you learning right now? What are the new tools and languages you're picking up right now?"></textarea>
 						</div>
 
 						<div class="form__item">
 							<label class="label" for="proyectsDescription">
-								My projects and hacks
+								Currently hacking on
 							</label>
 							<textarea id="proyectsDescription" class="form__field textarea ckeditor"
 								name="proyectsDescription"
@@ -1538,7 +1545,7 @@
 							</label>
 							<textarea id="collaborationsDescription" class="form__field textarea ckeditor"
 								name="collaborationsDescription"
-								placeholder="What kinds of collaborations or discussions are you available for? what's a good reason to say hey to you these days?"></textarea>
+								placeholder="What kinds of collaborations or discussions are you available for? What's a good reason to say hey to you these days?"></textarea>
 						</div>
 					</fieldset>
 
@@ -1647,11 +1654,12 @@
 						</legend>
 
 						<div class="form__item">
-							<label class="label" for="descriptionAbout">
+							<label class="label" for="aboutDescription">
 								Short description about you
 							</label>
-							<textarea id="descriptionAbout" class="form__field textarea ckeditor"
-								name="descriptionAbout" cols="30" rows="10" placeholder="..." required></textarea>
+							<textarea id="aboutDescription" class="form__field textarea ckeditor"
+								name="aboutDescription" cols="30" rows="10" placeholder="A short bio..."
+								required></textarea>
 						</div>
 
 						<div class="form__item">
@@ -1730,7 +1738,7 @@
 								<div class="form__item">
 									<label for="displayEmail" class="check">
 										<input id="displayEmail" class="check__input" name="displayEmail" value="1"
-											type="checkbox" required>
+											type="checkbox">
 										<span class="check__mark"></span>
 										<span class="check__label">
 											Display email on profile
