@@ -46,11 +46,11 @@
 				email: true,
 			},
 			//------------------------------
-			descriptionState: {
+			professionalDescription: {
 				required: true,
 			},
-			// company:{},
-			// companyRol:{},
+			// companyName:{},
+			// companyPosition:{},
 			// experienceYears:{},
 			experienceGrade: {
 				required: true,
@@ -58,7 +58,7 @@
 			profesionalStatus: {
 				required: true,
 			},
-			education: {
+			educationDescription: {
 				required: true,
 			},
 			skills: {
@@ -80,7 +80,7 @@
 			// editorVisualStudio:{},
 			// editorBrackets:{},
 			// editorJetbrains:{},
-			// gettingIntoDescription: {},
+			// learningDescription: {},
 			// proyectsDescription: {},
 			// collaborationsDescription: {},
 			//------------------------------
@@ -133,7 +133,7 @@
 				require_from_group: [1, ".social-media__field"],
 			},
 			//------------------------------
-			descriptionAbout: {
+			aboutDescription: {
 				required: true,
 			},
 			hobbies: {
@@ -145,10 +145,6 @@
 			},
 			newUsername: {
 				required: true,
-			},
-			repeatNewUsername: {
-				required: true,
-				equalTo: "#newUsername",
 			},
 			//------------------------------
 			oldEmail: {
@@ -164,9 +160,7 @@
 				email: true,
 				equalTo: "#newEmail",
 			},
-			displayEmail: {
-				required: true,
-			},
+			// displayEmail: {},
 			//------------------------------
 			oldPassword: {
 				required: true,
