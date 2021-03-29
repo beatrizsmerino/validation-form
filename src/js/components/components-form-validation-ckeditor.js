@@ -21,12 +21,12 @@ function ckeditorValidateFindField() {
 
 
 function ckeditorValidate(textareaId) {
-	var ckeditorIframe = $("#cke_" + textareaId + " iframe"),
-		ckeditorText   = ckeditorIframe.contents().find("body").html(),
-		ckeditorText   = ckeditorText.replace(/<[^>]+>/g, ""),
-		ckeditorDiv    = ckeditorIframe.parent().parent().parent(),
-		textarea       = ckeditorDiv.parent().find("textarea"),
-		textareaLabel  = "label[for='" + textareaId + "'] span";
+	var ckeditorIframe 			= $("#cke_" + textareaId + " iframe"),
+		ckeditorText   			= ckeditorIframe.contents().find("body").html(),
+		ckeditorTextFormatted   = ckeditorText.replace(/<[^>]+>/g, ""),
+		ckeditorDiv    			= ckeditorIframe.parent().parent().parent(),
+		textarea       			= ckeditorDiv.parent().find("textarea"),
+		textareaLabel  			= "label[for='" + textareaId + "'] span";
 
 	var errorLabel =
 			"<label id='" +
@@ -42,7 +42,7 @@ function ckeditorValidate(textareaId) {
 		if (!e) {
 			var e = window.event;
 		}
-		if (e.type == "submit" && ckeditorText == "") {
+		if (e.type == "submit" && ckeditorTextFormatted == "") {
 			e.preventDefault();
 		}
 	}
@@ -53,7 +53,7 @@ function ckeditorValidate(textareaId) {
 			.find(textareaLabel)
 			.hasClass("required")
 	) {
-		if (ckeditorText == "") {
+		if (ckeditorTextFormatted == "") {
 			if (!$("#" + errorLabelId).length) {
 				textarea.parent().append(errorLabel);
 			}
@@ -74,11 +74,23 @@ function ckeditorValidate(textareaId) {
 
 
 
+function ckeditorPlaceholder(textareaId) {
+	var ckeditorIframe 		= $("#cke_" + textareaId + " iframe");
+	var arrayTextarea 		= $("#" + textareaId);
+	var textareaPlaceholder = arrayTextarea.attr("placeholder");
+
+	ckeditorIframe.contents().find("body").text(textareaPlaceholder);
+}
+
+
+
+
+
 $(document).ready(function () {
+	var arrayTextareaId = ckeditorValidateFindField();
+	
 
 	$("form").submit(function () {
-		var arrayTextareaId = ckeditorValidateFindField();
-		
 		for (var i = 0; i < arrayTextareaId.length; ++i) {
 			ckeditorValidate(arrayTextareaId[i]);
 		}
@@ -87,6 +99,10 @@ $(document).ready(function () {
 	CKEDITOR.on("instanceReady", function (event) {
 		var editor 	= event.editor,
 			body 	= CKEDITOR.document.getBody();
+
+		for (var i = 0; i < arrayTextareaId.length; ++i) {
+			ckeditorPlaceholder(arrayTextareaId[i]);
+		}
 
 		function ckeditorValidateEvent(editor) {
 			var textareaId = editor.name;
