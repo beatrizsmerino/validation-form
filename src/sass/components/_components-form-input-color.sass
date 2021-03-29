@@ -10,17 +10,33 @@
 // FROM COLOR
 // =================================================
 
-.form-color
-    display: flex
-    align-items: center
+.field-color
+	display: flex
+	align-items: center
+	
+	&:not(:last-child)
+		margin-bottom: 0.5rem
+	
+	&__label
+		margin-left: 1rem
+	
+	&__input
+		width: 2.5rem
+		height: 2.5rem
+		padding: 0
+		border-radius: 50%
+		cursor: pointer
 
-    &:not(:last-child)
-        margin-bottom: 0.5rem
+		&::-webkit-color-swatch-wrapper
+			padding: 0
+			position: relative
 
-    &__label
-        margin-left: 1rem
-
-    &__input
-        width: 5rem
-        height: 2.5rem
-        padding: 0.2rem !important
+		&::-webkit-color-swatch
+			width: 80%
+			height: 80%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate3d(-50%, -50%, 0)
+			border-radius: 50%
+			border: none
