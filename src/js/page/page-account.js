@@ -17,42 +17,41 @@
 				required: true,
 				letter: true,
 			},
-			phone: {
-				required: true,
-			},
 			dateBirth: {
 				required: true,
 			},
-			// age:{},
-			// gender:{},
+			age: {
+				digits: true,
+			},
 			photo: {
 				required: true,
 			},
-			// backgroundColor:{},
-			// textColor:{},
+			// gender: {},
+			// backgroundColor: {},
+			// textColor: {}
 			//------------------------------
+			// address: {}
 			country: {
 				required: true,
 			},
-			province: {
-				required: true,
-			},
+			// province: {},
 			language: {
 				required: true,
+			},
+			//------------------------------
+			phone: {
+				lengthTlf: true,
+			},
+			email: {
+				email: true,
 			},
 			//------------------------------
 			descriptionState: {
 				required: true,
 			},
-			// company:{
-			// 	required: true
-			// },
-			// companyRol:{
-			// 	required: true
-			// },
-			// experienceYears:{
-			// 	required: true
-			// },
+			// company:{},
+			// companyRol:{},
+			// experienceYears:{},
 			experienceGrade: {
 				required: true,
 			},
@@ -81,63 +80,57 @@
 			// editorVisualStudio:{},
 			// editorBrackets:{},
 			// editorJetbrains:{},
-			gettingIntoDescription: {
-				required: true,
-			},
-			proyectsDescription: {
-				required: true,
-			},
-			collaborationsDescription: {
-				required: true,
-			},
+			// gettingIntoDescription: {},
+			// proyectsDescription: {},
+			// collaborationsDescription: {},
 			//------------------------------
 			gitHubUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			gitLabUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			stackOverflowUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			linkedinUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			facebookUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			twitterUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			instagramUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			mediumUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			codepenUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			codeSandboxUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			jsFiddleUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			webUrl: {
-				required: true,
 				url: true,
+				require_from_group: [1, ".social-media__field"],
 			},
 			//------------------------------
 			descriptionAbout: {
@@ -188,7 +181,7 @@
 			//------------------------------
 			// statusActive:{},
 			//------------------------------
-			termsAcept: {
+			termsAccept: {
 				required: true,
 			},
 		},
