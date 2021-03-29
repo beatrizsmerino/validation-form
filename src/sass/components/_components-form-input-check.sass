@@ -10,16 +10,16 @@
 // =================================================
 
 /* settings */
-$check-label-margin-left: 1rem
+$check-label-margin-left: 1.6rem
 // ------------------
-$check-input-size: 2rem
-$check-input-border: 2px
+$check-input-size: 3.2rem
+$check-input-border: 0.2rem
 $check-input-border-color: $color-gray-0
 $check-input-background-color: $color-gray-98
 $check-input-background-color-checked: $color-brand-1
 // ------------------
-$check-mark-width: 8
-$check-mark-height: 16
+$check-mark-width: 0.8
+$check-mark-height: 1.6
 $check-mark-color: $color-gray-100
 
 
@@ -31,7 +31,7 @@ $check-mark-color: $color-gray-100
 	display: flex
 	align-items: center
 	position: relative
-	font-size: 1rem
+	font-size: 1.6rem
 	user-select: none
 	cursor: pointer
 		
@@ -80,13 +80,13 @@ $check-mark-color: $color-gray-100
 		&:after
 			content: ""
 			display: none
-			width: #{$check-mark-width}px
-			height: #{$check-mark-height}px
+			width: #{$check-mark-width}rem
+			height: #{$check-mark-height}rem
 			position: absolute
-			top: calc(50% - #{$check-mark-height/2}px)
-			left: calc(50% - #{$check-mark-width/2}px)
+			top: calc(50% - #{$check-mark-height/2}rem)
+			left: calc(50% - #{$check-mark-width/2}rem)
 			border: solid $check-mark-color
-			border-width: 0 3px 3px 0
+			border-width: 0 0.3rem 0.3rem 0
 			transform: rotate(45deg)
 
 .check

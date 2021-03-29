@@ -10,6 +10,9 @@
 // FROM COLOR
 // =================================================
 
+$field-color-size: 4rem
+$field-color-label-margin: 1.6rem
+
 .field-color
 	display: flex
 	align-items: center
@@ -18,11 +21,12 @@
 		margin-bottom: 0.5rem
 	
 	&__label
-		margin-left: 1rem
+		margin-left: $field-color-label-margin
+		font-size: 1.6rem
 	
 	&__input
-		width: 2.5rem
-		height: 2.5rem
+		width: $field-color-size
+		height: $field-color-size
 		padding: 0
 		border-radius: 50%
 		cursor: pointer
