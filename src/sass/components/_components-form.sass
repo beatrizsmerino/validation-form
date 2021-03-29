@@ -78,7 +78,6 @@
 			&:not(:last-of-type)
 				margin-bottom: 0.5rem
 
-
 	&__item
 		width: 100%
 
@@ -116,6 +115,16 @@
 	&__button
 		margin-top: 2rem
 
+	&__buttons-fixed
+		width: 100%
+		padding: 1rem 2rem
+		position: fixed
+		left: 0
+		bottom: 0
+		display: flex
+		justify-content: flex-end
+		background-color: $color-brand-1
+		box-shadow: 0px 0 10px rgba($color-gray-0, 0.8)
 
 		@include media('md')
 			display: flex
