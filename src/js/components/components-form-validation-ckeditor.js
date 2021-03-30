@@ -9,6 +9,7 @@
 function ckeditorValidateFindField() {
 	var formId = $("form").attr("id");
 	var textarea = $("#" + formId + " " + ".ckeditor");
+	
 	var arrayTextareaId = [];
 	textarea.each(function () {
 		arrayTextareaId.push($(this).attr("id"));
@@ -28,6 +29,8 @@ function ckeditorValidate(textareaId) {
 		textarea       			= ckeditorDiv.parent().find("textarea"),
 		textareaLabel  			= "label[for='" + textareaId + "'] span";
 
+
+	var errorLabelId = textareaId + "-error";
 	var errorLabel =
 			"<label id='" +
 			textareaId +
@@ -35,16 +38,12 @@ function ckeditorValidate(textareaId) {
 			textareaId +
 			"'>" +
 			field_message_required +
-			"</label>",
-		errorLabelId = textareaId + "-error";
+			"</label>";
 
-	function knowEvent(e) {
-		if (!e) {
-			var e = window.event;
-		}
-		if (e.type == "submit" && ckeditorTextFormatted == "") {
-			e.preventDefault();
-		}
+	
+
+	if (ckeditorTextFormatted == "") {
+		ckeditorCreatePlaceholder(textareaId);
 	}
 
 	if (
@@ -58,11 +57,6 @@ function ckeditorValidate(textareaId) {
 				textarea.parent().append(errorLabel);
 			}
 			ckeditorDiv.addClass("error");
-
-			document.onsubmit 	= knowEvent;
-			document.onblur 	= knowEvent;
-			document.onkeypress = knowEvent;
-			document.onkeypress = knowEvent;
 		} else {
 			$("#" + errorLabelId).remove();
 			ckeditorDiv.removeClass("error");
@@ -74,12 +68,54 @@ function ckeditorValidate(textareaId) {
 
 
 
-function ckeditorPlaceholder(textareaId) {
+function ckeditorCreatePlaceholder(textareaId) {
 	var ckeditorIframe 		= $("#cke_" + textareaId + " iframe");
-	var arrayTextarea 		= $("#" + textareaId);
-	var textareaPlaceholder = arrayTextarea.attr("placeholder");
+	var textarea 			= $("#" + textareaId);
+	var textareaPlaceholder = textarea.attr("placeholder");
 
-	ckeditorIframe.contents().find("body").text(textareaPlaceholder);
+	if (textareaPlaceholder != undefined) {
+		ckeditorIframe
+			.contents()
+			.find("body")
+			.css(
+				{
+					"font-size": "16px"
+				}
+			)
+			.html('<span class="ckeditor__placeholder">' + textareaPlaceholder + "</span>")
+			.css(
+				{
+					"color": "rgb(117, 117, 117)"
+				}
+			);
+	}
+}
+
+
+
+
+
+function ckeditorAddPlaceholderAll(arrayTextareaId) {
+	for (var i = 0; i < arrayTextareaId.length; ++i) {
+		ckeditorCreatePlaceholder(arrayTextareaId[i]);
+	}
+}
+
+
+
+
+
+function ckeditorRemovePlaceholder(textareaId) {
+	var textarea = $("#" + textareaId);
+	var ckeditorIframe = $("#cke_" + textareaId + " iframe");
+	ckeditorGetPlaceholder(ckeditorIframe).remove();
+}
+
+
+
+
+function ckeditorGetPlaceholder(ckeditorIframe) {
+	return ckeditorIframe.contents().find(".ckeditor__placeholder");
 }
 
 
@@ -92,29 +128,29 @@ $(document).ready(function () {
 
 	$("form").submit(function () {
 		for (var i = 0; i < arrayTextareaId.length; ++i) {
+			ckeditorRemovePlaceholder(arrayTextareaId[i]);
 			ckeditorValidate(arrayTextareaId[i]);
 		}
 	});
 
 	CKEDITOR.on("instanceReady", function (event) {
-		var editor 	= event.editor,
-			body 	= CKEDITOR.document.getBody();
+		var editor 		= event.editor,
+			textareaId 	= editor.name;
 
-		for (var i = 0; i < arrayTextareaId.length; ++i) {
-			ckeditorPlaceholder(arrayTextareaId[i]);
-		}
 
-		function ckeditorValidateEvent(editor) {
-			var textareaId = editor.name;
-			ckeditorValidate(textareaId);
-		}
+		ckeditorAddPlaceholderAll(arrayTextareaId);
+
+
+		editor.on("focus", function () {
+			ckeditorRemovePlaceholder(textareaId);
+		});
 
 		editor.on("blur", function () {
-			ckeditorValidateEvent(editor);
+			ckeditorValidate(textareaId);
 		});
 
 		editor.on("change", function () {
-			ckeditorValidateEvent(editor);
+			ckeditorValidate(textareaId);
 		});
 	});
 
