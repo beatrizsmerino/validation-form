@@ -1,32 +1,32 @@
 // COMPONENTS
-// message
-// ------------------
+// MESSAGE
+// =================================================
 
 
 
 
 
-(function ()
-{
-
-    // MNG - CLOSE
-    // =================================================
-    $('.c-message__close').on('click', function ()
-    {
-        $(this).closest('.c-message').removeClass('is-view');
-    });
+function messageOpen() {
+	$(".message__open").on("click", function () {
+		$(".message").addClass("is-show");
+		$(".message").removeClass("is-hide");
+	});
+}
 
 
-    // MNG - VIEW
-    // =================================================
-    $('form').submit(function (e)
-    {
-        e.preventDefault();
-    });
 
-    $('input:submit').on('click', function ()
-    {
-        $('.c-message').addClass('is-view');
-    });
 
-})();
+
+function messageClose() {
+	$(".message__close").on("click", function () {
+		$('.message').removeClass('is-show');
+		$(".message").addClass("is-hide");
+	});
+}
+
+
+
+
+
+messageClose();
+messageOpen();
