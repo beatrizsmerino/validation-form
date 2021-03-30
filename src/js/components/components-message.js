@@ -7,7 +7,8 @@
 
 
 function messageOpen() {
-	$(".message__open").on("click", function () {
+	$(".message__open").on("click", function (e) {
+		e.preventDefault();
 		$(".message").addClass("is-show");
 		$(".message").removeClass("is-hide");
 	});
@@ -27,6 +28,9 @@ function messageClose() {
 
 
 
-
-messageClose();
-messageOpen();
+(function () {
+	$(document).ready(function () {
+		messageClose();
+		messageOpen();
+	});
+})();
