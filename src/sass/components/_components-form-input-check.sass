@@ -10,40 +10,34 @@
 // =================================================
 
 /* settings */
-$check-label-margin-left: 1rem
+$check-label-margin-left: 1.6rem
 // ------------------
-$check-input-size: 2rem
-$check-input-border: 2px
+$check-input-size: 3.2rem
+$check-input-border: 0.2rem
 $check-input-border-color: $color-gray-0
 $check-input-background-color: $color-gray-98
 $check-input-background-color-checked: $color-brand-1
 // ------------------
-$check-mark-width: 8
-$check-mark-height: 16
+$check-mark-width: 0.8
+$check-mark-height: 1.6
 $check-mark-color: $color-gray-100
 
 
 
-.c-check
+.check
 	width: 100%
 	height: $check-input-size
 	padding-left: $check-input-size
 	display: flex
 	align-items: center
 	position: relative
-	font-size: 1rem
+	font-size: 1.6rem
 	user-select: none
 	cursor: pointer
-	
-	&:only-child
-		margin-bottom: 0
-	
-	&:not(:last-of-type)
-		margin-bottom: 0.4rem
 		
 	/* On mouse-over */
 	&:hover
-		.c-check__input ~ .c-check__mark
+		.check__input ~ .check__mark
 			background-color: darken($color-brand-1, 5%)
 	
 	&__label
@@ -52,18 +46,22 @@ $check-mark-color: $color-gray-100
 	
 	/* Hide the browser's default checkbox */
 	&__input
-		width: 0
-		height: 0
+		width: $check-input-size
+		height: $check-input-size
+		margin: 0
+		padding: 0
 		position: absolute
+		top: 0
+		left: 0
 		opacity: 0
 		cursor: pointer
 		
 		/* When the checkbox is checked*/
-		&:checked ~ .c-check__mark
+		&:checked ~ .check__mark
 			background-color: $check-input-background-color-checked
 			
 		/* Show the checkmark when checked */
-		&:checked ~ .c-check__mark:after
+		&:checked ~ .check__mark:after
 			display: block
 	
 	/* Create a custom checkbox */
@@ -82,16 +80,16 @@ $check-mark-color: $color-gray-100
 		&:after
 			content: ""
 			display: none
-			width: #{$check-mark-width}px
-			height: #{$check-mark-height}px
+			width: #{$check-mark-width}rem
+			height: #{$check-mark-height}rem
 			position: absolute
-			top: calc(50% - #{$check-mark-height/2}px)
-			left: calc(50% - #{$check-mark-width/2}px)
+			top: calc(50% - #{$check-mark-height/2}rem)
+			left: calc(50% - #{$check-mark-width/2}rem)
 			border: solid $check-mark-color
-			border-width: 0 3px 3px 0
+			border-width: 0 0.3rem 0.3rem 0
 			transform: rotate(45deg)
 
-.c-check
+.check
 	&__input
-		&[type="radio"] ~ .c-check__mark
+		&[type="radio"] ~ .check__mark
 			border-radius: 50%

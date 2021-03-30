@@ -10,17 +10,37 @@
 // FROM COLOR
 // =================================================
 
-.c-form-color
-    display: flex
-    align-items: center
+$field-color-size: 4rem
+$field-color-label-margin: 1.6rem
 
-    &:not(:last-child)
-        margin-bottom: 0.5rem
+.field-color
+	display: flex
+	align-items: center
+	
+	&:not(:last-child)
+		margin-bottom: 0.5rem
+	
+	&__label
+		margin-left: $field-color-label-margin
+		font-size: 1.6rem
+	
+	&__input
+		width: $field-color-size
+		height: $field-color-size
+		padding: 0
+		border-radius: 50%
+		cursor: pointer
 
-    &__label
-        margin-left: 1rem
+		&::-webkit-color-swatch-wrapper
+			padding: 0
+			position: relative
 
-    &__input
-        width: 5rem
-        height: 2.5rem
-        padding: 0.2rem !important
+		&::-webkit-color-swatch
+			width: 80%
+			height: 80%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate3d(-50%, -50%, 0)
+			border-radius: 50%
+			border: none
