@@ -1,6 +1,8 @@
-![shieldsIO](https://img.shields.io/github/issues/beatrizsmerino/validation-form)
-![shieldsIO](https://img.shields.io/github/forks/beatrizsmerino/validation-form)
-![shieldsIO](https://img.shields.io/github/stars/beatrizsmerino/validation-form)
+![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/validation-form)
+![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/validation-form)
+![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/validation-form)
+![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/validation-form)
+![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/validation-form)
 
 # Validation form
 
