@@ -88,7 +88,7 @@ gulp watch
 
 ## 💻  Run server
 
-This create a static server with browserSync package, serves the files from `dist` folder and opens by default the index.html file in any of these browsers: Chrome & Firefox.
+This create a static server with browserSync package, serves the files from `dist` folder and opens by default the `index.html` file in any of these browsers: Chrome & Firefox.
 
 ```
 gulp serve
@@ -100,7 +100,7 @@ gulp serve
 This command is able to:
 
 1. Creates the `dist` folder if it does not exist.
-2. Generate html, css, js and icons on `dist` folder.
+2. Generate `html`, `css`, `js` and `icomoon` on `dist` folder.
 
 ```
 gulp build
