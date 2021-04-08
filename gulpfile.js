@@ -1,5 +1,6 @@
 "use strict";
 
+
 // DEPENDENCIES
 // =================================================
 const gulp                = require("gulp"),
@@ -16,6 +17,7 @@ const gulp                = require("gulp"),
       srcMaps             = require("gulp-sourcemaps"),
       uglify              = require("gulp-uglify"),
       babel               = require("gulp-babel");
+
 
 
 // SETTINGS: FOLDER/FILE PATHS
@@ -36,16 +38,16 @@ let pathDist        = "dist/",
 
 // Path Files
 let pathFiles     = "**/*",
-	pathFilesHtml = "*.html",
-	pathFilesSass = "**/*.sass",
-	pathFilesCss  = "**/*.css",
-	pathFilesJs   = "**/*.js";
+    pathFilesHtml = "*.html",
+    pathFilesSass = "**/*.sass",
+    pathFilesCss  = "**/*.css",
+    pathFilesJs   = "**/*.js";
 
 // Watch
-let WatchFilesHtml = pathDist + pathFilesHtml,
-	WatchFilesCss = pathDistCss + pathFilesCss,
-	WatchFilesJs = pathDistJs + pathFilesJs,
-	WatchFilesIcon = pathDistIcomoon + pathFiles;
+let watchFilesHtml = pathDist + pathFilesHtml,
+    watchFilesCss  = pathDistCss + pathFilesCss,
+    watchFilesJs   = pathDistJs + pathFilesJs,
+    watchFilesIcon = pathDistIcomoon + pathFiles;
 
 // Node modules
 var nodeModules = "./node_modules/";
@@ -63,6 +65,7 @@ let filesJsCompile = [
 ];
 
 var filesCss = [pathDistCss + "styles.min.css"];
+
 
 
 // FUNTIONS USED IN THE TASKS
@@ -86,12 +89,11 @@ function copyFiles(filesToCopy, directoryOutput) {
 	return gulp.src(filesToCopy).pipe(gulp.dest(directoryOutput));
 }
 
-function htmlCopy(){
+function htmlCopy() {
 	return copyFiles(pathSrc + pathFilesHtml, pathDist);
 }
 
-function icomoonMinify()
-{
+function icomoonMinify() {
     return gulp
         .src(pathSrcIcomoon + "style.css")
         .pipe(
@@ -107,12 +109,11 @@ function icomoonMinify()
         .pipe(gulp.dest(pathDistIcomoon));
 }
 
-function icomoonCopy(){
+function icomoonCopy() {
 	return copyDirectory(pathSrc + "icomoon/fonts", pathDist + "icomoon/fonts");
 }
 
-function sassCompile()
-{
+function sassCompile() {
     return gulp
 		.src([pathSrcSass + "styles.sass"])
 		.pipe(
@@ -136,8 +137,7 @@ function sassCompile()
 		.pipe(gulp.dest(pathDistCss));
 }
 
-function cssCompile()
-{
+function cssCompile() {
     return gulp
         .src(filesCss)
         .pipe(concat("styles.min.css"))
@@ -146,8 +146,7 @@ function cssCompile()
         .pipe(gulp.dest(pathDistCss));
 }
 
-function jsCompile()
-{
+function jsCompile() {
     return gulp
         .src(filesJsCompile)
         .pipe(
@@ -165,36 +164,34 @@ function jsCopy() {
 	return copyDirectory(pathSrc + "js/libs", pathDist + "js/libs");
 }
 
-
-// WATCH
-// =================================================
-function watch()
-{
+function watch() {
     createServer();
     
-	gulp.watch(pathSrc + pathFilesHtml, htmlCopy);
+    gulp.watch(pathSrc + pathFilesHtml, htmlCopy);
     gulp.watch(pathSrcJs + pathFilesJs, gulp.series(jsCompile, jsCopy));
     gulp.watch(pathSrcIcomoon + pathFiles, gulp.series(icomoonMinify, icomoonCopy));
     gulp.watch(pathSrcSass + pathFilesSass, gulp.series(sassCompile, cssCompile));
     
-    gulp.watch([WatchFilesHtml, WatchFilesCss, WatchFilesIcon, WatchFilesJs]).on(
+    gulp.watch([watchFilesHtml, watchFilesCss, watchFilesIcon, watchFilesJs]).on(
 		"change",
 		reload
 	);
 }
 
 
+
 // EXPORTS
 // =================================================
 exports.createServer  = createServer;
-exports.htmlCopy 	  = htmlCopy;
+exports.htmlCopy      = htmlCopy;
 exports.icomoonMinify = icomoonMinify;
 exports.icomoonCopy   = icomoonCopy;
 exports.sassCompile   = sassCompile;
 exports.cssCompile    = cssCompile;
 exports.jsCompile     = jsCompile;
-exports.jsCopy 		  = jsCopy;
-exports.watch 		  = watch;
+exports.jsCopy        = jsCopy;
+exports.watch         = watch;
+
 
 
 // TASKS
