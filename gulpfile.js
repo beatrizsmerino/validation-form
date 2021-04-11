@@ -64,7 +64,7 @@ let filesJsCompile = [
 	pathSrcJs + "scripts.js",
 ];
 
-var filesCss = [pathDistCss + "styles.min.css"];
+var filesCssCompile = [pathDistCss + "styles.min.css"];
 
 
 
@@ -139,7 +139,7 @@ function sassCompile() {
 
 function cssCompile() {
     return gulp
-        .src(filesCss)
+        .src(filesCssCompile)
         .pipe(concat("styles.min.css"))
         .pipe(srcMaps.write())
         .pipe(lineEndingCorrector())
