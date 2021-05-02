@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "09:00"
+    timezone: Europe/Madrid
+  ignore:
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.13.10
+    - 7.13.12
+  - dependency-name: is-svg
+    versions:
+    - 4.3.1
+  - dependency-name: gulp-sass
+    versions:
+    - 4.1.0
+  - dependency-name: browser-sync
+    versions:
+    - 2.26.14
+  - dependency-name: bl
+    versions:
+    - 1.2.3
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.13.10
+  - dependency-name: gulp-sourcemaps
+    versions:
+    - 3.0.0
