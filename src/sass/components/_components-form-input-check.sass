@@ -1,13 +1,11 @@
 // COMPONENTS
 // form-input-check: checkbox and radio buttons
-// ------------------
-
-
-
-
-
-// CHECKBOX
 // =================================================
+@use "sass:math"
+
+
+
+
 
 /* settings */
 $check-label-margin-left: 1.6rem
@@ -83,8 +81,8 @@ $check-mark-color: $color-gray-100
 			width: #{$check-mark-width}rem
 			height: #{$check-mark-height}rem
 			position: absolute
-			top: calc(50% - #{$check-mark-height/2}rem)
-			left: calc(50% - #{$check-mark-width/2}rem)
+			top: calc(50% - #{math.div($check-mark-height, 2)}rem)
+			left: calc(50% - #{math.div($check-mark-width, 2)}rem)
 			border: solid $check-mark-color
 			border-width: 0 0.3rem 0.3rem 0
 			transform: rotate(45deg)
