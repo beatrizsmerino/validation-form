@@ -1,20 +1,23 @@
 // ABSTRACTS - MIXIN
 // prefix animation
-// ------------------
-
-
-
-
-
-// ANIMATION
 // =================================================
+
+
+
+
+
+// Description:
+// ------------------------------------
 // http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
-//
+
+// Require:
+// ------------------------------------
 // This file need the files:
 // tools > _tools-mixins-prefix-keyframes.sass
 // tools > _tools-mixins-prefix-animation.sass
-//
-//
+
+// Use:
+// ------------------------------------
 // use example:
 // 1.create keyframe
 // animations > _animations-keyframes
@@ -30,6 +33,9 @@
 //
 // .object-to-animate
 //  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s')
+
+// Declaration:
+// ------------------------------------
 @mixin animation($animate...)
 	$max: length($animate)
 	$animations: ''
