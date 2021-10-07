@@ -9,7 +9,7 @@
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
 	"devDependencies": {
-		"@babel/core": "^7.15.5",
+		"@babel/core": "^7.15.8",
 		"@babel/preset-env": "^7.15.6",
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
