@@ -26,7 +26,7 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
-		"sass": "^1.51.0"
+		"sass": "^1.52.0"
 	},
 	"resolutions": {
 		"async": "https://registry.npmjs.org/async/-/async-2.6.4.tgz",
