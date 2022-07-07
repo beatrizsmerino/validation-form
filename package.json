@@ -4,7 +4,8 @@
 	"description": "Validation form",
 	"main": "index.js",
 	"scripts": {
-		"preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
+		"install:clean": "rm -rf node_modules package-lock.json",
+		"preinstall": "npm run install:clean && npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"author": "beatrizsmerino@gmail.com",
