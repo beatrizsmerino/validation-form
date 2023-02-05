@@ -32,7 +32,8 @@
 	"resolutions": {
 		"glob-parent": ">=5.1.2",
 		"json5": ">=2.2.2",
-		"qs": ">=6.2.4"
+		"qs": ">=6.2.4",
+		"ua-parser-js": ">=1.0.33"
 	},
 	"volta": {
 		"node": "14.19.3",
