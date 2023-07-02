@@ -27,7 +27,7 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
-		"sass": "^1.63.5"
+		"sass": "^1.63.6"
 	},
 	"resolutions": {
 		"glob-parent": ">=5.1.2",
