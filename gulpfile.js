@@ -3,18 +3,18 @@
 
 // DEPENDENCIES
 // =================================================
-const gulp                = require("gulp"),
-      autoprefixer        = require("gulp-autoprefixer"),
-      browserSync         = require("browser-sync").create(),
-      reload              = browserSync.reload,
-      cleanCss            = require("gulp-clean-css"),
-      concat              = require("gulp-concat"),
-      lineEndingCorrector = require("gulp-line-ending-corrector"),
-      rename              = require("gulp-rename"),
-      sass                = require("gulp-sass")(require('sass')),
-      srcMaps             = require("gulp-sourcemaps"),
-      uglify              = require("gulp-uglify"),
-      babel               = require("gulp-babel");
+const gulp = require("gulp"),
+	autoprefixer = require("gulp-autoprefixer"),
+	browserSync = require("browser-sync").create(),
+	reload = browserSync.reload,
+	cleanCss = require("gulp-clean-css"),
+	concat = require("gulp-concat"),
+	lineEndingCorrector = require("gulp-line-ending-corrector"),
+	rename = require("gulp-rename"),
+	sass = require("gulp-sass")(require('sass')),
+	srcMaps = require("gulp-sourcemaps"),
+	uglify = require("gulp-uglify"),
+	babel = require("gulp-babel");
 
 
 
@@ -23,29 +23,29 @@ const gulp                = require("gulp"),
 let proyectName = "./validation-form/";
 
 // Path src
-let pathSrc        = "src/",
-    pathSrcIcomoon = pathSrc + "icomoon/",
-    pathSrcSass    = pathSrc + "sass/",
-    pathSrcJs      = pathSrc + "js/";
+let pathSrc = "src/",
+	pathSrcIcomoon = pathSrc + "icomoon/",
+	pathSrcSass = pathSrc + "sass/",
+	pathSrcJs = pathSrc + "js/";
 
 // Path dist
-let pathDist        = "dist/",
-    pathDistIcomoon = pathDist + "icomoon/",
-    pathDistCss     = pathDist + "css/",
-    pathDistJs      = pathDist + "js/";
+let pathDist = "dist/",
+	pathDistIcomoon = pathDist + "icomoon/",
+	pathDistCss = pathDist + "css/",
+	pathDistJs = pathDist + "js/";
 
 // Path Files
-let pathFiles     = "**/*",
-    pathFilesHtml = "*.html",
-    pathFilesSass = "**/*.sass",
-    pathFilesCss  = "**/*.css",
-    pathFilesJs   = "**/*.js";
+let pathFiles = "**/*",
+	pathFilesHtml = "*.html",
+	pathFilesSass = "**/*.sass",
+	pathFilesCss = "**/*.css",
+	pathFilesJs = "**/*.js";
 
 // Watch
 let watchFilesHtml = pathDist + pathFilesHtml,
-    watchFilesCss  = pathDistCss + pathFilesCss,
-    watchFilesJs   = pathDistJs + pathFilesJs,
-    watchFilesIcon = pathDistIcomoon + pathFiles;
+	watchFilesCss = pathDistCss + pathFilesCss,
+	watchFilesJs = pathDistJs + pathFilesJs,
+	watchFilesIcon = pathDistIcomoon + pathFiles;
 
 // Node modules
 var nodeModules = "./node_modules/";
@@ -92,19 +92,19 @@ function htmlCopy() {
 }
 
 function icomoonMinify() {
-    return gulp
-        .src(pathSrcIcomoon + "style.css")
-        .pipe(
-            srcMaps.init({
-                loadMaps: true,
-                largeFile: true
-            })
-        )
-        .pipe(cleanCss())
-        .pipe(srcMaps.write("./maps/"))
-        .pipe(lineEndingCorrector())
-        .pipe(rename("fonts.min.css"))
-        .pipe(gulp.dest(pathDistIcomoon));
+	return gulp
+		.src(pathSrcIcomoon + "style.css")
+		.pipe(
+			srcMaps.init({
+				loadMaps: true,
+				largeFile: true
+			})
+		)
+		.pipe(cleanCss())
+		.pipe(srcMaps.write("./maps/"))
+		.pipe(lineEndingCorrector())
+		.pipe(rename("fonts.min.css"))
+		.pipe(gulp.dest(pathDistIcomoon));
 }
 
 function icomoonCopy() {
@@ -112,7 +112,7 @@ function icomoonCopy() {
 }
 
 function sassCompile() {
-    return gulp
+	return gulp
 		.src([pathSrcSass + "styles.sass"])
 		.pipe(
 			srcMaps.init({
@@ -136,26 +136,26 @@ function sassCompile() {
 }
 
 function cssCompile() {
-    return gulp
-        .src(filesCssCompile)
-        .pipe(concat("styles.min.css"))
-        .pipe(srcMaps.write())
-        .pipe(lineEndingCorrector())
-        .pipe(gulp.dest(pathDistCss));
+	return gulp
+		.src(filesCssCompile)
+		.pipe(concat("styles.min.css"))
+		.pipe(srcMaps.write())
+		.pipe(lineEndingCorrector())
+		.pipe(gulp.dest(pathDistCss));
 }
 
 function jsCompile() {
-    return gulp
-        .src(filesJsCompile)
-        .pipe(
-            babel({
-                presets: ["@babel/preset-env"]
-            })
-        )
-        .pipe(concat("scripts.min.js"))
-        .pipe(uglify())
-        .pipe(lineEndingCorrector())
-        .pipe(gulp.dest(pathDistJs));
+	return gulp
+		.src(filesJsCompile)
+		.pipe(
+			babel({
+				presets: ["@babel/preset-env"]
+			})
+		)
+		.pipe(concat("scripts.min.js"))
+		.pipe(uglify())
+		.pipe(lineEndingCorrector())
+		.pipe(gulp.dest(pathDistJs));
 }
 
 function jsCopy() {
@@ -163,14 +163,14 @@ function jsCopy() {
 }
 
 function watch() {
-    createServer();
-    
-    gulp.watch(pathSrc + pathFilesHtml, htmlCopy);
-    gulp.watch(pathSrcJs + pathFilesJs, gulp.series(jsCompile, jsCopy));
-    gulp.watch(pathSrcIcomoon + pathFiles, gulp.series(icomoonMinify, icomoonCopy));
-    gulp.watch(pathSrcSass + pathFilesSass, gulp.series(sassCompile, cssCompile));
-    
-    gulp.watch([watchFilesHtml, watchFilesCss, watchFilesIcon, watchFilesJs]).on(
+	createServer();
+
+	gulp.watch(pathSrc + pathFilesHtml, htmlCopy);
+	gulp.watch(pathSrcJs + pathFilesJs, gulp.series(jsCompile, jsCopy));
+	gulp.watch(pathSrcIcomoon + pathFiles, gulp.series(icomoonMinify, icomoonCopy));
+	gulp.watch(pathSrcSass + pathFilesSass, gulp.series(sassCompile, cssCompile));
+
+	gulp.watch([watchFilesHtml, watchFilesCss, watchFilesIcon, watchFilesJs]).on(
 		"change",
 		reload
 	);
@@ -180,15 +180,15 @@ function watch() {
 
 // EXPORTS
 // =================================================
-exports.createServer  = createServer;
-exports.htmlCopy      = htmlCopy;
+exports.createServer = createServer;
+exports.htmlCopy = htmlCopy;
 exports.icomoonMinify = icomoonMinify;
-exports.icomoonCopy   = icomoonCopy;
-exports.sassCompile   = sassCompile;
-exports.cssCompile    = cssCompile;
-exports.jsCompile     = jsCompile;
-exports.jsCopy        = jsCopy;
-exports.watch         = watch;
+exports.icomoonCopy = icomoonCopy;
+exports.sassCompile = sassCompile;
+exports.cssCompile = cssCompile;
+exports.jsCompile = jsCompile;
+exports.jsCopy = jsCopy;
+exports.watch = watch;
 
 
 
