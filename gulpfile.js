@@ -20,29 +20,29 @@ const gulp = require("gulp"),
 
 // SETTINGS: FOLDER/FILE PATHS
 // =================================================
-let proyectName = "./validation-form/";
+const proyectName = "./validation-form/";
 
 // Path src
-let pathSrc = "src/",
+const pathSrc = "src/",
 	pathSrcIcomoon = pathSrc + "icomoon/",
 	pathSrcSass = pathSrc + "sass/",
 	pathSrcJs = pathSrc + "js/";
 
 // Path dist
-let pathDist = "dist/",
+const pathDist = "dist/",
 	pathDistIcomoon = pathDist + "icomoon/",
 	pathDistCss = pathDist + "css/",
 	pathDistJs = pathDist + "js/";
 
 // Path Files
-let pathFiles = "**/*",
+const pathFiles = "**/*",
 	pathFilesHtml = "*.html",
 	pathFilesSass = "**/*.sass",
 	pathFilesCss = "**/*.css",
 	pathFilesJs = "**/*.js";
 
 // Watch
-let watchFilesHtml = pathDist + pathFilesHtml,
+const watchFilesHtml = pathDist + pathFilesHtml,
 	watchFilesCss = pathDistCss + pathFilesCss,
 	watchFilesJs = pathDistJs + pathFilesJs,
 	watchFilesIcon = pathDistIcomoon + pathFiles;
@@ -51,7 +51,7 @@ let watchFilesHtml = pathDist + pathFilesHtml,
 const nodeModules = "./node_modules/";
 
 // Paths used to concat the files in a specific order.
-let filesJsCompile = [
+const filesJsCompile = [
 	pathSrcJs + "components/components-form-require.js",
 	pathSrcJs + "components/components-form-validation.js",
 	pathSrcJs + "components/components-form-validation-ckeditor.js",
