@@ -72,7 +72,7 @@ const filesCssCompile = [
 function createServer() {
 	browserSync.init({
 		server: {
-			baseDir: "./dist",
+			baseDir: pathDist,
 			browser: [
 				"google-chrome",
 				"firefox",
@@ -83,7 +83,7 @@ function createServer() {
 
 function copyDirectory(directoryToCopy, directoryOutput) {
 	return gulp
-		.src(`${directoryToCopy}/**/*`)
+		.src(`${directoryToCopy}${pathFiles}`)
 		.pipe(gulp.dest(directoryOutput));
 };
 
@@ -118,8 +118,8 @@ function icomoonMinify() {
 
 function icomoonCopy() {
 	return copyDirectory(
-		`${pathSrc}icomoon/fonts`,
-		`${pathDist}icomoon/fonts`
+		`${pathSrcIcomoon}fonts`,
+		`${pathDistIcomoon}fonts`
 	);
 };
 
@@ -181,8 +181,8 @@ function jsCompile() {
 
 function jsCopy() {
 	return copyDirectory(
-		`${pathSrc}js/libs`,
-		`${pathDist}js/libs`
+		`${pathSrcJs}libs`,
+		`${pathDistJs}libs`
 	);
 };
 
