@@ -48,7 +48,7 @@ let watchFilesHtml = pathDist + pathFilesHtml,
 	watchFilesIcon = pathDistIcomoon + pathFiles;
 
 // Node modules
-var nodeModules = "./node_modules/";
+const nodeModules = "./node_modules/";
 
 // Paths used to concat the files in a specific order.
 let filesJsCompile = [
@@ -62,7 +62,7 @@ let filesJsCompile = [
 	pathSrcJs + "scripts.js",
 ];
 
-var filesCssCompile = [pathDistCss + "styles.min.css"];
+const filesCssCompile = [pathDistCss + "styles.min.css"];
 
 
 
