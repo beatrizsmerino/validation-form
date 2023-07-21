@@ -1,6 +1,7 @@
 "use strict";
 
 
+
 // DEPENDENCIES
 // =================================================
 const gulp = require("gulp");
@@ -15,7 +16,6 @@ const sass = require("gulp-sass")(require('sass'));
 const srcMaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
-
 
 
 // SETTINGS: FOLDER/FILE PATHS
@@ -63,7 +63,6 @@ const filesJsCompile = [
 ];
 
 const filesCssCompile = [pathDistCss + "styles.min.css"];
-
 
 
 // FUNTIONS USED IN THE TASKS
@@ -177,7 +176,6 @@ function watch() {
 }
 
 
-
 // EXPORTS
 // =================================================
 exports.createServer = createServer;
@@ -189,7 +187,6 @@ exports.cssCompile = cssCompile;
 exports.jsCompile = jsCompile;
 exports.jsCopy = jsCopy;
 exports.watch = watch;
-
 
 
 // TASKS
