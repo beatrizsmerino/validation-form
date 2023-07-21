@@ -20,8 +20,6 @@ const babel = require("gulp-babel");
 
 // SETTINGS: FOLDER/FILE PATHS
 // =================================================
-const proyectName = "./validation-form/";
-
 // Path src
 const pathSrc = "src/";
 const pathSrcIcomoon = `${pathSrc}icomoon/`;
@@ -46,9 +44,6 @@ const watchFilesHtml = `${pathDist}${pathFilesHtml}`;
 const watchFilesCss = `${pathDistCss}${pathFilesCss}`;
 const watchFilesJs = `${pathDistJs}${pathFilesJs}`;
 const watchFilesIcon = `${pathDistIcomoon}${pathFiles}`;
-
-// Node modules
-const nodeModules = "./node_modules/";
 
 // Paths used to concat the files in a specific order.
 const filesJsCompile = [
