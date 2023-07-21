@@ -63,7 +63,7 @@ const filesJsCompile = [
 ];
 
 const filesCssCompile = [
-	pathDistCss + "styles.min.css"
+	pathDistCss + "styles.min.css",
 ];
 
 
@@ -75,7 +75,7 @@ function createServer() {
 			baseDir: "./dist",
 			browser: [
 				"google-chrome",
-				"firefox"
+				"firefox",
 			],
 		},
 	});
@@ -106,7 +106,7 @@ function icomoonMinify() {
 		.pipe(
 			srcMaps.init({
 				loadMaps: true,
-				largeFile: true
+				largeFile: true,
 			})
 		)
 		.pipe(cleanCss())
@@ -126,7 +126,7 @@ function icomoonCopy() {
 function sassCompile() {
 	return gulp
 		.src([
-			pathSrcSass + "styles.sass"
+			pathSrcSass + "styles.sass",
 		])
 		.pipe(
 			srcMaps.init({
@@ -144,7 +144,7 @@ function sassCompile() {
 		.pipe(
 			autoprefixer({
 				versions: [
-					"last 2 versions"
+					"last 2 versions",
 				],
 			})
 		)
@@ -169,8 +169,8 @@ function jsCompile() {
 		.pipe(
 			babel({
 				presets: [
-					"@babel/preset-env"
-				]
+					"@babel/preset-env",
+				],
 			})
 		)
 		.pipe(concat("scripts.min.js"))
@@ -223,7 +223,7 @@ function watch() {
 			watchFilesHtml,
 			watchFilesCss,
 			watchFilesIcon,
-			watchFilesJs
+			watchFilesJs,
 		]
 	).on(
 		"change",
