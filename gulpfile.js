@@ -54,10 +54,6 @@ const filesJsCompile = [
 	`${paths.src.js}scripts.js`,
 ];
 
-const filesCssCompile = [
-	`${paths.dist.css}styles.min.css`,
-];
-
 
 // FUNTIONS USED IN THE TASKS
 // =================================================
@@ -146,15 +142,6 @@ function sassCompile() {
 		.pipe(gulp.dest(paths.dist.css));
 };
 
-function cssCompile() {
-	return gulp
-		.src(filesCssCompile)
-		.pipe(concat("styles.min.css"))
-		.pipe(srcMaps.write())
-		.pipe(lineEndingCorrector())
-		.pipe(gulp.dest(paths.dist.css));
-};
-
 function jsCompile() {
 	return gulp
 		.src(filesJsCompile)
@@ -204,10 +191,7 @@ function watch() {
 
 	gulp.watch(
 		`${paths.src.sass}${paths.files.sass}`,
-		gulp.series(
-			sassCompile,
-			cssCompile
-		)
+		sassCompile
 	);
 
 	gulp.watch(
@@ -231,7 +215,6 @@ exports.htmlCopy = htmlCopy;
 exports.icomoonMinify = icomoonMinify;
 exports.icomoonCopy = icomoonCopy;
 exports.sassCompile = sassCompile;
-exports.cssCompile = cssCompile;
 exports.jsCompile = jsCompile;
 exports.jsCopy = jsCopy;
 exports.watch = watch;
@@ -244,7 +227,6 @@ gulp.task(
 	gulp.series(
 		htmlCopy,
 		sassCompile,
-		cssCompile,
 		jsCompile,
 		jsCopy,
 		icomoonMinify,
@@ -263,7 +245,6 @@ gulp.task(
 	gulp.series(
 		htmlCopy,
 		sassCompile,
-		cssCompile,
 		jsCompile,
 		jsCopy,
 		icomoonMinify,
@@ -278,10 +259,7 @@ gulp.task(
 
 gulp.task(
 	"css",
-	gulp.series(
-		sassCompile,
-		cssCompile
-	)
+	sassCompile
 );
 
 gulp.task(
