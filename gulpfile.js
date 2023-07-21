@@ -263,9 +263,7 @@ gulp.task(
 
 gulp.task(
 	"serve",
-	gulp.series(
-		createServer
-	)
+	createServer
 );
 
 gulp.task(
@@ -283,9 +281,7 @@ gulp.task(
 
 gulp.task(
 	"html",
-	gulp.series(
-		htmlCopy
-	)
+	htmlCopy
 );
 
 gulp.task(
@@ -314,7 +310,5 @@ gulp.task(
 
 gulp.task(
 	"watch",
-	gulp.parallel(
-		watch
-	)
+	watch
 );
