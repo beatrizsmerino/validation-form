@@ -74,21 +74,21 @@ function createServer() {
 			browser: ["google-chrome", "firefox"],
 		},
 	});
-}
+};
 
 function copyDirectory(directoryToCopy, directoryOutput) {
 	return gulp
 		.src(`${directoryToCopy}/**/*`)
 		.pipe(gulp.dest(directoryOutput));
-}
+};
 
 function copyFiles(filesToCopy, directoryOutput) {
 	return gulp.src(filesToCopy).pipe(gulp.dest(directoryOutput));
-}
+};
 
 function htmlCopy() {
 	return copyFiles(pathSrc + pathFilesHtml, pathDist);
-}
+};
 
 function icomoonMinify() {
 	return gulp
@@ -104,11 +104,11 @@ function icomoonMinify() {
 		.pipe(lineEndingCorrector())
 		.pipe(rename("fonts.min.css"))
 		.pipe(gulp.dest(pathDistIcomoon));
-}
+};
 
 function icomoonCopy() {
 	return copyDirectory(pathSrc + "icomoon/fonts", pathDist + "icomoon/fonts");
-}
+};
 
 function sassCompile() {
 	return gulp
@@ -132,7 +132,7 @@ function sassCompile() {
 		.pipe(lineEndingCorrector())
 		.pipe(rename("styles.min.css"))
 		.pipe(gulp.dest(pathDistCss));
-}
+};
 
 function cssCompile() {
 	return gulp
@@ -141,7 +141,7 @@ function cssCompile() {
 		.pipe(srcMaps.write())
 		.pipe(lineEndingCorrector())
 		.pipe(gulp.dest(pathDistCss));
-}
+};
 
 function jsCompile() {
 	return gulp
@@ -155,11 +155,11 @@ function jsCompile() {
 		.pipe(uglify())
 		.pipe(lineEndingCorrector())
 		.pipe(gulp.dest(pathDistJs));
-}
+};
 
 function jsCopy() {
 	return copyDirectory(pathSrc + "js/libs", pathDist + "js/libs");
-}
+};
 
 function watch() {
 	createServer();
@@ -173,7 +173,7 @@ function watch() {
 		"change",
 		reload
 	);
-}
+};
 
 
 // EXPORTS
