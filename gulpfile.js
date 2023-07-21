@@ -57,18 +57,6 @@ const filesJsCompile = [
 
 // FUNCTIONS USED IN THE TASKS
 // =================================================
-function createServer() {
-	browserSync.init({
-		server: {
-			baseDir: paths.dist.base,
-			browser: [
-				"google-chrome",
-				"firefox",
-			],
-		},
-	});
-};
-
 function copyDirectory(directoryToCopy, directoryOutput) {
 	return gulp
 		.src(`${directoryToCopy}${paths.files.base}`)
@@ -81,6 +69,23 @@ function copyFiles(filesToCopy, directoryOutput) {
 		.pipe(gulp.dest(directoryOutput));
 };
 
+
+// FUNCTIONS & TASKS
+// =================================================
+function createServer() {
+	browserSync.init({
+		server: {
+			baseDir: paths.dist.base,
+			browser: [
+				"google-chrome",
+				"firefox",
+			],
+		},
+	});
+};
+
+// HTML
+// -------------------------------------------------
 function htmlCopy() {
 	return copyFiles(
 		`${paths.src.base}${paths.files.html}`,
@@ -88,29 +93,8 @@ function htmlCopy() {
 	);
 };
 
-function icomoonMinify() {
-	return gulp
-		.src(`${paths.src.icons}style.css`)
-		.pipe(
-			srcMaps.init({
-				loadMaps: true,
-				largeFile: true,
-			})
-		)
-		.pipe(cleanCss())
-		.pipe(srcMaps.write("./maps/"))
-		.pipe(lineEndingCorrector())
-		.pipe(rename("fonts.min.css"))
-		.pipe(gulp.dest(paths.dist.icons));
-};
-
-function icomoonCopy() {
-	return copyDirectory(
-		`${paths.src.icons}fonts`,
-		`${paths.dist.icons}fonts`
-	);
-};
-
+// CSS
+// -------------------------------------------------
 function sassCompile() {
 	return gulp
 		.src([
@@ -142,6 +126,8 @@ function sassCompile() {
 		.pipe(gulp.dest(paths.dist.css));
 };
 
+// JS
+// -------------------------------------------------
 function jsCompile() {
 	return gulp
 		.src(filesJsCompile)
@@ -165,12 +151,45 @@ function jsCopy() {
 	);
 };
 
+// ICON
+// -------------------------------------------------
+function icomoonMinify() {
+	return gulp
+		.src(`${paths.src.icons}style.css`)
+		.pipe(
+			srcMaps.init({
+				loadMaps: true,
+				largeFile: true,
+			})
+		)
+		.pipe(cleanCss())
+		.pipe(srcMaps.write("./maps/"))
+		.pipe(lineEndingCorrector())
+		.pipe(rename("fonts.min.css"))
+		.pipe(gulp.dest(paths.dist.icons));
+};
+
+function icomoonCopy() {
+	return copyDirectory(
+		`${paths.src.icons}fonts`,
+		`${paths.dist.icons}fonts`
+	);
+};
+
+
+// WATCH
+// =================================================
 function watch() {
 	createServer();
 
 	gulp.watch(
 		`${paths.src.base}${paths.files.html}`,
 		htmlCopy
+	);
+
+	gulp.watch(
+		`${paths.src.sass}${paths.files.sass}`,
+		sassCompile
 	);
 
 	gulp.watch(
@@ -187,11 +206,6 @@ function watch() {
 			icomoonMinify,
 			icomoonCopy
 		)
-	);
-
-	gulp.watch(
-		`${paths.src.sass}${paths.files.sass}`,
-		sassCompile
 	);
 
 	gulp.watch(
@@ -212,11 +226,11 @@ function watch() {
 // =================================================
 exports.createServer = createServer;
 exports.htmlCopy = htmlCopy;
-exports.icomoonMinify = icomoonMinify;
-exports.icomoonCopy = icomoonCopy;
 exports.sassCompile = sassCompile;
 exports.jsCompile = jsCompile;
 exports.jsCopy = jsCopy;
+exports.icomoonMinify = icomoonMinify;
+exports.icomoonCopy = icomoonCopy;
 exports.watch = watch;
 
 
