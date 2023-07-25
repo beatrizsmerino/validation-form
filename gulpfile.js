@@ -4,9 +4,10 @@
 
 // DEPENDENCIES
 // =================================================
+const browserSync = require("browser-sync");
 const gulp = require("gulp");
 const gulpAutoprefixer = require("gulp-autoprefixer");
-const browserSync = require("browser-sync");
+const gulpBabel = require("gulp-babel");
 const gulpCleanCss = require("gulp-clean-css");
 const gulpConcat = require("gulp-concat");
 const gulpLineEndingCorrector = require("gulp-line-ending-corrector");
@@ -14,7 +15,6 @@ const gulpRename = require("gulp-rename");
 const gulpSass = require("gulp-sass")(require("sass"));
 const gulpSourcemaps = require("gulp-sourcemaps");
 const gulpUglify = require("gulp-uglify");
-const gulpBabel = require("gulp-babel");
 
 const createBrowserSync = browserSync.create();
 const reloadBrowserSync = createBrowserSync.reload;
