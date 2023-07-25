@@ -128,6 +128,13 @@ function sassCompile() {
 
 // JS
 // -------------------------------------------------
+function jsLibCopy() {
+	return copyDirectory(
+		`${paths.src.js}libs`,
+		`${paths.dist.js}libs`
+	);
+};
+
 function jsCompile() {
 	return gulp
 		.src(filesJsCompile)
@@ -144,15 +151,16 @@ function jsCompile() {
 		.pipe(gulp.dest(paths.dist.js));
 };
 
-function jsLibCopy() {
-	return copyDirectory(
-		`${paths.src.js}libs`,
-		`${paths.dist.js}libs`
-	);
-};
 
 // ICON
 // -------------------------------------------------
+function fontsIcomoonCopy() {
+	return copyDirectory(
+		`${paths.src.icons}fonts`,
+		`${paths.dist.icons}fonts`
+	);
+};
+
 function cssIcomoonMinify() {
 	return gulp
 		.src(`${paths.src.icons}style.css`)
@@ -167,13 +175,6 @@ function cssIcomoonMinify() {
 		.pipe(gulpLineEndingCorrector())
 		.pipe(gulpRename("fonts.min.css"))
 		.pipe(gulp.dest(paths.dist.icons));
-};
-
-function fontsIcomoonCopy() {
-	return copyDirectory(
-		`${paths.src.icons}fonts`,
-		`${paths.dist.icons}fonts`
-	);
 };
 
 
@@ -195,16 +196,16 @@ function watch() {
 	gulp.watch(
 		`${paths.src.js}${paths.files.js}`,
 		gulp.series(
-			jsCompile,
-			jsLibCopy
+			jsLibCopy,
+			jsCompile
 		)
 	);
 
 	gulp.watch(
 		`${paths.src.icons}${paths.files.base}`,
 		gulp.series(
-			cssIcomoonMinify,
-			fontsIcomoonCopy
+			fontsIcomoonCopy,
+			cssIcomoonMinify
 		)
 	);
 
@@ -227,10 +228,10 @@ function watch() {
 exports.createServer = createServer;
 exports.htmlCopy = htmlCopy;
 exports.sassCompile = sassCompile;
-exports.jsCompile = jsCompile;
 exports.jsLibCopy = jsLibCopy;
-exports.cssIcomoonMinify = cssIcomoonMinify;
+exports.jsCompile = jsCompile;
 exports.fontsIcomoonCopy = fontsIcomoonCopy;
+exports.cssIcomoonMinify = cssIcomoonMinify;
 exports.watch = watch;
 
 
@@ -241,10 +242,10 @@ gulp.task(
 	gulp.series(
 		htmlCopy,
 		sassCompile,
-		jsCompile,
 		jsLibCopy,
-		cssIcomoonMinify,
+		jsCompile,
 		fontsIcomoonCopy,
+		cssIcomoonMinify,
 		watch
 	)
 );
@@ -259,10 +260,10 @@ gulp.task(
 	gulp.series(
 		htmlCopy,
 		sassCompile,
-		jsCompile,
 		jsLibCopy,
-		cssIcomoonMinify,
-		fontsIcomoonCopy
+		jsCompile,
+		fontsIcomoonCopy,
+		cssIcomoonMinify
 	)
 );
 
@@ -279,16 +280,16 @@ gulp.task(
 gulp.task(
 	"js",
 	gulp.series(
-		jsCompile,
-		jsLibCopy
+		jsLibCopy,
+		jsCompile
 	)
 );
 
 gulp.task(
 	"icon",
 	gulp.series(
-		cssIcomoonMinify,
-		fontsIcomoonCopy
+		fontsIcomoonCopy,
+		cssIcomoonMinify
 	)
 );
 
