@@ -99,9 +99,7 @@ function htmlCopy() {
 // -------------------------------------------------
 function sassCompile() {
 	return gulp
-		.src([
-			`${paths.src.sass}styles.sass`,
-		])
+		.src(`${paths.src.sass}styles.sass`)
 		.pipe(
 			gulpSourcemaps.init({
 				loadMaps: true,
