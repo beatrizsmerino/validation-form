@@ -151,7 +151,6 @@ function jsCompile() {
 		.pipe(gulp.dest(paths.dist.js));
 };
 
-
 // ICON
 // -------------------------------------------------
 function fontsIcomoonCopy() {
