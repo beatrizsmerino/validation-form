@@ -44,8 +44,12 @@ const paths = {
 	},
 };
 
+// FRONT
+// -------------------------------------------------
 const pathsFront = {
 	src: {
+		html: `${paths.src.base}${paths.files.html}`,
+		sass: `${paths.src.sass}styles.sass`,
 		js: [
 			`${paths.src.js}components/components-form-require.js`,
 			`${paths.src.js}components/components-form-validation.js`,
@@ -55,10 +59,14 @@ const pathsFront = {
 			`${paths.src.js}page/page-account.js`,
 			//----------------
 			`${paths.src.js}scripts.js`,
-		]
+		],
+		icons: paths.src.icons
 	},
 	dist: {
-		js: paths.dist.js
+		html: paths.dist.base,
+		css: paths.dist.css,
+		js: paths.dist.js,
+		icons: paths.dist.icons
 	}
 };
 
@@ -96,8 +104,8 @@ function createServer() {
 // -------------------------------------------------
 function htmlCopy() {
 	return copyFiles(
-		`${paths.src.base}${paths.files.html}`,
-		paths.dist.base
+		pathsFront.src.html,
+		pathsFront.dist.html
 	);
 };
 
@@ -105,7 +113,7 @@ function htmlCopy() {
 // -------------------------------------------------
 function sassCompile() {
 	return gulp
-		.src(`${paths.src.sass}styles.sass`)
+		.src(pathsFront.src.sass)
 		.pipe(
 			gulpSourcemaps.init({
 				loadMaps: true,
@@ -129,7 +137,7 @@ function sassCompile() {
 		.pipe(gulpSourcemaps.write())
 		.pipe(gulpLineEndingCorrector())
 		.pipe(gulpRename("styles.min.css"))
-		.pipe(gulp.dest(paths.dist.css));
+		.pipe(gulp.dest(pathsFront.dist.css));
 };
 
 // JS
@@ -161,8 +169,8 @@ function jsCompile() {
 // -------------------------------------------------
 function fontsIcomoonCopy() {
 	return copyDirectory(
-		`${paths.src.icons}fonts`,
-		`${paths.dist.icons}fonts`
+		`${pathsFront.src.icons}fonts`,
+		`${pathsFront.dist.icons}fonts`
 	);
 };
 
