@@ -44,17 +44,23 @@ const paths = {
 	},
 };
 
-// Paths used to concat the files in a specific order.
-const filesJsCompile = [
-	`${paths.src.js}components/components-form-require.js`,
-	`${paths.src.js}components/components-form-validation.js`,
-	`${paths.src.js}components/components-form-validation-ckeditor.js`,
-	`${paths.src.js}components/components-message.js`,
-	//----------------
-	`${paths.src.js}page/page-account.js`,
-	//----------------
-	`${paths.src.js}scripts.js`,
-];
+const pathsFront = {
+	src: {
+		js: [
+			`${paths.src.js}components/components-form-require.js`,
+			`${paths.src.js}components/components-form-validation.js`,
+			`${paths.src.js}components/components-form-validation-ckeditor.js`,
+			`${paths.src.js}components/components-message.js`,
+			//----------------
+			`${paths.src.js}page/page-account.js`,
+			//----------------
+			`${paths.src.js}scripts.js`,
+		]
+	},
+	dist: {
+		js: paths.dist.js
+	}
+};
 
 
 // FUNCTIONS USED IN THE TASKS
@@ -137,7 +143,7 @@ function jsLibCopy() {
 
 function jsCompile() {
 	return gulp
-		.src(filesJsCompile)
+		.src(pathsFront.src.js)
 		.pipe(
 			gulpBabel({
 				presets: [
@@ -148,7 +154,7 @@ function jsCompile() {
 		.pipe(gulpConcat("scripts.min.js"))
 		.pipe(gulpUglify())
 		.pipe(gulpLineEndingCorrector())
-		.pipe(gulp.dest(paths.dist.js));
+		.pipe(gulp.dest(pathsFront.dist.js));
 };
 
 // ICON
