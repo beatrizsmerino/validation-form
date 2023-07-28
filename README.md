@@ -1,5 +1,5 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/validation-form)
-![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)  
+![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/validation-form)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/validation-form)
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/validation-form)
@@ -24,13 +24,14 @@ It uses the `GULP` task runner to build the files in the `dist` folder and these
 
 ## Javascript
 
-- [Jquery 3.4.1](https://jquery.com/). jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
-- [jQuery Validation 1.19.1](https://jqueryvalidation.org/). This jQuery plugin makes simple clientside form validation easy, whilst still offering plenty of customization options. It makes a good choice if you’re building something new from scratch, but also when you’re trying to integrate something into an existing application with lots of existing markup. The plugin comes bundled with a useful set of validation methods, including URL and email validation, while providing an API to write your own methods. All bundled methods come with default error messages in english and translations into 37 other languages.
-Some more methods are provided as add-ons, and are currently included in `additional-methods.min.js` in the download package. You can find the source code for all additional methods in the [GitHub repository](https://github.com/jquery-validation/jquery-validation/tree/master/src/additional).
-- [CKEditor 4](https://ckeditor.com/ckeditor-4/). Modern JavaScript rich text editor with a modular architecture. Its clean UI and features provide the perfect WYSIWYG UX ❤️ for creating semantic content. It is full of features like pasting from Word, Excel and Google Docs. It's excellent table support with column resizing, row and column selection. You can include multimedia embeds as insert images, videos, tweets, Instagram posts widgets, code snippets, mathematical formulas and more. It has spreadsheets to create data grids within the editor. It uses autocomplete, @mentions, emoji 😊, styling and formatting plugins (copy formatting feature). It is designed with inline and iframe UI, autogrow, maximize mode for distraction-free typing with the read-only mode ...and more!
-Here you can see the [README.md](https://github.com/beatrizsmerino/validation-form/blob/master/src/js/libs/ckeditor/README.md) file of this project and the [samples](https://github.com/beatrizsmerino/validation-form/tree/master/src/js/libs/ckeditor/samples) folder.
+-   [Jquery 3.4.1](https://jquery.com/). jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+-   [jQuery Validation 1.19.1](https://jqueryvalidation.org/). This jQuery plugin makes simple clientside form validation easy, whilst still offering plenty of customization options. It makes a good choice if you’re building something new from scratch, but also when you’re trying to integrate something into an existing application with lots of existing markup. The plugin comes bundled with a useful set of validation methods, including URL and email validation, while providing an API to write your own methods. All bundled methods come with default error messages in english and translations into 37 other languages.
+    Some more methods are provided as add-ons, and are currently included in `additional-methods.min.js` in the download package. You can find the source code for all additional methods in the [GitHub repository](https://github.com/jquery-validation/jquery-validation/tree/master/src/additional).
+-   [CKEditor 4](https://ckeditor.com/ckeditor-4/). Modern JavaScript rich text editor with a modular architecture. Its clean UI and features provide the perfect WYSIWYG UX ❤️ for creating semantic content. It is full of features like pasting from Word, Excel and Google Docs. It's excellent table support with column resizing, row and column selection. You can include multimedia embeds as insert images, videos, tweets, Instagram posts widgets, code snippets, mathematical formulas and more. It has spreadsheets to create data grids within the editor. It uses autocomplete, @mentions, emoji 😊, styling and formatting plugins (copy formatting feature). It is designed with inline and iframe UI, autogrow, maximize mode for distraction-free typing with the read-only mode ...and more!
+    Here you can see the [README.md](https://github.com/beatrizsmerino/validation-form/blob/master/src/js/libs/ckeditor/README.md) file of this project and the [samples](https://github.com/beatrizsmerino/validation-form/tree/master/src/js/libs/ckeditor/samples) folder.
 
-# NPM 
+# NPM
+
 ## Project setup
 
 After cloning this repository you need to install the required NPM packages.
@@ -38,6 +39,7 @@ After cloning this repository you need to install the required NPM packages.
 ```
 npm install
 ```
+
 ## Deploy
 
 After development you can publish the content of `dist` folder in Github Pages (`gh-pages` branch)
@@ -87,7 +89,7 @@ gulp cssIcomoonMinify
 gulp watch
 ```
 
-## 💻  Run server
+## 💻 Run server
 
 This create a static server with browserSync package, serves the files from `dist` folder and opens by default the `index.html` file in any of these browsers: Chrome & Firefox.
 
