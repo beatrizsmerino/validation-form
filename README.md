@@ -80,10 +80,10 @@ or
 ```
 gulp htmlCopy
 gulp sassCompile
-gulp cssCompile
+gulp jsLibCopy
 gulp jsCompile
-gulp icomoonMinify
-gulp icomoonCopy
+gulp fontsIcomoonCopy
+gulp cssIcomoonMinify
 gulp watch
 ```
 
@@ -95,6 +95,11 @@ This create a static server with browserSync package, serves the files from `dis
 gulp serve
 ```
 
+or
+
+```
+gulp createServer
+```
 
 ## 📂 Generate html, css, js and icons
 
@@ -112,10 +117,10 @@ or
 ```
 gulp htmlCopy
 gulp sassCompile
-gulp cssCompile
+gulp jsLibCopy
 gulp jsCompile
-gulp icomoonMinify
-gulp icomoonCopy
+gulp fontsIcomoonCopy
+gulp cssIcomoonMinify
 ```
 
 ## 📄 Generate html
@@ -127,6 +132,12 @@ This command is able to:
 
 ```
 gulp html
+```
+
+or
+
+```
+gulp htmlCopy
 ```
 
 ## 📄 Generate css
@@ -145,7 +156,6 @@ or
 
 ```
 gulp sassCompile
-gulp cssCompile
 ```
 
 ## 📄 Generate js
@@ -153,7 +163,7 @@ gulp cssCompile
 This command is able to:
 
 1. Creates the `dist` folder if it does not exist.
-2. Get list of files of `filesJsCompile` variable, compile the files with Babel NPM package, compress it and apply a Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)...
+2. Get list of files of `pathsFront` constant, compile the files with Babel NPM package, compress it and apply a Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)...
 3. Export the `scripts.min.js` file to `dist/js` folder.
 4. Copy files of libraries js inside `src/js/libs` and paste into `dist/js/libs` folder.
 
@@ -164,8 +174,8 @@ gulp js
 or
 
 ```
+gulp jsLibCopy
 gulp jsCompile
-gulp jsCopy
 ```
 
 ## 📄 Generate font icons with icomoon
@@ -187,8 +197,8 @@ gulp icon
 or
 
 ```
-gulp icomoonMinify
-gulp icomoonCopy
+gulp fontsIcomoonCopy
+gulp cssIcomoonMinify
 ```
 
 ## 🔎 Watch changes
