@@ -1,5 +1,5 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/validation-form)
 ![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)
+![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/validation-form)
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/validation-form)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/validation-form)
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/validation-form)
