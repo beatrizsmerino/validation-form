@@ -7,6 +7,8 @@
 
 # Validation form
 
+## Description
+
 This `validation-form` repository is a complete example of a form with different fields, required validations and custom text fields.
 
 ![Validation Form](/README/images/validation-form.gif)
