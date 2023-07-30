@@ -7,7 +7,7 @@
 
 # Validation form
 
-![Validation Form](/README/images/validation-form.gif)
+![Validation Form](README/images/validation-form.gif)
 
 ## Description
 
