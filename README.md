@@ -73,36 +73,12 @@ This command is able to:
 gulp
 ```
 
-or
-
-```shell
-gulp default
-```
-
-or
-
-```shell
-gulp htmlCopy
-gulp sassCompile
-gulp jsLibCopy
-gulp jsCompile
-gulp fontsIcomoonCopy
-gulp cssIcomoonMinify
-gulp watch
-```
-
 ### 💻 Run server
 
 This create a static server with browserSync package, serves the files from `dist` folder and opens by default the `index.html` file in any of these browsers: Chrome & Firefox.
 
 ```shell
 gulp serve
-```
-
-or
-
-```shell
-gulp createServer
 ```
 
 ### 📂 Generate html, css, js and icons
@@ -116,17 +92,6 @@ This command is able to:
 gulp build
 ```
 
-or
-
-```shell
-gulp htmlCopy
-gulp sassCompile
-gulp jsLibCopy
-gulp jsCompile
-gulp fontsIcomoonCopy
-gulp cssIcomoonMinify
-```
-
 ### 📄 Generate html
 
 This command is able to:
@@ -136,12 +101,6 @@ This command is able to:
 
 ```shell
 gulp html
-```
-
-or
-
-```shell
-gulp htmlCopy
 ```
 
 ### 📄 Generate css
@@ -156,12 +115,6 @@ This command is able to:
 gulp css
 ```
 
-or
-
-```shell
-gulp sassCompile
-```
-
 ### 📄 Generate js
 
 This command is able to:
@@ -173,13 +126,6 @@ This command is able to:
 
 ```shell
 gulp js
-```
-
-or
-
-```shell
-gulp jsLibCopy
-gulp jsCompile
 ```
 
 ### 📄 Generate font icons with icomoon
@@ -196,13 +142,6 @@ This command is able to:
 
 ```shell
 gulp icon
-```
-
-or
-
-```shell
-gulp fontsIcomoonCopy
-gulp cssIcomoonMinify
 ```
 
 ### 🔎 Watch changes
