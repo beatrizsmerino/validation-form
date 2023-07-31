@@ -32,7 +32,7 @@ Some more methods are provided as add-ons, and are currently included in `additi
 - [CKEditor 4](https://ckeditor.com/ckeditor-4/). Modern JavaScript rich text editor with a modular architecture. Its clean UI and features provide the perfect WYSIWYG UX ❤️ for creating semantic content. It is full of features like pasting from Word, Excel and Google Docs. It's excellent table support with column resizing, row and column selection. You can include multimedia embeds as insert images, videos, tweets, Instagram posts widgets, code snippets, mathematical formulas and more. It has spreadsheets to create data grids within the editor. It uses autocomplete, @mentions, emoji 😊, styling and formatting plugins (copy formatting feature). It is designed with inline and iframe UI, autogrow, maximize mode for distraction-free typing with the read-only mode ...and more!  
 Here you can see the [README.md](https://github.com/beatrizsmerino/validation-form/blob/master/src/js/libs/ckeditor/README.md) file of this project and the [samples](https://github.com/beatrizsmerino/validation-form/tree/master/src/js/libs/ckeditor/samples) folder.
 
-## NPM
+## Commands
 
 ### Project setup
 
@@ -45,8 +45,6 @@ npm install
 ```shell
 npm run deploy
 ```
-
-## GULP
 
 ### Run server and watch changes
 
