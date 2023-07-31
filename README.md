@@ -15,14 +15,14 @@ This repository is a complete example of a form with different fields, required 
 
 ## Developed with
 
-It is developed in `HTML`, `CSS` (with the `SASS` preprocessor) and `JS` (with the `Jquery` library).
-It uses the `GULP` task runner to build the files in the `dist` folder and these files are published using an `NPM` script in the **gh-page** branch on GitHub.
-
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/-Css3-2173F6?style=for-the-badge&logo=css3&logoColor=white)
 ![SASS/SCSS](https://img.shields.io/badge/-SASS/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![Javascript](https://img.shields.io/badge/-Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Babel](https://img.shields.io/badge/-babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=000000) ![JQuery](https://img.shields.io/badge/-JQuery-183353?style=for-the-badge&logo=JQuery&logoColor=white) ![NPM](https://img.shields.io/badge/-NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![Gulp](https://img.shields.io/badge/-Gulp-D34A47?style=for-the-badge&logo=gulp&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-3D4648?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
+It is developed in `HTML`, `CSS` (with the `SASS` preprocessor) and `JS` (with the `Jquery` library).
+It uses the `GULP` task runner to build the files in the `dist` folder and these files are published using an `NPM` script in the **gh-page** branch on GitHub.
 
 ### Javascript
 
