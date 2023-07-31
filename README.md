@@ -101,7 +101,7 @@ So project development takes place in the `src` and the final optimized content 
 		</h3>
 	</summary>
 	<div>
-		After cloning this repository you need to install the required NPM packages.
+		To configure the project, after cloning this repository, you need to install the required NPM packages.
 	</div>
 </details>
 
@@ -116,7 +116,7 @@ npm install
 		</h3>
 	</summary>
 	<div>
-		After development you can publish the content of <code>dist</code> folder in Github Pages (<code>gh-pages</code> branch)
+		Once the development of the code in the `src` folder is finished, you can publish the project with the contents of the `dist` folder to Github Pages (`gh-pages` branch).
 	</div>
 </details>
 
@@ -132,23 +132,20 @@ npm run deploy
 	</summary>
 	<div>
 		<p>
-			This is the default gulp task
-		</p>
-		<p>
-			This command is able to:
+			The default gulp task handles various tasks:
 		</p>
 		<ol>
 			<li>
 				Creates the <code>dist</code> folder if it does not exist.
 			</li>
 			<li>
-				Generate <code>html</code>, <code>css</code>, <code>js</code> and font icons of <code>icomoon</code> on <code>dist</code> folder.
+				Build <code>html</code>, <code>css</code>, <code>js</code> and font icons of <code>icomoon</code> in the <code>dist</code> folder.
 			</li>
 			<li>
-				Watch the changes to the files in the <code>sass</code>, <code>js</code> and <code>icomoon</code> folders inside the <code>src</code> folder.
+				Watch for changes inside the <code>src</code> folder to rebuild the files.
 			</li>
 			<li>
-				Create a server and reloads if there are any changes in those files of <code>dist</code> folder.
+				Sets a server and reloads it automatically when changes are made to the <code>dist</code> folder.
 			</li>
 		</ol>
 	</div>
@@ -163,7 +160,20 @@ gulp
 		<h3>Create and run server</h3>
 	</summary>
 	<div>
-		This create a static server with browserSync package, serves the files from <code>dist</code> folder and opens by default the <code>index.html</code> file in any of these browsers: Chrome & Firefox.
+		<p>
+			This command is able to:
+		</p>
+		<ol>
+			<li>
+				Create a static server with the <code>browserSync</code> package.
+			</li>
+			<li>
+				Serve the files in the <code>dist</code> folder.
+			</li>
+			<li>
+				Open the default <code>index.html</code> file in any of these browsers: <code>Chrome</code> and <code>Firefox</code>.
+			</li>
+		</ol>
 	</div>
 </details>
 
@@ -179,19 +189,25 @@ gulp serve
 	</summary>
 	<div>
 		<p>
-			This command is able to:
+			This command is a powerful tool that performs the following tasks:
 		</p>
 		<ol>
 			<li>
-				Create the server.
+				Create and launch a server.
 			</li>
 			<li>
-				Watch the changes to the files in the <code>html</code>, <code>sass</code>, <code>icomoon</code> and <code>js</code> folders inside the <code>src</code> folder and run the tasks to re-generate the files inside the <code>dist</code> folder.
+				Observe the changes in the <code>html</code>, <code>sass</code>, <code>icomoon</code> and <code>js</code> files located inside the <code>src</code> folder.
 			</li>
 			<li>
-				Reloads the server if there are any changes to the <code>html</code>, <code>css</code>, <code>icomoon</code> and <code>js</code> files inside the <code>dist</code> folder.
+				When a change occurs, runs the necessary tasks to re-generate the files inside the <code>dist</code> folder.
+			</li>
+			<li>
+				Consequently, it reloads the server automatically, if there are any changes in the files inside the <code>dist</code> folder.
 			</li>
 		</ol>
+		<p>
+			This ensures a smooth development experience, as you can make changes to your source files and see updates in real time without manually refreshing the page.
+		</p>
 	</div>
 </details>
 
@@ -214,7 +230,7 @@ gulp watch
 				Creates the <code>dist</code> folder if it does not exist.
 			</li>
 			<li>
-				Generate <code>html</code>, <code>css</code>, <code>js</code> and <code>icomoon</code> on <code>dist</code> folder.
+				Build the <code>html</code>, <code>css</code>, <code>js</code> and <code>icomoon</code> on <code>dist</code> folder.
 			</li>
 		</ol>
 	</div>
@@ -239,7 +255,7 @@ gulp build
 				Creates the <code>dist</code> folder if it does not exist.
 			</li>
 			<li>
-				Copies the <code>html</code> files from the <code>src</code> folder and pastes them into the <code>dist</code> folder.
+				Copies the <code>html</code> files from the <code>src</code> folder to the <code>dist</code> folder.
 			</li>
 		</ol>
 	</div>
@@ -264,7 +280,24 @@ gulp html
 				Creates the <code>dist</code> folder if it does not exist.
 			</li>
 			<li>
-				Compile the <code>styles.sass</code> file (with the import files of partials sass) located at <code>src/sass/</code>, add prefixes to CSS properties, compress the file, create and add a mapping for the debugger styles sass on the browser inspector, apply a Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)...
+				Performs a series of processes:
+				<ul>
+					<li>
+						Compiles the <code>styles.sass</code> file, including its imported partials located at <code>src/sass/</code>.
+					</li>
+					<li>
+						Adds prefixes to <code>CSS</code>. properties for better browser compatibility.
+					</li>
+					<li>
+						Compresses the <code>CSS</code>. file to reduce its size for optimized performance.
+					</li>
+					<li>
+						Creates and adds a <code>mapping</code> for the debugger styles in the browser inspector for easier debugging.
+					</li>
+					<li>
+						Applies a Gulp Plugin, <code>Line Ending Corrector</code>, to ensure consistent line endings in your <code>CSS</code>. files.
+					</li>
+				</ul>
 			</li>
 			<li>
 				Export the <code>styles.min.css</code> file to <code>dist/css/</code> folder.
@@ -292,13 +325,27 @@ gulp css
 				Creates the <code>dist</code> folder if it does not exist.
 			</li>
 			<li>
-				Get a list of files of <code>pathsFront</code> constant, compile the files with Babel NPM package, compress it and apply a Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)...
+				Copies files of <code>JS</code> libraries from <code>src/js/libs</code> and pastes them into <code>dist/js/libs</code> folder.
+			</li>
+			<li>
+				Performs a series of processes:
+				<ul>
+					<li>
+						Compile partials <code>JS</code> files partials located at <code>src/js/</code>.
+					</li>
+					<li>
+						Use <code>Babel</code>, a JavaScript compiler, to ensure backward compatibility and compatibility with various browsers.
+					</li>
+					<li>
+						Minifies the concatenated file, reducing its size for optimized performance.
+					</li>
+					<li>
+						Applies a Gulp Plugin, <code>Line Ending Corrector</code>, to ensure consistent line endings in your <code>JS</code>. files.
+					</li>
+				</ul>
 			</li>
 			<li>
 				Export the <code>scripts.min.js</code> file to <code>dist/js</code> folder.
-			</li>
-			<li>
-				Copy files of libraries js inside <code>src/js/libs</code> and paste them into <code>dist/js/libs</code> folder.
 			</li>
 		</ol>
 	</div>
@@ -316,10 +363,9 @@ gulp js
 	</summary>
 	<div>
 		<p>
-			This project uses icons from <a href="https://icomoon.io/app/#/select">icomoon.io</a>, one app that has 2 buttons to <strong>generate SVG & More</strong> and <strong>generate Font</strong>.
-		</p>
-		<p>
-			The <code>src/icomoon/</code> folder contains a mix of both folders downloaded from these 2 buttons.
+			This project uses icons from <a href="https://icomoon.io/app/#/select">icomoon.io</a>, an online tool app that has 2 buttons to <code>generate SVG & More</code> and <code>generate Font</code>.
+			</br>
+			The <code>src/icomoon/</code> folder contains a mix of both downloaded folders.
 		</p>
 		<p>
 			This command is able to:
@@ -332,7 +378,7 @@ gulp js
 				Gets <code>style.css</code> file from <code>src/icomoon/</code> folder, generates a new compressed file, renames it <code>fonts.min.css</code> and export the file to <code>dist/icomoon</code>.
 			</li>
 			<li>
-				Copy directory <code>src/icomoon/fonts</code>, containing the fonts (EOT, SVG, TTF, WOFF), into <code>dist/icomoon/fonts</code>
+				Copy directory <code>src/icomoon/fonts</code>, containing the fonts (EOT, SVG, TTF, WOFF), and paste the files into <code>dist/icomoon/fonts</code>
 			</li>
 		</ol>
 	</div>
