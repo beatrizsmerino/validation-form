@@ -27,7 +27,15 @@ The best part is that you can easily customize these components to fit your spec
 ![CSS3](https://img.shields.io/badge/-Css3-2173F6?style=for-the-badge&logo=css3&logoColor=white)
 ![SASS/SCSS](https://img.shields.io/badge/-SASS/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![Javascript](https://img.shields.io/badge/-Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Babel](https://img.shields.io/badge/-babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=000000) ![JQuery](https://img.shields.io/badge/-JQuery-183353?style=for-the-badge&logo=JQuery&logoColor=white) ![NPM](https://img.shields.io/badge/-NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![Gulp](https://img.shields.io/badge/-Gulp-D34A47?style=for-the-badge&logo=gulp&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-3D4648?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![JQuery](https://img.shields.io/badge/-JQuery-183353?style=for-the-badge&logo=JQuery&logoColor=white)
+![jQuery Validation](https://img.shields.io/badge/-jQuery%20Validation-bb002b?style=for-the-badge&logo=jquery&logoColor=white)
+![CKEditor](https://img.shields.io/badge/-ckeditor4-0287D0?style=for-the-badge&logo=ckeditor4&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-3D4648?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![NPM](https://img.shields.io/badge/-NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![Gulp](https://img.shields.io/badge/-Gulp-D34A47?style=for-the-badge&logo=gulp&logoColor=white)
+![Autoprefixer](https://img.shields.io/badge/-Autoprefixer-FF9900?style=for-the-badge&logo=autoprefixer&logoColor=white)
+![Babel](https://img.shields.io/badge/-babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=000000)
+![Icomoon](https://img.shields.io/badge/-Icomoon-02A8F3?style=for-the-badge&logo=icomoon&logoColor=white)
 
 This project is developed inside of `src` folder, using in `HTML`, `CSS` (with the `SASS` preprocessor) and `JS` (with the `Jquery` library).
 To streamline the build process, the project utilizes the `Gulp` task runner, which compiles and optimizes the files, placing them in the `dist` folder.
