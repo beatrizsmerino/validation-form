@@ -158,4 +158,4 @@ gulp watch
 
 ## 🚀 State
 
-> The validation of the fields remains to be improved, hide / show fields as they are filled...and more.
+There is still room for improvement in validation, such as the implementation of showing/hiding fields dynamically as the user fills/hides them... and many other potential areas.
