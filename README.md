@@ -21,8 +21,11 @@ This repository is a complete example of a form with different fields, required 
 ![Javascript](https://img.shields.io/badge/-Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Babel](https://img.shields.io/badge/-babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=000000) ![JQuery](https://img.shields.io/badge/-JQuery-183353?style=for-the-badge&logo=JQuery&logoColor=white) ![NPM](https://img.shields.io/badge/-NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![Gulp](https://img.shields.io/badge/-Gulp-D34A47?style=for-the-badge&logo=gulp&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-3D4648?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
-It is developed in `HTML`, `CSS` (with the `SASS` preprocessor) and `JS` (with the `Jquery` library).
-It uses the `GULP` task runner to build the files in the `dist` folder and these files are published using an `NPM` script in the **gh-page** branch on GitHub.
+This project is developed inside of `src` folder, using in `HTML`, `CSS` (with the `SASS` preprocessor) and `JS` (with the `Jquery` library).
+To streamline the build process, the project utilizes the `Gulp` task runner, which compiles and optimizes the files, placing them in the `dist` folder.
+Once everything is ready, the project is published using an `NPM` script in the `gh-page` branch on GitHub.
+
+Here are the main technologies and tools used in this project:
 
 ### Javascript
 
@@ -73,11 +76,13 @@ It uses the `GULP` task runner to build the files in the `dist` folder and these
 
 ### Gulp
 
-As I said before this project uses the `GULP task runner`.
+As mentioned above, this project makes use of the `Gulp` task runner. The [gulpfile.js](https://github.com/beatrizsmerino/validation-form/blob/master/gulpfile.js) file contains several `Gulp` tasks designed to:
 
-In the [gulpfile.js](https://github.com/beatrizsmerino/validation-form/blob/master/gulpfile.js) of this proyect you can see the **gulp tasks** developed to compile and compress the `SASS` and `JS`, copy and paste the `HTML` files and `ICOMOON` icon fonts, create a server and listen to the changes made to reload it ([Browsersync + Gulp.js](https://browsersync.io/docs/gulp))
+-   Compile and compress `SASS` and `JS` files.
+-   Copy and paste `HTML` files and `ICOMOON` icon fonts.
+-   Create a server and enable live reloading using [Browsersync + Gulp.js](https://browsersync.io/docs/gulp).
 
-So the project is developed in the `src` folder and published in the `dist` folder.
+So project development takes place in the `src` and the final optimized content is generated in the `dist` folder for publishing. This setup ensures an efficient and organized workflow for web development.
 
 ## 🚀 Commands
 
