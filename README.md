@@ -48,54 +48,54 @@ npm run deploy
 
 ## GULP
 
-### 🔧 Run server and watch changes
+### Run server and watch changes
 
 ```shell
 gulp
 ```
 
-### 💻 Run server
+### Run server
 
 ```shell
 gulp serve
 ```
 
-### 📂 Generate html, css, js and icons
+### Generate html, css, js and icons
 
 ```shell
 gulp build
 ```
 
-### 📄 Generate html
+### Generate html
 
 ```shell
 gulp html
 ```
 
-### 📄 Generate css
+### Generate css
 
 ```shell
 gulp css
 ```
 
-### 📄 Generate js
+### Generate js
 
 ```shell
 gulp js
 ```
 
-### 📄 Generate font icons with icomoon
+### Generate font icons with icomoon
 
 ```shell
 gulp icon
 ```
 
-### 🔎 Watch changes
+### Watch changes
 
 ```shell
 gulp watch
 ```
 
-## 🚀 State
+## State
 
 There is still room for improvement in validation, such as the implementation of showing/hiding fields dynamically as the user fills/hides them... and many other potential areas.
