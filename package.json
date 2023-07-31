@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
-		"preinstall": "npm run install:clean && npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
+		"dependencies:fix": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
+		"preinstall": "npm run install:clean && npm run dependencies:fix",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"author": "beatrizsmerino@gmail.com",
@@ -34,7 +35,7 @@
 		"json5": ">=2.2.2"
 	},
 	"volta": {
-		"node": "14.19.3",
-		"npm": "6.14.17"
+		"node": "14.21.3",
+		"npm": "6.14.18"
 	}
 }
