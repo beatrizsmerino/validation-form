@@ -34,61 +34,61 @@ Here you can see the [README.md](https://github.com/beatrizsmerino/validation-fo
 
 ## 🚀 Commands
 
-### Project setup
+### Install dependencies
 
 ```shell
 npm install
 ```
 
-### Deploy
+### Deploy project
 
 ```shell
 npm run deploy
 ```
 
-### Run server and watch changes
+### Build files, run server and watch changes
 
 ```shell
 gulp
 ```
 
-### Run server
+### Create and run server
 
 ```shell
 gulp serve
 ```
 
-### Watch changes
+### Watch for changes
 
 ```shell
 gulp watch
 ```
 
-### Generate html, css, js and icons
+### Build files
 
 ```shell
 gulp build
 ```
 
-### Generate html
+### Build HTML files
 
 ```shell
 gulp html
 ```
 
-### Generate css
+### Build CSS files
 
 ```shell
 gulp css
 ```
 
-### Generate js
+### Build JS files
 
 ```shell
 gulp js
 ```
 
-### Generate font icons with icomoon
+### Build icon files
 
 ```shell
 gulp icon
