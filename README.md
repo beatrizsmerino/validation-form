@@ -13,7 +13,7 @@
 
 This `validation-form` repository is a complete example of a form with different fields, required validations and custom text fields.
 
-## Development interface
+## Developed with
 
 It is developed in `HTML`, `CSS` (with the `SASS` preprocessor) and `JS` (with the `Jquery` library).
 It uses the `GULP` task runner to build the files in the `dist` folder and these files are published using an `NPM` script in the **gh-page** branch on GitHub.
@@ -156,6 +156,6 @@ This command is able to:
 gulp watch
 ```
 
-## 🚀 Working
+## 🚀 State
 
 > The validation of the fields remains to be improved, hide / show fields as they are filled...and more.
