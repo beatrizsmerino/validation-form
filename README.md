@@ -48,9 +48,19 @@ It uses the `GULP` task runner to build the files in the `dist` folder and these
 </div>
 </details>
 
+### Gulp
+
+As I said before this project uses the `GULP task runner`.
+
+In the [gulpfile.js](https://github.com/beatrizsmerino/validation-form/blob/master/gulpfile.js) of this proyect you can see the **gulp tasks** developed to compile and compress the `SASS` and `JS`, copy and paste the `HTML` files and `ICOMOON` icon fonts, create a server and listen to the changes made to reload it ([Browsersync + Gulp.js](https://browsersync.io/docs/gulp))
+
+So the project is developed in the `src` folder and published in the `dist` folder.
+
 ## 🚀 Commands
 
 ### Install dependencies
+
+After cloning this repository you need to install the required NPM packages.
 
 ```shell
 npm install
@@ -58,11 +68,22 @@ npm install
 
 ### Deploy project
 
+After development you can publish the content of `dist` folder in Github Pages (`gh-pages` branch)
+
 ```shell
 npm run deploy
 ```
 
 ### Build files, run server and watch changes
+
+This is the default gulp task
+
+This command is able to:
+
+1. Creates the `dist` folder if it does not exist.
+2. Generate `html`, `css`, `js` and font icons of `icomoon` on `dist` folder.
+3. Watch the changes to the files in the `sass`, `js` and `icomoon` folders inside the `src` folder.
+4. Create a server and reloads if there are any changes in those files of `dist` folder.
 
 ```shell
 gulp
@@ -70,11 +91,19 @@ gulp
 
 ### Create and run server
 
+This create a static server with browserSync package, serves the files from `dist` folder and opens by default the `index.html` file in any of these browsers: Chrome & Firefox.
+
 ```shell
 gulp serve
 ```
 
 ### Watch for changes
+
+This command is able to:
+
+1. Create the server.
+2. Watch the changes to the files in the `html`, `sass`, `icomoon` and `js` folders inside the `src` folder and run the tasks to re-generate the files inside the `dist` folder.
+3. Reloads the server if there are any changes to the `html`, `css`, `icomoon` and `js` files inside the `dist` folder.
 
 ```shell
 gulp watch
@@ -82,11 +111,21 @@ gulp watch
 
 ### Build files
 
+This command is able to:
+
+1. Creates the `dist` folder if it does not exist.
+2. Generate `html`, `css`, `js` and `icomoon` on `dist` folder.
+
 ```shell
 gulp build
 ```
 
 ### Build HTML files
+
+This command is able to:
+
+1. Creates the `dist` folder if it does not exist.
+2. Copies the `html` files from the `src` folder and pastes the `dist` folder.
 
 ```shell
 gulp html
@@ -94,17 +133,40 @@ gulp html
 
 ### Build CSS files
 
+This command is able to:
+
+1. Creates the `dist` folder if it does not exist.
+2. Compile the `styles.sass` file (with the import files of partials sass) located at `src/sass/`, add prefixes to properties css, compress the file, create and add a mapping for the debugger styles sass on the browser inspector, apply a Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)...
+3. Export the `styles.min.css` file to `dist/css/` folder.
+
 ```shell
 gulp css
 ```
 
 ### Build JS files
 
+This command is able to:
+
+1. Creates the `dist` folder if it does not exist.
+2. Get list of files of `pathsFront` constant, compile the files with Babel NPM package, compress it and apply a Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)...
+3. Export the `scripts.min.js` file to `dist/js` folder.
+4. Copy files of libraries js inside `src/js/libs` and paste into `dist/js/libs` folder.
+
 ```shell
 gulp js
 ```
 
 ### Build icon files
+
+This proyect uses icons from [icomoon.io](https://icomoon.io/app/#/select), one app that has 2 buttons to **generate SVG & More** and **generate Font**.
+
+The `src/icomoon/` folder contains a mix of both folders downloaded from these 2 buttons.
+
+This command is able to:
+
+1. Creates the `dist` folder if it does not exist.
+2. Gets `style.css` file from `src/icomoon/` folder, generates a new compressed file, renames it `fonts.min.css` and export the file to `dist/icomoon`.
+3. Copy directory `src/icomoon/fonts`, containing the fonts (EOT, SVG, TTF, WOFF), into `dist/icomoon/fonts`
 
 ```shell
 gulp icon
