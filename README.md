@@ -24,18 +24,23 @@ The best part is that you can easily customize these components to fit your spec
 ## 🏗️ Developed with
 
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/-Css3-2173F6?style=for-the-badge&logo=css3&logoColor=white)
-![SASS/SCSS](https://img.shields.io/badge/-SASS/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+[![CSS Specificity Graph Generator](https://img.shields.io/badge/-Css3-2173F6?style=for-the-badge&logo=css3&logoColor=white)](https://jonassebastianohlsson.com/specificity-graph/)
+[![SASS/SCSS](https://img.shields.io/badge/-SASS/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
+[![BEM](https://img.shields.io/badge/-BEM-000000?style=for-the-badge&logo=bem&logoColor=white)](https://en.bem.info/methodology/)
+[![ITCSS](https://img.shields.io/badge/-ITCSS-ff2c59?style=for-the-badge)](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/#tips-on-using-itcss)
+[![BEMIT](https://img.shields.io/badge/-BEMIT-c84747?style=for-the-badge)](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
 ![Javascript](https://img.shields.io/badge/-Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![JQuery](https://img.shields.io/badge/-JQuery-183353?style=for-the-badge&logo=JQuery&logoColor=white)
-![jQuery Validation](https://img.shields.io/badge/-jQuery%20Validation-bb002b?style=for-the-badge&logo=jquery&logoColor=white)
-![CKEditor](https://img.shields.io/badge/-ckeditor4-0287D0?style=for-the-badge&logo=ckeditor4&logoColor=white)
+[![JQuery](https://img.shields.io/badge/-JQuery-183353?style=for-the-badge&logo=JQuery&logoColor=white)](https://jquery.com/)
+[![jQuery Validation](https://img.shields.io/badge/-jQuery%20Validation-bb002b?style=for-the-badge&logo=jquery&logoColor=white)](https://jqueryvalidation.org/)
+[![CKEditor](https://img.shields.io/badge/-ckeditor4-0287D0?style=for-the-badge&logo=ckeditor4&logoColor=white)](https://ckeditor.com/ckeditor-4/)
 ![Bash](https://img.shields.io/badge/Bash-3D4648?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![NPM](https://img.shields.io/badge/-NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
-![Gulp](https://img.shields.io/badge/-Gulp-D34A47?style=for-the-badge&logo=gulp&logoColor=white)
-![Autoprefixer](https://img.shields.io/badge/-Autoprefixer-FF9900?style=for-the-badge&logo=autoprefixer&logoColor=white)
-![Babel](https://img.shields.io/badge/-babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=000000)
-![Icomoon](https://img.shields.io/badge/-Icomoon-02A8F3?style=for-the-badge&logo=icomoon&logoColor=white)
+[![Volta](https://img.shields.io/badge/Volta-257a83?style=for-the-badge)](https://docs.volta.sh/guide/)
+[![NODE](https://img.shields.io/badge/-NODE-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/es/)
+[![NPM](https://img.shields.io/badge/-NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://docs.npmjs.com/)
+[![Gulp](https://img.shields.io/badge/-Gulp-D34A47?style=for-the-badge&logo=gulp&logoColor=white)](https://gulpjs.com)
+[![Autoprefixer](https://img.shields.io/badge/-Autoprefixer-FF9900?style=for-the-badge&logo=autoprefixer&logoColor=white)](https://www.npmjs.com/package/autoprefixer)
+[![Babel](https://img.shields.io/badge/-babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=000000)](https://babeljs.io/)
+[![Icomoon](https://img.shields.io/badge/-Icomoon-02A8F3?style=for-the-badge&logo=icomoon&logoColor=white)](https://icomoon.io/app/#/select)
 
 This project is developed inside of `src` folder, using in `HTML`, `CSS` (with the `SASS` preprocessor) and `JS` (with the `Jquery` library).
 To streamline the build process, the project utilizes the `Gulp` task runner, which compiles and optimizes the files, placing them in the `dist` folder.
