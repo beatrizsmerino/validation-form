@@ -9,11 +9,11 @@
 
 ![Validation Form](README/images/validation-form.gif)
 
-## Description
+## 🎯 Description
 
 This repository is a complete example of a form with different fields, required validations and custom text fields.
 
-## Developed with
+## 🧩 Developed with
 
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/-Css3-2173F6?style=for-the-badge&logo=css3&logoColor=white)
@@ -32,7 +32,7 @@ Some more methods are provided as add-ons, and are currently included in `additi
 - [CKEditor 4](https://ckeditor.com/ckeditor-4/). Modern JavaScript rich text editor with a modular architecture. Its clean UI and features provide the perfect WYSIWYG UX ❤️ for creating semantic content. It is full of features like pasting from Word, Excel and Google Docs. It's excellent table support with column resizing, row and column selection. You can include multimedia embeds as insert images, videos, tweets, Instagram posts widgets, code snippets, mathematical formulas and more. It has spreadsheets to create data grids within the editor. It uses autocomplete, @mentions, emoji 😊, styling and formatting plugins (copy formatting feature). It is designed with inline and iframe UI, autogrow, maximize mode for distraction-free typing with the read-only mode ...and more!  
 Here you can see the [README.md](https://github.com/beatrizsmerino/validation-form/blob/master/src/js/libs/ckeditor/README.md) file of this project and the [samples](https://github.com/beatrizsmerino/validation-form/tree/master/src/js/libs/ckeditor/samples) folder.
 
-## Commands
+## 🚀 Commands
 
 ### Project setup
 
@@ -94,6 +94,6 @@ gulp icon
 gulp watch
 ```
 
-## State
+## 🚧 State
 
 There is still room for improvement in validation, such as the implementation of showing/hiding fields dynamically as the user fills/hides them... and many other potential areas.
