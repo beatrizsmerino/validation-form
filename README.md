@@ -58,6 +58,12 @@ gulp
 gulp serve
 ```
 
+### Watch changes
+
+```shell
+gulp watch
+```
+
 ### Generate html, css, js and icons
 
 ```shell
@@ -86,12 +92,6 @@ gulp js
 
 ```shell
 gulp icon
-```
-
-### Watch changes
-
-```shell
-gulp watch
 ```
 
 ## 🚧 State
