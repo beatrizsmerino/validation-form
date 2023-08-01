@@ -1,7 +1,9 @@
 {
-	"name": "validation-form",
 	"version": "1.0.0",
+	"name": "validation-form",
 	"description": "Validation form",
+	"author": "beatrizsmerino@gmail.com",
+	"license": "ISC",
 	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
@@ -9,8 +11,6 @@
 		"preinstall": "npm run install:clean && npm run dependencies:fix",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
-	"author": "beatrizsmerino@gmail.com",
-	"license": "ISC",
 	"devDependencies": {
 		"@babel/core": "^7.22.9",
 		"@babel/preset-env": "^7.22.9",
