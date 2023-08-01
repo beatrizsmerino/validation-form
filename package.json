@@ -1,7 +1,7 @@
 {
 	"version": "1.0.0",
 	"name": "validation-form",
-	"description": "Validation form",
+	"description": "Customized form with validation for different types of fields.",
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
 	"main": "index.js",
