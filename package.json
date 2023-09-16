@@ -12,7 +12,7 @@
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.22.17",
+		"@babel/core": "^7.22.19",
 		"@babel/preset-env": "^7.22.15",
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
