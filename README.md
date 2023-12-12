@@ -34,7 +34,7 @@ The best part is that you can easily customize these components to fit your spec
 [![jQuery Validation](https://img.shields.io/badge/-jQuery%20Validation-bb002b?style=for-the-badge&logo=jquery&logoColor=white)](https://jqueryvalidation.org/)
 [![CKEditor](https://img.shields.io/badge/-ckeditor4-0287D0?style=for-the-badge&logo=ckeditor4&logoColor=white)](https://ckeditor.com/ckeditor-4/)
 ![Bash](https://img.shields.io/badge/Bash-3D4648?style=for-the-badge&logo=gnu-bash&logoColor=white)
-[![Volta](https://img.shields.io/badge/Volta-257a83?style=for-the-badge)](https://docs.volta.sh/guide/)
+[![NVM](https://img.shields.io/badge/NVM-f4dd4b?style=for-the-badge&logo=npm&logoColor=333333)](https://github.com/nvm-sh/nvm)
 [![NODE](https://img.shields.io/badge/-NODE-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/es/)
 [![NPM](https://img.shields.io/badge/-NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://docs.npmjs.com/)
 [![Gulp](https://img.shields.io/badge/-Gulp-D34A47?style=for-the-badge&logo=gulp&logoColor=white)](https://gulpjs.com)
