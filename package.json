@@ -30,10 +30,7 @@
 		"gulp-uglify": "^3.0.2",
 		"sass": "^1.69.5"
 	},
-	"resolutions": {
-		"glob-parent": ">=5.1.2",
-		"json5": ">=2.2.2"
-	},
+	"resolutions": {},
 	"engines": {
 		"node": "20.10.0",
 		"npm": "10.2.3",
