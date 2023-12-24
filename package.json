@@ -28,6 +28,7 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
+		"husky": "^8.0.3",
 		"sass": "^1.69.5"
 	},
 	"resolutions": {},
