@@ -129,7 +129,7 @@ npm install
 		</h3>
 	</summary>
 	<div>
-		Once the development of the code in the `src` folder is finished, you can publish the project with the contents of the `dist` folder to Github Pages (`gh-pages` branch).
+		Once the development of the code in the <code>src</code> folder is finished, you can publish the project with the contents of the <code>dist</code> folder to Github Pages (<code>gh-pages</code> branch).
 	</div>
 </details>
 
