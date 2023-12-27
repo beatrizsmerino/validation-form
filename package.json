@@ -4,6 +4,7 @@
 	"description": "Customized form with validation for different types of fields.",
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
+	"type": "module",
 	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
