@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 // DEPENDENCIES
 // =================================================
 import browserSync from "browser-sync";
@@ -20,7 +18,6 @@ import gulpUglify from "gulp-uglify";
 const createBrowserSync = browserSync.create();
 const reloadBrowserSync = createBrowserSync.reload;
 const sassCompiler = gulpSass(sass);
-
 
 // SETTINGS: FOLDER/FILE PATHS
 // =================================================
@@ -72,7 +69,6 @@ const pathsFront = {
 	}
 };
 
-
 // FUNCTIONS USED IN THE TASKS
 // =================================================
 function copyDirectory(directoryToCopy, directoryOutput) {
@@ -86,7 +82,6 @@ function copyFiles(filesToCopy, directoryOutput) {
 		.src(filesToCopy)
 		.pipe(gulp.dest(directoryOutput));
 };
-
 
 // FUNCTIONS & TASKS
 // =================================================
@@ -192,7 +187,6 @@ function cssIcomoonMinify() {
 		.pipe(gulp.dest(paths.dist.icons));
 };
 
-
 // WATCH
 // =================================================
 function watch() {
@@ -237,7 +231,6 @@ function watch() {
 	);
 };
 
-
 // EXPORTS
 // =================================================
 export {
@@ -250,7 +243,6 @@ export {
 	cssIcomoonMinify,
 	watch
 };
-
 
 // TASKS
 // =================================================
