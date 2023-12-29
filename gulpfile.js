@@ -2,6 +2,7 @@
 
 // DEPENDENCIES
 // =================================================
+import * as sass from "sass";
 import browserSync from "browser-sync";
 import gulp from "gulp";
 import gulpAutoprefixer from "gulp-autoprefixer";
@@ -11,7 +12,6 @@ import gulpConcat from "gulp-concat";
 import gulpLineEndingCorrector from "gulp-line-ending-corrector";
 import gulpRename from "gulp-rename";
 import gulpSass from "gulp-sass";
-import * as sass from "sass";
 import gulpSourcemaps from "gulp-sourcemaps";
 import gulpUglify from "gulp-uglify";
 
