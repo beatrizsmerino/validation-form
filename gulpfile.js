@@ -4,20 +4,22 @@
 
 // DEPENDENCIES
 // =================================================
-const browserSync = require("browser-sync");
-const gulp = require("gulp");
-const gulpAutoprefixer = require("gulp-autoprefixer");
-const gulpBabel = require("gulp-babel");
-const gulpCleanCss = require("gulp-clean-css");
-const gulpConcat = require("gulp-concat");
-const gulpLineEndingCorrector = require("gulp-line-ending-corrector");
-const gulpRename = require("gulp-rename");
-const gulpSass = require("gulp-sass")(require("sass"));
-const gulpSourcemaps = require("gulp-sourcemaps");
-const gulpUglify = require("gulp-uglify");
+import browserSync from "browser-sync";
+import gulp from "gulp";
+import gulpAutoprefixer from "gulp-autoprefixer";
+import gulpBabel from "gulp-babel";
+import gulpCleanCss from "gulp-clean-css";
+import gulpConcat from "gulp-concat";
+import gulpLineEndingCorrector from "gulp-line-ending-corrector";
+import gulpRename from "gulp-rename";
+import gulpSass from "gulp-sass";
+import * as sass from "sass";
+import gulpSourcemaps from "gulp-sourcemaps";
+import gulpUglify from "gulp-uglify";
 
 const createBrowserSync = browserSync.create();
 const reloadBrowserSync = createBrowserSync.reload;
+const sassCompiler = gulpSass(sass);
 
 
 // SETTINGS: FOLDER/FILE PATHS
@@ -120,11 +122,11 @@ function sassCompile() {
 			})
 		)
 		.pipe(
-			gulpSass({
+			sassCompiler({
 				outputStyle: "compressed",
 			}).on(
 				"error",
-				gulpSass.logError
+				sassCompiler.logError
 			)
 		)
 		.pipe(
@@ -238,14 +240,16 @@ function watch() {
 
 // EXPORTS
 // =================================================
-exports.createServer = createServer;
-exports.htmlCopy = htmlCopy;
-exports.sassCompile = sassCompile;
-exports.jsLibCopy = jsLibCopy;
-exports.jsCompile = jsCompile;
-exports.fontsIcomoonCopy = fontsIcomoonCopy;
-exports.cssIcomoonMinify = cssIcomoonMinify;
-exports.watch = watch;
+export {
+	createServer,
+	htmlCopy,
+    sassCompile,
+    jsLibCopy,
+    jsCompile,
+    fontsIcomoonCopy,
+	cssIcomoonMinify,
+	watch
+};
 
 
 // TASKS
