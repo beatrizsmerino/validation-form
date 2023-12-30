@@ -99,7 +99,7 @@ function createServer() {
 
 // HTML
 // -------------------------------------------------
-function htmlCopy() {
+function front__htmlCopy() {
 	return copyFiles(
 		pathsFront.src.html,
 		pathsFront.dist.html
@@ -108,7 +108,7 @@ function htmlCopy() {
 
 // CSS
 // -------------------------------------------------
-function sassCompile() {
+function front__sassCompile() {
 	return gulp
 		.src(pathsFront.src.sass)
 		.pipe(
@@ -139,14 +139,14 @@ function sassCompile() {
 
 // JS
 // -------------------------------------------------
-function jsLibCopy() {
+function front__jsLibCopy() {
 	return copyDirectory(
 		`${paths.src.js}libs`,
 		`${paths.dist.js}libs`
 	);
 };
 
-function jsCompile() {
+function front__jsCompile() {
 	return gulp
 		.src(pathsFront.src.js)
 		.pipe(
@@ -164,14 +164,14 @@ function jsCompile() {
 
 // ICON
 // -------------------------------------------------
-function fontsIcomoonCopy() {
+function front__fontsIcomoonCopy() {
 	return copyDirectory(
 		`${pathsFront.src.icons}fonts`,
 		`${pathsFront.dist.icons}fonts`
 	);
 };
 
-function cssIcomoonMinify() {
+function front__cssIcomoonMinify() {
 	return gulp
 		.src(`${paths.src.icons}style.css`)
 		.pipe(
@@ -194,27 +194,27 @@ function watch() {
 
 	gulp.watch(
 		`${paths.src.base}${paths.files.html}`,
-		htmlCopy
+		front__htmlCopy
 	);
 
 	gulp.watch(
 		`${paths.src.sass}${paths.files.sass}`,
-		sassCompile
+		front__sassCompile
 	);
 
 	gulp.watch(
 		`${paths.src.js}${paths.files.js}`,
 		gulp.series(
-			jsLibCopy,
-			jsCompile
+			front__jsLibCopy,
+			front__jsCompile
 		)
 	);
 
 	gulp.watch(
 		`${paths.src.icons}${paths.files.base}`,
 		gulp.series(
-			fontsIcomoonCopy,
-			cssIcomoonMinify
+			front__fontsIcomoonCopy,
+			front__cssIcomoonMinify
 		)
 	);
 
@@ -235,12 +235,12 @@ function watch() {
 // =================================================
 export {
 	createServer,
-	htmlCopy,
-    sassCompile,
-    jsLibCopy,
-    jsCompile,
-    fontsIcomoonCopy,
-	cssIcomoonMinify,
+	front__htmlCopy,
+    front__sassCompile,
+    front__jsLibCopy,
+    front__jsCompile,
+    front__fontsIcomoonCopy,
+	front__cssIcomoonMinify,
 	watch
 };
 
@@ -249,12 +249,12 @@ export {
 gulp.task(
 	"default",
 	gulp.series(
-		htmlCopy,
-		sassCompile,
-		jsLibCopy,
-		jsCompile,
-		fontsIcomoonCopy,
-		cssIcomoonMinify,
+		front__htmlCopy,
+		front__sassCompile,
+		front__jsLibCopy,
+		front__jsCompile,
+		front__fontsIcomoonCopy,
+		front__cssIcomoonMinify,
 		watch
 	)
 );
@@ -267,38 +267,38 @@ gulp.task(
 gulp.task(
 	"build",
 	gulp.series(
-		htmlCopy,
-		sassCompile,
-		jsLibCopy,
-		jsCompile,
-		fontsIcomoonCopy,
-		cssIcomoonMinify
+		front__htmlCopy,
+		front__sassCompile,
+		front__jsLibCopy,
+		front__jsCompile,
+		front__fontsIcomoonCopy,
+		front__cssIcomoonMinify
 	)
 );
 
 gulp.task(
 	"html",
-	htmlCopy
+	front__htmlCopy
 );
 
 gulp.task(
 	"css",
-	sassCompile
+	front__sassCompile
 );
 
 gulp.task(
 	"js",
 	gulp.series(
-		jsLibCopy,
-		jsCompile
+		front__jsLibCopy,
+		front__jsCompile
 	)
 );
 
 gulp.task(
 	"icon",
 	gulp.series(
-		fontsIcomoonCopy,
-		cssIcomoonMinify
+		front__fontsIcomoonCopy,
+		front__cssIcomoonMinify
 	)
 );
 
