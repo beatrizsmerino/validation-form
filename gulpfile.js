@@ -114,18 +114,18 @@ function sassCompile(src, dist, fileName) {
 
 function cssCompile(src, dist, fileName) {
 	return gulp
-	.src(src)
-	.pipe(
-		gulpSourcemaps.init({
-			loadMaps: true,
-			largeFile: true,
-		})
-	)
-	.pipe(gulpCleanCss())
-	.pipe(gulpSourcemaps.write("./maps/"))
-	.pipe(gulpLineEndingCorrector())
-	.pipe(gulpRename(fileName))
-	.pipe(gulp.dest(dist));
+		.src(src)
+		.pipe(
+			gulpSourcemaps.init({
+				loadMaps: true,
+				largeFile: true,
+			})
+		)
+		.pipe(gulpCleanCss())
+		.pipe(gulpSourcemaps.write("./maps/"))
+		.pipe(gulpLineEndingCorrector())
+		.pipe(gulpRename(fileName))
+		.pipe(gulp.dest(dist));
 }
 
 function jsCompile(src, dist, fileName) {
@@ -260,10 +260,10 @@ function watch() {
 export {
 	createServer,
 	front__htmlCopy,
-    front__sassCompile,
-    front__jsLibCopy,
-    front__jsCompile,
-    front__fontsIcomoonCopy,
+	front__sassCompile,
+	front__jsLibCopy,
+	front__jsCompile,
+	front__fontsIcomoonCopy,
 	front__cssIcomoonMinify,
 	watch
 };
