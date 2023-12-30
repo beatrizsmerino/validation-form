@@ -1,9 +1,8 @@
 "use strict";
 
-
-
 // DEPENDENCIES
 // =================================================
+import * as sass from "sass";
 import browserSync from "browser-sync";
 import gulp from "gulp";
 import gulpAutoprefixer from "gulp-autoprefixer";
@@ -13,14 +12,12 @@ import gulpConcat from "gulp-concat";
 import gulpLineEndingCorrector from "gulp-line-ending-corrector";
 import gulpRename from "gulp-rename";
 import gulpSass from "gulp-sass";
-import * as sass from "sass";
 import gulpSourcemaps from "gulp-sourcemaps";
 import gulpUglify from "gulp-uglify";
 
 const createBrowserSync = browserSync.create();
 const reloadBrowserSync = createBrowserSync.reload;
 const sassCompiler = gulpSass(sass);
-
 
 // SETTINGS: FOLDER/FILE PATHS
 // =================================================
@@ -72,7 +69,6 @@ const pathsFront = {
 	}
 };
 
-
 // FUNCTIONS USED IN THE TASKS
 // =================================================
 function copyDirectory(directoryToCopy, directoryOutput) {
@@ -87,35 +83,9 @@ function copyFiles(filesToCopy, directoryOutput) {
 		.pipe(gulp.dest(directoryOutput));
 };
 
-
-// FUNCTIONS & TASKS
-// =================================================
-function createServer() {
-	createBrowserSync.init({
-		server: {
-			baseDir: paths.dist.base,
-			browser: [
-				"google-chrome",
-				"firefox",
-			],
-		},
-	});
-};
-
-// HTML
-// -------------------------------------------------
-function htmlCopy() {
-	return copyFiles(
-		pathsFront.src.html,
-		pathsFront.dist.html
-	);
-};
-
-// CSS
-// -------------------------------------------------
-function sassCompile() {
+function sassCompile(src, dist, fileName) {
 	return gulp
-		.src(pathsFront.src.sass)
+		.src(src)
 		.pipe(
 			gulpSourcemaps.init({
 				loadMaps: true,
@@ -138,22 +108,29 @@ function sassCompile() {
 		)
 		.pipe(gulpSourcemaps.write())
 		.pipe(gulpLineEndingCorrector())
-		.pipe(gulpRename("styles.min.css"))
-		.pipe(gulp.dest(pathsFront.dist.css));
+		.pipe(gulpRename(fileName))
+		.pipe(gulp.dest(dist));
 };
 
-// JS
-// -------------------------------------------------
-function jsLibCopy() {
-	return copyDirectory(
-		`${paths.src.js}libs`,
-		`${paths.dist.js}libs`
-	);
-};
-
-function jsCompile() {
+function cssCompile(src, dist, fileName) {
 	return gulp
-		.src(pathsFront.src.js)
+	.src(src)
+	.pipe(
+		gulpSourcemaps.init({
+			loadMaps: true,
+			largeFile: true,
+		})
+	)
+	.pipe(gulpCleanCss())
+	.pipe(gulpSourcemaps.write("./maps/"))
+	.pipe(gulpLineEndingCorrector())
+	.pipe(gulpRename(fileName))
+	.pipe(gulp.dest(dist));
+}
+
+function jsCompile(src, dist, fileName) {
+	return gulp
+		.src(src)
 		.pipe(
 			gulpBabel({
 				presets: [
@@ -161,37 +138,78 @@ function jsCompile() {
 				],
 			})
 		)
-		.pipe(gulpConcat("scripts.min.js"))
+		.pipe(gulpConcat(fileName))
 		.pipe(gulpUglify())
 		.pipe(gulpLineEndingCorrector())
-		.pipe(gulp.dest(pathsFront.dist.js));
+		.pipe(gulp.dest(dist));
+};
+
+// FUNCTIONS & TASKS
+// =================================================
+function createServer() {
+	createBrowserSync.init({
+		server: {
+			baseDir: paths.dist.base,
+			browser: [
+				"google-chrome",
+				"firefox",
+			],
+		},
+	});
+};
+
+// HTML
+// -------------------------------------------------
+function front__htmlCopy() {
+	return copyFiles(
+		pathsFront.src.html,
+		pathsFront.dist.html
+	);
+};
+
+// CSS
+// -------------------------------------------------
+function front__sassCompile() {
+	return sassCompile(
+		pathsFront.src.sass,
+		pathsFront.dist.css,
+		"styles.min.css"
+	);
+};
+
+// JS
+// -------------------------------------------------
+function front__jsLibCopy() {
+	return copyDirectory(
+		`${paths.src.js}libs`,
+		`${paths.dist.js}libs`
+	);
+};
+
+function front__jsCompile() {
+	return jsCompile(
+		pathsFront.src.js,
+		pathsFront.dist.js,
+		"scripts.min.js"
+	);
 };
 
 // ICON
 // -------------------------------------------------
-function fontsIcomoonCopy() {
+function front__fontsIcomoonCopy() {
 	return copyDirectory(
 		`${pathsFront.src.icons}fonts`,
 		`${pathsFront.dist.icons}fonts`
 	);
 };
 
-function cssIcomoonMinify() {
-	return gulp
-		.src(`${paths.src.icons}style.css`)
-		.pipe(
-			gulpSourcemaps.init({
-				loadMaps: true,
-				largeFile: true,
-			})
-		)
-		.pipe(gulpCleanCss())
-		.pipe(gulpSourcemaps.write("./maps/"))
-		.pipe(gulpLineEndingCorrector())
-		.pipe(gulpRename("fonts.min.css"))
-		.pipe(gulp.dest(paths.dist.icons));
+function front__cssIcomoonMinify() {
+	return cssCompile(
+		`${paths.src.icons}style.css`,
+		paths.dist.icons,
+		"fonts.min.css"
+	);
 };
-
 
 // WATCH
 // =================================================
@@ -200,27 +218,27 @@ function watch() {
 
 	gulp.watch(
 		`${paths.src.base}${paths.files.html}`,
-		htmlCopy
+		front__htmlCopy
 	);
 
 	gulp.watch(
 		`${paths.src.sass}${paths.files.sass}`,
-		sassCompile
+		front__sassCompile
 	);
 
 	gulp.watch(
 		`${paths.src.js}${paths.files.js}`,
 		gulp.series(
-			jsLibCopy,
-			jsCompile
+			front__jsLibCopy,
+			front__jsCompile
 		)
 	);
 
 	gulp.watch(
 		`${paths.src.icons}${paths.files.base}`,
 		gulp.series(
-			fontsIcomoonCopy,
-			cssIcomoonMinify
+			front__fontsIcomoonCopy,
+			front__cssIcomoonMinify
 		)
 	);
 
@@ -237,32 +255,30 @@ function watch() {
 	);
 };
 
-
 // EXPORTS
 // =================================================
 export {
 	createServer,
-	htmlCopy,
-    sassCompile,
-    jsLibCopy,
-    jsCompile,
-    fontsIcomoonCopy,
-	cssIcomoonMinify,
+	front__htmlCopy,
+    front__sassCompile,
+    front__jsLibCopy,
+    front__jsCompile,
+    front__fontsIcomoonCopy,
+	front__cssIcomoonMinify,
 	watch
 };
-
 
 // TASKS
 // =================================================
 gulp.task(
 	"default",
 	gulp.series(
-		htmlCopy,
-		sassCompile,
-		jsLibCopy,
-		jsCompile,
-		fontsIcomoonCopy,
-		cssIcomoonMinify,
+		front__htmlCopy,
+		front__sassCompile,
+		front__jsLibCopy,
+		front__jsCompile,
+		front__fontsIcomoonCopy,
+		front__cssIcomoonMinify,
 		watch
 	)
 );
@@ -275,38 +291,38 @@ gulp.task(
 gulp.task(
 	"build",
 	gulp.series(
-		htmlCopy,
-		sassCompile,
-		jsLibCopy,
-		jsCompile,
-		fontsIcomoonCopy,
-		cssIcomoonMinify
+		front__htmlCopy,
+		front__sassCompile,
+		front__jsLibCopy,
+		front__jsCompile,
+		front__fontsIcomoonCopy,
+		front__cssIcomoonMinify
 	)
 );
 
 gulp.task(
 	"html",
-	htmlCopy
+	front__htmlCopy
 );
 
 gulp.task(
 	"css",
-	sassCompile
+	front__sassCompile
 );
 
 gulp.task(
 	"js",
 	gulp.series(
-		jsLibCopy,
-		jsCompile
+		front__jsLibCopy,
+		front__jsCompile
 	)
 );
 
 gulp.task(
 	"icon",
 	gulp.series(
-		fontsIcomoonCopy,
-		cssIcomoonMinify
+		front__fontsIcomoonCopy,
+		front__cssIcomoonMinify
 	)
 );
 
