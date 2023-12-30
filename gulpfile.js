@@ -83,6 +83,67 @@ function copyFiles(filesToCopy, directoryOutput) {
 		.pipe(gulp.dest(directoryOutput));
 };
 
+function sassCompile(src, dist, fileName) {
+	return gulp
+		.src(src)
+		.pipe(
+			gulpSourcemaps.init({
+				loadMaps: true,
+			})
+		)
+		.pipe(
+			sassCompiler({
+				outputStyle: "compressed",
+			}).on(
+				"error",
+				sassCompiler.logError
+			)
+		)
+		.pipe(
+			gulpAutoprefixer({
+				versions: [
+					"last 2 versions",
+				],
+			})
+		)
+		.pipe(gulpSourcemaps.write())
+		.pipe(gulpLineEndingCorrector())
+		.pipe(gulpRename(fileName))
+		.pipe(gulp.dest(dist));
+};
+
+function cssCompile(src, dist, fileName) {
+	return gulp
+	.src(src)
+	.pipe(
+		gulpSourcemaps.init({
+			loadMaps: true,
+			largeFile: true,
+		})
+	)
+	.pipe(gulpCleanCss())
+	.pipe(gulpSourcemaps.write("./maps/"))
+	.pipe(gulpLineEndingCorrector())
+	.pipe(gulpRename(fileName))
+	.pipe(gulp.dest(dist));
+}
+
+function jsCompile(src, dist, fileName) {
+	return gulp
+		.src(src)
+		.pipe(
+			gulpBabel({
+				presets: [
+					"@babel/preset-env",
+				],
+			})
+		)
+		.pipe(gulpConcat(fileName))
+		.pipe(gulpUglify())
+		.pipe(gulpLineEndingCorrector())
+		.pipe(gulp.dest(dist));
+};
+
 // FUNCTIONS & TASKS
 // =================================================
 function createServer() {
@@ -109,32 +170,11 @@ function front__htmlCopy() {
 // CSS
 // -------------------------------------------------
 function front__sassCompile() {
-	return gulp
-		.src(pathsFront.src.sass)
-		.pipe(
-			gulpSourcemaps.init({
-				loadMaps: true,
-			})
-		)
-		.pipe(
-			sassCompiler({
-				outputStyle: "compressed",
-			}).on(
-				"error",
-				sassCompiler.logError
-			)
-		)
-		.pipe(
-			gulpAutoprefixer({
-				versions: [
-					"last 2 versions",
-				],
-			})
-		)
-		.pipe(gulpSourcemaps.write())
-		.pipe(gulpLineEndingCorrector())
-		.pipe(gulpRename("styles.min.css"))
-		.pipe(gulp.dest(pathsFront.dist.css));
+	return sassCompile(
+		pathsFront.src.sass,
+		pathsFront.dist.css,
+		"styles.min.css"
+	);
 };
 
 // JS
@@ -147,19 +187,11 @@ function front__jsLibCopy() {
 };
 
 function front__jsCompile() {
-	return gulp
-		.src(pathsFront.src.js)
-		.pipe(
-			gulpBabel({
-				presets: [
-					"@babel/preset-env",
-				],
-			})
-		)
-		.pipe(gulpConcat("scripts.min.js"))
-		.pipe(gulpUglify())
-		.pipe(gulpLineEndingCorrector())
-		.pipe(gulp.dest(pathsFront.dist.js));
+	return jsCompile(
+		pathsFront.src.js,
+		pathsFront.dist.js,
+		"scripts.min.js"
+	);
 };
 
 // ICON
@@ -172,19 +204,11 @@ function front__fontsIcomoonCopy() {
 };
 
 function front__cssIcomoonMinify() {
-	return gulp
-		.src(`${paths.src.icons}style.css`)
-		.pipe(
-			gulpSourcemaps.init({
-				loadMaps: true,
-				largeFile: true,
-			})
-		)
-		.pipe(gulpCleanCss())
-		.pipe(gulpSourcemaps.write("./maps/"))
-		.pipe(gulpLineEndingCorrector())
-		.pipe(gulpRename("fonts.min.css"))
-		.pipe(gulp.dest(paths.dist.icons));
+	return cssCompile(
+		`${paths.src.icons}style.css`,
+		paths.dist.icons,
+		"fonts.min.css"
+	);
 };
 
 // WATCH
