@@ -10,13 +10,14 @@
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"dependencies:fix": "npm install --ignore-scripts && npx npm-force-resolutions",
 		"preinstall": "npm run install:clean && npm run dependencies:fix",
+		"prepare": "husky install",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.23.7",
 		"@babel/preset-env": "^7.23.7",
-		"@commitlint/cli": "^18.4.3",
-		"@commitlint/config-conventional": "^18.4.3",
+		"@commitlint/cli": "^18.4.4",
+		"@commitlint/config-conventional": "^18.4.4",
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
@@ -32,7 +33,7 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^8.0.3",
-		"sass": "^1.69.6"
+		"sass": "^1.69.7"
 	},
 	"resolutions": {},
 	"engines": {
