@@ -33,7 +33,7 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^8.0.3",
-		"sass": "^1.69.7"
+		"sass": "^1.70.0"
 	},
 	"resolutions": {},
 	"engines": {
