@@ -181,8 +181,8 @@ function front__sassCompile() {
 // -------------------------------------------------
 function front__jsLibCopy() {
 	return copyDirectory(
-		`${paths.src.js}libs`,
-		`${paths.dist.js}`
+		`${paths.src.js}libs/`,
+		`${paths.dist.js}libs/`
 	);
 };
 
@@ -198,8 +198,8 @@ function front__jsCompile() {
 // -------------------------------------------------
 function front__fontsIcomoonCopy() {
 	return copyDirectory(
-		`${pathsFront.src.icons}fonts`,
-		`${pathsFront.dist.icons}`
+		`${pathsFront.src.icons}fonts/`,
+		`${pathsFront.dist.icons}fonts/`
 	);
 };
 
