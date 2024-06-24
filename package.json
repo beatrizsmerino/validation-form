@@ -1,5 +1,5 @@
 {
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"name": "validation-form",
 	"description": "Customized form with validation for different types of fields.",
 	"author": "beatrizsmerino@gmail.com",
@@ -10,19 +10,19 @@
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"dependencies:fix": "npm install --ignore-scripts && npx npm-force-resolutions",
 		"preinstall": "npm run install:clean && npm run dependencies:fix",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.24.7",
 		"@babel/preset-env": "^7.24.7",
-		"@commitlint/cli": "^18.6.1",
-		"@commitlint/config-conventional": "^18.6.3",
+		"@commitlint/cli": "^19.3.0",
+		"@commitlint/config-conventional": "^19.2.2",
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
 		"browser-sync": "^3.0.2",
-		"gulp": "^4.0.2",
+		"gulp": "^5.0.0",
 		"gulp-autoprefixer": "^9.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-clean-css": "^4.3.0",
@@ -32,13 +32,13 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
-		"husky": "^8.0.3",
+		"husky": "^9.0.11",
 		"sass": "^1.77.6"
 	},
 	"resolutions": {},
 	"engines": {
 		"node": "20.11.0",
 		"npm": "10.4.0",
-		"gulp-cli": "2.3.0"
+		"gulp-cli": "3.0.0"
 	}
 }
