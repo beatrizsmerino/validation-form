@@ -10,7 +10,7 @@
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"dependencies:fix": "npm install --ignore-scripts && npx npm-force-resolutions",
 		"preinstall": "npm run install:clean && npm run dependencies:fix",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
@@ -32,7 +32,7 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
-		"husky": "^8.0.3",
+		"husky": "^9.0.11",
 		"sass": "^1.77.6"
 	},
 	"resolutions": {},
