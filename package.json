@@ -22,7 +22,7 @@
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
 		"browser-sync": "^3.0.2",
-		"gulp": "^4.0.2",
+		"gulp": "^5.0.0",
 		"gulp-autoprefixer": "^9.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-clean-css": "^4.3.0",
@@ -39,6 +39,6 @@
 	"engines": {
 		"node": "20.11.0",
 		"npm": "10.4.0",
-		"gulp-cli": "2.3.0"
+		"gulp-cli": "3.0.0"
 	}
 }
