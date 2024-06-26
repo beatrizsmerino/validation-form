@@ -1,5 +1,5 @@
 {
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"name": "validation-form",
 	"description": "Customized form with validation for different types of fields.",
 	"author": "beatrizsmerino@gmail.com",
@@ -8,8 +8,6 @@
 	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
-		"dependencies:fix": "npm install --ignore-scripts && npx npm-force-resolutions",
-		"preinstall": "npm run install:clean && npm run dependencies:fix",
 		"prepare": "husky",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
@@ -35,7 +33,6 @@
 		"husky": "^9.0.11",
 		"sass": "^1.77.6"
 	},
-	"resolutions": {},
 	"engines": {
 		"node": "20.11.0",
 		"npm": "10.4.0",
