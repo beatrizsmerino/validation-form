@@ -73,13 +73,13 @@ const pathsFront = {
 // =================================================
 function copyDirectory(directoryToCopy, directoryOutput) {
 	return gulp
-		.src(`${directoryToCopy}${paths.files.base}`)
+		.src(`${directoryToCopy}${paths.files.base}`, { encoding: false })
 		.pipe(gulp.dest(directoryOutput));
 };
 
 function copyFiles(filesToCopy, directoryOutput) {
 	return gulp
-		.src(filesToCopy)
+		.src(filesToCopy, { encoding: false })
 		.pipe(gulp.dest(directoryOutput));
 };
 
