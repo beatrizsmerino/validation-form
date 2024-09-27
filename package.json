@@ -19,7 +19,7 @@
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
-		"browser-sync": "^3.0.2",
+		"browser-sync": "^3.0.3",
 		"gulp": "^5.0.0",
 		"gulp-autoprefixer": "^9.0.0",
 		"gulp-babel": "^8.0.0",
