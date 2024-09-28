@@ -2,6 +2,7 @@
 // form-input-check: checkbox and radio buttons
 // =================================================
 @use "sass:math"
+@use "sass:color"
 
 
 
@@ -36,7 +37,7 @@ $check-mark-color: $color-gray-100
 	/* On mouse-over */
 	&:hover
 		.check__input ~ .check__mark
-			background-color: darken($color-brand-1, 5%)
+			background-color: color.scale($color: $color-brand-1, $lightness: -5%)
 	
 	&__label
 		margin-left: $check-label-margin-left
