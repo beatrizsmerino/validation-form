@@ -8,7 +8,7 @@
 
 
 
-/* settings */
+// Settings
 $check-label-margin-left: 1.6rem
 // ------------------
 $check-input-size: 3.2rem
@@ -34,7 +34,7 @@ $check-mark-color: $color-gray-100
 	user-select: none
 	cursor: pointer
 
-	/* On mouse-over */
+	// On mouse-over
 	&:hover
 		.check__input ~ .check__mark
 			background-color: color.scale($color: $color-brand-1, $lightness: -5%)
@@ -43,7 +43,7 @@ $check-mark-color: $color-gray-100
 		margin-left: $check-label-margin-left
 		position: relative
 
-	/* Hide the browser's default checkbox */
+	// Hide the browser's default checkbox
 	&__input
 		width: $check-input-size
 		height: $check-input-size
@@ -55,15 +55,15 @@ $check-mark-color: $color-gray-100
 		opacity: 0
 		cursor: pointer
 
-		/* When the checkbox is checked*/
+		// When the checkbox is checked
 		&:checked ~ .check__mark
 			background-color: $check-input-background-color-checked
 
-		/* Show the checkmark when checked */
+		// Show the checkmark when checked
 		&:checked ~ .check__mark:after
 			display: block
 
-	/* Create a custom checkbox */
+	// Create a custom checkbox
 	&__mark
 		width: $check-input-size
 		height: $check-input-size
@@ -75,7 +75,7 @@ $check-mark-color: $color-gray-100
 		border-color: $check-input-border-color
 		background-color: $check-input-background-color
 
-		/* Create the checkmark/indicator (hidden when not checked) */
+		// Create the checkmark/indicator (hidden when not checked)
 		&:after
 			content: ""
 			display: none
