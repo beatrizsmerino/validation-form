@@ -33,16 +33,16 @@ $check-mark-color: $color-gray-100
 	font-size: 1.6rem
 	user-select: none
 	cursor: pointer
-		
+
 	/* On mouse-over */
 	&:hover
 		.check__input ~ .check__mark
 			background-color: color.scale($color: $color-brand-1, $lightness: -5%)
-	
+
 	&__label
 		margin-left: $check-label-margin-left
 		position: relative
-	
+
 	/* Hide the browser's default checkbox */
 	&__input
 		width: $check-input-size
@@ -54,15 +54,15 @@ $check-mark-color: $color-gray-100
 		left: 0
 		opacity: 0
 		cursor: pointer
-		
+
 		/* When the checkbox is checked*/
 		&:checked ~ .check__mark
 			background-color: $check-input-background-color-checked
-			
+
 		/* Show the checkmark when checked */
 		&:checked ~ .check__mark:after
 			display: block
-	
+
 	/* Create a custom checkbox */
 	&__mark
 		width: $check-input-size
@@ -74,7 +74,7 @@ $check-mark-color: $color-gray-100
 		border-style: solid
 		border-color: $check-input-border-color
 		background-color: $check-input-background-color
-		
+
 		/* Create the checkmark/indicator (hidden when not checked) */
 		&:after
 			content: ""
