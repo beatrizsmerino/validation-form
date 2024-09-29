@@ -2,6 +2,7 @@
 // form-input-range
 // =================================================
 @use "sass:math"
+@use "sass:color"
 
 
 
@@ -36,10 +37,10 @@ $track-border-color: $color-gray-80 !default
 $track-radius: 0.5rem !default
 $contrast: 5% !default
 
-$ie-bottom-track-color: darken($track-color, $contrast) !default
+$ie-bottom-track-color: color.scale($color: $track-color, $lightness: math.div($contrast, -1)) !default
 
 @mixin shadow($shadow-size, $shadow-blur, $shadow-color)
-	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%)
+	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size color.scale($color: $shadow-color, $lightness: 5%)
 
 
 @mixin track
@@ -74,13 +75,13 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default
 		outline: 0
 		
 		&::-webkit-slider-runnable-track
-			background: lighten($track-color, $contrast)
+			background: color.scale($color: $track-color, $lightness: $contrast)
 			
 		&::-ms-fill-lower
 			background: $track-color
 		
 		&::-ms-fill-upper
-			background: lighten($track-color, $contrast)
+			background: color.scale($color: $track-color, $lightness: $contrast)
 	
 	&::-webkit-slider-runnable-track
 		@include track
