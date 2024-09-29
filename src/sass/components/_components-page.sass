@@ -1,6 +1,7 @@
 // COMPONENTS
 // page
 // =================================================
+@use "sass:color"
 
 
 
@@ -15,6 +16,6 @@
 		margin-bottom: 4.8rem
 		font-weight: 900
 		font-size: 4.8rem
-		color: darken($color-brand-1, 20%)
+		color: color.scale($color: $color-brand-1, $lightness: -20%)
 
 	// &__content
