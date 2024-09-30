@@ -20,6 +20,8 @@ $check-input-background-color-checked: $color-brand-1
 $check-mark-width: 0.8
 $check-mark-height: 1.6
 $check-mark-color: $color-gray-100
+// ------------------
+$contrast: 5%
 
 
 
@@ -37,7 +39,7 @@ $check-mark-color: $color-gray-100
 	// On mouse-over
 	&:hover
 		.check__input ~ .check__mark
-			background-color: color.scale($color: $color-brand-1, $lightness: -5%)
+			background-color: color.scale($color: $color-brand-1, $lightness: math.div($contrast, -1))
 
 	&__label
 		margin-left: $check-label-margin-left
