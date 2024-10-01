@@ -6,31 +6,5 @@
 
 
 
-// Description:
-// ------------------------------------
-// This function 'contains' check whether an item belongs to a list or not. For example it`s using in the mixin mediaquery.
-
-// Require:
-// ------------------------------------
-// This function require:
-//
-// Args:
-// ------------------
-// - $list
-// @param {List} List of items to check into.
-// - $item
-// @param {any} Item to check within the list.
-//
-// This function return:
-//
-// @return {bool} True/false if the item is contained in the list.
-
-// Use:
-// ------------------------------------
-// @if not contains($rules, $rule)
-//  $rule: 'max'
-
-// Declaration:
-// ------------------------------------
 @function contains($list, $item)
 	@return index($list, $item) !=null
