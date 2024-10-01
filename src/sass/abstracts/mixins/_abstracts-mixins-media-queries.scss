@@ -44,7 +44,7 @@
 	}
 	@if type-of($breakpoint) == number {
 		@if unitless($breakpoint) {
-			@media (#{$rule}-#{$dimension}: #{$breakpoint} + $unit) {
+			@media (#{$rule}-#{$dimension}: #{$breakpoint + $unit}) {
 				@content;
 			}
 		} @else if contains($units, unit($breakpoint)) {
