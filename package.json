@@ -31,7 +31,7 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^9.1.6",
-		"sass": "^1.79.4"
+		"sass": "^1.80.2"
 	},
 	"engines": {
 		"node": "20.11.0",
