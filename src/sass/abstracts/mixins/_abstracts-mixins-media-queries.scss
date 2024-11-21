@@ -10,12 +10,15 @@
 	$rules: "max", "min";
 	$dimensions: "width", "height";
 	$units: "px", "em", "rem", "%", "vw", "vh";
+
 	@if not contains($rules, $rule) {
 		$rule: "max";
 	}
+
 	@if not contains($dimensions, $dimension) {
 		$rule: "width";
 	}
+
 	@if type-of($breakpoint) == number {
 		@if unitless($breakpoint) {
 			@media (#{$rule}-#{$dimension}: #{$breakpoint + $unit}) {
