@@ -8,7 +8,7 @@
 
 @mixin animation($animate...)
 	$max: length($animate)
-	$animations: ''
+	$animations: ""
 
 	@for $i from 1 through $max
 		$animations: #{$animations + nth($animate, $i)}
