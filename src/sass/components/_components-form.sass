@@ -1,10 +1,10 @@
 // COMPONENTS
-// form
+// FORM
 // =================================================
 
 
 
-	
+
 
 .form
 	&__group
@@ -15,7 +15,7 @@
 	&__column
 		display: flex
 
-		@include media('md')
+		@include media("md")
 			flex-direction: column
 
 		&:not(:last-of-type)
@@ -24,14 +24,14 @@
 		> *
 			flex: 1
 
-			@include media('md')
+			@include media("md")
 				width: 100%
 				flex: none
 
 			&:not(:last-of-type)
 				margin-right: 2.4rem
 
-				@include media('md')
+				@include media("md")
 					margin-right: 0
 					margin-bottom: 2.4rem
 
@@ -39,27 +39,27 @@
 			&:not(:last-of-type)
 				margin-right: 3rem
 
-				@include media('lg')
+				@include media("lg")
 					margin-bottom: 4rem
 		&--3
-			@include media('lg')
+			@include media("lg")
 				flex-direction: column
 
 			>*
-				@include media('lg')
+				@include media("lg")
 					width: 100%
 					flex: none
 
 				&:not(:last-of-type)
 					margin-right: 2.4rem
 
-					@include media('lg')
+					@include media("lg")
 						margin-right: 0
 						margin-bottom: 2.4rem
 
 			> .fieldset
 				&:not(:last-of-type)
-					@include media('lg')
+					@include media("lg")
 						margin-bottom: 4rem
 
 		> .form
@@ -67,11 +67,11 @@
 				&:not(:last-of-type)
 					margin-bottom: 0
 
-					@include media('md')
+					@include media("md")
 						margin-right: 0
 						margin-bottom: 2.4rem
-		
-	
+
+
 	> .fieldset,
 	> *
 		&:not(:last-child)
@@ -96,19 +96,19 @@
 		background-color: $color-gray-100
 
 		&::-webkit-input-placeholder
-			/* Chrome/Opera/Safari */
+			// Chrome/Opera/Safari
 			font-weight: 200
 
 		&::-moz-placeholder
-			/* Firefox 19+ */
+			// Firefox 19+
 			font-weight: 200
 
 		&:-ms-input-placeholder
-			/* IE 10+ */
+			// IE 10+
 			font-weight: 200
 
 		&:-moz-placeholder
-			/* Firefox 18- */
+			// Firefox 18-
 			font-weight: 200
 
 		&:hover,
@@ -130,10 +130,10 @@
 		background-color: $color-brand-1
 		box-shadow: 0 0 1.6rem rgba($color-gray-0, 0.8)
 
-		@include media('md')
+		@include media("md")
 			display: flex
 			justify-content: center
-			
+
 
 .legend
 	width: 100%

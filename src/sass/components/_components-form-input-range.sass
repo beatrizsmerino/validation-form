@@ -1,5 +1,5 @@
 // COMPONENTS
-// form-input-range
+// FORM-INPUT-RANGE
 // =================================================
 @use "sass:math"
 @use "sass:color"
@@ -14,33 +14,36 @@
 // Version 1.5.2
 // MIT License
 
-$track-color: $color-gray-90 !default
-$thumb-color: $color-brand-1 !default
+// Settings
+$track-color: $color-gray-90
+$thumb-color: $color-brand-1
+// ------------------
+$thumb-radius: 1.2rem
+$thumb-height: 2.4rem
+$thumb-width: 2.4rem
+$thumb-shadow-size: 0.4rem
+$thumb-shadow-blur: 0.4rem
+$thumb-shadow-color: rgba($color-gray-0, .2)
+$thumb-border-width: 0.2rem
+$thumb-border-color: $color-gray-90
+// ------------------
+$track-width: 100%
+$track-height: 0.8rem
+$track-shadow-size: 0.1rem
+$track-shadow-blur: 0.1rem
+$track-shadow-color: rgba($color-gray-0, .2)
+$track-border-width: 0.2rem
+$track-border-color: $color-gray-80
+// ------------------
+$track-radius: 0.5rem
+$contrast: 5%
+// ------------------
+$ie-bottom-track-color: color.scale($color: $track-color, $lightness: math.div($contrast, -1))
 
-$thumb-radius: 1.2rem !default
-$thumb-height: 2.4rem !default
-$thumb-width: 2.4rem !default
-$thumb-shadow-size: 0.4rem !default
-$thumb-shadow-blur: 0.4rem !default
-$thumb-shadow-color: rgba($color-gray-0, .2) !default
-$thumb-border-width: 0.2rem !default
-$thumb-border-color: $color-gray-90 !default
 
-$track-width: 100% !default
-$track-height: 0.8rem !default
-$track-shadow-size: 0.1rem !default
-$track-shadow-blur: 0.1rem !default
-$track-shadow-color: rgba($color-gray-0, .2) !default
-$track-border-width: 0.2rem !default
-$track-border-color: $color-gray-80 !default
-
-$track-radius: 0.5rem !default
-$contrast: 5% !default
-
-$ie-bottom-track-color: color.scale($color: $track-color, $lightness: math.div($contrast, -1)) !default
 
 @mixin shadow($shadow-size, $shadow-blur, $shadow-color)
-	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size color.scale($color: $shadow-color, $lightness: 5%)
+	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size color.scale($color: $shadow-color, $lightness: $contrast)
 
 
 @mixin track
@@ -59,42 +62,42 @@ $ie-bottom-track-color: color.scale($color: $track-color, $lightness: math.div($
 	cursor: default
 	height: $thumb-height
 	width: $thumb-width
-	
 
-.range[type='range']
+
+.range[type="range"]
 	-webkit-appearance: none
 	background: transparent
 	margin: math.div($thumb-height, 2)
 	width: $track-width
 	height: 5.4rem
-	
+
 	&::-moz-focus-outer
 		border: 0
-	
+
 	&:focus
 		outline: 0
-		
+
 		&::-webkit-slider-runnable-track
 			background: color.scale($color: $track-color, $lightness: $contrast)
-			
+
 		&::-ms-fill-lower
 			background: $track-color
-		
+
 		&::-ms-fill-upper
 			background: color.scale($color: $track-color, $lightness: $contrast)
-	
+
 	&::-webkit-slider-runnable-track
 		@include track
 		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color)
 		background: $track-color
 		border: $track-border-width solid $track-border-color
 		border-radius: $track-radius
-		
+
 	&::-webkit-slider-thumb
 		@include thumb
 		-webkit-appearance: none
 		margin-top: (math.div(-$track-border-width * 2 + $track-height, 2) - math.div($thumb-height, 2))
-		
+
 	&::-moz-range-track
 		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color)
 		@include track
@@ -102,33 +105,33 @@ $ie-bottom-track-color: color.scale($color: $track-color, $lightness: math.div($
 		border: $track-border-width solid $track-border-color
 		border-radius: $track-radius
 		height: math.div($track-height, 2)
-		
+
 	&::-moz-range-thumb
 		@include thumb
-	
+
 	&::-ms-track
 		@include track
 		background: transparent
 		border-color: transparent
 		border-width: math.div($thumb-height, 2)
 		color: transparent
-	
+
 	&::-ms-fill-lower
 		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color)
 		background: $ie-bottom-track-color
 		border: $track-border-width solid $track-border-color
 		border-radius: ($track-radius * 2)
-	
+
 	&::-ms-fill-upper
 		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color)
 		background: $track-color
 		border: $track-border-width solid $track-border-color
 		border-radius: ($track-radius * 2)
-	
+
 	&::-ms-thumb
 		@include thumb
 		margin-top: math.div($track-height, 4)
-	
+
 	&:disabled
 		&::-webkit-slider-thumb,
 		&::-moz-range-thumb,

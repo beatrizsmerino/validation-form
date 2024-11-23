@@ -1,57 +1,42 @@
-// INDEX
-// =============================================================================
-// ABSTRACTS / UTITILITIES.......helpers tools which don’t output any CSS when compiled: variables,mixins, extends, functions...
-// VENDORS.......................code from external libraries and frameworks: bootstrap, foundation, jquery-ui...
-// BASE..........................standard styles: reset, typography...
-// LAYOUT........................handles the layout: header, nav, main, section, article, aside, footer, grid-system, forms...
-// COMPONENTS....................small modules reusable: modal, button, list, slider, carrousel...
-// PAGES.........................styles specific to individual pages: home, about, services, products, gallery, quotes, contact...
-// THEMES........................sections of your site contain alternate color schemes: default theme, admin theme...
+// PARTIALS SASS
+// ===============================================================================
 
 
 
 
 
 // ABSTRACTS
-// =================================================
-@import "abstracts/variables/abstracts-variables-colors"
-@import "abstracts/variables/abstracts-variables-typography"
-@import "abstracts/variables/abstracts-variables-breakpoints"
-// ------------------------------
+// ----------------------------------------------------------------------
 @import "abstracts/functions/abstracts-functions-contains"
-// ------------------------------
-@import "abstracts/mixins/abstracts-mixins-media-queries"
+// ------------------
+@import "abstracts/mixins/abstracts-mixins-media"
 @import "abstracts/mixins/abstracts-mixins-position"
 @import "abstracts/mixins/abstracts-mixins-prefix"
 @import "abstracts/mixins/abstracts-mixins-prefix-keyframes"
 @import "abstracts/mixins/abstracts-mixins-prefix-animation"
-
-
-
-
-
-
-// VENDORS
-// =================================================
-// @import "vendor/animation"
+// ------------------
+@import "abstracts/variables/abstracts-variables-colors"
+@import "abstracts/variables/abstracts-variables-fonts"
+@import "abstracts/variables/abstracts-variables-breakpoints"
 
 
 
 
 
 // BASE
-// =================================================
+// ----------------------------------------------------------------------
 // @import "base/base-reset-ericmeyer"
 // @import "base/base-reset-normalize"
 @import "base/base-reset-personal"
-@import "base/base-typography"
+@import "base/base-fonts"
 
 
 
 
 
 // ANIMATIONS
-// =================================================
+// ----------------------------------------------------------------------
+// @import "animations/animations-animate-css"
 @import "animations/animations-keyframes-fade"
 @import "animations/animations-keyframes-move"
 @import "animations/animations-keyframes-size"
@@ -60,15 +45,8 @@
 
 
 
-// LAYOUT
-// =================================================
-
-
-
-
-
 // COMPONENTS
-// =================================================
+// ----------------------------------------------------------------------
 @import "components/components-container"
 @import "components/components-page"
 @import "components/components-link"
@@ -83,17 +61,3 @@
 @import "components/components-form-require"
 @import "components/components-form-error"
 @import "components/components-form-ckeditor"
-
-
-
-
-
-// PAGES
-// =================================================
-
-
-
-
-
-// THEMES
-// =================================================
