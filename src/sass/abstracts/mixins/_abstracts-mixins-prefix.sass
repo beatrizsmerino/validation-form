@@ -1,42 +1,28 @@
-// ABSTRACTS - MIXIN
-// prefix: webkit moz ms o (transform, transition...)
+// ABSTRACTS - MIXINS
+// PREFIX
 // =================================================
 
 
 
 
 
-// MIXIN - PREFIX
+// PREFIX
 // ------------------------------------
 @mixin prefix($property, $value, $prefixes: webkit moz ms o)
 	@each $prefix in $prefixes
-		#{'-' + $prefix + '-' + $property}: $value
+		#{"-" + $prefix + "-" + $property}: $value
 
-	// Output standard non-prefixed declaration
 	#{$property}: $value
 
 
-// Use:
-// @include prefix(transform, rotate(45deg))
 
 
 
-
-	
-// MIXIN - TRANSFORM
+// TRANSFORM
 // ------------------------------------
 @mixin prefix--multiple($declarations, $prefixes: webkit moz ms o)
 	@each $property, $value in $declarations
 		@each $prefix in $prefixes
-			#{'-' + $prefix + '-' + $property}: $value
+			#{"-" + $prefix + "-" + $property}: $value
 
-		// Output standard non-prefixed declaration
 		#{$property}: $value
-
-
-// Use:
-// @include prefix((
-//    column-count: 3,
-//    column-gap: 1.5em,
-//    column-rule: 2px solid hotpink
-// ), webkit moz ms o)
