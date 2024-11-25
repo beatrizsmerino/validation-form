@@ -1,17 +1,19 @@
 // ABSTRACTS - MIXINS
 // PREFIX-ANIMATION
 // =================================================
+@use "sass:list"
+@use "abstracts/mixins/abstracts-mixins-prefix" as *
 
 
 
 
 
 @mixin animation($animate...)
-	$max: length($animate)
+	$max: list.length($animate)
 	$animations: ""
 
 	@for $i from 1 through $max
-		$animations: #{$animations + nth($animate, $i)}
+		$animations: #{$animations + list.nth($animate, $i)}
 
 		@if $i < $max
 			$animations: #{$animations + ", "}
