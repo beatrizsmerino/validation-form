@@ -5,30 +5,12 @@
 
 
 
-// ABSTRACTS
-// ----------------------------------------------------------------------
-@import "abstracts/functions/abstracts-functions-contains"
-// ------------------
-@import "abstracts/mixins/abstracts-mixins-media"
-@import "abstracts/mixins/abstracts-mixins-position"
-@import "abstracts/mixins/abstracts-mixins-prefix"
-@import "abstracts/mixins/abstracts-mixins-prefix-keyframes"
-@import "abstracts/mixins/abstracts-mixins-prefix-animation"
-// ------------------
-@import "abstracts/variables/abstracts-variables-colors"
-@import "abstracts/variables/abstracts-variables-fonts"
-@import "abstracts/variables/abstracts-variables-breakpoints"
-
-
-
-
-
 // BASE
 // ----------------------------------------------------------------------
-// @import "base/base-reset-ericmeyer"
-// @import "base/base-reset-normalize"
-@import "base/base-reset-personal"
-@import "base/base-fonts"
+// @use "base/base-reset-ericmeyer"
+// @use "base/base-reset-normalize"
+@use "base/base-reset-personal"
+@use "base/base-fonts"
 
 
 
@@ -36,10 +18,10 @@
 
 // ANIMATIONS
 // ----------------------------------------------------------------------
-// @import "animations/animations-animate-css"
-@import "animations/animations-keyframes-fade"
-@import "animations/animations-keyframes-move"
-@import "animations/animations-keyframes-size"
+// @use "animations/animations-animate-css"
+@use "animations/animations-keyframes-fade"
+@use "animations/animations-keyframes-move"
+@use "animations/animations-keyframes-size"
 
 
 
@@ -47,17 +29,17 @@
 
 // COMPONENTS
 // ----------------------------------------------------------------------
-@import "components/components-container"
-@import "components/components-page"
-@import "components/components-link"
-@import "components/components-button"
-@import "components/components-icon"
-@import "components/components-message"
-@import "components/components-form"
-@import "components/components-form-select"
-@import "components/components-form-input-range"
-@import "components/components-form-input-check"
-@import "components/components-form-input-color"
-@import "components/components-form-require"
-@import "components/components-form-error"
-@import "components/components-form-ckeditor"
+@use "components/components-container"
+@use "components/components-page"
+@use "components/components-link"
+@use "components/components-button"
+@use "components/components-icon"
+@use "components/components-message"
+@use "components/components-form"
+@use "components/components-form-select"
+@use "components/components-form-input-range"
+@use "components/components-form-input-check"
+@use "components/components-form-input-color"
+@use "components/components-form-require"
+@use "components/components-form-error"
+@use "components/components-form-ckeditor"
