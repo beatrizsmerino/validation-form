@@ -2,6 +2,7 @@
 // MEDIA
 // =================================================
 @use "sass:meta";
+@use "sass:math";
 @use "sass:map";
 @use "../variables/abstracts-variables-breakpoints" as *;
 @use "../functions/abstracts-functions-contains" as *;
@@ -28,7 +29,7 @@
 	}
 
 	@if meta.type-of($breakpoint) == number {
-		@if unitless($breakpoint) {
+		@if math.is-unitless($breakpoint) {
 			@media (#{$rule}-#{$dimension}: #{$breakpoint + $unit}) {
 				@content;
 			}
