@@ -111,7 +111,7 @@ function sassCompile(src, dist, fileName) {
 		)
 		.pipe(
 			gulpAutoprefixer({
-				versions: [
+				overrideBrowserslist: [
 					"last 2 versions",
 				],
 			})
