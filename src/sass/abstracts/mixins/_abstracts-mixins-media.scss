@@ -21,6 +21,10 @@
 		$dimension: "width";
 	}
 
+	@if not contains($units, $unit) {
+		$unit: "px";
+	}
+
 	@if type-of($breakpoint) == number {
 		@if unitless($breakpoint) {
 			@media (#{$rule}-#{$dimension}: #{$breakpoint + $unit}) {
