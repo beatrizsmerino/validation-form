@@ -9,7 +9,7 @@
 
 
 @mixin animation($animate...)
-	$max: length($animate)
+	$max: list.length($animate)
 	$animations: ""
 
 	@for $i from 1 through $max
