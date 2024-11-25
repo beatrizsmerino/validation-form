@@ -104,6 +104,7 @@ function sassCompile(src, dist, fileName) {
 		.pipe(
 			sassCompiler({
 				outputStyle: "compressed",
+				silenceDeprecations: ["legacy-js-api"],
 			}).on(
 				"error",
 				sassCompiler.logError
@@ -111,7 +112,7 @@ function sassCompile(src, dist, fileName) {
 		)
 		.pipe(
 			gulpAutoprefixer({
-				versions: [
+				overrideBrowserslist: [
 					"last 2 versions",
 				],
 			})
