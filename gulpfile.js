@@ -104,6 +104,7 @@ function sassCompile(src, dist, fileName) {
 		.pipe(
 			sassCompiler({
 				outputStyle: "compressed",
+				silenceDeprecations: ["legacy-js-api"],
 			}).on(
 				"error",
 				sassCompiler.logError
