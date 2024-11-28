@@ -103,7 +103,7 @@ function sassCompile(src, dist, fileName) {
 		)
 		.pipe(
 			sassCompiler({
-				outputStyle: "compressed",
+				style: "compressed",
 				silenceDeprecations: ["legacy-js-api"],
 			}).on(
 				"error",
