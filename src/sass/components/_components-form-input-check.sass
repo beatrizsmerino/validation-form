@@ -26,7 +26,7 @@ $contrast: 5%
 
 
 
-.check
+.field-check
 	width: 100%
 	height: $check-input-size
 	padding-left: $check-input-size
@@ -39,7 +39,7 @@ $contrast: 5%
 
 	// On mouse-over
 	&:hover
-		.check__input ~ .check__mark
+		.field-check__input ~ .field-check__mark
 			background-color: color.scale($color: $color-brand-1, $lightness: math.div($contrast, -1))
 
 	&__label
@@ -59,11 +59,11 @@ $contrast: 5%
 		cursor: pointer
 
 		// When the checkbox is checked
-		&:checked ~ .check__mark
+		&:checked ~ .field-check__mark
 			background-color: $check-input-background-color-checked
 
 		// Show the checkmark when checked
-		&:checked ~ .check__mark:after
+		&:checked ~ .field-check__mark:after
 			display: block
 
 	// Create a custom checkbox
@@ -91,7 +91,7 @@ $contrast: 5%
 			border-width: 0 0.3rem 0.3rem 0
 			transform: rotate(45deg)
 
-.check
+.field-check
 	&__input
-		&[type="radio"] ~ .check__mark
+		&[type="radio"] ~ .field-check__mark
 			border-radius: 50%
