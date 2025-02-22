@@ -6,7 +6,7 @@
 
 
 
-@mixin prefix--multiple($declarations, $prefixes: webkit moz ms o)
+@mixin prefix-multiple($declarations, $prefixes: webkit moz ms o)
 	@each $property, $value in $declarations
 		@each $prefix in $prefixes
 			#{"-" + $prefix + "-" + $property}: $value
