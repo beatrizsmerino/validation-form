@@ -1,5 +1,5 @@
 // ANIMATIONS
-// KEYFRAMES-SIZE
+// KEYFRAMES-ZOOM
 // =================================================
 @use "../abstracts/index" as *
 
@@ -32,26 +32,3 @@
 	100%
 		opacity: 0
 		@include prefix(transform, scale3d(0.8, 0.8, 0.8))
-
-
-
-
-
-// RADAR
-// ----------------------------------------------------------------------
-@include keyframes(radar)
-	from
-		@include prefix(transform, scale3d(1, 1, 1))
-
-	100%
-		@include prefix(transform, scale3d(1.1, 1.1, 1.1))
-
-
-
-
-
-// RADAR CENTER
-// ----------------------------------------------------------------------
-@include keyframes(radarCenter)
-	to
-		@include prefix(transform, translate(-50%, -50%) scale3d(1.05, 1.05, 1.05))
