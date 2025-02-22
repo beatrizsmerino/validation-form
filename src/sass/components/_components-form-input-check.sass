@@ -10,26 +10,26 @@
 
 
 // Settings
-$check-label-margin-left: 1.6rem
+$field-check-label-margin-left: 1.6rem
 // ------------------
-$check-input-size: 3.2rem
-$check-input-border: 0.2rem
-$check-input-border-color: $color-gray-0
-$check-input-background-color: $color-gray-98
-$check-input-background-color-checked: $color-brand-1
+$field-check-input-size: 3.2rem
+$field-check-input-border: 0.2rem
+$field-check-input-border-color: $color-gray-0
+$field-check-input-background-color: $color-gray-98
+$field-check-input-background-color-checked: $color-brand-1
 // ------------------
-$check-mark-width: 0.8
-$check-mark-height: 1.6
-$check-mark-color: $color-gray-100
+$field-check-mark-width: 0.8
+$field-check-mark-height: 1.6
+$field-check-mark-color: $color-gray-100
 // ------------------
-$contrast: 5%
+$field-check-contrast: 5%
 
 
 
 .field-check
 	width: 100%
-	height: $check-input-size
-	padding-left: $check-input-size
+	height: $field-check-input-size
+	padding-left: $field-check-input-size
 	display: flex
 	align-items: center
 	position: relative
@@ -40,16 +40,16 @@ $contrast: 5%
 	// On mouse-over
 	&:hover
 		.field-check__input ~ .field-check__mark
-			background-color: color.scale($color: $color-brand-1, $lightness: math.div($contrast, -1))
+			background-color: color.scale($color: $color-brand-1, $lightness: math.div($field-check-contrast, -1))
 
 	&__label
-		margin-left: $check-label-margin-left
+		margin-left: $field-check-label-margin-left
 		position: relative
 
 	// Hide the browser's default checkbox
 	&__input
-		width: $check-input-size
-		height: $check-input-size
+		width: $field-check-input-size
+		height: $field-check-input-size
 		margin: 0
 		padding: 0
 		position: absolute
@@ -60,7 +60,7 @@ $contrast: 5%
 
 		// When the checkbox is checked
 		&:checked ~ .field-check__mark
-			background-color: $check-input-background-color-checked
+			background-color: $field-check-input-background-color-checked
 
 		// Show the checkmark when checked
 		&:checked ~ .field-check__mark:after
@@ -68,26 +68,26 @@ $contrast: 5%
 
 	// Create a custom checkbox
 	&__mark
-		width: $check-input-size
-		height: $check-input-size
+		width: $field-check-input-size
+		height: $field-check-input-size
 		position: absolute
 		top: 0
 		left: 0
-		border-width: $check-input-border
+		border-width: $field-check-input-border
 		border-style: solid
-		border-color: $check-input-border-color
-		background-color: $check-input-background-color
+		border-color: $field-check-input-border-color
+		background-color: $field-check-input-background-color
 
 		// Create the checkmark/indicator (hidden when not checked)
 		&:after
 			content: ""
 			display: none
-			width: #{$check-mark-width}rem
-			height: #{$check-mark-height}rem
+			width: #{$field-check-mark-width}rem
+			height: #{$field-check-mark-height}rem
 			position: absolute
-			top: calc(50% - #{math.div($check-mark-height, 2)}rem)
-			left: calc(50% - #{math.div($check-mark-width, 2)}rem)
-			border: solid $check-mark-color
+			top: calc(50% - #{math.div($field-check-mark-height, 2)}rem)
+			left: calc(50% - #{math.div($field-check-mark-width, 2)}rem)
+			border: solid $field-check-mark-color
 			border-width: 0 0.3rem 0.3rem 0
 			transform: rotate(45deg)
 
