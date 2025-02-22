@@ -16,60 +16,60 @@
 // MIT License
 
 // Settings
-$track-color: $color-gray-90
-$thumb-color: $color-brand-1
+$field-range-track-color: $color-gray-90
+$field-range-thumb-color: $color-brand-1
 // ------------------
-$thumb-radius: 1.2rem
-$thumb-height: 2.4rem
-$thumb-width: 2.4rem
-$thumb-shadow-size: 0.4rem
-$thumb-shadow-blur: 0.4rem
-$thumb-shadow-color: rgba($color-gray-0, .2)
-$thumb-border-width: 0.2rem
-$thumb-border-color: $color-gray-90
+$field-range-thumb-radius: 1.2rem
+$field-range-thumb-height: 2.4rem
+$field-range-thumb-width: 2.4rem
+$field-range-thumb-shadow-size: 0.4rem
+$field-range-thumb-shadow-blur: 0.4rem
+$field-range-thumb-shadow-color: rgba($color-gray-0, .2)
+$field-range-thumb-border-width: 0.2rem
+$field-range-thumb-border-color: $color-gray-90
 // ------------------
-$track-width: 100%
-$track-height: 0.8rem
-$track-shadow-size: 0.1rem
-$track-shadow-blur: 0.1rem
-$track-shadow-color: rgba($color-gray-0, .2)
-$track-border-width: 0.2rem
-$track-border-color: $color-gray-80
+$field-range-track-width: 100%
+$field-range-track-height: 0.8rem
+$field-range-track-shadow-size: 0.1rem
+$field-range-track-shadow-blur: 0.1rem
+$field-range-track-shadow-color: rgba($color-gray-0, .2)
+$field-range-track-border-width: 0.2rem
+$field-range-track-border-color: $color-gray-80
 // ------------------
-$track-radius: 0.5rem
-$contrast: 5%
+$field-range-track-radius: 0.5rem
+$field-range-contrast: 5%
 // ------------------
-$ie-bottom-track-color: color.scale($color: $track-color, $lightness: math.div($contrast, -1))
+$field-range-track-color-ie: color.scale($color: $field-range-track-color, $lightness: math.div($field-range-contrast, -1))
 
 
 
 @mixin field-range-shadow($shadow-size, $shadow-blur, $shadow-color)
-	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size color.scale($color: $shadow-color, $lightness: $contrast)
+	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size color.scale($color: $shadow-color, $lightness: $field-range-contrast)
 
 
 @mixin field-range-track
 	cursor: default
-	height: $track-height
+	height: $field-range-track-height
 	transition: all .2s ease
-	width: $track-width
+	width: $field-range-track-width
 
 
 @mixin field-range-thumb
-	@include field-range-shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color)
-	background: $thumb-color
-	border: $thumb-border-width solid $thumb-border-color
-	border-radius: $thumb-radius
+	@include field-range-shadow($field-range-thumb-shadow-size, $field-range-thumb-shadow-blur, $field-range-thumb-shadow-color)
+	background: $field-range-thumb-color
+	border: $field-range-thumb-border-width solid $field-range-thumb-border-color
+	border-radius: $field-range-thumb-radius
 	box-sizing: border-box
 	cursor: default
-	height: $thumb-height
-	width: $thumb-width
+	height: $field-range-thumb-height
+	width: $field-range-thumb-width
 
 
 .field-range[type="range"]
 	-webkit-appearance: none
 	background: transparent
-	margin: math.div($thumb-height, 2)
-	width: $track-width
+	margin: math.div($field-range-thumb-height, 2)
+	width: $field-range-track-width
 	height: 5.4rem
 
 	&::-moz-focus-outer
@@ -79,33 +79,33 @@ $ie-bottom-track-color: color.scale($color: $track-color, $lightness: math.div($
 		outline: 0
 
 		&::-webkit-slider-runnable-track
-			background: color.scale($color: $track-color, $lightness: $contrast)
+			background: color.scale($color: $field-range-track-color, $lightness: $field-range-contrast)
 
 		&::-ms-fill-lower
-			background: $track-color
+			background: $field-range-track-color
 
 		&::-ms-fill-upper
-			background: color.scale($color: $track-color, $lightness: $contrast)
+			background: color.scale($color: $field-range-track-color, $lightness: $field-range-contrast)
 
 	&::-webkit-slider-runnable-track
 		@include field-range-track
-		@include field-range-shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color)
-		background: $track-color
-		border: $track-border-width solid $track-border-color
-		border-radius: $track-radius
+		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
+		background: $field-range-track-color
+		border: $field-range-track-border-width solid $field-range-track-border-color
+		border-radius: $field-range-track-radius
 
 	&::-webkit-slider-thumb
 		@include field-range-thumb
 		-webkit-appearance: none
-		margin-top: (math.div(-$track-border-width * 2 + $track-height, 2) - math.div($thumb-height, 2))
+		margin-top: (math.div(-$field-range-track-border-width * 2 + $field-range-track-height, 2) - math.div($field-range-thumb-height, 2))
 
 	&::-moz-range-track
-		@include field-range-shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color)
+		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
 		@include field-range-track
-		background: $track-color
-		border: $track-border-width solid $track-border-color
-		border-radius: $track-radius
-		height: math.div($track-height, 2)
+		background: $field-range-track-color
+		border: $field-range-track-border-width solid $field-range-track-border-color
+		border-radius: $field-range-track-radius
+		height: math.div($field-range-track-height, 2)
 
 	&::-moz-range-thumb
 		@include field-range-thumb
@@ -114,24 +114,24 @@ $ie-bottom-track-color: color.scale($color: $track-color, $lightness: math.div($
 		@include field-range-track
 		background: transparent
 		border-color: transparent
-		border-width: math.div($thumb-height, 2)
+		border-width: math.div($field-range-thumb-height, 2)
 		color: transparent
 
 	&::-ms-fill-lower
-		@include field-range-shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color)
-		background: $ie-bottom-track-color
-		border: $track-border-width solid $track-border-color
-		border-radius: ($track-radius * 2)
+		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
+		background: $field-range-track-color-ie
+		border: $field-range-track-border-width solid $field-range-track-border-color
+		border-radius: ($field-range-track-radius * 2)
 
 	&::-ms-fill-upper
-		@include field-range-shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color)
-		background: $track-color
-		border: $track-border-width solid $track-border-color
-		border-radius: ($track-radius * 2)
+		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
+		background: $field-range-track-color
+		border: $field-range-track-border-width solid $field-range-track-border-color
+		border-radius: ($field-range-track-radius * 2)
 
 	&::-ms-thumb
 		@include field-range-thumb
-		margin-top: math.div($track-height, 4)
+		margin-top: math.div($field-range-track-height, 4)
 
 	&:disabled
 		&::-webkit-slider-thumb,
