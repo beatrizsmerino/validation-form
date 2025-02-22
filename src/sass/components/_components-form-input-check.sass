@@ -66,6 +66,9 @@ $field-check-contrast: 5%
 		&:checked ~ .field-check__mark:after
 			display: block
 
+		&[type="radio"] ~ .field-check__mark
+			border-radius: 50%
+
 	// Create a custom checkbox
 	&__mark
 		width: $field-check-input-size
@@ -90,8 +93,3 @@ $field-check-contrast: 5%
 			border: solid $field-check-mark-color
 			border-width: 0 0.3rem 0.3rem 0
 			transform: rotate(45deg)
-
-.field-check
-	&__input
-		&[type="radio"] ~ .field-check__mark
-			border-radius: 50%
