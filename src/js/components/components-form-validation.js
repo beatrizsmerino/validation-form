@@ -60,7 +60,7 @@ var validateSettings = {
             );
         } else if (element.is("select")) {
             error.appendTo(
-                element.closest(".select__wrapper")
+                element.closest(".field-select__wrapper")
             );
         } else {
             error.insertAfter(element);
