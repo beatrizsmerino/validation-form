@@ -15,34 +15,6 @@
 // Version 1.5.2
 // MIT License
 
-// Settings
-$field-range-track-color: $color-gray-90
-$field-range-thumb-color: $color-brand-1
-// ------------------
-$field-range-thumb-radius: 1.2rem
-$field-range-thumb-height: 2.4rem
-$field-range-thumb-width: 2.4rem
-$field-range-thumb-shadow-size: 0.4rem
-$field-range-thumb-shadow-blur: 0.4rem
-$field-range-thumb-shadow-color: rgba($color-gray-0, .2)
-$field-range-thumb-border-width: 0.2rem
-$field-range-thumb-border-color: $color-gray-90
-// ------------------
-$field-range-track-width: 100%
-$field-range-track-height: 0.8rem
-$field-range-track-shadow-size: 0.1rem
-$field-range-track-shadow-blur: 0.1rem
-$field-range-track-shadow-color: rgba($color-gray-0, .2)
-$field-range-track-border-width: 0.2rem
-$field-range-track-border-color: $color-gray-80
-// ------------------
-$field-range-track-radius: 0.5rem
-$field-range-contrast: 5%
-// ------------------
-$field-range-track-color-ie: color.scale($color: $field-range-track-color, $lightness: math.div($field-range-contrast, -1))
-
-
-
 @mixin field-range-shadow($shadow-size, $shadow-blur, $shadow-color)
 	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size color.scale($color: $shadow-color, $lightness: $field-range-contrast)
 
@@ -119,7 +91,7 @@ $field-range-track-color-ie: color.scale($color: $field-range-track-color, $ligh
 
 	&::-ms-fill-lower
 		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
-		background: $field-range-track-color-ie
+		background: color.scale($color: $field-range-track-color, $lightness: math.div($field-range-contrast, -1))
 		border: $field-range-track-border-width solid $field-range-track-border-color
 		border-radius: ($field-range-track-radius * 2)
 
