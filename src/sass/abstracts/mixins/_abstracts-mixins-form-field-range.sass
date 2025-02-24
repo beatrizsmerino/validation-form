@@ -1,0 +1,30 @@
+// ABSTRACTS - MIXINS
+// FORM-FIELD-RANGE
+// =================================================
+@use "sass:color"
+@use "../variables/abstracts-variables-form-field-range" as *
+
+
+
+
+
+@mixin field-range-shadow($shadow-size, $shadow-blur, $shadow-color)
+	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size color.scale($color: $shadow-color, $lightness: $field-range-contrast)
+
+
+@mixin field-range-track
+	cursor: default
+	height: $field-range-track-height
+	transition: all .2s ease
+	width: $field-range-track-width
+
+
+@mixin field-range-thumb
+	@include field-range-shadow($field-range-thumb-shadow-size, $field-range-thumb-shadow-blur, $field-range-thumb-shadow-color)
+	background: $field-range-thumb-color
+	border: $field-range-thumb-border-width solid $field-range-thumb-border-color
+	border-radius: $field-range-thumb-radius
+	box-sizing: border-box
+	cursor: default
+	height: $field-range-thumb-height
+	width: $field-range-thumb-width

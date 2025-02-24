@@ -1,0 +1,93 @@
+// COMPONENTS
+// FORM-INPUT-RANGE
+// =================================================
+@use "sass:color"
+@use "sass:math"
+@use "../abstracts/index" as *
+
+
+
+
+
+// Styling Cross-Browser Compatible Range Inputs with Sass
+// Github: https://github.com/darlanrod/input-range-sass
+// Author: Darlan Rod https://github.com/darlanrod
+// Version 1.5.2
+// MIT License
+
+.field-range[type="range"]
+	-webkit-appearance: none
+	background: transparent
+	margin: math.div($field-range-thumb-height, 2)
+	width: $field-range-track-width
+	height: 5.4rem
+
+	&::-moz-focus-outer
+		border: 0
+
+	&:focus
+		outline: 0
+
+		&::-webkit-slider-runnable-track
+			background: color.scale($color: $field-range-track-color, $lightness: $field-range-contrast)
+
+		&::-ms-fill-lower
+			background: $field-range-track-color
+
+		&::-ms-fill-upper
+			background: color.scale($color: $field-range-track-color, $lightness: $field-range-contrast)
+
+	&::-webkit-slider-runnable-track
+		@include field-range-track
+		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
+		background: $field-range-track-color
+		border: $field-range-track-border-width solid $field-range-track-border-color
+		border-radius: $field-range-track-radius
+
+	&::-webkit-slider-thumb
+		@include field-range-thumb
+		-webkit-appearance: none
+		margin-top: (math.div(-$field-range-track-border-width * 2 + $field-range-track-height, 2) - math.div($field-range-thumb-height, 2))
+
+	&::-moz-range-track
+		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
+		@include field-range-track
+		background: $field-range-track-color
+		border: $field-range-track-border-width solid $field-range-track-border-color
+		border-radius: $field-range-track-radius
+		height: math.div($field-range-track-height, 2)
+
+	&::-moz-range-thumb
+		@include field-range-thumb
+
+	&::-ms-track
+		@include field-range-track
+		background: transparent
+		border-color: transparent
+		border-width: math.div($field-range-thumb-height, 2)
+		color: transparent
+
+	&::-ms-fill-lower
+		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
+		background: color.scale($color: $field-range-track-color, $lightness: math.div($field-range-contrast, -1))
+		border: $field-range-track-border-width solid $field-range-track-border-color
+		border-radius: ($field-range-track-radius * 2)
+
+	&::-ms-fill-upper
+		@include field-range-shadow($field-range-track-shadow-size, $field-range-track-shadow-blur, $field-range-track-shadow-color)
+		background: $field-range-track-color
+		border: $field-range-track-border-width solid $field-range-track-border-color
+		border-radius: ($field-range-track-radius * 2)
+
+	&::-ms-thumb
+		@include field-range-thumb
+		margin-top: math.div($field-range-track-height, 4)
+
+	&:disabled
+		&::-webkit-slider-thumb,
+		&::-moz-range-thumb,
+		&::-ms-thumb,
+		&::-webkit-slider-runnable-track,
+		&::-ms-fill-lower,
+		&::-ms-fill-upper
+			cursor: not-allowed
