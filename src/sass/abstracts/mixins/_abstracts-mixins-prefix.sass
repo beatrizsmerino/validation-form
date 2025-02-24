@@ -6,23 +6,8 @@
 
 
 
-// PREFIX
-// ------------------------------------
 @mixin prefix($property, $value, $prefixes: webkit moz ms o)
 	@each $prefix in $prefixes
 		#{"-" + $prefix + "-" + $property}: $value
 
 	#{$property}: $value
-
-
-
-
-
-// TRANSFORM
-// ------------------------------------
-@mixin prefix--multiple($declarations, $prefixes: webkit moz ms o)
-	@each $property, $value in $declarations
-		@each $prefix in $prefixes
-			#{"-" + $prefix + "-" + $property}: $value
-
-		#{$property}: $value

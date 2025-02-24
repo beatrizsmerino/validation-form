@@ -1,0 +1,78 @@
+// COMPONENTS
+// FORM-INPUT-CHECK
+// =================================================
+@use "sass:color"
+@use "sass:math"
+@use "../abstracts/index" as *
+
+
+
+
+
+.field-check
+	width: 100%
+	height: $field-check-input-size
+	padding-left: $field-check-input-size
+	display: flex
+	align-items: center
+	position: relative
+	font-size: 1.6rem
+	user-select: none
+	cursor: pointer
+
+	// On mouse-over
+	&:hover
+		.field-check__input ~ .field-check__mark
+			background-color: color.scale($color: $color-brand-1, $lightness: math.div($field-check-contrast, -1))
+
+	&__label
+		margin-left: $field-check-label-margin-left
+		position: relative
+
+	// Hide the browser's default checkbox
+	&__input
+		width: $field-check-input-size
+		height: $field-check-input-size
+		margin: 0
+		padding: 0
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		cursor: pointer
+
+		// When the checkbox is checked
+		&:checked ~ .field-check__mark
+			background-color: $field-check-input-background-color-checked
+
+		// Show the checkmark when checked
+		&:checked ~ .field-check__mark:after
+			display: block
+
+		&[type="radio"] ~ .field-check__mark
+			border-radius: 50%
+
+	// Create a custom checkbox
+	&__mark
+		width: $field-check-input-size
+		height: $field-check-input-size
+		position: absolute
+		top: 0
+		left: 0
+		border-width: $field-check-input-border
+		border-style: solid
+		border-color: $field-check-input-border-color
+		background-color: $field-check-input-background-color
+
+		// Create the checkmark/indicator (hidden when not checked)
+		&:after
+			content: ""
+			display: none
+			width: #{$field-check-mark-width}rem
+			height: #{$field-check-mark-height}rem
+			position: absolute
+			top: calc(50% - #{math.div($field-check-mark-height, 2)}rem)
+			left: calc(50% - #{math.div($field-check-mark-width, 2)}rem)
+			border: solid $field-check-mark-color
+			border-width: 0 0.3rem 0.3rem 0
+			transform: rotate(45deg)

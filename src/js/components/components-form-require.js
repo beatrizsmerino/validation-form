@@ -18,15 +18,15 @@ function fieldRequired(requiredAsterisk) {
 
 
 function checkRequired(requiredAsterisk) {
-	$(".check__input[required]")
-		.closest(".check")
-		.find(".check__label")
+	$(".field-check__input[required]")
+		.closest(".field-check")
+		.find(".field-check__label")
 		.append(requiredAsterisk);
-	$(".form__list .check__input[required]")
+	$(".form__list .field-check__input[required]")
 		.closest(".form__item")
 		.find(".label")
 		.append(requiredAsterisk);
-	$(".form__list .check__label").find(".required").remove();
+	$(".form__list .field-check__label").find(".required").remove();
 }
 
 
