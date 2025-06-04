@@ -20,7 +20,7 @@
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
 		"browser-sync": "^3.0.4",
-		"gulp": "^5.0.0",
+		"gulp": "^5.0.1",
 		"gulp-autoprefixer": "^9.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-clean-css": "^4.3.0",
