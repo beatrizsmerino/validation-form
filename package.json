@@ -1,5 +1,5 @@
 {
-	"version": "2.2.6",
+	"version": "2.2.7",
 	"name": "validation-form",
 	"description": "Customized form with validation for different types of fields.",
 	"author": "beatrizsmerino@gmail.com",
@@ -12,30 +12,45 @@
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.26.9",
-		"@babel/preset-env": "^7.26.9",
-		"@commitlint/cli": "^19.7.1",
-		"@commitlint/config-conventional": "^19.7.1",
+		"@babel/core": "^7.28.5",
+		"@babel/preset-env": "^7.28.5",
+		"@commitlint/cli": "^20.1.0",
+		"@commitlint/config-conventional": "^20.0.0",
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
-		"browser-sync": "^3.0.3",
-		"gulp": "^5.0.0",
-		"gulp-autoprefixer": "^9.0.0",
+		"browser-sync": "^3.0.4",
+		"gulp": "^5.0.1",
+		"gulp-autoprefixer": "^10.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-clean-css": "^4.3.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-line-ending-corrector": "^1.0.3",
-		"gulp-rename": "^2.0.0",
-		"gulp-sass": "^6.0.0",
+		"gulp-rename": "^2.1.0",
+		"gulp-sass": "^6.0.1",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^9.1.7",
-		"sass": "^1.85.0"
+		"sass": "^1.94.2"
 	},
 	"engines": {
 		"node": "20.18.0",
 		"npm": "10.8.2",
 		"gulp-cli": "3.0.0"
+	},
+	"overrides": {
+		"json5": "^2.2.3",
+		"postcss": "^8.4.31",
+		"@gulp-sourcemaps/identity-map": {
+			"postcss": "^8.4.31"
+		},
+		"babel-core": {
+			"json5": "^2.2.3",
+			"babel-traverse": "npm:@babel/traverse@^7.28.5",
+			"babel-types": "npm:@babel/types@^7.28.5"
+		},
+		"babel-preset-env": {
+			"babel-traverse": "npm:@babel/traverse@^7.28.5"
+		}
 	}
 }
