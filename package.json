@@ -4,6 +4,21 @@
 	"description": "Customized form with validation for different types of fields.",
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/beatrizsmerino/validation-form.git"
+	},
+	"homepage": "https://beatrizsmerino.github.io/validation-form",
+	"bugs": {
+		"url": "https://github.com/beatrizsmerino/validation-form/issues"
+	},
+	"keywords": [
+		"javascript",
+		"form",
+		"validation",
+		"gulp",
+		"sass"
+	],
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
