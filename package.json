@@ -29,8 +29,8 @@
 	"devDependencies": {
 		"@babel/core": "^7.28.5",
 		"@babel/preset-env": "^7.28.5",
-		"@commitlint/cli": "^20.1.0",
-		"@commitlint/config-conventional": "^20.0.0",
+		"@commitlint/cli": "^20.2.0",
+		"@commitlint/config-conventional": "^20.2.0",
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
@@ -46,7 +46,7 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^9.1.7",
-		"sass": "^1.94.2"
+		"sass": "^1.97.0"
 	},
 	"engines": {
 		"node": "20.18.0",
