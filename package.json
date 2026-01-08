@@ -46,7 +46,7 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^9.1.7",
-		"sass": "^1.97.1"
+		"sass": "^1.97.2"
 	},
 	"engines": {
 		"node": "24.12.0",
