@@ -1,5 +1,5 @@
 {
-	"version": "2.4.3",
+	"version": "2.5.0",
 	"name": "validation-form",
 	"description": "Customized form with validation for different types of fields.",
 	"author": "beatrizsmerino@gmail.com",
@@ -27,10 +27,10 @@
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.28.5",
-		"@babel/preset-env": "^7.28.5",
-		"@commitlint/cli": "^20.2.0",
-		"@commitlint/config-conventional": "^20.2.0",
+		"@babel/core": "^7.28.6",
+		"@babel/preset-env": "^7.28.6",
+		"@commitlint/cli": "^20.3.1",
+		"@commitlint/config-conventional": "^20.3.1",
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
@@ -46,10 +46,10 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^9.1.7",
-		"sass": "^1.97.1"
+		"sass": "^1.97.2"
 	},
 	"engines": {
-		"node": "24.12.0",
+		"node": "24.13.0",
 		"npm": "11.6.2",
 		"gulp-cli": "3.0.0"
 	},
