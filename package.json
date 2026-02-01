@@ -30,7 +30,7 @@
 		"@babel/core": "^7.28.6",
 		"@babel/preset-env": "^7.28.6",
 		"@commitlint/cli": "^20.4.0",
-		"@commitlint/config-conventional": "^20.3.1",
+		"@commitlint/config-conventional": "^20.4.0",
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
