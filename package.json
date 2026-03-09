@@ -3,7 +3,7 @@
 	"name": "validation-form",
 	"description": "Customized form with validation for different types of fields.",
 	"author": "beatrizsmerino@gmail.com",
-	"license": "ISC",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/beatrizsmerino/validation-form.git"

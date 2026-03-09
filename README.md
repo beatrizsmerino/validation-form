@@ -406,3 +406,7 @@ gulp icon
 ## 🚧 Status
 
 There is still room for improvement in validation, such as the implementation of showing/hiding fields dynamically as the user fills/hides them... and many other potential areas.
+
+## 📄 License
+
+This project is licensed under the `MIT` License, which allows free use, modification and distribution. See [LICENSE](LICENSE) for details.
