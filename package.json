@@ -2,7 +2,11 @@
 	"version": "2.5.0",
 	"name": "validation-form",
 	"description": "Customized form with validation for different types of fields.",
-	"author": "beatrizsmerino@gmail.com",
+	"author": {
+		"name": "Beatriz Sopeña Merino",
+		"email": "beatrizsmerino@gmail.com",
+		"url": "https://github.com/beatrizsmerino"
+	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
