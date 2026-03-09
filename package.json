@@ -1,6 +1,7 @@
 {
 	"version": "2.5.0",
 	"name": "validation-form",
+	"private": true,
 	"description": "Customized form with validation for different types of fields.",
 	"author": {
 		"name": "Beatriz Sopeña Merino",
