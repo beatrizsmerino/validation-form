@@ -1,9 +1,14 @@
 {
-	"version": "2.5.0",
+	"version": "2.6.0",
 	"name": "validation-form",
+	"private": true,
 	"description": "Customized form with validation for different types of fields.",
-	"author": "beatrizsmerino@gmail.com",
-	"license": "ISC",
+	"author": {
+		"name": "Beatriz Sopeña Merino",
+		"email": "beatrizsmerino@gmail.com",
+		"url": "https://github.com/beatrizsmerino"
+	},
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/beatrizsmerino/validation-form.git"
@@ -54,8 +59,6 @@
 		"gulp-cli": "3.0.0"
 	},
 	"overrides": {
-		"json5": "^2.2.3",
-		"postcss": "^8.4.31",
 		"@gulp-sourcemaps/identity-map": {
 			"postcss": "^8.4.31"
 		},
