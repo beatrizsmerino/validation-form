@@ -7,10 +7,6 @@
 @use "../variables/abstracts-variables-breakpoints" as *;
 @use "../functions/abstracts-functions-contains" as *;
 
-
-
-
-
 @mixin media($breakpoint, $rule: "max", $dimension: "width", $unit: "px") {
 	$rules: "max", "min";
 	$dimensions: "width", "height";

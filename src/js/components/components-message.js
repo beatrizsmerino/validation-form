@@ -2,10 +2,6 @@
 // MESSAGE
 // =================================================
 
-
-
-
-
 function messageOpen() {
 	$(".message__open").on("click", function (e) {
 		e.preventDefault();
@@ -14,19 +10,12 @@ function messageOpen() {
 	});
 }
 
-
-
-
-
 function messageClose() {
 	$(".message__close").on("click", function () {
-		$('.message').removeClass('is-show');
+		$(".message").removeClass("is-show");
 		$(".message").addClass("is-hide");
 	});
 }
-
-
-
 
 (function () {
 	$(document).ready(function () {

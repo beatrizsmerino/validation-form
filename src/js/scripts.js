@@ -5,10 +5,6 @@
  * @copyright (2021)
  */
 
-
-
-
-
 (function () {
 	$(document).ready(function () {
 		$("form").submit(function (e) {
