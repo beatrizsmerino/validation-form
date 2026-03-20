@@ -29,7 +29,7 @@
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"prepare": "husky",
-		"prettier:fix": "prettier --write \"./**/*.{css,scss,sass,json,js,cjs,mjs}\"",
+		"prettier:fix": "prettier --write \"./**/*.{css,scss,json,js,cjs,mjs}\"",
 		"lint": "npm run prettier:fix",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
