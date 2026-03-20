@@ -5,6 +5,8 @@
 # FOLDERS
 .git
 dist
+src/icomoon
+src/js/libs
 
 # FILES
 .gitignore
