@@ -1,0 +1,12 @@
+# path/to/project/root/.prettierrc
+# /node_modules/* and /bower_components/* in the project root are ignored by default
+
+
+# FOLDERS
+.git
+dist
+src/icomoon
+src/js/libs
+
+# FILES
+.gitignore

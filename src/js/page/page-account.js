@@ -2,10 +2,6 @@
 // ACCOUNT
 // =================================================
 
-
-
-
-
 (function () {
 	var accountFormValidate = {
 		rules: {

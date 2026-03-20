@@ -59,39 +59,33 @@ const pathsFront = {
 			//----------------
 			`${paths.src.js}scripts.js`,
 		],
-		icons: paths.src.icons
+		icons: paths.src.icons,
 	},
 	dist: {
 		html: paths.dist.base,
 		css: paths.dist.css,
 		js: paths.dist.js,
-		icons: paths.dist.icons
-	}
+		icons: paths.dist.icons,
+	},
 };
 
 // FUNCTIONS USED IN THE TASKS
 // =================================================
 function copyDirectory(directoryToCopy, directoryOutput) {
 	return gulp
-		.src(
-			`${directoryToCopy}${paths.files.base}`,
-			{
-				encoding: false
-			}
-		)
+		.src(`${directoryToCopy}${paths.files.base}`, {
+			encoding: false,
+		})
 		.pipe(gulp.dest(directoryOutput));
-};
+}
 
 function copyFiles(filesToCopy, directoryOutput) {
 	return gulp
-		.src(
-			filesToCopy,
-			{
-				encoding: false
-			}
-		)
+		.src(filesToCopy, {
+			encoding: false,
+		})
 		.pipe(gulp.dest(directoryOutput));
-};
+}
 
 function sassCompile(src, dist, fileName) {
 	return gulp
@@ -99,29 +93,24 @@ function sassCompile(src, dist, fileName) {
 		.pipe(
 			gulpSourcemaps.init({
 				loadMaps: true,
-			})
+			}),
 		)
 		.pipe(
 			sassCompiler({
 				style: "compressed",
 				silenceDeprecations: ["legacy-js-api"],
-			}).on(
-				"error",
-				sassCompiler.logError
-			)
+			}).on("error", sassCompiler.logError),
 		)
 		.pipe(
 			gulpAutoprefixer({
-				overrideBrowserslist: [
-					"last 2 versions",
-				],
-			})
+				overrideBrowserslist: ["last 2 versions"],
+			}),
 		)
 		.pipe(gulpSourcemaps.write())
 		.pipe(gulpLineEndingCorrector())
 		.pipe(gulpRename(fileName))
 		.pipe(gulp.dest(dist));
-};
+}
 
 function cssCompile(src, dist, fileName) {
 	return gulp
@@ -130,7 +119,7 @@ function cssCompile(src, dist, fileName) {
 			gulpSourcemaps.init({
 				loadMaps: true,
 				largeFile: true,
-			})
+			}),
 		)
 		.pipe(gulpCleanCss())
 		.pipe(gulpSourcemaps.write("./maps/"))
@@ -144,16 +133,14 @@ function jsCompile(src, dist, fileName) {
 		.src(src)
 		.pipe(
 			gulpBabel({
-				presets: [
-					"@babel/preset-env",
-				],
-			})
+				presets: ["@babel/preset-env"],
+			}),
 		)
 		.pipe(gulpConcat(fileName))
 		.pipe(gulpUglify())
 		.pipe(gulpLineEndingCorrector())
 		.pipe(gulp.dest(dist));
-};
+}
 
 // FUNCTIONS & TASKS
 // =================================================
@@ -161,110 +148,63 @@ function createServer() {
 	createBrowserSync.init({
 		server: {
 			baseDir: paths.dist.base,
-			browser: [
-				"google-chrome",
-				"firefox",
-			],
+			browser: ["google-chrome", "firefox"],
 		},
 	});
-};
+}
 
 // HTML
 // -------------------------------------------------
 function front__htmlCopy() {
-	return copyFiles(
-		pathsFront.src.html,
-		pathsFront.dist.html
-	);
-};
+	return copyFiles(pathsFront.src.html, pathsFront.dist.html);
+}
 
 // CSS
 // -------------------------------------------------
 function front__sassCompile() {
-	return sassCompile(
-		pathsFront.src.sass,
-		pathsFront.dist.css,
-		"styles.min.css"
-	);
-};
+	return sassCompile(pathsFront.src.sass, pathsFront.dist.css, "styles.min.css");
+}
 
 // JS
 // -------------------------------------------------
 function front__jsLibCopy() {
-	return copyDirectory(
-		`${paths.src.js}libs/`,
-		`${paths.dist.js}libs/`
-	);
-};
+	return copyDirectory(`${paths.src.js}libs/`, `${paths.dist.js}libs/`);
+}
 
 function front__jsCompile() {
-	return jsCompile(
-		pathsFront.src.js,
-		pathsFront.dist.js,
-		"scripts.min.js"
-	);
-};
+	return jsCompile(pathsFront.src.js, pathsFront.dist.js, "scripts.min.js");
+}
 
 // ICON
 // -------------------------------------------------
 function front__fontsIcomoonCopy() {
-	return copyDirectory(
-		`${pathsFront.src.icons}fonts/`,
-		`${pathsFront.dist.icons}fonts/`
-	);
-};
+	return copyDirectory(`${pathsFront.src.icons}fonts/`, `${pathsFront.dist.icons}fonts/`);
+}
 
 function front__cssIcomoonMinify() {
-	return cssCompile(
-		`${paths.src.icons}style.css`,
-		paths.dist.icons,
-		"fonts.min.css"
-	);
-};
+	return cssCompile(`${paths.src.icons}style.css`, paths.dist.icons, "fonts.min.css");
+}
 
 // WATCH
 // =================================================
 function watch() {
 	createServer();
 
-	gulp.watch(
-		`${paths.src.base}${paths.files.html}`,
-		front__htmlCopy
-	);
+	gulp.watch(`${paths.src.base}${paths.files.html}`, front__htmlCopy);
 
-	gulp.watch(
-		`${paths.src.sass}${paths.files.sass}`,
-		front__sassCompile
-	);
+	gulp.watch(`${paths.src.sass}${paths.files.sass}`, front__sassCompile);
 
-	gulp.watch(
-		`${paths.src.js}${paths.files.js}`,
-		gulp.series(
-			front__jsLibCopy,
-			front__jsCompile
-		)
-	);
+	gulp.watch(`${paths.src.js}${paths.files.js}`, gulp.series(front__jsLibCopy, front__jsCompile));
 
-	gulp.watch(
-		`${paths.src.icons}${paths.files.base}`,
-		gulp.series(
-			front__fontsIcomoonCopy,
-			front__cssIcomoonMinify
-		)
-	);
+	gulp.watch(`${paths.src.icons}${paths.files.base}`, gulp.series(front__fontsIcomoonCopy, front__cssIcomoonMinify));
 
-	gulp.watch(
-		[
-			`${paths.dist.base}${paths.files.html}`,
-			`${paths.dist.css}${paths.files.css}`,
-			`${paths.dist.js}${paths.files.js}`,
-			`${paths.dist.icons}${paths.files.base}`,
-		]
-	).on(
-		"change",
-		reloadBrowserSync
-	);
-};
+	gulp.watch([
+		`${paths.dist.base}${paths.files.html}`,
+		`${paths.dist.css}${paths.files.css}`,
+		`${paths.dist.js}${paths.files.js}`,
+		`${paths.dist.icons}${paths.files.base}`,
+	]).on("change", reloadBrowserSync);
+}
 
 // EXPORTS
 // =================================================
@@ -276,7 +216,7 @@ export {
 	front__jsCompile,
 	front__fontsIcomoonCopy,
 	front__cssIcomoonMinify,
-	watch
+	watch,
 };
 
 // TASKS
@@ -290,14 +230,11 @@ gulp.task(
 		front__jsCompile,
 		front__fontsIcomoonCopy,
 		front__cssIcomoonMinify,
-		watch
-	)
+		watch,
+	),
 );
 
-gulp.task(
-	"serve",
-	createServer
-);
+gulp.task("serve", createServer);
 
 gulp.task(
 	"build",
@@ -307,37 +244,16 @@ gulp.task(
 		front__jsLibCopy,
 		front__jsCompile,
 		front__fontsIcomoonCopy,
-		front__cssIcomoonMinify
-	)
+		front__cssIcomoonMinify,
+	),
 );
 
-gulp.task(
-	"html",
-	front__htmlCopy
-);
+gulp.task("html", front__htmlCopy);
 
-gulp.task(
-	"css",
-	front__sassCompile
-);
+gulp.task("css", front__sassCompile);
 
-gulp.task(
-	"js",
-	gulp.series(
-		front__jsLibCopy,
-		front__jsCompile
-	)
-);
+gulp.task("js", gulp.series(front__jsLibCopy, front__jsCompile));
 
-gulp.task(
-	"icon",
-	gulp.series(
-		front__fontsIcomoonCopy,
-		front__cssIcomoonMinify
-	)
-);
+gulp.task("icon", gulp.series(front__fontsIcomoonCopy, front__cssIcomoonMinify));
 
-gulp.task(
-	"watch",
-	watch
-);
+gulp.task("watch", watch);
