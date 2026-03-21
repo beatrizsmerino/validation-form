@@ -30,7 +30,7 @@
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"prepare": "husky",
 		"prettier:fix": "prettier --write './**/*.{css,scss,json,js,cjs,mjs}'",
-		"lint": "npm run prettier:fix",
+		"lint": "npm run prettier:fix && true",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
@@ -53,6 +53,7 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^9.1.7",
+		"lint-staged": "^16.4.0",
 		"prettier": "^3.8.1",
 		"sass": "^1.98.0"
 	},
