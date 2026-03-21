@@ -4,6 +4,14 @@ module.exports = {
 		"stylelint-config-sass-guidelines",
 		"stylelint-config-property-sort-order-smacss",
 	],
+	"overrides": [
+		{
+			"files": [
+				"**/*.sass",
+			],
+			"customSyntax": "postcss-sass",
+		},
+	],
 	"plugins": [
 		"stylelint-scss",
 	],
