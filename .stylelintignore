@@ -11,3 +11,4 @@ src/js/libs
 # FILES
 .gitignore
 src/sass/animations/_animations-animate-css.scss
+src/sass/base/_base-reset-normalize.scss
