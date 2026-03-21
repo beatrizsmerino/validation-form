@@ -4,7 +4,7 @@
 
 function ckeditorValidateFindField() {
 	var formId = $("form").attr("id");
-	var textarea = $("#" + formId + " " + ".ckeditor");
+	var textarea = $("#" + formId + " .ckeditor");
 
 	var arrayTextareaId = [];
 	textarea.each(function () {
