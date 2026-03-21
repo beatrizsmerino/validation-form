@@ -58,7 +58,7 @@ function ckeditorCreatePlaceholder(textareaId) {
 	var textarea = $("#" + textareaId);
 	var textareaPlaceholder = textarea.attr("placeholder");
 
-	if (textareaPlaceholder != undefined) {
+	if (typeof textareaPlaceholder !== "undefined") {
 		ckeditorIframe
 			.contents()
 			.find("body")
