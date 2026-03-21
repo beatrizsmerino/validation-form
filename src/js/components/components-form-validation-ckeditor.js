@@ -79,7 +79,6 @@ function ckeditorAddPlaceholderAll(arrayTextareaId) {
 }
 
 function ckeditorRemovePlaceholder(textareaId) {
-	var textarea = $("#" + textareaId);
 	var ckeditorIframe = $("#cke_" + textareaId + " iframe");
 	ckeditorGetPlaceholder(ckeditorIframe).remove();
 }

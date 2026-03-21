@@ -7,8 +7,7 @@
 // ------------------
 var fieldMessageRequired = "This field is required",
 	fieldMessageLetter = "Please enter only letters",
-	fieldMessageLengthTlf = "The phone must have 9 digits",
-	fieldMessageNovalid = "Please enter other social media, it is already in use";
+	fieldMessageLengthTlf = "The phone must have 9 digits";
 
 // VALIDATE JS - letter
 // ------------------
