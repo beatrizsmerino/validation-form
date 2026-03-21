@@ -4,8 +4,9 @@
 
 # FOLDERS
 .git
-.nuxt
 dist
+src/icomoon
+src/js/libs
 
 # FILES
 .gitignore
