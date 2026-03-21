@@ -188,6 +188,7 @@ module.exports = {
 		"string-no-newline": true,
 		"unit-no-unknown": true,
 		"value-keyword-case": "lower",
+		"annotation-no-unknown": null,
 		"@stylistic/indentation": "tab",
 		"@stylistic/string-quotes": "double",
 	},
