@@ -30,7 +30,8 @@
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"prepare": "husky",
 		"prettier:fix": "prettier --write './**/*.{css,scss,json,yml,yaml,js,cjs,mjs}'",
-		"lint": "npm run prettier:fix && true",
+		"eslint:fix": "eslint './**/*.{json,js,cjs,mjs}' --fix --ignore-path .eslintignore",
+		"lint": "npm run prettier:fix && npm run eslint:fix",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
