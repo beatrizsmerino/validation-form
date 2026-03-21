@@ -5,6 +5,9 @@ module.exports = {
 		"jquery": true,
 		"node": true,
 	},
+	"globals": {
+		"CKEDITOR": "readonly",
+	},
 	"extends": [
 		"prettier",
 		"eslint:recommended",
