@@ -17,6 +17,14 @@ module.exports = {
 				"camelcase": "off",
 			},
 		},
+		{
+			"files": [
+				"src/js/components/components-form-validation-message.js",
+			],
+			"rules": {
+				"no-unused-vars": "off",
+			},
+		},
 	],
 	"extends": [
 		"prettier",

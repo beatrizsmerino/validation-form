@@ -1,6 +1,7 @@
 // COMPONENTS
 // FORM VALIDATION - CKEDITOR
 // =================================================
+/* global fieldMessageRequired */
 
 function ckeditorValidateFindField() {
 	var formId = $("form").attr("id");
