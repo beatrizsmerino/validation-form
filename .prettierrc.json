@@ -9,8 +9,7 @@
 	"overrides": [
 		{
 			"files": [
-				"*.json",
-				".prettierrc"
+				"*.json"
 			],
 			"options": {
 				"parser": "json",
