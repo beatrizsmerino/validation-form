@@ -10,3 +10,4 @@ src/js/libs
 
 # FILES
 .gitignore
+src/sass/animations/_animations-animate-css.scss
