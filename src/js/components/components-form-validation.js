@@ -9,8 +9,8 @@
 // ------------------
 jQuery.validator.addMethod(
 	"letter",
-	function (value, element) {
-		return this.optional(element) || /^[a-zA-Z\s]*$/u.test(value);
+	function(value, element) {
+		return this.optional(element) || (/^[a-zA-Z\s]*$/u).test(value);
 	},
 	fieldMessageLetter,
 );
@@ -19,16 +19,16 @@ jQuery.validator.addMethod(
 // ------------------
 jQuery.validator.addMethod(
 	"lengthTlf",
-	function (value, element) {
-		return this.optional(element) || /^[0-9]{9}$/u.test(value);
+	function(value, element) {
+		return this.optional(element) || (/^[0-9]{9}$/u).test(value);
 	},
 	fieldMessageLengthTlf,
 );
 
 // VALIDATE JS - SETTINGS
 // ------------------
-var validateSettings = {
-	errorPlacement: function (error, element) {
+const validateSettings = {
+	"errorPlacement"(error, element) {
 		if (element.is(":checkbox")) {
 			error.appendTo(element.closest(".form__item"));
 		} else if (element.is(":radio")) {
@@ -39,10 +39,10 @@ var validateSettings = {
 			error.insertAfter(element);
 		}
 	},
-	onkeyup: function (element) {
+	"onkeyup"(element) {
 		this.element(element);
 	},
-	onfocusout: function (element) {
+	"onfocusout"(element) {
 		this.element(element);
 	},
 };

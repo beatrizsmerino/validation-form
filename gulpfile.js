@@ -1,5 +1,3 @@
-"use strict";
-
 // DEPENDENCIES
 // =================================================
 import * as sass from "sass";
@@ -22,133 +20,134 @@ const sassCompiler = gulpSass(sass);
 // SETTINGS: FOLDER/FILE PATHS
 // =================================================
 const paths = {
-	src: {
-		base: "src/",
-		sass: "src/sass/",
-		js: "src/js/",
-		icons: "src/icomoon/",
+	"src": {
+		"base": "src/",
+		"sass": "src/sass/",
+		"js": "src/js/",
+		"icons": "src/icomoon/",
 	},
-	dist: {
-		base: "dist/",
-		css: "dist/css/",
-		js: "dist/js/",
-		icons: "dist/icomoon/",
+	"dist": {
+		"base": "dist/",
+		"css": "dist/css/",
+		"js": "dist/js/",
+		"icons": "dist/icomoon/",
 	},
-	files: {
-		base: "**/*",
-		html: "*.html",
-		sass: "**/*.sass",
-		css: "**/*.css",
-		js: "**/*.js",
+	"files": {
+		"base": "**/*",
+		"html": "*.html",
+		"sass": "**/*.sass",
+		"css": "**/*.css",
+		"js": "**/*.js",
 	},
 };
 
 // FRONT
 // -------------------------------------------------
 const pathsFront = {
-	src: {
-		html: `${paths.src.base}${paths.files.html}`,
-		sass: `${paths.src.sass}styles.sass`,
-		js: [
+	"src": {
+		"html": `${paths.src.base}${paths.files.html}`,
+		"sass": `${paths.src.sass}styles.sass`,
+		"js": [
 			`${paths.src.js}components/components-form-require.js`,
 			`${paths.src.js}components/components-form-validation.js`,
 			`${paths.src.js}components/components-form-validation-ckeditor.js`,
 			`${paths.src.js}components/components-message.js`,
-			//----------------
+
+			// ----------------
 			`${paths.src.js}page/page-account.js`,
-			//----------------
+
+			// ----------------
 			`${paths.src.js}scripts.js`,
 		],
-		icons: paths.src.icons,
+		"icons": paths.src.icons,
 	},
-	dist: {
-		html: paths.dist.base,
-		css: paths.dist.css,
-		js: paths.dist.js,
-		icons: paths.dist.icons,
+	"dist": {
+		"html": paths.dist.base,
+		"css": paths.dist.css,
+		"js": paths.dist.js,
+		"icons": paths.dist.icons,
 	},
 };
 
 // FUNCTIONS USED IN THE TASKS
 // =================================================
 function copyDirectory(directoryToCopy, directoryOutput) {
-	return gulp
-		.src(`${directoryToCopy}${paths.files.base}`, {
-			encoding: false,
-		})
-		.pipe(gulp.dest(directoryOutput));
+	return gulp.
+		src(`${directoryToCopy}${paths.files.base}`, {
+			"encoding": false,
+		}).
+		pipe(gulp.dest(directoryOutput));
 }
 
 function copyFiles(filesToCopy, directoryOutput) {
-	return gulp
-		.src(filesToCopy, {
-			encoding: false,
-		})
-		.pipe(gulp.dest(directoryOutput));
+	return gulp.
+		src(filesToCopy, {
+			"encoding": false,
+		}).
+		pipe(gulp.dest(directoryOutput));
 }
 
 function sassCompile(src, dist, fileName) {
-	return gulp
-		.src(src)
-		.pipe(
-			gulpSourcemaps.init({
-				loadMaps: true,
-			}),
-		)
-		.pipe(
-			sassCompiler({
-				style: "compressed",
-				silenceDeprecations: ["legacy-js-api"],
-			}).on("error", sassCompiler.logError),
-		)
-		.pipe(
-			gulpAutoprefixer({
-				overrideBrowserslist: ["last 2 versions"],
-			}),
-		)
-		.pipe(gulpSourcemaps.write())
-		.pipe(gulpLineEndingCorrector())
-		.pipe(gulpRename(fileName))
-		.pipe(gulp.dest(dist));
+	return gulp.
+		src(src).
+		pipe(gulpSourcemaps.init({
+			"loadMaps": true,
+		})).
+		pipe(sassCompiler({
+			"style": "compressed",
+			"silenceDeprecations": [
+				"legacy-js-api",
+			],
+		}).on("error", sassCompiler.logError)).
+		pipe(gulpAutoprefixer({
+			"overrideBrowserslist": [
+				"last 2 versions",
+			],
+		})).
+		pipe(gulpSourcemaps.write()).
+		pipe(gulpLineEndingCorrector()).
+		pipe(gulpRename(fileName)).
+		pipe(gulp.dest(dist));
 }
 
 function cssCompile(src, dist, fileName) {
-	return gulp
-		.src(src)
-		.pipe(
-			gulpSourcemaps.init({
-				loadMaps: true,
-				largeFile: true,
-			}),
-		)
-		.pipe(gulpCleanCss())
-		.pipe(gulpSourcemaps.write("./maps/"))
-		.pipe(gulpLineEndingCorrector())
-		.pipe(gulpRename(fileName))
-		.pipe(gulp.dest(dist));
+	return gulp.
+		src(src).
+		pipe(gulpSourcemaps.init({
+			"loadMaps": true,
+			"largeFile": true,
+		})).
+		pipe(gulpCleanCss()).
+		pipe(gulpSourcemaps.write("./maps/")).
+		pipe(gulpLineEndingCorrector()).
+		pipe(gulpRename(fileName)).
+		pipe(gulp.dest(dist));
 }
 
 function jsCompile(src, dist, fileName) {
-	return gulp
-		.src(src)
-		.pipe(
-			gulpBabel({
-				presets: ["@babel/preset-env"],
-			}),
-		)
-		.pipe(gulpConcat(fileName))
-		.pipe(gulpUglify())
-		.pipe(gulpLineEndingCorrector())
-		.pipe(gulp.dest(dist));
+	return gulp.
+		src(src).
+		pipe(gulpBabel({
+			"presets": [
+				"@babel/preset-env",
+			],
+		})).
+		pipe(gulpConcat(fileName)).
+		pipe(gulpUglify()).
+		pipe(gulpLineEndingCorrector()).
+		pipe(gulp.dest(dist));
 }
 
 // FUNCTIONS & TASKS
 // =================================================
 function createServer() {
 	createBrowserSync.init({
-		server: {
-			baseDir: paths.dist.base,
-			browser: ["google-chrome", "firefox"],
+		"server": {
+			"baseDir": paths.dist.base,
+			"browser": [
+				"google-chrome",
+				"firefox",
+			],
 		},
 	});
 }

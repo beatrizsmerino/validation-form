@@ -2,67 +2,73 @@
 // ACCOUNT
 // =================================================
 
-(function () {
-	var accountFormValidate = {
-		rules: {
-			firstName: {
-				required: true,
-				letter: true,
+(function() {
+	const accountFormValidate = {
+		"rules": {
+			"firstName": {
+				"required": true,
+				"letter": true,
 			},
-			lastName: {
-				required: true,
-				letter: true,
+			"lastName": {
+				"required": true,
+				"letter": true,
 			},
-			dateBirth: {
-				required: true,
+			"dateBirth": {
+				"required": true,
 			},
-			age: {
-				digits: true,
+			"age": {
+				"digits": true,
 			},
-			photo: {
-				required: true,
+			"photo": {
+				"required": true,
 			},
+
 			// gender: {},
 			// backgroundColor: {},
 			// textColor: {}
-			//------------------------------
+			// ------------------------------
 			// address: {}
-			country: {
-				required: true,
+			"country": {
+				"required": true,
 			},
+
 			// province: {},
-			language: {
-				required: true,
+			"language": {
+				"required": true,
 			},
-			//------------------------------
-			phone: {
-				lengthTlf: true,
+
+			// ------------------------------
+			"phone": {
+				"lengthTlf": true,
 			},
-			email: {
-				email: true,
+			"email": {
+				"email": true,
 			},
-			//------------------------------
-			professionalDescription: {
-				required: true,
+
+			// ------------------------------
+			"professionalDescription": {
+				"required": true,
 			},
+
 			// companyName:{},
 			// companyPosition:{},
 			// experienceYears:{},
-			experienceGrade: {
-				required: true,
+			"experienceGrade": {
+				"required": true,
 			},
-			profesionalStatus: {
-				required: true,
+			"profesionalStatus": {
+				"required": true,
 			},
-			educationDescription: {
-				required: true,
+			"educationDescription": {
+				"required": true,
 			},
-			skills: {
-				required: true,
+			"skills": {
+				"required": true,
 			},
-			skillsDescription: {
-				required: true,
+			"skillsDescription": {
+				"required": true,
 			},
+
 			// browserChrome:{},
 			// browserFirefox:{},
 			// browserSafari:{},
@@ -79,104 +85,145 @@
 			// learningDescription: {},
 			// proyectsDescription: {},
 			// collaborationsDescription: {},
-			//------------------------------
-			gitHubUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			// ------------------------------
+			"gitHubUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			gitLabUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"gitLabUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			stackOverflowUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"stackOverflowUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			linkedinUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"linkedinUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			facebookUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"facebookUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			twitterUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"twitterUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			instagramUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"instagramUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			mediumUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"mediumUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			codepenUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"codepenUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			codeSandboxUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"codeSandboxUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			jsFiddleUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"jsFiddleUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			webUrl: {
-				url: true,
-				require_from_group: [1, ".social-media__field"],
+			"webUrl": {
+				"url": true,
+				"require_from_group": [
+					1,
+					".social-media__field",
+				],
 			},
-			//------------------------------
-			aboutDescription: {
-				required: true,
+
+			// ------------------------------
+			"aboutDescription": {
+				"required": true,
 			},
-			hobbies: {
-				required: true,
+			"hobbies": {
+				"required": true,
 			},
-			//------------------------------
-			oldUsername: {
-				required: true,
+
+			// ------------------------------
+			"oldUsername": {
+				"required": true,
 			},
-			newUsername: {
-				required: true,
+			"newUsername": {
+				"required": true,
 			},
-			//------------------------------
-			oldEmail: {
-				required: true,
-				email: true,
+
+			// ------------------------------
+			"oldEmail": {
+				"required": true,
+				"email": true,
 			},
-			newEmail: {
-				required: true,
-				email: true,
+			"newEmail": {
+				"required": true,
+				"email": true,
 			},
-			repeatNewEmail: {
-				required: true,
-				email: true,
-				equalTo: "#newEmail",
+			"repeatNewEmail": {
+				"required": true,
+				"email": true,
+				"equalTo": "#newEmail",
 			},
+
 			// displayEmail: {},
-			//------------------------------
-			oldPassword: {
-				required: true,
+			// ------------------------------
+			"oldPassword": {
+				"required": true,
 			},
-			newPassword: {
-				required: true,
+			"newPassword": {
+				"required": true,
 			},
-			repeatNewPassword: {
-				required: true,
-				equalTo: "#newPassword",
+			"repeatNewPassword": {
+				"required": true,
+				"equalTo": "#newPassword",
 			},
-			//------------------------------
+
+			// ------------------------------
 			// statusActive:{},
-			//------------------------------
-			termsAccept: {
-				required: true,
+			// ------------------------------
+			"termsAccept": {
+				"required": true,
 			},
 		},
-		messages: {},
+		"messages": {},
 	};
 
 	$("#accountForm").validate(accountFormValidate);
-})();
+}());

@@ -2,6 +2,6 @@
 // FORM VALIDATION - MESSAGES
 // =================================================
 
-var fieldMessageRequired = "This field is required",
+const fieldMessageLengthTlf = "The phone must have 9 digits",
 	fieldMessageLetter = "Please enter only letters",
-	fieldMessageLengthTlf = "The phone must have 9 digits";
+	fieldMessageRequired = "This field is required";
