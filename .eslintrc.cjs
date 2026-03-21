@@ -2,6 +2,7 @@
 module.exports = {
 	"env": {
 		"browser": true,
+		"jquery": true,
 		"node": true,
 	},
 	"extends": [
