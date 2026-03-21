@@ -14,12 +14,12 @@ function ckeditorValidateFindField() {
 }
 
 function ckeditorValidate(textareaId) {
-	var ckeditorIframe = $("#cke_" + textareaId + " iframe"),
-		ckeditorText = ckeditorIframe.contents().find("body").html(),
-		ckeditorTextFormatted = ckeditorText.replace(/<[^>]+>/gu, ""),
-		ckeditorDiv = ckeditorIframe.parent().parent().parent(),
-		textarea = ckeditorDiv.parent().find("textarea"),
-		textareaLabel = "label[for='" + textareaId + "'] span";
+	var ckeditorIframe = $("#cke_" + textareaId + " iframe");
+	var ckeditorText = ckeditorIframe.contents().find("body").html();
+	var ckeditorTextFormatted = ckeditorText.replace(/<[^>]+>/gu, "");
+	var ckeditorDiv = ckeditorIframe.parent().parent().parent();
+	var textarea = ckeditorDiv.parent().find("textarea");
+	var textareaLabel = "label[for='" + textareaId + "'] span";
 
 	var errorLabelId = textareaId + "-error";
 	var errorLabel =
