@@ -163,22 +163,10 @@ module.exports = {
 		],
 		"selector-pseudo-class-no-unknown": [
 			true,
-			{
-				"ignorePseudoClasses": [
-					"v-deep",
-					"deep",
-				],
-			},
 		],
 		"selector-pseudo-element-colon-notation": "single",
 		"selector-pseudo-element-no-unknown": [
 			true,
-			{
-				"ignorePseudoElements": [
-					"v-deep",
-					"deep",
-				],
-			},
 		],
 		"selector-type-case": "lower",
 		"selector-type-no-unknown": [
