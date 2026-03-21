@@ -28,7 +28,7 @@ function ckeditorValidate(textareaId) {
 		"-error' class='error' for='" +
 		textareaId +
 		"'>" +
-		field_message_required +
+		fieldMessageRequired +
 		"</label>";
 
 	if (ckeditorTextFormatted == "") {

@@ -5,10 +5,10 @@
 
 // VALIDATE JS - MESSAGES
 // ------------------
-var field_message_required = "This field is required",
-	field_message_letter = "Please enter only letters",
-	field_message_lenghtTlf = "The phone must have 9 digits",
-	field_message_novalid = "Please enter other social media, it is already in use";
+var fieldMessageRequired = "This field is required",
+	fieldMessageLetter = "Please enter only letters",
+	fieldMessageLengthTlf = "The phone must have 9 digits",
+	fieldMessageNovalid = "Please enter other social media, it is already in use";
 
 // VALIDATE JS - letter
 // ------------------
@@ -17,7 +17,7 @@ jQuery.validator.addMethod(
 	function (value, element) {
 		return this.optional(element) || /^[a-zA-Z\s]*$/u.test(value);
 	},
-	field_message_letter,
+	fieldMessageLetter,
 );
 
 // VALIDATE JS - lengthTlf
@@ -27,7 +27,7 @@ jQuery.validator.addMethod(
 	function (value, element) {
 		return this.optional(element) || /^[0-9]{9}$/u.test(value);
 	},
-	field_message_lenghtTlf,
+	fieldMessageLengthTlf,
 );
 
 // VALIDATE JS - SETTINGS
