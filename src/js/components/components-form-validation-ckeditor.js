@@ -16,7 +16,7 @@ function ckeditorValidateFindField() {
 function ckeditorValidate(textareaId) {
 	var ckeditorIframe = $("#cke_" + textareaId + " iframe"),
 		ckeditorText = ckeditorIframe.contents().find("body").html(),
-		ckeditorTextFormatted = ckeditorText.replace(/<[^>]+>/g, ""),
+		ckeditorTextFormatted = ckeditorText.replace(/<[^>]+>/gu, ""),
 		ckeditorDiv = ckeditorIframe.parent().parent().parent(),
 		textarea = ckeditorDiv.parent().find("textarea"),
 		textareaLabel = "label[for='" + textareaId + "'] span";

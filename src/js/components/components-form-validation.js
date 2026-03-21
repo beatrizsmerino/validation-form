@@ -15,7 +15,7 @@ var field_message_required = "This field is required",
 jQuery.validator.addMethod(
 	"letter",
 	function (value, element) {
-		return this.optional(element) || /^[a-zA-Z\s]*$/.test(value);
+		return this.optional(element) || /^[a-zA-Z\s]*$/u.test(value);
 	},
 	field_message_letter,
 );
@@ -25,7 +25,7 @@ jQuery.validator.addMethod(
 jQuery.validator.addMethod(
 	"lengthTlf",
 	function (value, element) {
-		return this.optional(element) || /^[0-9]{9}$/.test(value);
+		return this.optional(element) || /^[0-9]{9}$/u.test(value);
 	},
 	field_message_lenghtTlf,
 );
