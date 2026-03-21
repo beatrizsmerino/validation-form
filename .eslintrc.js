@@ -7,18 +7,7 @@ module.exports = {
 	"extends": [
 		"prettier",
 		"eslint:recommended",
-		"plugin:vue/recommended",
 		"plugin:json/recommended",
-	],
-	"overrides": [
-		{
-			"files": [
-				"*.vue",
-			],
-			"rules": {
-				"indent": "off",
-			},
-		},
 	],
 	"parserOptions": {
 		"ecmaFeatures": {
@@ -30,7 +19,6 @@ module.exports = {
 		"sourceType": "module",
 	},
 	"plugins": [
-		"vue",
 		"prettier",
 		"json",
 	],
