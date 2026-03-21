@@ -8,6 +8,16 @@ module.exports = {
 	"globals": {
 		"CKEDITOR": "readonly",
 	},
+	"overrides": [
+		{
+			"files": [
+				"gulpfile.js",
+			],
+			"rules": {
+				"camelcase": "off",
+			},
+		},
+	],
 	"extends": [
 		"prettier",
 		"eslint:recommended",
