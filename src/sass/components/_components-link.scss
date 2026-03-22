@@ -1,0 +1,18 @@
+// COMPONENTS
+// LINK
+// =================================================
+@use "../abstracts/index" as *;
+
+
+
+
+
+.link {
+	font-weight: 700;
+	color: $color-brand-1;
+
+	&:hover {
+		color: $color-brand-2;
+		text-decoration: underline;
+	}
+}

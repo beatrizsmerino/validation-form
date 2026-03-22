@@ -1,0 +1,43 @@
+// COMPONENTS
+// FORM-ERROR
+// =================================================
+@use "../abstracts/index" as *;
+
+
+
+
+
+form {
+	label {
+		&.error {
+			width: 100%;
+			margin-top: 0.5rem;
+			display: inline-block;
+			font-weight: 500;
+			font-size: 1.6rem;
+			color: $color-error;
+		}
+	}
+
+	input,
+	textarea,
+	select {
+		&.error {
+			border-color: $color-error;
+		}
+	}
+
+	.field-check {
+		&__input {
+			&.error + .field-check__mark {
+				border-color: $color-error;
+			}
+		}
+
+		&:hover {
+			.field-check__mark {
+				border-color: $color-gray-0;
+			}
+		}
+	}
+}

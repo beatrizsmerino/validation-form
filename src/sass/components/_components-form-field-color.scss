@@ -1,0 +1,46 @@
+// COMPONENTS
+// FORM-FIELD-COLOR
+// =================================================
+@use "../abstracts/index" as *;
+
+
+
+
+
+.field-color {
+	display: flex;
+	align-items: center;
+
+	&:not(:last-child) {
+		margin-bottom: 0.5rem;
+	}
+
+	&__label {
+		margin-left: $field-color-label-margin;
+		font-size: 1.6rem;
+	}
+
+	&__input {
+		width: $field-color-size;
+		height: $field-color-size;
+		padding: 0;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&::-webkit-color-swatch-wrapper {
+			padding: 0;
+			position: relative;
+		}
+
+		&::-webkit-color-swatch {
+			width: 80%;
+			height: 80%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate3d(-50%, -50%, 0);
+			border-radius: 50%;
+			border: none;
+		}
+	}
+}

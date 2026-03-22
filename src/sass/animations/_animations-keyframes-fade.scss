@@ -1,0 +1,55 @@
+// ANIMATIONS
+// KEYFRAMES-FADE
+// =================================================
+@use "../abstracts/index" as *;
+
+
+
+
+
+// FADE IN
+// ----------------------------------------------------------------------
+@include keyframes(fadeIn) {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+// FADE OUT
+// ----------------------------------------------------------------------
+@include keyframes(fadeOut) {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+
+
+// FADE IN OUT
+// ----------------------------------------------------------------------
+@include keyframes(fadeInOut) {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	55% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}

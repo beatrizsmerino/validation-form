@@ -1,0 +1,41 @@
+// COMPONENTS
+// BUTTON
+// =================================================
+@use "../abstracts/index" as *;
+
+
+
+
+
+.button {
+	padding: 1rem 3rem;
+	font-size: 1.8rem;
+	color: $color-gray-100;
+	border: 0.3rem solid $color-gray-0;
+	background-color: $color-gray-0;
+
+	&:hover {
+		color: $color-gray-0;
+		background-color: transparent;
+	}
+
+	&--white {
+		color: $color-gray-0;
+		border-color: $color-gray-100;
+		background-color: $color-gray-100;
+
+		&:hover {
+			color: $color-gray-100;
+		}
+	}
+
+	&__list {
+		margin-top: 2rem;
+
+		>* {
+			&:not(:last-child) {
+				margin-right: 1.6rem;
+			}
+		}
+	}
+}

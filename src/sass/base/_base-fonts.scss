@@ -1,0 +1,63 @@
+// BASE
+// FONTS
+// =================================================
+@use "../abstracts/index" as *;
+
+
+
+
+
+// HTML
+// ----------------------------------------------------------------------
+html {
+	font-size: $font-size--html;
+}
+
+
+
+
+
+// BODY
+// ----------------------------------------------------------------------
+body {
+	font-size: $font-size--global;
+}
+
+body,
+textarea {
+	font-family: $font-brand-1;
+}
+
+
+
+
+
+// H1-H6
+// ----------------------------------------------------------------------
+h1 {
+	font-size: $font-size--h1;
+}
+
+h2 {
+	font-size: $font-size--h2;
+}
+
+h3 {
+	font-size: $font-size--h3;
+}
+
+h4 {
+	font-size: $font-size--h4;
+}
+
+h5 {
+	font-size: $font-size--h5;
+}
+
+h6 {
+	font-size: $font-size--h6;
+}
+
+p {
+	line-height: 150%;
+}
