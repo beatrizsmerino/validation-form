@@ -4,6 +4,16 @@ module.exports = {
 		"stylelint-config-sass-guidelines",
 		"stylelint-config-property-sort-order-smacss",
 	],
+	"overrides": [
+		{
+			"files": [
+				"src/sass/abstracts/mixins/_abstracts-mixins-media.scss",
+			],
+			"rules": {
+				"media-query-no-invalid": null,
+			},
+		},
+	],
 	"plugins": [
 		"stylelint-scss",
 	],
