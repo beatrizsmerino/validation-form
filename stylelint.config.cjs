@@ -28,6 +28,9 @@ module.exports = {
 				"ignore": [
 					"after-comment",
 				],
+				"ignoreAtRules": [
+					"else",
+				],
 			},
 		],
 		"at-rule-no-unknown": null,
