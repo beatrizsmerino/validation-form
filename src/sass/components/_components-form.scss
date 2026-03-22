@@ -153,7 +153,6 @@
 		box-shadow: 0 0 1.6rem rgba($color-gray-0, 0.8);
 
 		@include media("md") {
-			display: flex;
 			justify-content: center;
 		}
 	}
