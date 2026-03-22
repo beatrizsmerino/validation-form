@@ -8,7 +8,7 @@
 
 // ZOOM IN
 // ----------------------------------------------------------------------
-@keyframes zoomIn {
+@keyframes zoom-in {
 	from {
 		opacity: 0;
 		transform: scale3d(0.8, 0.8, 0.8);
@@ -26,7 +26,7 @@
 
 // ZOOM OUT
 // ----------------------------------------------------------------------
-@keyframes zoomOut {
+@keyframes zoom-out {
 	from {
 		opacity: 1;
 		transform: scale3d(1, 1, 1);

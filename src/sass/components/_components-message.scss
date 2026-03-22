@@ -73,10 +73,10 @@
 	}
 
 	&.is-show {
-		animation: moveInTopToBottom 0.2s ease-in 0s forwards;
+		animation: move-in-top-to-bottom 0.2s ease-in 0s forwards;
 	}
 
 	&.is-hide {
-		animation: moveOutBottomToTop 0.2s ease-in 0s forwards;
+		animation: move-out-bottom-to-top 0.2s ease-in 0s forwards;
 	}
 }
