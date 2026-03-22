@@ -3,10 +3,6 @@
 // =================================================
 @use "../abstracts/index" as *;
 
-
-
-
-
 .form {
 	&__group {
 		> * {
@@ -31,8 +27,8 @@
 			flex: 1;
 
 			@include media("md") {
-				width: 100%;
 				flex: none;
+				width: 100%;
 			}
 
 			&:not(:last-of-type) {
@@ -45,7 +41,7 @@
 			}
 		}
 
-		>.fieldset {
+		> .fieldset {
 			&:not(:last-of-type) {
 				margin-right: 3rem;
 
@@ -56,17 +52,17 @@
 		}
 
 		// When there are 3+ children, stack earlier (lg instead of md)
-		&:has(> *:first-child:nth-last-child(n+3)) {
+		&:has(> *:first-child:nth-last-child(n + 3)) {
 			@include media("lg") {
 				flex-direction: column;
 			}
 		}
 
-		> *:first-child:nth-last-child(n+3),
-		> *:first-child:nth-last-child(n+3) ~ * {
+		> *:first-child:nth-last-child(n + 3),
+		> *:first-child:nth-last-child(n + 3) ~ * {
 			@include media("lg") {
-				width: 100%;
 				flex: none;
+				width: 100%;
 			}
 
 			&:not(:last-of-type) {
@@ -77,8 +73,8 @@
 			}
 		}
 
-		> .fieldset:first-child:nth-last-child(n+3),
-		> .fieldset:first-child:nth-last-child(n+3) ~ .fieldset {
+		> .fieldset:first-child:nth-last-child(n + 3),
+		> .fieldset:first-child:nth-last-child(n + 3) ~ .fieldset {
 			&:not(:last-of-type) {
 				@include media("lg") {
 					margin-bottom: 4rem;
@@ -108,7 +104,7 @@
 	}
 
 	&__list {
-		>* {
+		> * {
 			&:not(:last-of-type) {
 				margin-bottom: 0.8rem;
 			}
@@ -126,9 +122,9 @@
 	&__field {
 		width: 100%;
 		padding: 1.6rem;
-		font-size: 1.6rem;
 		border: 0.2rem solid $color-gray-0;
 		background-color: $color-gray-100;
+		font-size: 1.6rem;
 
 		&::placeholder {
 			font-weight: 200;
@@ -146,13 +142,13 @@
 	}
 
 	&__buttons-fixed {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		justify-content: flex-end;
 		width: 100%;
 		padding: 1.6rem 2rem;
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		display: flex;
-		justify-content: flex-end;
 		background-color: $color-brand-1;
 		box-shadow: 0 0 1.6rem rgba($color-gray-0, 0.8);
 

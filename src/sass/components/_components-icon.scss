@@ -3,14 +3,10 @@
 // =================================================
 @use "../abstracts/index" as *;
 
-
-
-
-
 .icon {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 
 	i {
 		font-style: normal;

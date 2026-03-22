@@ -4,21 +4,17 @@
 @use "sass:color";
 @use "../abstracts/index" as *;
 
-
-
-
-
 .page {
 	&__body {
-		padding: 6.4rem 0 12.8rem;
 		position: relative;
+		padding: 6.4rem 0 12.8rem;
 	}
 
 	&__title {
 		margin-bottom: 4.8rem;
-		font-weight: 900;
-		font-size: 4.8rem;
 		color: color.scale($color: $color-brand-1, $lightness: -20%);
+		font-size: 4.8rem;
+		font-weight: 900;
 	}
 
 	// &__content

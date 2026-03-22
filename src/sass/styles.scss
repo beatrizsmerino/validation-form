@@ -1,20 +1,12 @@
 // PARTIALS SASS
 // ===============================================================================
 
-
-
-
-
 // BASE
 // ----------------------------------------------------------------------
 // @use "base/base-reset-ericmeyer";
 // @use "base/base-reset-normalize";
 @use "base/base-reset-personal";
 @use "base/base-fonts";
-
-
-
-
 
 // ANIMATIONS
 // ----------------------------------------------------------------------
@@ -23,10 +15,6 @@
 @use "animations/animations-keyframes-move";
 @use "animations/animations-keyframes-radar";
 @use "animations/animations-keyframes-zoom";
-
-
-
-
 
 // COMPONENTS
 // ----------------------------------------------------------------------

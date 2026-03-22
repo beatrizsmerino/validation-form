@@ -3,36 +3,32 @@
 // =================================================
 @use "../abstracts/index" as *;
 
-
-
-
-
 .message {
-	width: 100%;
 	position: fixed;
-	left: 0;
-	top: 0;
 	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translate3d(0, -100%, 0);
+	opacity: 0;
 	background-color: $color-brand-1;
 	box-shadow: 0 0 2rem rgba($color-gray-0, 0.1);
-	opacity: 0;
-	transform: translate3d(0, -100%, 0);
 
 	&__inner {
-		margin: 0.5rem;
 		display: flex;
 		position: relative;
+		margin: 0.5rem;
 	}
 
 	&__text {
 		padding: 1.6rem 3rem 1.6rem 1.6rem;
+		color: $color-gray-95;
 		font-size: 1.6rem;
 		font-weight: 400;
-		color: $color-gray-95;
 
 		.link {
-			font-weight: 700;
 			color: $color-gray-100;
+			font-weight: 700;
 
 			&:hover {
 				text-decoration: underline;
@@ -44,9 +40,9 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+		color: $color-gray-95;
 		font-size: 2rem;
 		font-weight: 600;
-		color: $color-gray-95;
 		cursor: pointer;
 
 		&:hover {

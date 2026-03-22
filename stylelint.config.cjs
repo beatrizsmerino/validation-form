@@ -140,6 +140,7 @@ module.exports = {
 		"scss/declaration-property-value-no-unknown": true,
 		"scss/function-no-unknown": true,
 		"scss/no-global-function-names": null,
+
 		// Allows: BEM pattern (block__element--modifier) + CKEditor classes (cke_*)
 		"selector-class-pattern": [
 			"^(cke_[a-z]+|([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?)$",

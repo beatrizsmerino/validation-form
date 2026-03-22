@@ -5,20 +5,16 @@
 @use "sass:math";
 @use "../abstracts/index" as *;
 
-
-
-
-
 .field-check {
+	display: flex;
+	position: relative;
+	align-items: center;
 	width: 100%;
 	height: $field-check-input-size;
 	padding-left: $field-check-input-size;
-	display: flex;
-	align-items: center;
-	position: relative;
 	font-size: 1.6rem;
-	user-select: none;
 	cursor: pointer;
+	user-select: none;
 
 	// On mouse-over
 	&:hover {
@@ -28,19 +24,19 @@
 	}
 
 	&__label {
-		margin-left: $field-check-label-margin-left;
 		position: relative;
+		margin-left: $field-check-label-margin-left;
 	}
 
 	// Hide the browser's default checkbox
 	&__input {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: $field-check-input-size;
 		height: $field-check-input-size;
 		margin: 0;
 		padding: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
 		opacity: 0;
 		cursor: pointer;
 
@@ -61,11 +57,11 @@
 
 	// Create a custom checkbox
 	&__mark {
-		width: $field-check-input-size;
-		height: $field-check-input-size;
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: $field-check-input-size;
+		height: $field-check-input-size;
 		border-width: $field-check-input-border;
 		border-style: solid;
 		border-color: $field-check-input-border-color;
@@ -75,14 +71,14 @@
 		&:after {
 			content: "";
 			display: none;
-			width: #{$field-check-mark-width}rem;
-			height: #{$field-check-mark-height}rem;
 			position: absolute;
 			top: calc(50% - #{math.div($field-check-mark-height, 2)}rem);
 			left: calc(50% - #{math.div($field-check-mark-width, 2)}rem);
+			width: #{$field-check-mark-width}rem;
+			height: #{$field-check-mark-height}rem;
+			transform: rotate(45deg);
 			border: solid $field-check-mark-color;
 			border-width: 0 0.3rem 0.3rem 0;
-			transform: rotate(45deg);
 		}
 	}
 }

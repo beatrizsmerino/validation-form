@@ -2,38 +2,30 @@
 // KEYFRAMES-ZOOM
 // =================================================
 
-
-
-
-
 // ZOOM IN
 // ----------------------------------------------------------------------
 @keyframes zoom-in {
-	from {
-		opacity: 0;
+	0% {
 		transform: scale3d(0.8, 0.8, 0.8);
+		opacity: 0;
 	}
 
 	100% {
-		opacity: 1;
 		transform: scale3d(1, 1, 1);
+		opacity: 1;
 	}
 }
-
-
-
-
 
 // ZOOM OUT
 // ----------------------------------------------------------------------
 @keyframes zoom-out {
-	from {
-		opacity: 1;
+	0% {
 		transform: scale3d(1, 1, 1);
+		opacity: 1;
 	}
 
 	100% {
-		opacity: 0;
 		transform: scale3d(0.8, 0.8, 0.8);
+		opacity: 0;
 	}
 }

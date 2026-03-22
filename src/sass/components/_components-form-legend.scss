@@ -3,14 +3,10 @@
 // =================================================
 @use "../abstracts/index" as *;
 
-
-
-
-
 .legend {
 	width: 100%;
 	margin-bottom: 3.2rem;
+	color: $color-brand-1;
 	font-size: 3rem;
 	font-weight: 800;
-	color: $color-brand-1;
 }

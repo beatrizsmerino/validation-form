@@ -2,10 +2,6 @@
 // POSITION
 // =================================================
 
-
-
-
-
 @mixin position($vertical, $horizontal: NULL) {
 	position: absolute;
 
@@ -29,10 +25,12 @@
 		@if $vertical == "center" {
 			top: 50%;
 			transform: translate(0, -50%);
+
 			@if $horizontal == "center" {
 				left: 50%;
 				transform: translate(-50%, 0);
 			}
+
 			@if $horizontal == "left" {
 				left: 0;
 			} @else if $horizontal == "right" {
@@ -42,6 +40,7 @@
 
 		@if $vertical == "top" {
 			top: 0;
+
 			@if $horizontal == "center" {
 				left: 50%;
 				transform: translate(-50%, 0);
@@ -54,6 +53,7 @@
 
 		@if $vertical == "bottom" {
 			bottom: 0;
+
 			@if $horizontal == "center" {
 				left: 50%;
 				transform: translate(-50%, 0);
