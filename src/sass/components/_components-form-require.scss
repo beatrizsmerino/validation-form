@@ -4,12 +4,10 @@
 @use "../abstracts/index" as *;
 
 .required {
-	display: inline-block;
 	position: absolute;
 	top: -1rem;
 	right: -1.6rem;
 	height: 100%;
-	margin-left: 1.6rem;
 	color: $color-error;
 	font-size: 4rem;
 }
