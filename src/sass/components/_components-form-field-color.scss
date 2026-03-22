@@ -30,11 +30,10 @@
 
 		&::-webkit-color-swatch {
 			position: absolute;
-			top: 50%;
-			left: 50%;
+			inset: 0;
 			width: 80%;
 			height: 80%;
-			transform: translate3d(-50%, -50%, 0);
+			margin: auto;
 			border: 0;
 			border-radius: 50%;
 		}
