@@ -1,7 +1,6 @@
 // ANIMATIONS
 // KEYFRAMES-ZOOM
 // =================================================
-@use "../abstracts/index" as *;
 
 
 
@@ -9,15 +8,15 @@
 
 // ZOOM IN
 // ----------------------------------------------------------------------
-@include keyframes(zoomIn) {
+@keyframes zoomIn {
 	from {
 		opacity: 0;
-		@include prefix(transform, scale3d(0.8, 0.8, 0.8));
+		transform: scale3d(0.8, 0.8, 0.8);
 	}
 
 	100% {
 		opacity: 1;
-		@include prefix(transform, scale3d(1, 1, 1));
+		transform: scale3d(1, 1, 1);
 	}
 }
 
@@ -27,14 +26,14 @@
 
 // ZOOM OUT
 // ----------------------------------------------------------------------
-@include keyframes(zoomOut) {
+@keyframes zoomOut {
 	from {
 		opacity: 1;
-		@include prefix(transform, scale3d(1, 1, 1));
+		transform: scale3d(1, 1, 1);
 	}
 
 	100% {
 		opacity: 0;
-		@include prefix(transform, scale3d(0.8, 0.8, 0.8));
+		transform: scale3d(0.8, 0.8, 0.8);
 	}
 }

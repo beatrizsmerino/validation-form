@@ -14,9 +14,9 @@
 	top: 0;
 	z-index: 999;
 	background-color: $color-brand-1;
-	@include prefix(box-shadow, 0 0 2rem rgba($color-gray-0, 0.1));
+	box-shadow: 0 0 2rem rgba($color-gray-0, 0.1);
 	opacity: 0;
-	@include prefix(transform, translate3d(0, -100%, 0));
+	transform: translate3d(0, -100%, 0);
 
 	&__inner {
 		margin: 0.5rem;
@@ -73,10 +73,10 @@
 	}
 
 	&.is-show {
-		@include animation(moveInTopToBottom 0.2s ease-in 0s forwards);
+		animation: moveInTopToBottom 0.2s ease-in 0s forwards;
 	}
 
 	&.is-hide {
-		@include animation(moveOutBottomToTop 0.2s ease-in 0s forwards);
+		animation: moveOutBottomToTop 0.2s ease-in 0s forwards;
 	}
 }

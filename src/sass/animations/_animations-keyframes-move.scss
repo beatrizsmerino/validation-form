@@ -1,7 +1,6 @@
 // ANIMATIONS
 // KEYFRAMES-MOVE
 // =================================================
-@use "../abstracts/index" as *;
 
 
 
@@ -9,50 +8,50 @@
 
 // MOVE IN
 // ----------------------------------------------------------------------
-@include keyframes(moveInBottomToTop) {
+@keyframes moveInBottomToTop {
 	0% {
 		opacity: 0;
-		@include prefix(transform, translate3d(0, 100%, 0));
+		transform: translate3d(0, 100%, 0);
 	}
 	100% {
 		opacity: 1;
-		@include prefix(transform, translate3d(0, 0, 0));
+		transform: translate3d(0, 0, 0);
 	}
 }
 
 
-@include keyframes(moveInTopToBottom) {
+@keyframes moveInTopToBottom {
 	0% {
 		opacity: 0;
-		@include prefix(transform, translate3d(0, -100%, 0));
+		transform: translate3d(0, -100%, 0);
 	}
 	100% {
 		opacity: 1;
-		@include prefix(transform, translate3d(0, 0, 0));
+		transform: translate3d(0, 0, 0);
 	}
 }
 
 
-@include keyframes(moveInRightToLeft) {
+@keyframes moveInRightToLeft {
 	0% {
 		opacity: 0;
-		@include prefix(transform, translate3d(100%, 0, 0));
+		transform: translate3d(100%, 0, 0);
 	}
 	100% {
 		opacity: 1;
-		@include prefix(transform, translate3d(0, 0, 0));
+		transform: translate3d(0, 0, 0);
 	}
 }
 
 
-@include keyframes(moveInLeftToRight) {
+@keyframes moveInLeftToRight {
 	0% {
 		opacity: 0;
-		@include prefix(transform, translate3d(-100%, 0, 0));
+		transform: translate3d(-100%, 0, 0);
 	}
 	100% {
 		opacity: 1;
-		@include prefix(transform, translate3d(0, 0, 0));
+		transform: translate3d(0, 0, 0);
 	}
 }
 
@@ -62,49 +61,49 @@
 
 // MOVE OUT
 // ----------------------------------------------------------------------
-@include keyframes(moveOutTopToBottom) {
+@keyframes moveOutTopToBottom {
 	0% {
 		opacity: 1;
-		@include prefix(transform, translate3d(0, 0, 0));
+		transform: translate3d(0, 0, 0);
 	}
 	100% {
 		opacity: 0;
-		@include prefix(transform, translate3d(0, 100%, 0));
+		transform: translate3d(0, 100%, 0);
 	}
 }
 
 
-@include keyframes(moveOutBottomToTop) {
+@keyframes moveOutBottomToTop {
 	0% {
 		opacity: 1;
-		@include prefix(transform, translate3d(0, 0, 0));
+		transform: translate3d(0, 0, 0);
 	}
 	100% {
 		opacity: 0;
-		@include prefix(transform, translate3d(0, -100%, 0));
+		transform: translate3d(0, -100%, 0);
 	}
 }
 
 
-@include keyframes(moveOutLeftToRight) {
+@keyframes moveOutLeftToRight {
 	0% {
 		opacity: 1;
-		@include prefix(transform, translate3d(0, 0, 0));
+		transform: translate3d(0, 0, 0);
 	}
 	100% {
 		opacity: 0;
-		@include prefix(transform, translate3d(100%, 0, 0));
+		transform: translate3d(100%, 0, 0);
 	}
 }
 
 
-@include keyframes(moveOutRightToLeft) {
+@keyframes moveOutRightToLeft {
 	0% {
 		opacity: 1;
-		@include prefix(transform, translate3d(0, 0, 0));
+		transform: translate3d(0, 0, 0);
 	}
 	100% {
 		opacity: 0;
-		@include prefix(transform, translate3d(-100%, 0, 0));
+		transform: translate3d(-100%, 0, 0);
 	}
 }
