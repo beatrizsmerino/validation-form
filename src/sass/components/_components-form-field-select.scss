@@ -1,0 +1,25 @@
+// COMPONENTS
+// FORM-FIELD-SELECT
+// =================================================
+@use "../abstracts/index" as *;
+
+.field-select {
+	cursor: pointer;
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__arrow {
+		display: flex;
+		position: absolute;
+		top: 2.7rem;
+		right: 1.6rem;
+		align-items: center;
+		margin: 0;
+		transform: translateY(-50%);
+		color: $color-gray-0;
+		font-size: 2rem;
+		pointer-events: none;
+	}
+}

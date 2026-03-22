@@ -1,0 +1,17 @@
+// PARTIALS SASS
+// ===============================================================================
+
+// ABSTRACTS
+// ----------------------------------------------------------------------
+@forward "./functions/abstracts-functions-contains";
+// ------------------
+@forward "./mixins/abstracts-mixins-media";
+@forward "./mixins/abstracts-mixins-position";
+@forward "./mixins/abstracts-mixins-form-field-range";
+// ------------------
+@forward "./variables/abstracts-variables-colors";
+@forward "./variables/abstracts-variables-fonts";
+@forward "./variables/abstracts-variables-breakpoints";
+@forward "./variables/abstracts-variables-form-field-check";
+@forward "./variables/abstracts-variables-form-field-color";
+@forward "./variables/abstracts-variables-form-field-range";

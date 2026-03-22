@@ -1,0 +1,13 @@
+// COMPONENTS
+// FORM-LABEL
+// =================================================
+@use "../abstracts/index" as *;
+
+.label {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 0.8rem;
+	color: $color-brand-2;
+	font-size: 2rem;
+	font-weight: 600;
+}

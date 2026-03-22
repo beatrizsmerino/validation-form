@@ -1,0 +1,160 @@
+// COMPONENTS
+// FORM
+// =================================================
+@use "../abstracts/index" as *;
+
+.form {
+	&__group {
+		> * {
+			&:not(:last-of-type) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	&__column {
+		display: flex;
+
+		@include media("md") {
+			flex-direction: column;
+		}
+
+		&:not(:last-of-type) {
+			margin-bottom: 2.4rem;
+		}
+
+		> * {
+			flex: 1;
+
+			@include media("md") {
+				flex: none;
+				width: 100%;
+			}
+
+			&:not(:last-of-type) {
+				margin-right: 2.4rem;
+
+				@include media("md") {
+					margin-right: 0;
+					margin-bottom: 2.4rem;
+				}
+			}
+		}
+
+		> .fieldset {
+			&:not(:last-of-type) {
+				margin-right: 3rem;
+
+				@include media("lg") {
+					margin-bottom: 4rem;
+				}
+			}
+		}
+
+		// When there are 3+ children, stack earlier (lg instead of md)
+		&:has(> *:first-child:nth-last-child(n + 3)) {
+			@include media("lg") {
+				flex-direction: column;
+			}
+		}
+
+		> *:first-child:nth-last-child(n + 3),
+		> *:first-child:nth-last-child(n + 3) ~ * {
+			@include media("lg") {
+				flex: none;
+				width: 100%;
+			}
+
+			&:not(:last-of-type) {
+				@include media("lg") {
+					margin-right: 0;
+					margin-bottom: 2.4rem;
+				}
+			}
+		}
+
+		> .fieldset:first-child:nth-last-child(n + 3),
+		> .fieldset:first-child:nth-last-child(n + 3) ~ .fieldset {
+			&:not(:last-of-type) {
+				@include media("lg") {
+					margin-bottom: 4rem;
+				}
+			}
+		}
+
+		> .form {
+			&__item {
+				&:not(:last-of-type) {
+					margin-bottom: 0;
+
+					@include media("md") {
+						margin-right: 0;
+						margin-bottom: 2.4rem;
+					}
+				}
+			}
+		}
+	}
+
+	> .fieldset,
+	> * {
+		&:not(:last-child) {
+			margin-bottom: 6.4rem;
+		}
+	}
+
+	&__list {
+		> * {
+			&:not(:last-of-type) {
+				margin-bottom: 0.8rem;
+			}
+		}
+	}
+
+	&__item {
+		width: 100%;
+
+		&:not(:last-of-type) {
+			margin-bottom: 2.4rem;
+		}
+	}
+
+	&__field {
+		width: 100%;
+		padding: 1.6rem;
+		border: 0.2rem solid $color-gray-0;
+		background-color: $color-gray-100;
+		font-size: 1.6rem;
+
+		&::placeholder {
+			font-weight: 200;
+		}
+
+		&:hover,
+		&:focus {
+			border-color: $color-brand-1;
+			background-color: $color-gray-98;
+		}
+	}
+
+	&__button {
+		margin-top: 2rem;
+	}
+
+	&__buttons-fixed {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		justify-content: flex-end;
+		width: 100%;
+		padding: 1.6rem 2rem;
+		background-color: $color-brand-1;
+		box-shadow: 0 0 1.6rem rgba($color-gray-0, 0.8);
+
+		@include media("md") {
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
