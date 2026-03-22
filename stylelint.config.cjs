@@ -82,6 +82,15 @@ module.exports = {
 				],
 			},
 		],
+		"annotation-no-unknown": [
+			true,
+			{
+				"ignoreAnnotations": [
+					"default",
+					"global",
+				],
+			},
+		],
 		"declaration-property-value-no-unknown": null,
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
