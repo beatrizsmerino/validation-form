@@ -29,5 +29,9 @@
 		display: flex;
 		gap: 1.6rem;
 		margin-top: 2rem;
+
+		@include media("xs") {
+			flex-direction: column;
+		}
 	}
 }
