@@ -82,32 +82,7 @@ module.exports = {
 				],
 			},
 		],
-		"declaration-property-value-no-unknown": [
-			true,
-			{
-				"ignoreProperties": {
-					"background-color": [
-						"/^rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
-					],
-					"border": [
-						"/^[0-9.]+(px|rem|em|%)\\s+(solid|dashed|dotted)\\s+(\\$[a-zA-Z0-9-_]+|rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\))$/",
-						"/^(solid|dashed|dotted)\\s+\\$[a-zA-Z0-9-_]+$/",
-					],
-					"border-radius": [
-						"/^\\(\\$[a-zA-Z0-9-_]+(\\s*\\*\\s*[0-9.]+)?\\)$/",
-					],
-					"border-width": [
-						"/^math\\.div\\(.*\\)$/",
-					],
-					"box-shadow": [
-						"/^((inset\\s+)?[0-9.]+(px|rem|em|%)?\\s*){1,4}rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
-					],
-					"margin-top": [
-						"/^.*math\\.div\\(.*\\).*$/s",
-					],
-				},
-			},
-		],
+		"declaration-property-value-no-unknown": null,
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
 		"function-calc-no-unspaced-operator": true,
@@ -147,6 +122,7 @@ module.exports = {
 			},
 		],
 		"scss/at-rule-no-unknown": true,
+		"scss/declaration-property-value-no-unknown": true,
 		"scss/no-global-function-names": null,
 		// Allows: BEM pattern (block__element--modifier) + CKEditor classes (cke_*)
 		"selector-class-pattern": [
