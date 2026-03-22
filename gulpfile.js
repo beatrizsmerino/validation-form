@@ -35,7 +35,7 @@ const paths = {
 	"files": {
 		"base": "**/*",
 		"html": "*.html",
-		"sass": "**/*.sass",
+		"sass": "**/*.scss",
 		"css": "**/*.css",
 		"js": "**/*.js",
 	},
@@ -46,7 +46,7 @@ const paths = {
 const pathsFront = {
 	"src": {
 		"html": `${paths.src.base}${paths.files.html}`,
-		"sass": `${paths.src.sass}styles.sass`,
+		"sass": `${paths.src.sass}styles.scss`,
 		"js": [
 			`${paths.src.js}components/components-form-require.js`,
 			`${paths.src.js}components/components-form-validation.js`,
