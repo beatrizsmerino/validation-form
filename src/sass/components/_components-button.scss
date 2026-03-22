@@ -26,12 +26,8 @@
 	}
 
 	&__list {
+		display: flex;
+		gap: 1.6rem;
 		margin-top: 2rem;
-
-		> * {
-			&:not(:last-child) {
-				margin-right: 1.6rem;
-			}
-		}
 	}
 }
