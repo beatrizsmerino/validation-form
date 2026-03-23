@@ -6,7 +6,11 @@
 form {
 	label {
 		&.error {
+			display: block;
+			margin-top: 0.5rem;
 			color: $color-error;
+			font-size: 1.6rem;
+			font-weight: 500;
 		}
 	}
 
