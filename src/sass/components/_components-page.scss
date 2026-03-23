@@ -7,7 +7,11 @@
 .page {
 	&__body {
 		position: relative;
-		padding: 6.4rem 0 12.8rem;
+		padding: 6.4rem 0 calc(6.4rem + 7.9rem);
+
+		@include media("xs") {
+			padding-bottom: calc(6.4rem + 14.2rem);
+		}
 	}
 
 	&__title {
