@@ -30,14 +30,14 @@
 								<label class="label" for="firstName">
 									First name
 								</label>
-								<input id="firstName" class="form__field" name="firstName" type="text" autocomplete="given-name" required aria-required="true">
+								<input id="firstName" class="form__field" name="firstName" type="text" autocomplete="given-name" placeholder="John" required aria-required="true">
 							</div>
 
 							<div class="form__item">
 								<label class="label" for="lastName">
 									Last name
 								</label>
-								<input id="lastName" class="form__field" name="lastName" type="text" autocomplete="family-name" required aria-required="true">
+								<input id="lastName" class="form__field" name="lastName" type="text" autocomplete="family-name" placeholder="Smith" required aria-required="true">
 							</div>
 						</div>
 
@@ -53,7 +53,7 @@
 								<label class="label" for="age">
 									Age
 								</label>
-								<input id="age" class="form__field" name="age" type="number" min="1" step="1">
+								<input id="age" class="form__field" name="age" type="number" min="1" step="1" placeholder="0">
 							</div>
 						</div>
 
@@ -131,7 +131,7 @@
 								<label class="label" for="address">
 									Address
 								</label>
-								<input id="address" class="form__field" name="address" type="text" autocomplete="street-address">
+								<input id="address" class="form__field" name="address" type="text" autocomplete="street-address" placeholder="123 Main St">
 							</div>
 
 							<div class="form__item">
@@ -1156,14 +1156,14 @@
 								<label class="label" for="phone">
 									Phone
 								</label>
-								<input id="phone" class="form__field" name="phone" type="tel" autocomplete="tel">
+								<input id="phone" class="form__field" name="phone" type="tel" autocomplete="tel" placeholder="612 345 678">
 							</div>
 
 							<div class="form__item">
 								<label class="label" for="email">
 									Email
 								</label>
-								<input id="email" class="form__field" name="email" type="email" autocomplete="email">
+								<input id="email" class="form__field" name="email" type="email" autocomplete="email" placeholder="email@example.com">
 							</div>
 						</fieldset>
 					</div>
@@ -1178,7 +1178,7 @@
 								Professional history
 							</label>
 							<textarea id="professionalDescription" class="form__field textarea ckeditor"
-								name="professionalDescription" required aria-required="true"></textarea>
+								name="professionalDescription" placeholder="Describe your professional history..." required aria-required="true"></textarea>
 						</div>
 
 						<div class="form__column">
@@ -1186,14 +1186,14 @@
 								<label class="label" for="companyName">
 									Company name
 								</label>
-								<input id="companyName" class="form__field" name="companyName" type="text">
+								<input id="companyName" class="form__field" name="companyName" type="text" placeholder="Google">
 							</div>
 
 							<div class="form__item">
 								<label class="label" for="companyPosition">
 									Company position
 								</label>
-								<input id="companyPosition" class="form__field" name="companyPosition" type="text">
+								<input id="companyPosition" class="form__field" name="companyPosition" type="text" placeholder="Frontend Developer">
 							</div>
 						</div>
 
@@ -1314,7 +1314,7 @@
 								Education history
 							</label>
 							<textarea id="educationDescription" class="form__field textarea ckeditor"
-								name="educationDescription" required aria-required="true"></textarea>
+								name="educationDescription" placeholder="Describe your education history..." required aria-required="true"></textarea>
 						</div>
 
 						<div class="form__item">
@@ -1694,7 +1694,7 @@
 										Old username
 									</label>
 									<input id="oldUsername" class="form__field" name="oldUsername" type="text" autocomplete="username"
-										placeholder="" required aria-required="true">
+										placeholder="johndoe" required aria-required="true">
 								</div>
 
 								<div class="form__item">
@@ -1702,7 +1702,7 @@
 										New username
 									</label>
 									<input id="newUsername" class="form__field" name="newUsername" type="text" autocomplete="username"
-										placeholder="" required aria-required="true">
+										placeholder="johndoe" required aria-required="true">
 								</div>
 							</fieldset>
 
