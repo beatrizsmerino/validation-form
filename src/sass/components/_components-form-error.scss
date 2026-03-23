@@ -6,12 +6,7 @@
 form {
 	label {
 		&.error {
-			display: inline-block;
-			width: 100%;
-			margin-top: 0.5rem;
 			color: $color-error;
-			font-size: 1.6rem;
-			font-weight: 500;
 		}
 	}
 

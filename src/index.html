@@ -19,8 +19,8 @@
 			</h1>
 
 			<div class="page__content">
-				<form id="accountForm" class="form" action="" method="" enctype="multipart/form-data">
-					<fieldset class="fieldset inner">
+				<form id="accountForm" class="form inner" action="" method="" enctype="multipart/form-data">
+					<fieldset class="fieldset">
 						<legend class="legend">
 							Data user
 						</legend>
@@ -121,7 +121,7 @@
 						</div>
 					</fieldset>
 
-					<div class="form__column inner">
+					<div class="form__column">
 						<fieldset class="fieldset">
 							<legend class="legend">
 								Location
@@ -1168,7 +1168,7 @@
 						</fieldset>
 					</div>
 
-					<fieldset class="fieldset inner">
+					<fieldset class="fieldset">
 						<legend class="legend">
 							Proffesional data
 						</legend>
@@ -1177,7 +1177,8 @@
 							<label class="label" for="professionalDescription">
 								Professional history
 							</label>
-							<textarea id="professionalDescription" class="form__field textarea ckeditor" name="professionalDescription" required></textarea>
+							<textarea id="professionalDescription" class="form__field textarea ckeditor"
+								name="professionalDescription" required></textarea>
 						</div>
 
 						<div class="form__column">
@@ -1200,8 +1201,7 @@
 							<label class="label" for="experienceYears">
 								Experience (0-30 years)
 							</label>
-							<input id="experienceYears" class="form__field field-range" name="experienceYears" type="range"
-								max="30" value="0" step="1">
+							<input id="experienceYears" class="form__field field-range" name="experienceYears" type="range" max="30" value="0" step="1">
 						</div>
 
 						<div class="form__column">
@@ -1212,8 +1212,8 @@
 
 								<div class="form__list">
 									<label for="experienceGradePractices" class="field-check">
-										<input id="experienceGradePractices" class="field-check__input" name="experienceGrade"
-											value="0" type="radio" required>
+										<input id="experienceGradePractices" class="field-check__input"
+											name="experienceGrade" value="0" type="radio" required>
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Practices
@@ -1221,8 +1221,8 @@
 									</label>
 
 									<label for="experienceGradeJunior" class="field-check">
-										<input id="experienceGradeJunior" class="field-check__input" name="experienceGrade"
-											value="1" type="radio">
+										<input id="experienceGradeJunior" class="field-check__input"
+											name="experienceGrade" value="1" type="radio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Junior
@@ -1230,8 +1230,8 @@
 									</label>
 
 									<label for="experienceGradeSenior" class="field-check">
-										<input id="experienceGradeSenior" class="field-check__input" name="experienceGrade"
-											value="2" type="radio">
+										<input id="experienceGradeSenior" class="field-check__input"
+											name="experienceGrade" value="2" type="radio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Senior
@@ -1239,8 +1239,8 @@
 									</label>
 
 									<label for="experienceGradeManager" class="field-check">
-										<input id="experienceGradeManager" class="field-check__input" name="experienceGrade"
-											value="3" type="radio">
+										<input id="experienceGradeManager" class="field-check__input"
+											name="experienceGrade" value="3" type="radio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Manager
@@ -1248,8 +1248,8 @@
 									</label>
 
 									<label for="experienceGradeDirector" class="field-check">
-										<input id="experienceGradeDirector" class="field-check__input" name="experienceGrade"
-											value="4" type="radio">
+										<input id="experienceGradeDirector" class="field-check__input"
+											name="experienceGrade" value="4" type="radio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Director
@@ -1257,8 +1257,8 @@
 									</label>
 
 									<label for="experienceGradeBoss" class="field-check">
-										<input id="experienceGradeBoss" class="field-check__input" name="experienceGrade"
-											value="5" type="radio">
+										<input id="experienceGradeBoss" class="field-check__input"
+											name="experienceGrade" value="5" type="radio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Boss
@@ -1274,32 +1274,32 @@
 
 								<div class="form__list">
 									<label for="studying" class="field-check">
-										<input id="studying" class="field-check__input" name="profesionalStatus" value="0"
-											type="radio" required>
+										<input id="studying" class="field-check__input" name="profesionalStatus"
+											value="0" type="radio" required>
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Studying
 										</span>
 									</label>
 									<label for="working" class="field-check">
-										<input id="working" class="field-check__input" name="profesionalStatus" value="1"
-											type="radio">
+										<input id="working" class="field-check__input" name="profesionalStatus"
+											value="1" type="radio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Working
 										</span>
 									</label>
 									<label for="lookingWork" class="field-check">
-										<input id="lookingWork" class="field-check__input" name="profesionalStatus" value="2"
-											type="radio">
+										<input id="lookingWork" class="field-check__input" name="profesionalStatus"
+											value="2" type="radio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Working but open to opportunities
 										</span>
 									</label>
 									<label for="contactMe" class="field-check">
-										<input id="contactMe" class="field-check__input" name="profesionalStatus" value="3"
-											type="radio">
+										<input id="contactMe" class="field-check__input" name="profesionalStatus"
+											value="3" type="radio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Recruiters can contact me about job opportunities
@@ -1313,7 +1313,8 @@
 							<label class="label" for="educationDescription">
 								Education history
 							</label>
-							<textarea id="educationDescription" class="form__field textarea ckeditor" name="educationDescription" required></textarea>
+							<textarea id="educationDescription" class="form__field textarea ckeditor"
+								name="educationDescription" required></textarea>
 						</div>
 
 						<div class="form__item">
@@ -1321,7 +1322,8 @@
 								Skills
 							</label>
 							<div class="field-select__wrapper">
-								<select id="skills" class="form__field field-select" name="skills" multiple size="8" required>
+								<select id="skills" class="form__field field-select" name="skills" multiple size="8"
+									required>
 									<option value="0">Select one</option>
 									<optgroup label="Languages">
 										<option value="1">HTML</option>
@@ -1419,8 +1421,8 @@
 									</label>
 
 									<label for="browserOpera" class="field-check">
-										<input id="browserOpera" class="field-check__input" name="browserOpera" value="Opera"
-											type="checkbox">
+										<input id="browserOpera" class="field-check__input" name="browserOpera"
+											value="Opera" type="checkbox">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Opera
@@ -1463,8 +1465,8 @@
 									</label>
 
 									<label for="editorSublimeText" class="field-check">
-										<input id="editorSublimeText" class="field-check__input" name="editorSublimeText"
-											value="Sublime Text" type="checkbox">
+										<input id="editorSublimeText" class="field-check__input"
+											name="editorSublimeText" value="Sublime Text" type="checkbox">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Sublime Text
@@ -1490,8 +1492,8 @@
 									</label>
 
 									<label for="editorVisualStudio" class="field-check">
-										<input id="editorVisualStudio" class="field-check__input" name="editorVisualStudio"
-											value="Visual Studio" type="checkbox">
+										<input id="editorVisualStudio" class="field-check__input"
+											name="editorVisualStudio" value="Visual Studio" type="checkbox">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Visual Studio
@@ -1547,7 +1549,7 @@
 						</div>
 					</fieldset>
 
-					<fieldset class="fieldset inner">
+					<fieldset class="fieldset">
 						<legend class="legend">
 							Social media
 						</legend>
@@ -1646,7 +1648,7 @@
 						</div>
 					</fieldset>
 
-					<fieldset class="fieldset inner">
+					<fieldset class="fieldset">
 						<legend class="legend">
 							Aditional info
 						</legend>
@@ -1680,7 +1682,7 @@
 						</div>
 					</fieldset>
 
-					<div class="form__group inner">
+					<div class="form__group">
 						<div class="form__column">
 							<fieldset class="fieldset">
 								<legend class="legend">
@@ -1735,8 +1737,8 @@
 
 								<div class="form__item">
 									<label for="displayEmail" class="field-check">
-										<input id="displayEmail" class="field-check__input" name="displayEmail" value="1"
-											type="checkbox">
+										<input id="displayEmail" class="field-check__input" name="displayEmail"
+											value="1" type="checkbox">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Display email on profile
@@ -1777,7 +1779,7 @@
 						</div>
 					</div>
 
-					<div class="form__column inner">
+					<div class="form__column">
 						<fieldset class="fieldset">
 							<legend class="legend">
 								Status
@@ -1795,8 +1797,7 @@
 									</label>
 
 									<label for="statusPublic" class="field-check">
-										<input id="statusPublic" class="field-check__input" name="statusActive" value="Public"
-											type="radio" checked>
+										<input id="statusPublic" class="field-check__input" name="statusActive" value="Public" type="radio" checked>
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Public
@@ -1812,8 +1813,7 @@
 							</legend>
 							<div class="form__item">
 								<label for="termsAccept" class="field-check">
-									<input id="termsAccept" class="field-check__input" name="termsAccept" value="termsAccept"
-										type="checkbox" checked required>
+									<input id="termsAccept" class="field-check__input" name="termsAccept" value="termsAccept" type="checkbox" checked required>
 									<span class="field-check__mark"></span>
 									<span class="field-check__label">
 										I accept the <a href="#" class="link">Terms and Conditions</a>

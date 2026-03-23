@@ -45,8 +45,9 @@
 			&:not(:last-of-type) {
 				margin-right: 3rem;
 
-				@include media("lg") {
-					margin-bottom: 4rem;
+				@include media("md") {
+					margin-right: 0;
+					margin-bottom: 6.4rem;
 				}
 			}
 		}
@@ -77,7 +78,7 @@
 		> .fieldset:first-child:nth-last-child(n + 3) ~ .fieldset {
 			&:not(:last-of-type) {
 				@include media("lg") {
-					margin-bottom: 4rem;
+					margin-bottom: 6.4rem;
 				}
 			}
 		}
@@ -88,7 +89,6 @@
 					margin-bottom: 0;
 
 					@include media("md") {
-						margin-right: 0;
 						margin-bottom: 2.4rem;
 					}
 				}
@@ -96,11 +96,12 @@
 		}
 	}
 
-	> .fieldset,
-	> * {
-		&:not(:last-child) {
-			margin-bottom: 6.4rem;
-		}
+	> *:not(:last-child) {
+		margin-bottom: 6.4rem;
+	}
+
+	> *:has(+ .form__buttons-fixed) {
+		margin-bottom: 0;
 	}
 
 	&__list {
@@ -137,10 +138,6 @@
 		}
 	}
 
-	&__button {
-		margin-top: 2rem;
-	}
-
 	&__buttons-fixed {
 		display: flex;
 		position: fixed;
@@ -153,7 +150,6 @@
 		box-shadow: 0 0 1.6rem rgba($color-gray-0, 0.8);
 
 		@include media("md") {
-			display: flex;
 			justify-content: center;
 		}
 	}

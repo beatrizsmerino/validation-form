@@ -26,12 +26,11 @@
 	}
 
 	&__list {
-		margin-top: 2rem;
+		display: flex;
+		gap: 1.6rem;
 
-		> * {
-			&:not(:last-child) {
-				margin-right: 1.6rem;
-			}
+		@include media("xs") {
+			flex-direction: column;
 		}
 	}
 }
