@@ -49,6 +49,7 @@ const pathsFront = {
 		"sass": `${paths.src.sass}styles.scss`,
 		"js": [
 			`${paths.src.js}components/components-form-require.js`,
+			`${paths.src.js}components/components-form-validation-message.js`,
 			`${paths.src.js}components/components-form-validation.js`,
 			`${paths.src.js}components/components-form-validation-ckeditor.js`,
 			`${paths.src.js}components/components-message.js`,
