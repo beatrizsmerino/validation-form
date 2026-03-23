@@ -66,10 +66,10 @@
 
 						<div class="form__column">
 							<div class="form__item">
-								<label class="label">
+								<label class="label" id="genderLabel">
 									Gender
 								</label>
-								<div class="form__list">
+								<div class="form__list" role="group" aria-labelledby="genderLabel">
 									<label for="genderMale" class="field-check">
 										<input id="genderMale" class="field-check__input" name="gender" value="Male"
 											type="radio">
@@ -1206,11 +1206,11 @@
 
 						<div class="form__column">
 							<div class="form__item">
-								<label class="label">
+								<label class="label" id="experienceLabel">
 									Experience
 								</label>
 
-								<div class="form__list">
+								<div class="form__list" role="group" aria-labelledby="experienceLabel">
 									<label for="experienceGradePractices" class="field-check">
 										<input id="experienceGradePractices" class="field-check__input"
 											name="experienceGrade" value="0" type="radio" required aria-required="true">
@@ -1268,11 +1268,11 @@
 							</div>
 
 							<div class="form__item">
-								<label class="label">
+								<label class="label" id="profesionalStatusLabel">
 									Profesional status
 								</label>
 
-								<div class="form__list">
+								<div class="form__list" role="group" aria-labelledby="profesionalStatusLabel">
 									<label for="studying" class="field-check">
 										<input id="studying" class="field-check__input" name="profesionalStatus"
 											value="0" type="radio" required aria-required="true">
@@ -1388,11 +1388,11 @@
 
 						<div class="form__column">
 							<div class="form__item">
-								<label class="label">
+								<label class="label" id="favoriteBrowsersLabel">
 									Favorite browsers
 								</label>
 
-								<div class="form__list">
+								<div class="form__list" role="group" aria-labelledby="favoriteBrowsersLabel">
 									<label for="browserChrome" class="field-check">
 										<input id="browserChrome" class="field-check__input" name="browserChrome"
 											value="Chrome" type="checkbox">
@@ -1450,11 +1450,11 @@
 							</div>
 
 							<div class="form__item">
-								<label class="label">
+								<label class="label" id="favoriteEditorLabel">
 									Favorite editor
 								</label>
 
-								<div class="form__list">
+								<div class="form__list" role="group" aria-labelledby="favoriteEditorLabel">
 									<label for="editorNotePad" class="field-check">
 										<input id="editorNotePad" class="field-check__input" name="editorNotePad"
 											value="Note Pad" type="checkbox">
