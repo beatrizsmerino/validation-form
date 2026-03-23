@@ -240,4 +240,8 @@
 	};
 
 	$("#accountForm").validate(accountFormValidate);
+
+	$("#experienceYears").on("input", function() {
+		$(this).attr("aria-valuenow", $(this).val());
+	});
 }());
