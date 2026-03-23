@@ -96,10 +96,12 @@
 		}
 	}
 
-	> * {
-		&:not(:last-child) {
-			margin-bottom: 6.4rem;
-		}
+	> *:not(:last-child) {
+		margin-bottom: 6.4rem;
+	}
+
+	> *:has(+ .form__buttons-fixed) {
+		margin-bottom: 0;
 	}
 
 	&__list {
