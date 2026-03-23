@@ -19,6 +19,11 @@ form {
 	select {
 		&.error {
 			border-color: $color-error;
+
+			&:hover,
+			&:focus {
+				border-color: $color-error;
+			}
 		}
 	}
 
