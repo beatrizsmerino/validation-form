@@ -6,7 +6,11 @@
 form {
 	label {
 		&.error {
+			display: block;
+			margin-top: 0.5rem;
 			color: $color-error;
+			font-size: 1.6rem;
+			font-weight: 500;
 		}
 	}
 
@@ -15,6 +19,11 @@ form {
 	select {
 		&.error {
 			border-color: $color-error;
+
+			&:hover,
+			&:focus {
+				border-color: $color-error;
+			}
 		}
 	}
 
