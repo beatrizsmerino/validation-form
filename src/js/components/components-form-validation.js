@@ -30,10 +30,20 @@ jQuery.validator.addMethod(
 const validateSettings = {
 	"highlight"(element) {
 		$(element).attr("aria-invalid", "true");
+
+		$(element).addClass("error");
+		if ($(element).is(":radio")) {
+			$(`input[name="${$(element).attr("name")}"]`).addClass("error");
+		}
 	},
 	"unhighlight"(element) {
 		$(element).attr("aria-invalid", "false");
 		$(element).removeAttr("aria-describedby");
+
+		$(element).removeClass("error");
+		if ($(element).is(":radio")) {
+			$(`input[name="${$(element).attr("name")}"]`).removeClass("error");
+		}
 	},
 	"errorPlacement"(error, element) {
 		const errorId = `${element.attr("id")}-error`;
