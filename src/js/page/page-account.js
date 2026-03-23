@@ -223,6 +223,20 @@
 			},
 		},
 		"messages": {},
+		"highlight"(element) {
+			$(element).attr("aria-invalid", "true");
+		},
+		"unhighlight"(element) {
+			$(element).attr("aria-invalid", "false");
+			$(element).removeAttr("aria-describedby");
+		},
+		"errorPlacement"(error, element) {
+			const errorId = `${element.attr("id")}-error`;
+			error.attr("id", errorId);
+			error.attr("role", "alert");
+			element.attr("aria-describedby", errorId);
+			error.insertAfter(element);
+		},
 	};
 
 	$("#accountForm").validate(accountFormValidate);
