@@ -14,7 +14,7 @@
 .field-range[type="range"] {
 	width: $field-range-track-width;
 	height: 5.4rem;
-	margin: math.div($field-range-thumb-height, 2);
+	margin: 0;
 	background: transparent;
 	appearance: none;
 
