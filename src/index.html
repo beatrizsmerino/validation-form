@@ -30,14 +30,14 @@
 								<label class="label" for="firstName">
 									First name
 								</label>
-								<input id="firstName" class="form__field" name="firstName" type="text" required aria-required="true">
+								<input id="firstName" class="form__field" name="firstName" type="text" autocomplete="given-name" required aria-required="true">
 							</div>
 
 							<div class="form__item">
 								<label class="label" for="lastName">
 									Last name
 								</label>
-								<input id="lastName" class="form__field" name="lastName" type="text" required aria-required="true">
+								<input id="lastName" class="form__field" name="lastName" type="text" autocomplete="family-name" required aria-required="true">
 							</div>
 						</div>
 
@@ -46,7 +46,7 @@
 								<label class="label" for="dateBirth">
 									Date of birth
 								</label>
-								<input id="dateBirth" class="form__field" name="dateBirth" type="date" required aria-required="true">
+								<input id="dateBirth" class="form__field" name="dateBirth" type="date" autocomplete="bday" required aria-required="true">
 							</div>
 
 							<div class="form__item">
@@ -131,7 +131,7 @@
 								<label class="label" for="address">
 									Address
 								</label>
-								<input id="address" class="form__field" name="address" type="text">
+								<input id="address" class="form__field" name="address" type="text" autocomplete="street-address">
 							</div>
 
 							<div class="form__item">
@@ -143,7 +143,7 @@
 									<span class="field-select__arrow">
 										<i class="icon-chevron-thin-down"></i>
 									</span>
-									<select id="country" class="form__field field-select" name="country" required aria-required="true">
+									<select id="country" class="form__field field-select" name="country" autocomplete="country-name" required aria-required="true">
 										<option disabled="" selected="" value="0">
 											Select one
 										</option>
@@ -1156,14 +1156,14 @@
 								<label class="label" for="phone">
 									Phone
 								</label>
-								<input id="phone" class="form__field" name="phone" type="tel">
+								<input id="phone" class="form__field" name="phone" type="tel" autocomplete="tel">
 							</div>
 
 							<div class="form__item">
 								<label class="label" for="email">
 									Email
 								</label>
-								<input id="email" class="form__field" name="email" type="email">
+								<input id="email" class="form__field" name="email" type="email" autocomplete="email">
 							</div>
 						</fieldset>
 					</div>
@@ -1560,14 +1560,14 @@
 									<label class="label" for="gitHubUrl">
 										Github
 									</label>
-									<input id="gitHubUrl" class="social-media__field form__field" name="gitHubUrl"
+									<input id="gitHubUrl" class="social-media__field form__field" name="gitHubUrl" autocomplete="url"
 										type="url" placeholder="https://github.com/...">
 								</div>
 								<div class="form__item">
 									<label class="label" for="gitLabUrl">
 										GitLab
 									</label>
-									<input id="gitLabUrl" class="social-media__field form__field" name="gitLabUrl"
+									<input id="gitLabUrl" class="social-media__field form__field" name="gitLabUrl" autocomplete="url"
 										type="url" placeholder="https://about.gitlab.com/...">
 								</div>
 								<div class="form__item">
@@ -1575,20 +1575,20 @@
 										Stack Overflow
 									</label>
 									<input id="stackOverflowUrl" class="social-media__field form__field"
-										name="stackOverflowUrl" type="url" placeholder="https://github.com/...">
+										name="stackOverflowUrl" autocomplete="url" type="url" placeholder="https://github.com/...">
 								</div>
 								<div class="form__item">
 									<label class="label" for="mediumUrl">
 										Medium
 									</label>
-									<input id="mediumUrl" class="social-media__field form__field" name="mediumUrl"
+									<input id="mediumUrl" class="social-media__field form__field" name="mediumUrl" autocomplete="url"
 										type="url" placeholder="https://medium.com/...">
 								</div>
 								<div class="form__item">
 									<label class="label" for="codepenUrl">
 										Codepen
 									</label>
-									<input id="codepenUrl" class="social-media__field form__field" name="codepenUrl"
+									<input id="codepenUrl" class="social-media__field form__field" name="codepenUrl" autocomplete="url"
 										type="url" placeholder="https://codepen.io/">
 								</div>
 								<div class="form__item">
@@ -1596,13 +1596,13 @@
 										CodeSandbox
 									</label>
 									<input id="codeSandboxUrl" class="social-media__field form__field"
-										name="codeSandboxUrl" type="url" placeholder="https://codesandbox.io/">
+										name="codeSandboxUrl" autocomplete="url" type="url" placeholder="https://codesandbox.io/">
 								</div>
 								<div class="form__item">
 									<label class="label" for="jsFiddleUrl">
 										JSFiddle
 									</label>
-									<input id="jsFiddleUrl" class="social-media__field form__field" name="jsFiddleUrl"
+									<input id="jsFiddleUrl" class="social-media__field form__field" name="jsFiddleUrl" autocomplete="url"
 										type="url" placeholder="https://jsfiddle.net/">
 								</div>
 							</div>
@@ -1612,28 +1612,28 @@
 									<label class="label" for="linkedinUrl">
 										Linkedin
 									</label>
-									<input id="linkedinUrl" class="social-media__field form__field" name="linkedinUrl"
+									<input id="linkedinUrl" class="social-media__field form__field" name="linkedinUrl" autocomplete="url"
 										type="url" placeholder="https://www.linkedin.com/...">
 								</div>
 								<div class="form__item">
 									<label class="label" for="facebookUrl">
 										Facebook
 									</label>
-									<input id="facebookUrl" class="social-media__field form__field" name="facebookUrl"
+									<input id="facebookUrl" class="social-media__field form__field" name="facebookUrl" autocomplete="url"
 										type="url" placeholder="https://facebook.com/...">
 								</div>
 								<div class="form__item">
 									<label class="label" for="twitterUrl">
 										Twitter
 									</label>
-									<input id="twitterUrl" class="social-media__field form__field" name="twitterUrl"
+									<input id="twitterUrl" class="social-media__field form__field" name="twitterUrl" autocomplete="url"
 										type="url" placeholder="https://www.twitter.com/...">
 								</div>
 								<div class="form__item">
 									<label class="label" for="instagramUrl">
 										Instagram
 									</label>
-									<input id="instagramUrl" class="social-media__field form__field" name="instagramUrl"
+									<input id="instagramUrl" class="social-media__field form__field" name="instagramUrl" autocomplete="url"
 										type="url" placeholder="https://www.instagram.com/...">
 								</div>
 							</div>
@@ -1643,7 +1643,7 @@
 							<label class="label" for="webUrl">
 								Website
 							</label>
-							<input id="webUrl" class="social-media__field form__field" name="webUrl" type="url"
+							<input id="webUrl" class="social-media__field form__field" name="webUrl" autocomplete="url" type="url"
 								placeholder="https://www...">
 						</div>
 					</fieldset>
@@ -1693,7 +1693,7 @@
 									<label class="label" for="oldUsername">
 										Old username
 									</label>
-									<input id="oldUsername" class="form__field" name="oldUsername" type="text"
+									<input id="oldUsername" class="form__field" name="oldUsername" type="text" autocomplete="username"
 										placeholder="" required aria-required="true">
 								</div>
 
@@ -1701,7 +1701,7 @@
 									<label class="label" for="newUsername">
 										New username
 									</label>
-									<input id="newUsername" class="form__field" name="newUsername" type="text"
+									<input id="newUsername" class="form__field" name="newUsername" type="text" autocomplete="username"
 										placeholder="" required aria-required="true">
 								</div>
 							</fieldset>
@@ -1715,7 +1715,7 @@
 									<label class="label" for="oldEmail">
 										Old email
 									</label>
-									<input id="oldEmail" class="form__field" name="oldEmail" type="email"
+									<input id="oldEmail" class="form__field" name="oldEmail" type="email" autocomplete="email"
 										placeholder="@" required aria-required="true">
 								</div>
 
@@ -1723,7 +1723,7 @@
 									<label class="label" for="newEmail">
 										New email
 									</label>
-									<input id="newEmail" class="form__field" name="newEmail" type="email"
+									<input id="newEmail" class="form__field" name="newEmail" type="email" autocomplete="email"
 										placeholder="@" required aria-required="true">
 								</div>
 
@@ -1731,7 +1731,7 @@
 									<label class="label" for="repeatNewEmail">
 										Repeat new email
 									</label>
-									<input id="repeatNewEmail" class="form__field" name="repeatNewEmail" type="email"
+									<input id="repeatNewEmail" class="form__field" name="repeatNewEmail" type="email" autocomplete="email"
 										placeholder="@" required aria-required="true">
 								</div>
 
@@ -1756,7 +1756,7 @@
 									<label class="label" for="oldPassword">
 										Old password
 									</label>
-									<input id="oldPassword" class="form__field" name="oldPassword" type="password"
+									<input id="oldPassword" class="form__field" name="oldPassword" type="password" autocomplete="current-password"
 										placeholder="***" required aria-required="true">
 								</div>
 
@@ -1764,7 +1764,7 @@
 									<label class="label" for="newPassword">
 										New password
 									</label>
-									<input id="newPassword" class="form__field" name="newPassword" type="password"
+									<input id="newPassword" class="form__field" name="newPassword" type="password" autocomplete="new-password"
 										placeholder="***" required aria-required="true">
 								</div>
 
@@ -1772,7 +1772,7 @@
 									<label class="label" for="repeatNewPassword">
 										Repeat new password
 									</label>
-									<input id="repeatNewPassword" class="form__field" name="repeatNewPassword"
+									<input id="repeatNewPassword" class="form__field" name="repeatNewPassword" autocomplete="new-password"
 										type="password" placeholder="***" required aria-required="true">
 								</div>
 							</fieldset>
