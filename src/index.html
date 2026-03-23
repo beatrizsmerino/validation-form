@@ -30,14 +30,14 @@
 								<label class="label" for="firstName">
 									First name
 								</label>
-								<input id="firstName" class="form__field" name="firstName" type="text" required>
+								<input id="firstName" class="form__field" name="firstName" type="text" required aria-required="true">
 							</div>
 
 							<div class="form__item">
 								<label class="label" for="lastName">
 									Last name
 								</label>
-								<input id="lastName" class="form__field" name="lastName" type="text" required>
+								<input id="lastName" class="form__field" name="lastName" type="text" required aria-required="true">
 							</div>
 						</div>
 
@@ -46,7 +46,7 @@
 								<label class="label" for="dateBirth">
 									Date of birth
 								</label>
-								<input id="dateBirth" class="form__field" name="dateBirth" type="date" required>
+								<input id="dateBirth" class="form__field" name="dateBirth" type="date" required aria-required="true">
 							</div>
 
 							<div class="form__item">
@@ -61,7 +61,7 @@
 							<label class="label" for="photo">
 								Profile image
 							</label>
-							<input id="photo" class="form__field" name="photo" type="file" required>
+							<input id="photo" class="form__field" name="photo" type="file" required aria-required="true">
 						</div>
 
 						<div class="form__column">
@@ -143,7 +143,7 @@
 									<span class="field-select__arrow">
 										<i class="icon-chevron-thin-down"></i>
 									</span>
-									<select id="country" class="form__field field-select" name="country" required>
+									<select id="country" class="form__field field-select" name="country" required aria-required="true">
 										<option disabled="" selected="" value="0">
 											Select one
 										</option>
@@ -1067,7 +1067,7 @@
 									<span class="field-select__arrow">
 										<i class="icon-chevron-thin-down"></i>
 									</span>
-									<select id="language" class="form__field field-select" name="language" required>
+									<select id="language" class="form__field field-select" name="language" required aria-required="true">
 										<option disabled="" selected="" value="0">
 											Select one
 										</option>
@@ -1178,7 +1178,7 @@
 								Professional history
 							</label>
 							<textarea id="professionalDescription" class="form__field textarea ckeditor"
-								name="professionalDescription" required></textarea>
+								name="professionalDescription" required aria-required="true"></textarea>
 						</div>
 
 						<div class="form__column">
@@ -1213,7 +1213,7 @@
 								<div class="form__list">
 									<label for="experienceGradePractices" class="field-check">
 										<input id="experienceGradePractices" class="field-check__input"
-											name="experienceGrade" value="0" type="radio" required>
+											name="experienceGrade" value="0" type="radio" required aria-required="true">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Practices
@@ -1275,7 +1275,7 @@
 								<div class="form__list">
 									<label for="studying" class="field-check">
 										<input id="studying" class="field-check__input" name="profesionalStatus"
-											value="0" type="radio" required>
+											value="0" type="radio" required aria-required="true">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Studying
@@ -1314,7 +1314,7 @@
 								Education history
 							</label>
 							<textarea id="educationDescription" class="form__field textarea ckeditor"
-								name="educationDescription" required></textarea>
+								name="educationDescription" required aria-required="true"></textarea>
 						</div>
 
 						<div class="form__item">
@@ -1323,7 +1323,7 @@
 							</label>
 							<div class="field-select__wrapper">
 								<select id="skills" class="form__field field-select" name="skills" multiple size="8"
-									required>
+									required aria-required="true">
 									<option value="0">Select one</option>
 									<optgroup label="Languages">
 										<option value="1">HTML</option>
@@ -1383,7 +1383,7 @@
 							<textarea id="skillsDescription" class="form__field textarea ckeditor"
 								name="skillsDescription"
 								placeholder="What tools and languages are you most experienced with? Are you specialized or more of a generalist?"
-								required></textarea>
+								required aria-required="true"></textarea>
 						</div>
 
 						<div class="form__column">
@@ -1659,7 +1659,7 @@
 							</label>
 							<textarea id="aboutDescription" class="form__field textarea ckeditor"
 								name="aboutDescription" cols="30" rows="10" placeholder="A short bio..."
-								required></textarea>
+								required aria-required="true"></textarea>
 						</div>
 
 						<div class="form__item">
@@ -1671,7 +1671,7 @@
 									<i class="icon-chevron-thin-down"></i>
 								</span>
 								<input class="form__field field-select" list="hobbies" name="hobbies"
-									placeholder="Choose or write" required>
+									placeholder="Choose or write" required aria-required="true">
 								<datalist id="hobbies">
 									<option value="Meetups"></option>
 									<option value="Sports"></option>
@@ -1694,7 +1694,7 @@
 										Old username
 									</label>
 									<input id="oldUsername" class="form__field" name="oldUsername" type="text"
-										placeholder="" required>
+										placeholder="" required aria-required="true">
 								</div>
 
 								<div class="form__item">
@@ -1702,7 +1702,7 @@
 										New username
 									</label>
 									<input id="newUsername" class="form__field" name="newUsername" type="text"
-										placeholder="" required>
+										placeholder="" required aria-required="true">
 								</div>
 							</fieldset>
 
@@ -1716,7 +1716,7 @@
 										Old email
 									</label>
 									<input id="oldEmail" class="form__field" name="oldEmail" type="email"
-										placeholder="@" required>
+										placeholder="@" required aria-required="true">
 								</div>
 
 								<div class="form__item">
@@ -1724,7 +1724,7 @@
 										New email
 									</label>
 									<input id="newEmail" class="form__field" name="newEmail" type="email"
-										placeholder="@" required>
+										placeholder="@" required aria-required="true">
 								</div>
 
 								<div class="form__item">
@@ -1732,7 +1732,7 @@
 										Repeat new email
 									</label>
 									<input id="repeatNewEmail" class="form__field" name="repeatNewEmail" type="email"
-										placeholder="@" required>
+										placeholder="@" required aria-required="true">
 								</div>
 
 								<div class="form__item">
@@ -1757,7 +1757,7 @@
 										Old password
 									</label>
 									<input id="oldPassword" class="form__field" name="oldPassword" type="password"
-										placeholder="***" required>
+										placeholder="***" required aria-required="true">
 								</div>
 
 								<div class="form__item">
@@ -1765,7 +1765,7 @@
 										New password
 									</label>
 									<input id="newPassword" class="form__field" name="newPassword" type="password"
-										placeholder="***" required>
+										placeholder="***" required aria-required="true">
 								</div>
 
 								<div class="form__item">
@@ -1773,7 +1773,7 @@
 										Repeat new password
 									</label>
 									<input id="repeatNewPassword" class="form__field" name="repeatNewPassword"
-										type="password" placeholder="***" required>
+										type="password" placeholder="***" required aria-required="true">
 								</div>
 							</fieldset>
 						</div>
@@ -1813,7 +1813,7 @@
 							</legend>
 							<div class="form__item">
 								<label for="termsAccept" class="field-check">
-									<input id="termsAccept" class="field-check__input" name="termsAccept" value="termsAccept" type="checkbox" checked required>
+									<input id="termsAccept" class="field-check__input" name="termsAccept" value="termsAccept" type="checkbox" checked required aria-required="true">
 									<span class="field-check__mark"></span>
 									<span class="field-check__label">
 										I accept the <a href="#" class="link">Terms and Conditions</a>
