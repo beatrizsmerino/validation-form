@@ -30,14 +30,14 @@
 								<label class="label" for="firstName">
 									First name
 								</label>
-								<input id="firstName" class="form__field" name="firstName" type="text" autocomplete="given-name" placeholder="John" required aria-required="true">
+								<input id="firstName" class="form__field" name="firstName" type="text" placeholder="John" autocomplete="given-name" required aria-required="true">
 							</div>
 
 							<div class="form__item">
 								<label class="label" for="lastName">
 									Last name
 								</label>
-								<input id="lastName" class="form__field" name="lastName" type="text" autocomplete="family-name" placeholder="Smith" required aria-required="true">
+								<input id="lastName" class="form__field" name="lastName" type="text" placeholder="Smith" autocomplete="family-name" required aria-required="true">
 							</div>
 						</div>
 
@@ -71,24 +71,21 @@
 								</label>
 								<div class="form__list" role="group" aria-labelledby="genderLabel">
 									<label for="genderMale" class="field-check">
-										<input id="genderMale" class="field-check__input" name="gender" value="Male"
-											type="radio">
+										<input id="genderMale" class="field-check__input" name="gender" type="radio" value="Male">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Male
 										</span>
 									</label>
 									<label for="genderFemale" class="field-check">
-										<input id="genderFemale" class="field-check__input" name="gender" value="Female"
-											type="radio">
+										<input id="genderFemale" class="field-check__input" name="gender" type="radio" value="Female">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Female
 										</span>
 									</label>
 									<label for="genderOther" class="field-check">
-										<input id="genderOther" class="field-check__input" name="gender" value="Other"
-											type="radio">
+										<input id="genderOther" class="field-check__input" name="gender" type="radio" value="Other">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Other
@@ -131,7 +128,7 @@
 								<label class="label" for="address">
 									Address
 								</label>
-								<input id="address" class="form__field" name="address" type="text" autocomplete="street-address" placeholder="123 Main St">
+								<input id="address" class="form__field" name="address" type="text" placeholder="123 Main St" autocomplete="street-address">
 							</div>
 
 							<div class="form__item">
@@ -1156,14 +1153,14 @@
 								<label class="label" for="phone">
 									Phone
 								</label>
-								<input id="phone" class="form__field" name="phone" type="tel" autocomplete="tel" placeholder="612 345 678">
+								<input id="phone" class="form__field" name="phone" type="tel" placeholder="612 345 678" autocomplete="tel">
 							</div>
 
 							<div class="form__item">
 								<label class="label" for="email">
 									Email
 								</label>
-								<input id="email" class="form__field" name="email" type="email" autocomplete="email" placeholder="email@example.com">
+								<input id="email" class="form__field" name="email" type="email" placeholder="email@example.com" autocomplete="email">
 							</div>
 						</fieldset>
 					</div>
@@ -1213,7 +1210,7 @@
 								<div class="form__list" role="group" aria-labelledby="experienceLabel">
 									<label for="experienceGradePractices" class="field-check">
 										<input id="experienceGradePractices" class="field-check__input"
-											name="experienceGrade" value="0" type="radio" required aria-required="true">
+											name="experienceGrade" type="radio" value="0" required aria-required="true">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Practices
@@ -1222,7 +1219,7 @@
 
 									<label for="experienceGradeJunior" class="field-check">
 										<input id="experienceGradeJunior" class="field-check__input"
-											name="experienceGrade" value="1" type="radio">
+											name="experienceGrade" type="radio" value="1">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Junior
@@ -1231,7 +1228,7 @@
 
 									<label for="experienceGradeSenior" class="field-check">
 										<input id="experienceGradeSenior" class="field-check__input"
-											name="experienceGrade" value="2" type="radio">
+											name="experienceGrade" type="radio" value="2">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Senior
@@ -1240,7 +1237,7 @@
 
 									<label for="experienceGradeManager" class="field-check">
 										<input id="experienceGradeManager" class="field-check__input"
-											name="experienceGrade" value="3" type="radio">
+											name="experienceGrade" type="radio" value="3">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Manager
@@ -1249,7 +1246,7 @@
 
 									<label for="experienceGradeDirector" class="field-check">
 										<input id="experienceGradeDirector" class="field-check__input"
-											name="experienceGrade" value="4" type="radio">
+											name="experienceGrade" type="radio" value="4">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Director
@@ -1258,7 +1255,7 @@
 
 									<label for="experienceGradeBoss" class="field-check">
 										<input id="experienceGradeBoss" class="field-check__input"
-											name="experienceGrade" value="5" type="radio">
+											name="experienceGrade" type="radio" value="5">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Boss
@@ -1275,7 +1272,7 @@
 								<div class="form__list" role="group" aria-labelledby="profesionalStatusLabel">
 									<label for="studying" class="field-check">
 										<input id="studying" class="field-check__input" name="profesionalStatus"
-											value="0" type="radio" required aria-required="true">
+											type="radio" value="0" required aria-required="true">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Studying
@@ -1283,7 +1280,7 @@
 									</label>
 									<label for="working" class="field-check">
 										<input id="working" class="field-check__input" name="profesionalStatus"
-											value="1" type="radio">
+											type="radio" value="1">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Working
@@ -1291,7 +1288,7 @@
 									</label>
 									<label for="lookingWork" class="field-check">
 										<input id="lookingWork" class="field-check__input" name="profesionalStatus"
-											value="2" type="radio">
+											type="radio" value="2">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Working but open to opportunities
@@ -1299,7 +1296,7 @@
 									</label>
 									<label for="contactMe" class="field-check">
 										<input id="contactMe" class="field-check__input" name="profesionalStatus"
-											value="3" type="radio">
+											type="radio" value="3">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Recruiters can contact me about job opportunities
@@ -1395,7 +1392,7 @@
 								<div class="form__list" role="group" aria-labelledby="favoriteBrowsersLabel">
 									<label for="browserChrome" class="field-check">
 										<input id="browserChrome" class="field-check__input" name="browserChrome"
-											value="Chrome" type="checkbox">
+											type="checkbox" value="Chrome">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Chrome
@@ -1404,7 +1401,7 @@
 
 									<label for="browserFirefox" class="field-check">
 										<input id="browserFirefox" class="field-check__input" name="browserFirefox"
-											value="Firefox" type="checkbox">
+											type="checkbox" value="Firefox">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Firefox
@@ -1413,7 +1410,7 @@
 
 									<label for="browserSafari" class="field-check">
 										<input id="browserSafari" class="field-check__input" name="browserSafari"
-											value="Safari" type="checkbox">
+											type="checkbox" value="Safari">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Safari
@@ -1422,7 +1419,7 @@
 
 									<label for="browserOpera" class="field-check">
 										<input id="browserOpera" class="field-check__input" name="browserOpera"
-											value="Opera" type="checkbox">
+											type="checkbox" value="Opera">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Opera
@@ -1431,7 +1428,7 @@
 
 									<label for="browserInternetExplorer" class="field-check">
 										<input id="browserInternetExplorer" class="field-check__input"
-											name="browserInternetExplorer" value="Internet Explorer" type="checkbox">
+											name="browserInternetExplorer" type="checkbox" value="Internet Explorer">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Internet Explorer
@@ -1440,7 +1437,7 @@
 
 									<label for="browserMicrosoftEdge" class="field-check">
 										<input id="browserMicrosoftEdge" class="field-check__input"
-											name="browserMicrosoftEdge" value="Microsoft Edge" type="checkbox">
+											name="browserMicrosoftEdge" type="checkbox" value="Microsoft Edge">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Microsoft Edge
@@ -1457,7 +1454,7 @@
 								<div class="form__list" role="group" aria-labelledby="favoriteEditorLabel">
 									<label for="editorNotePad" class="field-check">
 										<input id="editorNotePad" class="field-check__input" name="editorNotePad"
-											value="Note Pad" type="checkbox">
+											type="checkbox" value="Note Pad">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Note Pad ++
@@ -1466,7 +1463,7 @@
 
 									<label for="editorSublimeText" class="field-check">
 										<input id="editorSublimeText" class="field-check__input"
-											name="editorSublimeText" value="Sublime Text" type="checkbox">
+											name="editorSublimeText" type="checkbox" value="Sublime Text">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Sublime Text
@@ -1474,8 +1471,7 @@
 									</label>
 
 									<label for="editorAtom" class="field-check">
-										<input id="editorAtom" class="field-check__input" name="editorAtom" value="Atom"
-											type="checkbox">
+										<input id="editorAtom" class="field-check__input" name="editorAtom" type="checkbox" value="Atom">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Atom
@@ -1484,7 +1480,7 @@
 
 									<label for="editorNetbeans" class="field-check">
 										<input id="editorNetbeans" class="field-check__input" name="editorNetbeans"
-											value="Netbeans" type="checkbox">
+											type="checkbox" value="Netbeans">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Netbeans
@@ -1493,7 +1489,7 @@
 
 									<label for="editorVisualStudio" class="field-check">
 										<input id="editorVisualStudio" class="field-check__input"
-											name="editorVisualStudio" value="Visual Studio" type="checkbox">
+											name="editorVisualStudio" type="checkbox" value="Visual Studio">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Visual Studio
@@ -1502,7 +1498,7 @@
 
 									<label for="editorBrackets" class="field-check">
 										<input id="editorBrackets" class="field-check__input" name="editorBrackets"
-											value="Brackets" type="checkbox">
+											type="checkbox" value="Brackets">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Brackets
@@ -1511,7 +1507,7 @@
 
 									<label for="editorJetbrains" class="field-check">
 										<input id="editorJetbrains" class="field-check__input" name="editorJetbrains"
-											value="Jetbrains" type="checkbox">
+											type="checkbox" value="Jetbrains">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Jetbrains (WebStorm, PhpSorm,...)
@@ -1560,50 +1556,45 @@
 									<label class="label" for="gitHubUrl">
 										Github
 									</label>
-									<input id="gitHubUrl" class="social-media__field form__field" name="gitHubUrl" autocomplete="url"
-										type="url" placeholder="https://github.com/...">
+									<input id="gitHubUrl" class="social-media__field form__field" name="gitHubUrl" type="url" placeholder="https://github.com/..." autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="gitLabUrl">
 										GitLab
 									</label>
-									<input id="gitLabUrl" class="social-media__field form__field" name="gitLabUrl" autocomplete="url"
-										type="url" placeholder="https://about.gitlab.com/...">
+									<input id="gitLabUrl" class="social-media__field form__field" name="gitLabUrl" type="url" placeholder="https://about.gitlab.com/..." autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="stackOverflowUrl">
 										Stack Overflow
 									</label>
 									<input id="stackOverflowUrl" class="social-media__field form__field"
-										name="stackOverflowUrl" autocomplete="url" type="url" placeholder="https://stackoverflow.com/...">
+										name="stackOverflowUrl" type="url" placeholder="https://stackoverflow.com/..." autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="mediumUrl">
 										Medium
 									</label>
-									<input id="mediumUrl" class="social-media__field form__field" name="mediumUrl" autocomplete="url"
-										type="url" placeholder="https://medium.com/...">
+									<input id="mediumUrl" class="social-media__field form__field" name="mediumUrl" type="url" placeholder="https://medium.com/..." autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="codepenUrl">
 										Codepen
 									</label>
-									<input id="codepenUrl" class="social-media__field form__field" name="codepenUrl" autocomplete="url"
-										type="url" placeholder="https://codepen.io/">
+									<input id="codepenUrl" class="social-media__field form__field" name="codepenUrl" type="url" placeholder="https://codepen.io/" autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="codeSandboxUrl">
 										CodeSandbox
 									</label>
 									<input id="codeSandboxUrl" class="social-media__field form__field"
-										name="codeSandboxUrl" autocomplete="url" type="url" placeholder="https://codesandbox.io/">
+										name="codeSandboxUrl" type="url" placeholder="https://codesandbox.io/" autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="jsFiddleUrl">
 										JSFiddle
 									</label>
-									<input id="jsFiddleUrl" class="social-media__field form__field" name="jsFiddleUrl" autocomplete="url"
-										type="url" placeholder="https://jsfiddle.net/">
+									<input id="jsFiddleUrl" class="social-media__field form__field" name="jsFiddleUrl" type="url" placeholder="https://jsfiddle.net/" autocomplete="url">
 								</div>
 							</div>
 
@@ -1612,29 +1603,25 @@
 									<label class="label" for="linkedinUrl">
 										Linkedin
 									</label>
-									<input id="linkedinUrl" class="social-media__field form__field" name="linkedinUrl" autocomplete="url"
-										type="url" placeholder="https://www.linkedin.com/...">
+									<input id="linkedinUrl" class="social-media__field form__field" name="linkedinUrl" type="url" placeholder="https://www.linkedin.com/..." autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="facebookUrl">
 										Facebook
 									</label>
-									<input id="facebookUrl" class="social-media__field form__field" name="facebookUrl" autocomplete="url"
-										type="url" placeholder="https://facebook.com/...">
+									<input id="facebookUrl" class="social-media__field form__field" name="facebookUrl" type="url" placeholder="https://facebook.com/..." autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="twitterUrl">
 										Twitter
 									</label>
-									<input id="twitterUrl" class="social-media__field form__field" name="twitterUrl" autocomplete="url"
-										type="url" placeholder="https://www.twitter.com/...">
+									<input id="twitterUrl" class="social-media__field form__field" name="twitterUrl" type="url" placeholder="https://www.twitter.com/..." autocomplete="url">
 								</div>
 								<div class="form__item">
 									<label class="label" for="instagramUrl">
 										Instagram
 									</label>
-									<input id="instagramUrl" class="social-media__field form__field" name="instagramUrl" autocomplete="url"
-										type="url" placeholder="https://www.instagram.com/...">
+									<input id="instagramUrl" class="social-media__field form__field" name="instagramUrl" type="url" placeholder="https://www.instagram.com/..." autocomplete="url">
 								</div>
 							</div>
 						</div>
@@ -1643,8 +1630,7 @@
 							<label class="label" for="webUrl">
 								Website
 							</label>
-							<input id="webUrl" class="social-media__field form__field" name="webUrl" autocomplete="url" type="url"
-								placeholder="https://www...">
+							<input id="webUrl" class="social-media__field form__field" name="webUrl" type="url" placeholder="https://www..." autocomplete="url">
 						</div>
 					</fieldset>
 
@@ -1738,7 +1724,7 @@
 								<div class="form__item">
 									<label for="displayEmail" class="field-check">
 										<input id="displayEmail" class="field-check__input" name="displayEmail"
-											value="1" type="checkbox">
+											type="checkbox" value="1">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Display email on profile
@@ -1772,8 +1758,7 @@
 									<label class="label" for="repeatNewPassword">
 										Repeat new password
 									</label>
-									<input id="repeatNewPassword" class="form__field" name="repeatNewPassword" autocomplete="new-password"
-										type="password" placeholder="***" required aria-required="true">
+									<input id="repeatNewPassword" class="form__field" name="repeatNewPassword" type="password" placeholder="***" autocomplete="new-password" required aria-required="true">
 								</div>
 							</fieldset>
 						</div>
@@ -1789,7 +1774,7 @@
 								<div class="form__list" role="group" aria-labelledby="statusLegend">
 									<label for="statusPrivate" class="field-check">
 										<input id="statusPrivate" class="field-check__input" name="statusActive"
-											value="Private" type="radio">
+											type="radio" value="Private">
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Private
@@ -1797,7 +1782,7 @@
 									</label>
 
 									<label for="statusPublic" class="field-check">
-										<input id="statusPublic" class="field-check__input" name="statusActive" value="Public" type="radio" checked>
+										<input id="statusPublic" class="field-check__input" name="statusActive" type="radio" value="Public" checked>
 										<span class="field-check__mark"></span>
 										<span class="field-check__label">
 											Public
@@ -1813,7 +1798,7 @@
 							</legend>
 							<div class="form__item">
 								<label for="termsAccept" class="field-check">
-									<input id="termsAccept" class="field-check__input" name="termsAccept" value="termsAccept" type="checkbox" checked required aria-required="true">
+									<input id="termsAccept" class="field-check__input" name="termsAccept" type="checkbox" value="termsAccept" checked required aria-required="true">
 									<span class="field-check__mark"></span>
 									<span class="field-check__label">
 										I accept the <a href="#" class="link" role="button" tabindex="0">Terms and Conditions</a>
