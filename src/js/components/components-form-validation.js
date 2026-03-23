@@ -28,7 +28,19 @@ jQuery.validator.addMethod(
 // VALIDATE JS - SETTINGS
 // ------------------
 const validateSettings = {
+	"highlight"(element) {
+		$(element).attr("aria-invalid", "true");
+	},
+	"unhighlight"(element) {
+		$(element).attr("aria-invalid", "false");
+		$(element).removeAttr("aria-describedby");
+	},
 	"errorPlacement"(error, element) {
+		const errorId = `${element.attr("id")}-error`;
+		error.attr("id", errorId);
+		error.attr("role", "alert");
+		element.attr("aria-describedby", errorId);
+
 		if (element.is(":checkbox")) {
 			error.appendTo(element.closest(".form__item"));
 		} else if (element.is(":radio")) {
