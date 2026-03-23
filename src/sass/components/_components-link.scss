@@ -1,14 +1,15 @@
 // COMPONENTS
 // LINK
 // =================================================
+@use "sass:color";
 @use "../abstracts/index" as *;
 
 .link {
-	color: $color-brand-1;
+	color: color.scale($color: $color-brand-1, $lightness: -20%);
 	font-weight: 700;
+	text-decoration: underline;
 
 	&:hover {
 		color: $color-brand-2;
-		text-decoration: underline;
 	}
 }
