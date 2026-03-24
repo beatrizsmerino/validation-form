@@ -10,7 +10,7 @@
 jQuery.validator.addMethod(
 	"letter",
 	function(value, element) {
-		return this.optional(element) || (/^[a-zA-Z\s]*$/u).test(value);
+		return this.optional(element) || (/^[\p{L}\s]*$/u).test(value);
 	},
 	fieldMessageLetter,
 );
