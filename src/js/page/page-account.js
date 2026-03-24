@@ -224,7 +224,37 @@
 				"required": true,
 			},
 		},
-		"messages": {},
+		"messages": {
+			"skills": {
+				"required": "Please select at least one option",
+			},
+			"oldUsername": {
+				"required": "Please enter your current username",
+			},
+			"newUsername": {
+				"required": "Please enter a new username",
+			},
+			"oldEmail": {
+				"required": "Please enter your current email",
+			},
+			"newEmail": {
+				"required": "Please enter a new email",
+			},
+			"repeatNewEmail": {
+				"required": "Please repeat your new email",
+				"equalTo": "Emails do not match",
+			},
+			"oldPassword": {
+				"required": "Please enter your current password",
+			},
+			"newPassword": {
+				"required": "Please enter a new password",
+			},
+			"repeatNewPassword": {
+				"required": "Please repeat your new password",
+				"equalTo": "Passwords do not match",
+			},
+		},
 		"submitHandler"() {
 			const $message = $(".message");
 			$message.find(".message__text").text("Form submitted successfully!");
