@@ -149,7 +149,7 @@ select {
 	appearance: none;
 }
 
-input::-webkit-calendar-picker-indicator {
+input[list]::-webkit-calendar-picker-indicator {
 	display: none;
 }
 
