@@ -1,3 +1,3 @@
 export default {
-	"*.{css,scss,json,yml,yaml,js,cjs,mjs}": () => "npm run lint",
+	"*.{css,scss,json,yml,yaml,js,cjs,mjs,html}": () => "npm run lint",
 };
