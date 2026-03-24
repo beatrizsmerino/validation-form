@@ -153,6 +153,10 @@ input[list]::-webkit-calendar-picker-indicator {
 	display: none;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+	cursor: pointer;
+}
+
 fieldset {
 	margin: 0;
 	padding: 0;
