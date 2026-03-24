@@ -2,6 +2,8 @@
 // ACCOUNT
 // =================================================
 
+/* global messageShow, messageHide */
+
 (function() {
 	const accountFormValidate = {
 		"rules": {
@@ -223,6 +225,15 @@
 			},
 		},
 		"messages": {},
+		"submitHandler"() {
+			const $message = $(".message");
+			$message.find(".message__text").text("Form submitted successfully!");
+			messageShow();
+
+			setTimeout(function() {
+				messageHide();
+			}, 10000);
+		},
 	};
 
 	$("#accountForm").validate(accountFormValidate);
