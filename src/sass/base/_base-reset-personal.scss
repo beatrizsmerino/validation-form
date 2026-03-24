@@ -150,7 +150,7 @@ select {
 }
 
 input[list]::-webkit-calendar-picker-indicator {
-	display: none;
+	display: none !important;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
