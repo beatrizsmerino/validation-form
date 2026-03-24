@@ -268,7 +268,17 @@
 
 	$("#accountForm").validate(accountFormValidate);
 
-	$("#experienceYears").on("input", function() {
-		$(this).attr("aria-valuenow", $(this).val());
+	const $range = $("#experienceYears");
+	const $output = $("<output>").
+		attr("for", "experienceYears").
+		addClass("field-range__output").
+		text(`${$range.val()} years`);
+
+	$range.after($output);
+
+	$range.on("input", function() {
+		const val = $(this).val();
+		$(this).attr("aria-valuenow", val);
+		$output.text(`${val} years`);
 	});
 }());
