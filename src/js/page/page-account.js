@@ -2,6 +2,8 @@
 // ACCOUNT
 // =================================================
 
+/* global messageShow, messageHide */
+
 (function() {
 	const accountFormValidate = {
 		"rules": {
@@ -222,12 +224,61 @@
 				"required": true,
 			},
 		},
-		"messages": {},
+		"messages": {
+			"skills": {
+				"required": "Please select at least one option",
+			},
+			"oldUsername": {
+				"required": "Please enter your current username",
+			},
+			"newUsername": {
+				"required": "Please enter a new username",
+			},
+			"oldEmail": {
+				"required": "Please enter your current email",
+			},
+			"newEmail": {
+				"required": "Please enter a new email",
+			},
+			"repeatNewEmail": {
+				"required": "Please repeat your new email",
+				"equalTo": "Emails do not match",
+			},
+			"oldPassword": {
+				"required": "Please enter your current password",
+			},
+			"newPassword": {
+				"required": "Please enter a new password",
+			},
+			"repeatNewPassword": {
+				"required": "Please repeat your new password",
+				"equalTo": "Passwords do not match",
+			},
+		},
+		"submitHandler"() {
+			const $message = $(".message");
+			$message.find(".message__text").text("Form submitted successfully!");
+			messageShow();
+
+			setTimeout(function() {
+				messageHide();
+			}, 10000);
+		},
 	};
 
 	$("#accountForm").validate(accountFormValidate);
 
-	$("#experienceYears").on("input", function() {
-		$(this).attr("aria-valuenow", $(this).val());
+	const $range = $("#experienceYears");
+	const $output = $("<output>").
+		attr("for", "experienceYears").
+		addClass("field-range__output").
+		text(`${$range.val()} years`);
+
+	$range.after($output);
+
+	$range.on("input", function() {
+		const val = $(this).val();
+		$(this).attr("aria-valuenow", val);
+		$output.text(`${val} years`);
 	});
 }());
