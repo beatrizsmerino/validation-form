@@ -1,0 +1,14 @@
+# path/to/project/root/.eslintignore
+# /node_modules/* and /bower_components/* in the project root are ignored by default
+
+
+# FOLDERS
+.git
+dist
+src/icomoon
+src/js/libs
+
+# FILES
+.gitignore
+*.md
+LICENSE

@@ -1,0 +1,13 @@
+// COMPONENTS
+// FORM-REQUIRE
+// =================================================
+@use "../abstracts/index" as *;
+
+.required {
+	position: absolute;
+	top: -1rem;
+	right: -1.6rem;
+	height: 100%;
+	color: $color-error;
+	font-size: 4rem;
+}

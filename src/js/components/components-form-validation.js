@@ -3,75 +3,70 @@
 // =================================================
 // https://jqueryvalidation.org/
 
-
-
-
-
-// VALIDATE JS - MESSAGES
-// ------------------
-var field_message_required  = "This field is required",
-	field_message_letter    = "Please enter only letters",
-	field_message_lenghtTlf = "The phone must have 9 digits",
-	field_message_novalid   = "Please enter other social media, it is already in use";
-
-
-
-
+/* global fieldMessageLetter, fieldMessageLengthTlf */
 
 // VALIDATE JS - letter
 // ------------------
 jQuery.validator.addMethod(
 	"letter",
-	function (value, element) {
-		return this.optional(element) || /^[a-zA-Z\s]*$/.test(value);
+	function(value, element) {
+		return this.optional(element) || (/^[\p{L}\s]*$/u).test(value);
 	},
-	field_message_letter
+	fieldMessageLetter,
 );
-
-
-
-
 
 // VALIDATE JS - lengthTlf
 // ------------------
 jQuery.validator.addMethod(
 	"lengthTlf",
-	function (value, element) {
-		return this.optional(element) || /^[0-9]{9}$/.test(value);
+	function(value, element) {
+		return this.optional(element) || (/^[0-9]{9}$/u).test(value);
 	},
-	field_message_lenghtTlf
+	fieldMessageLengthTlf,
 );
-
-
-
-
 
 // VALIDATE JS - SETTINGS
 // ------------------
-var validateSettings = {
-    errorPlacement: function (error, element) {
-        if (element.is(":checkbox")) {
-            error.appendTo(
-                element.closest(".form__item")
-            );
-        } else if (element.is(":radio")) {
-            error.appendTo(
-                element.closest(".form__item")
-            );
-        } else if (element.is("select")) {
-            error.appendTo(
-                element.closest(".field-select__wrapper")
-            );
-        } else {
-            error.insertAfter(element);
-        }
-    },
-    onkeyup: function (element) {
-        this.element(element);
-    },
-    onfocusout: function (element) {
-        this.element(element);
-    }
+const validateSettings = {
+	"highlight"(element) {
+		$(element).attr("aria-invalid", "true");
+
+		$(element).addClass("error");
+		if ($(element).is(":radio")) {
+			$(`input[name="${$(element).attr("name")}"]`).addClass("error");
+		}
+	},
+	"unhighlight"(element) {
+		$(element).attr("aria-invalid", "false");
+		$(element).removeAttr("aria-describedby");
+
+		$(element).removeClass("error");
+		if ($(element).is(":radio")) {
+			$(`input[name="${$(element).attr("name")}"]`).removeClass("error");
+		}
+	},
+	"errorPlacement"(error, element) {
+		const errorId = `${element.attr("id")}-error`;
+		error.attr("id", errorId);
+		error.attr("role", "alert");
+		element.attr("aria-describedby", errorId);
+
+		if (element.is(":checkbox")) {
+			error.appendTo(element.closest(".form__item"));
+		} else if (element.is(":radio")) {
+			error.appendTo(element.closest(".form__item"));
+		} else if (element.is("select")) {
+			error.appendTo(element.closest(".field-select__wrapper"));
+		} else {
+			error.insertAfter(element);
+		}
+	},
+	"onkeyup"(element) {
+		this.element(element);
+	},
+	"onfocusout"(element) {
+		this.element(element);
+	},
 };
 
 jQuery.validator.setDefaults(validateSettings);

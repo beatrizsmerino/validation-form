@@ -1,0 +1,78 @@
+// COMPONENTS
+// MESSAGE
+// =================================================
+@use "../abstracts/index" as *;
+
+.message {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translate3d(0, -100%, 0);
+	opacity: 0;
+	background-color: $color-brand-1;
+	box-shadow: 0 0 2rem rgba($color-gray-0, 0.1);
+
+	&__inner {
+		display: flex;
+		position: relative;
+		margin: 0.5rem;
+	}
+
+	&__text {
+		padding: 1.6rem 3rem 1.6rem 1.6rem;
+		color: $color-gray-95;
+		font-size: 1.6rem;
+		font-weight: 400;
+
+		.link {
+			color: $color-gray-100;
+			font-weight: 700;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: $color-gray-95;
+		font-size: 2rem;
+		font-weight: 600;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-gray-100;
+		}
+	}
+
+	&--success,
+	&--error {
+		.message {
+			&__text,
+			&__close {
+				color: $color-gray-100;
+			}
+		}
+	}
+
+	&--success {
+		background-color: $color-success;
+	}
+
+	&--error {
+		background-color: $color-error;
+	}
+
+	&.is-show {
+		animation: move-in-top-to-bottom 0.2s ease-in 0s forwards;
+	}
+
+	&.is-hide {
+		animation: move-out-bottom-to-top 0.2s ease-in 0s forwards;
+	}
+}
