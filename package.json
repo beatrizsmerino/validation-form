@@ -1,9 +1,14 @@
 {
-	"version": "2.5.0",
+	"version": "2.6.0",
 	"name": "validation-form",
+	"private": true,
 	"description": "Customized form with validation for different types of fields.",
-	"author": "beatrizsmerino@gmail.com",
-	"license": "ISC",
+	"author": {
+		"name": "Beatriz Sopeña Merino",
+		"email": "beatrizsmerino@gmail.com",
+		"url": "https://github.com/beatrizsmerino"
+	},
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/beatrizsmerino/validation-form.git"
@@ -24,6 +29,10 @@
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"prepare": "husky",
+		"prettier:fix": "prettier --write './**/*.{css,scss,json,yml,yaml,js,cjs,mjs,html}'",
+		"eslint:fix": "eslint './**/*.{json,js,cjs,mjs}' --fix --ignore-path .eslintignore",
+		"stylelint:fix": "stylelint './**/*.{css,scss}' --fix --ignore-path .stylelintignore",
+		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"devDependencies": {
@@ -35,6 +44,10 @@
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
 		"browser-sync": "^3.0.4",
+		"eslint": "^8.57.1",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-json": "^3.1.0",
+		"eslint-plugin-prettier": "^5.5.5",
 		"gulp": "^5.0.1",
 		"gulp-autoprefixer": "^10.0.0",
 		"gulp-babel": "^8.0.0",
@@ -46,7 +59,14 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-uglify": "^3.0.2",
 		"husky": "^9.1.7",
-		"sass": "^1.98.0"
+		"lint-staged": "^16.4.0",
+		"prettier": "^3.8.1",
+		"sass": "^1.98.0",
+		"stylelint": "^16.26.1",
+		"stylelint-config-property-sort-order-smacss": "^11.2.0",
+		"stylelint-config-sass-guidelines": "^12.1.0",
+		"stylelint-config-standard": "^39.0.1",
+		"stylelint-scss": "^6.14.0"
 	},
 	"engines": {
 		"node": "24.14.1",
@@ -54,8 +74,6 @@
 		"gulp-cli": "3.0.0"
 	},
 	"overrides": {
-		"json5": "^2.2.3",
-		"postcss": "^8.4.31",
 		"@gulp-sourcemaps/identity-map": {
 			"postcss": "^8.4.31"
 		},

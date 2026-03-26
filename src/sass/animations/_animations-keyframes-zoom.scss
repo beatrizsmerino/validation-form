@@ -1,0 +1,31 @@
+// ANIMATIONS
+// KEYFRAMES-ZOOM
+// =================================================
+
+// ZOOM IN
+// ----------------------------------------------------------------------
+@keyframes zoom-in {
+	0% {
+		transform: scale3d(0.8, 0.8, 0.8);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+		opacity: 1;
+	}
+}
+
+// ZOOM OUT
+// ----------------------------------------------------------------------
+@keyframes zoom-out {
+	0% {
+		transform: scale3d(1, 1, 1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale3d(0.8, 0.8, 0.8);
+		opacity: 0;
+	}
+}

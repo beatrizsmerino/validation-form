@@ -1,0 +1,25 @@
+// COMPONENTS
+// PAGE
+// =================================================
+@use "sass:color";
+@use "../abstracts/index" as *;
+
+.page {
+	&__body {
+		position: relative;
+		padding: 6.4rem 0 calc(6.4rem + 7.9rem);
+
+		@include media("xs") {
+			padding-bottom: calc(6.4rem + 14.2rem);
+		}
+	}
+
+	&__title {
+		margin-bottom: 4.8rem;
+		color: color.scale($color: $color-brand-1, $lightness: -20%);
+		font-size: 4.8rem;
+		font-weight: 900;
+	}
+
+	// &__content
+}

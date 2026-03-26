@@ -26,7 +26,7 @@ on:
   schedule:
     # Monthly: First Saturday at 09:00 Spain (08:00 UTC)
     # Runs on days 1-7 of each month, but only if it's Saturday (day 6)
-    - cron: '0 8 1-7 * 6'
+    - cron: "0 8 1-7 * 6"
   workflow_dispatch:
 
 permissions:
@@ -155,7 +155,7 @@ jobs:
           echo "npm_version=$NPM_VERSION" >> $GITHUB_OUTPUT
           echo "lts_oldest=$LTS_OLDEST" >> $GITHUB_OUTPUT
           echo "lts_latest=$LTS_LATEST" >> $GITHUB_OUTPUT
-          echo "matrix=[ $LTS_OLDEST, $LTS_LATEST ]" >> $GITHUB_OUTPUT
+          echo "matrix=[$LATEST_VERSION]" >> $GITHUB_OUTPUT
           echo "has_version_limit=$HAS_CONFIG" >> $GITHUB_OUTPUT
 
       - name: 📖 Get current versions
@@ -242,9 +242,7 @@ jobs:
       - name: 🚀 Create Pull Request
         if: |
           steps.check-update.outputs.update_needed == 'true' &&
-          (steps.current-versions.outputs.has_nvmrc == 'true' ||
-           steps.current-versions.outputs.has_engines == 'true' ||
-           steps.current-versions.outputs.has_node_yml == 'true')
+          (steps.current-versions.outputs.has_nvmrc == 'true' || steps.current-versions.outputs.has_engines == 'true' || steps.current-versions.outputs.has_node_yml == 'true')
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.PAT_WORKFLOW }}
