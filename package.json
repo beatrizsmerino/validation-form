@@ -31,7 +31,7 @@
 		"prepare": "husky",
 		"prettier:fix": "prettier --write './**/*.{css,scss,json,yml,yaml,js,cjs,mjs,html}'",
 		"eslint:fix": "eslint './**/*.{json,js,cjs,mjs}' --fix --ignore-path .eslintignore",
-		"stylelint:fix": "stylelint '**/*.{css,scss}' --fix --ignore-path .stylelintignore",
+		"stylelint:fix": "stylelint './**/*.{css,scss}' --fix --ignore-path .stylelintignore",
 		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
