@@ -28,6 +28,7 @@
 	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
+		"postinstall": "npm run lint",
 		"prepare": "husky",
 		"prettier:fix": "prettier --write './**/*.{css,scss,json,yml,yaml,js,cjs,mjs,html}'",
 		"eslint:fix": "eslint './**/*.{json,js,cjs,mjs}' --fix --ignore-path .eslintignore",
