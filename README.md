@@ -149,6 +149,14 @@ Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.o
 npm run lint
 ```
 
+### Format files with Prettier
+
+Format CSS, SCSS, JSON, YAML, JS and HTML files with [Prettier](https://prettier.io/).
+
+```bash
+npm run prettier:fix
+```
+
 ### Deploy project
 
 Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
