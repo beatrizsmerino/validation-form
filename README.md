@@ -109,149 +109,81 @@ So project development takes place in the `src` and the final optimized content 
 
 ## 🚀 Commands
 
-<details>
-	<summary>
-		<h3>
-			Install dependencies
-		</h3>
-	</summary>
-	<div>
-		Install all dependencies listed in <code>package.json</code>.
-	</div>
-</details>
+### Install dependencies
+
+Install all dependencies listed in `package.json`.
 
 ```bash
 npm install
 ```
 
-<details>
-	<summary>
-		<h3>
-			Deploy project
-		</h3>
-	</summary>
-	<div>
-		Publish the <code>dist</code> folder to GitHub Pages (<code>gh-pages</code> branch).
-	</div>
-</details>
+### Deploy project
+
+Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
 
 ```bash
 npm run deploy
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build files, run server and watch changes
-		</h3>
-	</summary>
-	<div>
-		Build <code>html</code>, <code>css</code>, <code>js</code> and <code>icomoon</code> files, run a server and watch for changes.
-	</div>
-</details>
+### Build files, run server and watch changes
+
+Build `html`, `css`, `js` and `icomoon` files, run a server and watch for changes.
 
 ```bash
 gulp
 ```
 
-<details>
-	<summary>
-		<h3>Create and run server</h3>
-	</summary>
-	<div>
-		Create a static server with <code>browserSync</code> and serve the <code>dist</code> folder.
-	</div>
-</details>
+### Create and run server
+
+Create a static server with `browserSync` and serve the `dist` folder.
 
 ```bash
 gulp serve
 ```
 
-<details>
-	<summary>
-		<h3>
-			Watch for changes
-		</h3>
-	</summary>
-	<div>
-		Watch for changes in <code>src</code> files, rebuild to <code>dist</code> and reload the server automatically.
-	</div>
-</details>
+### Watch for changes
+
+Watch for changes in `src` files, rebuild to `dist` and reload the server automatically.
 
 ```bash
 gulp watch
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build files
-		</h3>
-	</summary>
-	<div>
-		Build <code>html</code>, <code>css</code>, <code>js</code> and <code>icomoon</code> files to the <code>dist</code> folder.
-	</div>
-</details>
+### Build files
+
+Build `html`, `css`, `js` and `icomoon` files to the `dist` folder.
 
 ```bash
 gulp build
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build HTML files
-		</h3>
-	</summary>
-	<div>
-		Copy <code>html</code> files from <code>src</code> to <code>dist</code> folder.
-	</div>
-</details>
+### Build HTML files
+
+Copy `html` files from `src` to `dist` folder.
 
 ```bash
 gulp html
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build CSS files
-		</h3>
-	</summary>
-	<div>
-		Compile <code>sass</code>, add prefixes, compress and export <code>styles.min.css</code> to <code>dist/css/</code>.
-	</div>
-</details>
+### Build CSS files
+
+Compile `sass`, add prefixes, compress and export `styles.min.css` to `dist/css/`.
 
 ```bash
 gulp css
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build JS files
-		</h3>
-	</summary>
-	<div>
-		Compile, transpile with <code>Babel</code>, minify and export <code>scripts.min.js</code> to <code>dist/js/</code>.
-	</div>
-</details>
+### Build JS files
+
+Compile, transpile with `Babel`, minify and export `scripts.min.js` to `dist/js/`.
 
 ```bash
 gulp js
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build icon files
-		</h3>
-	</summary>
-	<div>
-		Compress <code>icomoon</code> CSS and copy font files from <a href="https://icomoon.io/app/#/select">icomoon.io</a> to <code>dist/icomoon/</code>.
-	</div>
-</details>
+### Build icon files
+
+Compress `icomoon` CSS and copy font files from [icomoon.io](https://icomoon.io/app/#/select) to `dist/icomoon/`.
 
 ```bash
 gulp icon
