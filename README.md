@@ -117,6 +117,14 @@ Install all dependencies listed in `package.json`.
 npm install
 ```
 
+### Clean install dependencies
+
+Remove `node_modules` and `package-lock.json` to reinstall from scratch.
+
+```bash
+npm run install:clean
+```
+
 ### Deploy project
 
 Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
