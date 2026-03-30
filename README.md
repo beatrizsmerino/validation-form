@@ -120,7 +120,7 @@ So project development takes place in the `src` and the final optimized content 
 	</div>
 </details>
 
-```shell
+```bash
 npm install
 ```
 
@@ -135,7 +135,7 @@ npm install
 	</div>
 </details>
 
-```shell
+```bash
 npm run deploy
 ```
 
@@ -166,7 +166,7 @@ npm run deploy
 	</div>
 </details>
 
-```shell
+```bash
 gulp
 ```
 
@@ -192,7 +192,7 @@ gulp
 	</div>
 </details>
 
-```shell
+```bash
 gulp serve
 ```
 
@@ -226,7 +226,7 @@ gulp serve
 	</div>
 </details>
 
-```shell
+```bash
 gulp watch
 ```
 
@@ -251,7 +251,7 @@ gulp watch
 	</div>
 </details>
 
-```shell
+```bash
 gulp build
 ```
 
@@ -276,7 +276,7 @@ gulp build
 	</div>
 </details>
 
-```shell
+```bash
 gulp html
 ```
 
@@ -321,7 +321,7 @@ gulp html
 	</div>
 </details>
 
-```shell
+```bash
 gulp css
 ```
 
@@ -366,7 +366,7 @@ gulp css
 	</div>
 </details>
 
-```shell
+```bash
 gulp js
 ```
 
@@ -399,7 +399,7 @@ gulp js
 	</div>
 </details>
 
-```shell
+```bash
 gulp icon
 ```
 
