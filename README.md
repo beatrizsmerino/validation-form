@@ -116,7 +116,7 @@ So project development takes place in the `src` and the final optimized content 
 		</h3>
 	</summary>
 	<div>
-		To configure the project, after cloning this repository, you need to install the required NPM packages.
+		Install all dependencies listed in <code>package.json</code>.
 	</div>
 </details>
 
@@ -131,7 +131,7 @@ npm install
 		</h3>
 	</summary>
 	<div>
-		Once the development of the code in the <code>src</code> folder is finished, you can publish the project with the contents of the <code>dist</code> folder to Github Pages (<code>gh-pages</code> branch).
+		Publish the <code>dist</code> folder to GitHub Pages (<code>gh-pages</code> branch).
 	</div>
 </details>
 
@@ -146,23 +146,7 @@ npm run deploy
 		</h3>
 	</summary>
 	<div>
-		<p>
-			The default gulp task handles various tasks:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Build <code>html</code>, <code>css</code>, <code>js</code> and font icons of <code>icomoon</code> in the <code>dist</code> folder.
-			</li>
-			<li>
-				Watch for changes inside the <code>src</code> folder to rebuild the files.
-			</li>
-			<li>
-				Sets a server and reloads it automatically when changes are made to the <code>dist</code> folder.
-			</li>
-		</ol>
+		Build <code>html</code>, <code>css</code>, <code>js</code> and <code>icomoon</code> files, run a server and watch for changes.
 	</div>
 </details>
 
@@ -175,20 +159,7 @@ gulp
 		<h3>Create and run server</h3>
 	</summary>
 	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Create a static server with the <code>browserSync</code> package.
-			</li>
-			<li>
-				Serve the files in the <code>dist</code> folder.
-			</li>
-			<li>
-				Open the default <code>index.html</code> file in any of these browsers: <code>Chrome</code> and <code>Firefox</code>.
-			</li>
-		</ol>
+		Create a static server with <code>browserSync</code> and serve the <code>dist</code> folder.
 	</div>
 </details>
 
@@ -203,26 +174,7 @@ gulp serve
 		</h3>
 	</summary>
 	<div>
-		<p>
-			This command is a powerful tool that performs the following tasks:
-		</p>
-		<ol>
-			<li>
-				Create and launch a server.
-			</li>
-			<li>
-				Observe the changes in the <code>html</code>, <code>sass</code>, <code>icomoon</code> and <code>js</code> files located inside the <code>src</code> folder.
-			</li>
-			<li>
-				When a change occurs, runs the necessary tasks to re-generate the files inside the <code>dist</code> folder.
-			</li>
-			<li>
-				Consequently, it reloads the server automatically, if there are any changes in the files inside the <code>dist</code> folder.
-			</li>
-		</ol>
-		<p>
-			This ensures a smooth development experience, as you can make changes to your source files and see updates in real time without manually refreshing the page.
-		</p>
+		Watch for changes in <code>src</code> files, rebuild to <code>dist</code> and reload the server automatically.
 	</div>
 </details>
 
@@ -237,17 +189,7 @@ gulp watch
 		</h3>
 	</summary>
 	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Build the <code>html</code>, <code>css</code>, <code>js</code> and <code>icomoon</code> on <code>dist</code> folder.
-			</li>
-		</ol>
+		Build <code>html</code>, <code>css</code>, <code>js</code> and <code>icomoon</code> files to the <code>dist</code> folder.
 	</div>
 </details>
 
@@ -262,17 +204,7 @@ gulp build
 		</h3>
 	</summary>
 	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Copies the <code>html</code> files from the <code>src</code> folder to the <code>dist</code> folder.
-			</li>
-		</ol>
+		Copy <code>html</code> files from <code>src</code> to <code>dist</code> folder.
 	</div>
 </details>
 
@@ -287,37 +219,7 @@ gulp html
 		</h3>
 	</summary>
 	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Performs a series of processes:
-				<ul>
-					<li>
-						Compiles the <code>styles.sass</code> file, including its imported partials located at <code>src/sass/</code>.
-					</li>
-					<li>
-						Adds prefixes to <code>CSS</code>. properties for better browser compatibility.
-					</li>
-					<li>
-						Compresses the <code>CSS</code>. file to reduce its size for optimized performance.
-					</li>
-					<li>
-						Creates and adds a <code>mapping</code> for the debugger styles in the browser inspector for easier debugging.
-					</li>
-					<li>
-						Applies a Gulp Plugin, <code>Line Ending Corrector</code>, to ensure consistent line endings in your <code>CSS</code>. files.
-					</li>
-				</ul>
-			</li>
-			<li>
-				Export the <code>styles.min.css</code> file to <code>dist/css/</code> folder.
-			</li>
-		</ol>
+		Compile <code>sass</code>, add prefixes, compress and export <code>styles.min.css</code> to <code>dist/css/</code>.
 	</div>
 </details>
 
@@ -332,37 +234,7 @@ gulp css
 		</h3>
 	</summary>
 	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Copies files of <code>JS</code> libraries from <code>src/js/libs</code> and pastes them into <code>dist/js/libs</code> folder.
-			</li>
-			<li>
-				Performs a series of processes:
-				<ul>
-					<li>
-						Compile partials <code>JS</code> files partials located at <code>src/js/</code>.
-					</li>
-					<li>
-						Use <code>Babel</code>, a JavaScript compiler, to ensure backward compatibility and compatibility with various browsers.
-					</li>
-					<li>
-						Minifies the concatenated file, reducing its size for optimized performance.
-					</li>
-					<li>
-						Applies a Gulp Plugin, <code>Line Ending Corrector</code>, to ensure consistent line endings in your <code>JS</code>. files.
-					</li>
-				</ul>
-			</li>
-			<li>
-				Export the <code>scripts.min.js</code> file to <code>dist/js</code> folder.
-			</li>
-		</ol>
+		Compile, transpile with <code>Babel</code>, minify and export <code>scripts.min.js</code> to <code>dist/js/</code>.
 	</div>
 </details>
 
@@ -377,25 +249,7 @@ gulp js
 		</h3>
 	</summary>
 	<div>
-		<p>
-			This project uses icons from <a href="https://icomoon.io/app/#/select">icomoon.io</a>, an online tool app that has 2 buttons to <code>generate SVG & More</code> and <code>generate Font</code>.
-			</br>
-			The <code>src/icomoon/</code> folder contains a mix of both downloaded folders.
-		</p>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Gets <code>style.css</code> file from <code>src/icomoon/</code> folder, generates a new compressed file, renames it <code>fonts.min.css</code> and export the file to <code>dist/icomoon</code>.
-			</li>
-			<li>
-				Copy directory <code>src/icomoon/fonts</code>, containing the fonts (EOT, SVG, TTF, WOFF), and paste the files into <code>dist/icomoon/fonts</code>
-			</li>
-		</ol>
+		Compress <code>icomoon</code> CSS and copy font files from <a href="https://icomoon.io/app/#/select">icomoon.io</a> to <code>dist/icomoon/</code>.
 	</div>
 </details>
 
