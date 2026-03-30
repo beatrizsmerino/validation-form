@@ -165,6 +165,14 @@ Lint and fix JSON and JS files with [ESLint](https://eslint.org/).
 npm run eslint:fix
 ```
 
+### Lint and fix styles with Stylelint
+
+Lint and fix CSS and SCSS files with [Stylelint](https://stylelint.io/).
+
+```bash
+npm run stylelint:fix
+```
+
 ### Deploy project
 
 Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
