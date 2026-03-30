@@ -141,6 +141,14 @@ Runs automatically after `postinstall` to enable `pre-commit` and `commit-msg` h
 npm run prepare
 ```
 
+### Lint all files
+
+Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
+
+```bash
+npm run lint
+```
+
 ### Deploy project
 
 Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
