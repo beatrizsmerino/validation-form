@@ -117,12 +117,28 @@ Install all dependencies listed in `package.json`.
 npm install
 ```
 
-### Deploy project
+### Clean install dependencies
 
-Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
+Remove `node_modules` and `package-lock.json` to reinstall from scratch.
 
 ```bash
-npm run deploy
+npm run install:clean
+```
+
+### Lint after install
+
+Runs automatically after `npm install` to run `npm run lint` on all project files.
+
+```bash
+npm run postinstall
+```
+
+### Set up Husky git hooks
+
+Runs automatically after `postinstall` to enable `pre-commit` and `commit-msg` hooks of [Husky](https://typicode.github.io/husky/).
+
+```bash
+npm run prepare
 ```
 
 ### Build files, run server and watch changes
@@ -147,6 +163,38 @@ Watch for changes in `src` files, rebuild to `dist` and reload the server automa
 
 ```bash
 gulp watch
+```
+
+### Lints and fixes files
+
+Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
+
+```bash
+npm run lint
+```
+
+### Format files with Prettier
+
+Format CSS, SCSS, JSON, YAML, JS and HTML files with [Prettier](https://prettier.io/).
+
+```bash
+npm run prettier:fix
+```
+
+### Lint and fix files with ESLint
+
+Lint and fix JSON and JS files with [ESLint](https://eslint.org/).
+
+```bash
+npm run eslint:fix
+```
+
+### Lint and fix styles with Stylelint
+
+Lint and fix CSS and SCSS files with [Stylelint](https://stylelint.io/).
+
+```bash
+npm run stylelint:fix
 ```
 
 ### Build files
@@ -187,6 +235,14 @@ Compress `icomoon` CSS and copy font files from [icomoon.io](https://icomoon.io/
 
 ```bash
 gulp icon
+```
+
+### Deploy project
+
+Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
+
+```bash
+npm run deploy
 ```
 
 ## 🚧 Status
