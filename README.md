@@ -109,300 +109,178 @@ So project development takes place in the `src` and the final optimized content 
 
 ## 🚀 Commands
 
-<details>
-	<summary>
-		<h3>
-			Install dependencies
-		</h3>
-	</summary>
-	<div>
-		To configure the project, after cloning this repository, you need to install the required NPM packages.
-	</div>
-</details>
+### Install dependencies
 
-```shell
+Install all dependencies listed in `package.json`.
+
+```bash
 npm install
 ```
 
-<details>
-	<summary>
-		<h3>
-			Deploy project
-		</h3>
-	</summary>
-	<div>
-		Once the development of the code in the <code>src</code> folder is finished, you can publish the project with the contents of the <code>dist</code> folder to Github Pages (<code>gh-pages</code> branch).
-	</div>
-</details>
+### Clean install dependencies
 
-```shell
-npm run deploy
+Remove `node_modules` and `package-lock.json` to reinstall from scratch.
+
+```bash
+npm run install:clean
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build files, run server and watch changes
-		</h3>
-	</summary>
-	<div>
-		<p>
-			The default gulp task handles various tasks:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Build <code>html</code>, <code>css</code>, <code>js</code> and font icons of <code>icomoon</code> in the <code>dist</code> folder.
-			</li>
-			<li>
-				Watch for changes inside the <code>src</code> folder to rebuild the files.
-			</li>
-			<li>
-				Sets a server and reloads it automatically when changes are made to the <code>dist</code> folder.
-			</li>
-		</ol>
-	</div>
-</details>
+### Lint after install
 
-```shell
+Runs automatically after `npm install` to run `npm run lint` on all project files.
+
+```bash
+npm run postinstall
+```
+
+### Set up Husky git hooks
+
+Runs automatically after `postinstall` to enable `pre-commit` and `commit-msg` hooks of [Husky](https://typicode.github.io/husky/).
+
+```bash
+npm run prepare
+```
+
+### Build files, run server and watch changes
+
+Build `html`, `css`, `js` and `icomoon` files, run a server and watch for changes.
+
+```bash
+npm run dev
+```
+
+```bash
 gulp
 ```
 
-<details>
-	<summary>
-		<h3>Create and run server</h3>
-	</summary>
-	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Create a static server with the <code>browserSync</code> package.
-			</li>
-			<li>
-				Serve the files in the <code>dist</code> folder.
-			</li>
-			<li>
-				Open the default <code>index.html</code> file in any of these browsers: <code>Chrome</code> and <code>Firefox</code>.
-			</li>
-		</ol>
-	</div>
-</details>
+### Create and run server
 
-```shell
+Create a static server with `browserSync` and serve the `dist` folder.
+
+```bash
+npm run serve
+```
+
+```bash
 gulp serve
 ```
 
-<details>
-	<summary>
-		<h3>
-			Watch for changes
-		</h3>
-	</summary>
-	<div>
-		<p>
-			This command is a powerful tool that performs the following tasks:
-		</p>
-		<ol>
-			<li>
-				Create and launch a server.
-			</li>
-			<li>
-				Observe the changes in the <code>html</code>, <code>sass</code>, <code>icomoon</code> and <code>js</code> files located inside the <code>src</code> folder.
-			</li>
-			<li>
-				When a change occurs, runs the necessary tasks to re-generate the files inside the <code>dist</code> folder.
-			</li>
-			<li>
-				Consequently, it reloads the server automatically, if there are any changes in the files inside the <code>dist</code> folder.
-			</li>
-		</ol>
-		<p>
-			This ensures a smooth development experience, as you can make changes to your source files and see updates in real time without manually refreshing the page.
-		</p>
-	</div>
-</details>
+### Watch for changes
 
-```shell
+Watch for changes in `src` files, rebuild to `dist` and reload the server automatically.
+
+```bash
+npm run watch
+```
+
+```bash
 gulp watch
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build files
-		</h3>
-	</summary>
-	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Build the <code>html</code>, <code>css</code>, <code>js</code> and <code>icomoon</code> on <code>dist</code> folder.
-			</li>
-		</ol>
-	</div>
-</details>
+### Lints and fixes files
 
-```shell
+Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
+
+```bash
+npm run lint
+```
+
+### Format files with Prettier
+
+Format CSS, SCSS, JSON, YAML, JS and HTML files with [Prettier](https://prettier.io/).
+
+```bash
+npm run prettier:fix
+```
+
+### Lint and fix files with ESLint
+
+Lint and fix JSON and JS files with [ESLint](https://eslint.org/).
+
+```bash
+npm run eslint:fix
+```
+
+### Lint and fix styles with Stylelint
+
+Lint and fix CSS and SCSS files with [Stylelint](https://stylelint.io/).
+
+```bash
+npm run stylelint:fix
+```
+
+### Build files
+
+Build `html`, `css`, `js` and `icomoon` files to the `dist` folder.
+
+```bash
+npm run build
+```
+
+```bash
 gulp build
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build HTML files
-		</h3>
-	</summary>
-	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Copies the <code>html</code> files from the <code>src</code> folder to the <code>dist</code> folder.
-			</li>
-		</ol>
-	</div>
-</details>
+### Build HTML files
 
-```shell
+Copy `html` files from `src` to `dist` folder.
+
+```bash
+npm run build:html
+```
+
+```bash
 gulp html
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build CSS files
-		</h3>
-	</summary>
-	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Performs a series of processes:
-				<ul>
-					<li>
-						Compiles the <code>styles.sass</code> file, including its imported partials located at <code>src/sass/</code>.
-					</li>
-					<li>
-						Adds prefixes to <code>CSS</code>. properties for better browser compatibility.
-					</li>
-					<li>
-						Compresses the <code>CSS</code>. file to reduce its size for optimized performance.
-					</li>
-					<li>
-						Creates and adds a <code>mapping</code> for the debugger styles in the browser inspector for easier debugging.
-					</li>
-					<li>
-						Applies a Gulp Plugin, <code>Line Ending Corrector</code>, to ensure consistent line endings in your <code>CSS</code>. files.
-					</li>
-				</ul>
-			</li>
-			<li>
-				Export the <code>styles.min.css</code> file to <code>dist/css/</code> folder.
-			</li>
-		</ol>
-	</div>
-</details>
+### Build CSS files
 
-```shell
+Compile `sass`, add prefixes, compress and export `styles.min.css` to `dist/css/`.
+
+```bash
+npm run build:css
+```
+
+```bash
 gulp css
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build JS files
-		</h3>
-	</summary>
-	<div>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Copies files of <code>JS</code> libraries from <code>src/js/libs</code> and pastes them into <code>dist/js/libs</code> folder.
-			</li>
-			<li>
-				Performs a series of processes:
-				<ul>
-					<li>
-						Compile partials <code>JS</code> files partials located at <code>src/js/</code>.
-					</li>
-					<li>
-						Use <code>Babel</code>, a JavaScript compiler, to ensure backward compatibility and compatibility with various browsers.
-					</li>
-					<li>
-						Minifies the concatenated file, reducing its size for optimized performance.
-					</li>
-					<li>
-						Applies a Gulp Plugin, <code>Line Ending Corrector</code>, to ensure consistent line endings in your <code>JS</code>. files.
-					</li>
-				</ul>
-			</li>
-			<li>
-				Export the <code>scripts.min.js</code> file to <code>dist/js</code> folder.
-			</li>
-		</ol>
-	</div>
-</details>
+### Build JS files
 
-```shell
+Compile, transpile with `Babel`, minify and export `scripts.min.js` to `dist/js/`.
+
+```bash
+npm run build:js
+```
+
+```bash
 gulp js
 ```
 
-<details>
-	<summary>
-		<h3>
-			Build icon files
-		</h3>
-	</summary>
-	<div>
-		<p>
-			This project uses icons from <a href="https://icomoon.io/app/#/select">icomoon.io</a>, an online tool app that has 2 buttons to <code>generate SVG & More</code> and <code>generate Font</code>.
-			</br>
-			The <code>src/icomoon/</code> folder contains a mix of both downloaded folders.
-		</p>
-		<p>
-			This command is able to:
-		</p>
-		<ol>
-			<li>
-				Creates the <code>dist</code> folder if it does not exist.
-			</li>
-			<li>
-				Gets <code>style.css</code> file from <code>src/icomoon/</code> folder, generates a new compressed file, renames it <code>fonts.min.css</code> and export the file to <code>dist/icomoon</code>.
-			</li>
-			<li>
-				Copy directory <code>src/icomoon/fonts</code>, containing the fonts (EOT, SVG, TTF, WOFF), and paste the files into <code>dist/icomoon/fonts</code>
-			</li>
-		</ol>
-	</div>
-</details>
+### Build icon files
 
-```shell
+Compress `icomoon` CSS and copy font files from [icomoon.io](https://icomoon.io/app/#/select) to `dist/icomoon/`.
+
+```bash
+npm run build:icon
+```
+
+```bash
 gulp icon
+```
+
+### Deploy project
+
+Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
+
+```bash
+npm run deploy
 ```
 
 ## 🚧 Status
 
 There is still room for improvement in validation, such as the implementation of showing/hiding fields dynamically as the user fills/hides them... and many other potential areas.
+
+## 📄 License
+
+This project is licensed under the `MIT` License, which allows free use, modification and distribution. See [LICENSE](LICENSE) for details.

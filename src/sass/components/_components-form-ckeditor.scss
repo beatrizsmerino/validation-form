@@ -1,0 +1,18 @@
+// COMPONENTS
+// FORM-CKEDITOR
+// =================================================
+@use "../abstracts/index" as *;
+
+.textarea + .cke_chrome {
+	border: 0.2rem solid $color-gray-0;
+	font-size: 1.6rem;
+
+	&:hover,
+	&:focus {
+		border-color: $color-brand-1;
+	}
+
+	&.error {
+		border-color: $color-error;
+	}
+}

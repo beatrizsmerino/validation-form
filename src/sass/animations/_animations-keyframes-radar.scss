@@ -1,0 +1,19 @@
+// ANIMATIONS
+// KEYFRAMES-RADAR
+// =================================================
+
+@keyframes radar {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	100% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+}
+
+@keyframes radar-center {
+	to {
+		transform: translate(-50%, -50%) scale3d(1.05, 1.05, 1.05);
+	}
+}
