@@ -141,6 +141,30 @@ Runs automatically after `postinstall` to enable `pre-commit` and `commit-msg` h
 npm run prepare
 ```
 
+### Build files, run server and watch changes
+
+Build `html`, `css`, `js` and `icomoon` files, run a server and watch for changes.
+
+```bash
+gulp
+```
+
+### Create and run server
+
+Create a static server with `browserSync` and serve the `dist` folder.
+
+```bash
+gulp serve
+```
+
+### Watch for changes
+
+Watch for changes in `src` files, rebuild to `dist` and reload the server automatically.
+
+```bash
+gulp watch
+```
+
 ### Lints and fixes files
 
 Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
@@ -171,38 +195,6 @@ Lint and fix CSS and SCSS files with [Stylelint](https://stylelint.io/).
 
 ```bash
 npm run stylelint:fix
-```
-
-### Deploy project
-
-Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
-
-```bash
-npm run deploy
-```
-
-### Build files, run server and watch changes
-
-Build `html`, `css`, `js` and `icomoon` files, run a server and watch for changes.
-
-```bash
-gulp
-```
-
-### Create and run server
-
-Create a static server with `browserSync` and serve the `dist` folder.
-
-```bash
-gulp serve
-```
-
-### Watch for changes
-
-Watch for changes in `src` files, rebuild to `dist` and reload the server automatically.
-
-```bash
-gulp watch
 ```
 
 ### Build files
@@ -243,6 +235,14 @@ Compress `icomoon` CSS and copy font files from [icomoon.io](https://icomoon.io/
 
 ```bash
 gulp icon
+```
+
+### Deploy project
+
+Publish the `dist` folder to GitHub Pages (`gh-pages` branch).
+
+```bash
+npm run deploy
 ```
 
 ## 🚧 Status
