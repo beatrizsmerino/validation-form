@@ -146,6 +146,10 @@ npm run prepare
 Build `html`, `css`, `js` and `icomoon` files, run a server and watch for changes.
 
 ```bash
+npm run dev
+```
+
+```bash
 gulp
 ```
 
@@ -154,12 +158,20 @@ gulp
 Create a static server with `browserSync` and serve the `dist` folder.
 
 ```bash
+npm run serve
+```
+
+```bash
 gulp serve
 ```
 
 ### Watch for changes
 
 Watch for changes in `src` files, rebuild to `dist` and reload the server automatically.
+
+```bash
+npm run watch
+```
 
 ```bash
 gulp watch
@@ -202,12 +214,20 @@ npm run stylelint:fix
 Build `html`, `css`, `js` and `icomoon` files to the `dist` folder.
 
 ```bash
+npm run build
+```
+
+```bash
 gulp build
 ```
 
 ### Build HTML files
 
 Copy `html` files from `src` to `dist` folder.
+
+```bash
+npm run build:html
+```
 
 ```bash
 gulp html
@@ -218,6 +238,10 @@ gulp html
 Compile `sass`, add prefixes, compress and export `styles.min.css` to `dist/css/`.
 
 ```bash
+npm run build:css
+```
+
+```bash
 gulp css
 ```
 
@@ -226,12 +250,20 @@ gulp css
 Compile, transpile with `Babel`, minify and export `scripts.min.js` to `dist/js/`.
 
 ```bash
+npm run build:js
+```
+
+```bash
 gulp js
 ```
 
 ### Build icon files
 
 Compress `icomoon` CSS and copy font files from [icomoon.io](https://icomoon.io/app/#/select) to `dist/icomoon/`.
+
+```bash
+npm run build:icon
+```
 
 ```bash
 gulp icon
