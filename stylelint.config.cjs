@@ -168,7 +168,7 @@ module.exports = {
 		"selector-pseudo-class-no-unknown": [
 			true,
 		],
-		"selector-pseudo-element-colon-notation": "single",
+		"selector-pseudo-element-colon-notation": "double",
 		"selector-pseudo-element-no-unknown": [
 			true,
 		],
