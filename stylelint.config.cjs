@@ -143,7 +143,7 @@ module.exports = {
 
 		// Allows: BEM pattern (block__element--modifier) + CKEditor classes (cke_*)
 		"selector-class-pattern": [
-			"^(cke_[a-z]+|([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?)$",
+			"^(cke_[a-z]+|([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?)$",
 			{
 				"resolveNestedSelectors": true,
 			},
