@@ -18,6 +18,15 @@ module.exports = {
 		"stylelint-scss",
 	],
 	"rules": {
+		"annotation-no-unknown": [
+			true,
+			{
+				"ignoreAnnotations": [
+					"default",
+					"global",
+				],
+			},
+		],
 		"at-rule-empty-line-before": [
 			"always",
 			{
@@ -92,15 +101,6 @@ module.exports = {
 				"ignore": [
 					"after-comment",
 					"inside-single-line-block",
-				],
-			},
-		],
-		"annotation-no-unknown": [
-			true,
-			{
-				"ignoreAnnotations": [
-					"default",
-					"global",
 				],
 			},
 		],
