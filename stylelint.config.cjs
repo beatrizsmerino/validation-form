@@ -4,20 +4,19 @@ module.exports = {
 		"stylelint-config-sass-guidelines",
 		"stylelint-config-property-sort-order-smacss",
 	],
-	"overrides": [
-		{
-			"files": [
-				"src/sass/abstracts/mixins/_abstracts-mixins-media.scss",
-			],
-			"rules": {
-				"media-query-no-invalid": null,
-			},
-		},
-	],
 	"plugins": [
 		"stylelint-scss",
 	],
 	"rules": {
+		"annotation-no-unknown": [
+			true,
+			{
+				"ignoreAnnotations": [
+					"default",
+					"global",
+				],
+			},
+		],
 		"at-rule-empty-line-before": [
 			"always",
 			{
@@ -95,15 +94,6 @@ module.exports = {
 				],
 			},
 		],
-		"annotation-no-unknown": [
-			true,
-			{
-				"ignoreAnnotations": [
-					"default",
-					"global",
-				],
-			},
-		],
 		"declaration-property-value-no-unknown": null,
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
@@ -142,16 +132,21 @@ module.exports = {
 		"scss/no-global-function-names": null,
 
 		// Allows: BEM pattern (block__element--modifier) + CKEditor classes (cke_*)
+		// Examples (BEM): card, card-product, card--primary, card-product--primary, card-product__title, card-product__title-text, card-product__title--primary, card-product__title--primary-dark, card-product__title--primary-2, card-product__title--2, is-active
+		// Examples (CKEditor): cke_button, cke_btn_locked, cke_button__bold_icon
 		"selector-class-pattern": [
-			"^(cke_[a-z]+|([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?)$",
+			"^(cke_[a-z]+|([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?)$",
 			{
 				"resolveNestedSelectors": true,
 			},
 		],
+
+		// Allows: camelCase pattern
+		// Examples (camelCase): header, mainContent, userProfile2
 		"selector-id-pattern": [
-			"error",
+			"^[a-z][a-zA-Z0-9]*$",
 			{
-				"format": "camelCase",
+				"message": "Expected ID selector to be camelCase",
 			},
 		],
 		"selector-max-compound-selectors": null,
@@ -168,7 +163,7 @@ module.exports = {
 		"selector-pseudo-class-no-unknown": [
 			true,
 		],
-		"selector-pseudo-element-colon-notation": "single",
+		"selector-pseudo-element-colon-notation": "double",
 		"selector-pseudo-element-no-unknown": [
 			true,
 		],
@@ -187,4 +182,14 @@ module.exports = {
 		"@stylistic/indentation": "tab",
 		"@stylistic/string-quotes": "double",
 	},
+	"overrides": [
+		{
+			"files": [
+				"src/sass/abstracts/mixins/_abstracts-mixins-media.scss",
+			],
+			"rules": {
+				"media-query-no-invalid": null,
+			},
+		},
+	],
 };
