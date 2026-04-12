@@ -46,7 +46,7 @@
 		}
 
 		// Show the checkmark when checked
-		&:checked ~ .field-check__mark:after {
+		&:checked ~ .field-check__mark::after {
 			display: block;
 		}
 
@@ -68,7 +68,7 @@
 		background-color: $field-check-input-background-color;
 
 		// Create the checkmark/indicator (hidden when not checked)
-		&:after {
+		&::after {
 			content: "";
 			display: none;
 			position: absolute;
