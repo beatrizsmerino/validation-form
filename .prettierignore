@@ -9,6 +9,6 @@
 # Build output
 dist/
 
-# FOLDERS
-src/icomoon
-src/js/libs
+# Project assets
+src/icomoon/
+src/js/libs/
