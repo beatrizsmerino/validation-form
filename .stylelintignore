@@ -9,10 +9,8 @@
 # Build output
 dist/
 
-# FOLDERS
-src/icomoon
-src/js/libs
-
-# FILES
+# Project assets
+src/icomoon/
+src/js/libs/
 src/sass/animations/_animations-animate-css.scss
 src/sass/base/_base-reset-normalize.scss
