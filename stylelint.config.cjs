@@ -8,6 +8,8 @@ module.exports = {
 		"stylelint-scss",
 	],
 	"rules": {
+		"@stylistic/indentation": "tab",
+		"@stylistic/string-quotes": "double",
 		"annotation-no-unknown": [
 			true,
 			{
@@ -179,8 +181,6 @@ module.exports = {
 		"string-no-newline": true,
 		"unit-no-unknown": true,
 		"value-keyword-case": "lower",
-		"@stylistic/indentation": "tab",
-		"@stylistic/string-quotes": "double",
 	},
 	"overrides": [
 		{
