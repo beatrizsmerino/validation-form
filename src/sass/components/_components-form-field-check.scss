@@ -74,8 +74,8 @@
 			position: absolute;
 			top: calc(50% - #{math.div($field-check-mark-height, 2)}rem);
 			left: calc(50% - #{math.div($field-check-mark-width, 2)}rem);
-			width: #{$field-check-mark-width}rem;
-			height: #{$field-check-mark-height}rem;
+			width: $field-check-mark-width * 1rem;
+			height: $field-check-mark-height * 1rem;
 			transform: rotate(45deg);
 			border: solid $field-check-mark-color;
 			border-width: 0 0.3rem 0.3rem 0;
