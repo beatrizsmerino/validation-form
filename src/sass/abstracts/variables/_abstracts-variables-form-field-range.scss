@@ -1,6 +1,7 @@
 // ABSTRACTS - VARIABLES
 // FORM-FIELD-RANGE
 // =================================================
+@use "sass:math";
 @use "./abstracts-variables-colors" as *;
 
 $field-range-thumb-width: 2.4rem;
@@ -12,6 +13,7 @@ $field-range-thumb-shadow-color: rgba($color-gray-0, 0.2);
 $field-range-thumb-border-width: 0.2rem;
 $field-range-thumb-border-color: $color-gray-90;
 $field-range-thumb-radius: 1.2rem;
+$field-range-thumb-center: math.div($field-range-thumb-height, 2);
 
 // ------------------
 $field-range-track-width: 100%;
@@ -23,6 +25,7 @@ $field-range-track-shadow-color: rgba($color-gray-0, 0.2);
 $field-range-track-border-width: 0.2rem;
 $field-range-track-border-color: $color-gray-80;
 $field-range-track-radius: 0.5rem;
+$field-range-track-center: math.div(-$field-range-track-border-width * 2 + $field-range-track-height, 2);
 
 // ------------------
 $field-range-contrast: 5%;

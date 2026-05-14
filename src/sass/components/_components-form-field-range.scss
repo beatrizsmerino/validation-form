@@ -47,10 +47,7 @@
 		@include field-range-thumb;
 
 		appearance: none;
-		margin-top: (
-			math.div(-$field-range-track-border-width * 2 + $field-range-track-height, 2) - math.div($field-range-thumb-height,
-				2)
-		);
+		margin-top: $field-range-track-center - $field-range-thumb-center;
 	}
 
 	&::-moz-range-track {
