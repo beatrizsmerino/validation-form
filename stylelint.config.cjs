@@ -5,6 +5,7 @@ module.exports = {
 		"stylelint-config-property-sort-order-smacss",
 	],
 	"plugins": [
+		"stylelint-declaration-block-no-ignored-properties",
 		"stylelint-scss",
 	],
 	"rules": {
@@ -123,6 +124,7 @@ module.exports = {
 		"no-invalid-double-slash-comments": true,
 		"no-invalid-position-at-import-rule": true,
 		"no-irregular-whitespace": true,
+		"plugin/declaration-block-no-ignored-properties": true,
 		"property-no-unknown": true,
 		"rule-empty-line-before": [
 			"always-multi-line",
