@@ -96,6 +96,7 @@ module.exports = {
 				],
 			},
 		],
+		"declaration-property-value-disallowed-list": null,
 		"declaration-property-value-no-unknown": null,
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
