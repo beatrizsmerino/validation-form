@@ -78,8 +78,8 @@
 		"stylelint-scss": "^6.14.0"
 	},
 	"engines": {
-		"node": "24.15.0",
-		"npm": "11.12.1",
+		"node": "24.20.0",
+		"npm": "11.19.0",
 		"gulp-cli": "3.0.0"
 	},
 	"overrides": {
